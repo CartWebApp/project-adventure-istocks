@@ -1,0 +1,119 @@
+:root {
+    margin: 0;
+    padding: 0;
+
+    --main-black: #2E2E2E;
+    --main-white: #FFFFFF;
+    --option-border-black: #5E5E5E;
+
+    --border-radius: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Starting Screen */
+
+#startingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    width: 100%;
+    height: 100%;
+}
+
+#startingScreen.hidden {
+    display: none;
+}
+
+#startingScreen h1 {
+    background-color: var(--main-white);
+    border: 3px solid var(--main-black);
+    border-radius: var(--border-radius);
+
+    padding: 15px 30px;
+}
+
+#startButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    & button {
+        width: 275px;
+        height: 50px;
+
+        background-color: var(--main-black);
+        color: var(--main-white);
+        font-size: 25px;
+
+        border-radius: var(--border-radius);
+    }
+}
+
+/* Actual Game Layout */
+#actualGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#actualGame.hidden {
+    display: none;
+}
+
+#mainVisual {
+    aspect-ratio: 3/1;
+}
+
+#optionsAndDialogue {
+    width: 100;
+    height: 100%;
+}
+
+#dialogueBox {
+    text-align: center;
+    padding: 150px auto;
+    background-color: var(--main-white);
+    border: 4px solid var(--main-black);
+    border-radius: var(--border-radius);
+}
+
+#optionsRow {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+
+    & li {
+        background-color: var(--main-black);
+        color: var(--main-white);
+        border: 4px solid var(--option-border-black);
+        border-radius: var(--border-radius);
+        padding: 5px 10px;
+    }
+}
+
+/* Mechanics */
+
+#health {
+    position: absolute;
+}
+
+#inventoryButton {
+    position: absolute;
+    top: 5px;
+    right: 5px
+}
