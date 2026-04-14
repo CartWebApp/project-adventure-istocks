@@ -36,6 +36,8 @@ button:hover {
     border-radius: var(--border-radius);
 
     padding: 15px 30px;
+    width: 200px;
+    font-size: xx-large;
 }
 
 #startButtons {
@@ -44,6 +46,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-top: 250px;
 
     & button {
         width: 275px;
