@@ -3,6 +3,9 @@ const gameScreen = document.querySelector('#actualGame')
 
 const startGameButton = document.querySelector('#startGame')
 
+
+let currentScene = "Intro"
+
 /* Functions */
 function beginGame() {
     startingScreen.classList.add('hidden')
