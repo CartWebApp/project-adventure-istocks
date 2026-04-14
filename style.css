@@ -110,10 +110,14 @@ button:hover {
 
 #health {
     position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
 #inventoryButton {
     position: absolute;
     top: 5px;
-    right: 5px
+    right: 5px;
+    height: 80px;
+    width: 80px;
 }
