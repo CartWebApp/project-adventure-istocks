@@ -9,7 +9,7 @@ const imageVisual = document.querySelector('#mainVisual');
 /* Interactables */
 const startGameButton = document.querySelector('#startGame');
 
-const dialogue = document.querySelector('#dialogueBox p');
+const dialogue = document.querySelector('#dialogueBox #dialogue');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 

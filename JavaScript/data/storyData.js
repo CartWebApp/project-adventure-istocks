@@ -9,7 +9,7 @@ export const data = [
                 image: 'images/Visuals/Intro/starting-john-page.jpg',
                 text: "Woah! Make a choice, Johnny!",
                 options: [
-                    { text: "Go to work", leadsTo: "1A" /* Will probably not be what we actually call them */ },
+                    { text: "Go to work", leadsTo: "1A"},
                     { text: "Ditch your job and wander off", leadsTo: "1B" },
                     { text: "Get a liiittle bit more sleep...", leadsTo: "1C" },
                 ]
@@ -26,7 +26,7 @@ export const data = [
                 image: '',
                 text: 'Choose',
                 options: [
-                    { text: "Listen to Low Budget Man", leadsTo: "1A2A" },
+                    { text: "Listen to Him", leadsTo: "1A2A" },
                     { text: "Just another homeless guy...", leadsTo: "1A2B" },
                 ]
             }
@@ -37,7 +37,7 @@ export const data = [
         id: "1A2A",
         scenes: [
             { image: '', text: "Introducing Low-Budget-Man, a stick figure who was banished from Layer 1, and informs John that something must be done." },
-            { image: '', text: "He informs John that if he is not to ascent the layers, he too may be banished!" },
+            { image: '', text: "He informs John that if he is not to ascend the layers, he too may be banished!" },
 
             {
                 image: '',

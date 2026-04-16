@@ -78,17 +78,19 @@ button:hover {
 
 /* Actual Game Layout */
 #actualGame {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
+    display: grid;
+    grid-template: auto / auto 1fr auto;
 }
 
 #actualGame.hidden {
     display: none;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #mainVisual {
@@ -101,12 +103,17 @@ button:hover {
     
 }
 
-#dialogueAndOptions {
-    width: 100%;
-    height: 100%;
+#speakerTag {
+    margin: 0px;
+    padding: 20px;
+    width: 100px;
+
+    background-color: var(--main-black);
+    color: var(--main-white);
+    border-radius: var(--border-radius);
 }
 
-#dialogueBox {
+#dialogueBoxStyle {
     text-align: center;
     font-size: 20px;
     padding: 150px auto;
@@ -162,15 +169,11 @@ button:hover {
 /* Mechanics */
 
 #health {
-    position: absolute;
-    top: 5px;
-    left: 5px;
+    order: -1
 }
 
 #inventoryButton {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    order: 1;
     height: 80px;
     width: 80px;
 }
