@@ -48,6 +48,7 @@ button:hover {
     background-color: var(--main-white);
     border: 3px solid var(--main-black);
     border-radius: var(--border-radius);
+    font-family: var(--font-family);
 
     padding: 15px 30px;
     font-size: xx-large;
