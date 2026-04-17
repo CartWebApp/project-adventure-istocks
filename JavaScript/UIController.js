@@ -10,6 +10,7 @@ const imageVisual = document.querySelector('#mainVisual');
 const startGameButton = document.querySelector('#startGame');
 
 const dialogue = document.querySelector('#dialogueBox #dialogue');
+const speakerTag = document.querySelector('#speakerTag');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
@@ -38,11 +39,13 @@ function nextEncounter(encounterID) {
 
 function initiateScene() {
     /* Loads the image and text of the next scene */
-    imageVisual.src = currentEncounter.scenes[currentSceneIndex].image;
-    dialogue.textContent = currentEncounter.scenes[currentSceneIndex].text;
+    const currentScene = currentEncounter.scenes[currentSceneIndex]
+    imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
+    dialogue.textContent = currentScene.text;
+    speakerTag.textContent = currentScene.speaker
 
     // If there are options, show the options
-    const options = currentEncounter.scenes[currentSceneIndex].options
+    const options = currentScene.options
     if (options) {
         nextBtn.classList.add("hidden")
 
