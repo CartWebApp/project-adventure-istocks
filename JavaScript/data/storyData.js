@@ -187,7 +187,7 @@ export const data = [
             // Low-Budget man beats him up
             { image: '', speaker: "Narrator", text: "", damage: -1},
             { image: '', speaker: "John", text: "AUUUGHH!!"},
-            { image: '', speaker: "Low-Budget Man", text: "Are you a nutcase? You see a man beyond your form, and your primal response is to fight them?" },
+            { image: '', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
             { image: '', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
             { image: '', speaker: "Low-Budget Man", text: "I don't care. Look, you have something to do." },
             { image: '', 
@@ -336,6 +336,9 @@ export const data = [
         ]
     },
 
+    // 1B Future dialogue plan: It gets real heated, untill....
+    // "I cannot fulfill this request as it contains highly offensive and derogatory language. My purpose is to be helpful, and that includes not encouraging or perpetuating hate speech."
+
     {
         id: "1C",
         scenes: [
@@ -398,23 +401,134 @@ export const data = [
     {
         id: "1C2B3C",
         scenes: [
-            // John is begging in a cardboard box with a cup for change
-            { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
-            { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
-            { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
-            //
-            { image: '', speaker: "Narrator", text: "" },
+            { image: '', speaker: "Narrator", text: "John is unable to hold back his tears." },
+            { image: '', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
+
+            // Black screen
+            { image: '', speaker: "Narrator", text: "John runs away." },
+            { image: '', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
+            { image: '', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
+            { image: '', speaker: "John", text: "I hate my stock life......................................................." },
+            { image: '', speaker: "John", text: "....................................................... :(" },
+            { image: '', speaker: "Narrator", text: "........................" },
+            { image: '', speaker: "John", autoskip: true, text: "......" },
+            { image: '', speaker: "Narrator", text: "Alright, stop." },
+            { image: '', speaker: "John", text: "whatever" },
+            { image: '', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
+            { image: '', speaker: "John", text: "Ow! What the-" },
+
+            // Barrier
+            { image: '', speaker: "Narrator", text: "A brilliant, illuminant border, expanding limitlessly into the horizon, greets John." },
+            { image: '', speaker: "John", text: "Woah." },
+            { image: '', speaker: "Narrator", text: "John tries to put his hand through, but an invisible wall seems to stop him from passing through." },
+            { image: '', speaker: "John", text: "...Well, this is something. Doesn't solve me being jobless though." },
+            { image: '', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
+
+            // A shadow at the border
+            { image: '', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
+            { image: '', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
+
+            // The man--a dude who literally is drawn in pencil, seemingly by a child--stands in front of John with his hands in his pockets, his intentions unknown.
+            { image: '', speaker: "Narrator", text: "..." },
 
             {
                 image: '',
                 speaker: "Narrator",
-                text: 'Listen to him?',
+                text: 'Should you talk to him?',
                 options: [
-                    { text: 'Listen', leadsTo: "1A2A" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3B" },
-                    { text: 'Get away from me!', leadsTo: '1C2B3C'},
+                    { text: 'I need friends', leadsTo: "1A2A3C4A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C" },
                 ]
             }
         ]
     },
+
+    {
+        id: "1C2B3C",
+        scenes: [
+            { image: '', speaker: "Narrator", text: "John is unable to hold back his tears." },
+            { image: '', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
+
+            // Black screen
+            { image: '', speaker: "Narrator", text: "John runs away." },
+            { image: '', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
+            { image: '', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
+            { image: '', speaker: "John", text: "I hate my stock life......................................................." },
+            { image: '', speaker: "John", text: "....................................................... :(" },
+            { image: '', speaker: "Narrator", text: "........................" },
+            { image: '', speaker: "John", autoskip: true, text: "......" },
+            { image: '', speaker: "Narrator", text: "Alright, stop." },
+            { image: '', speaker: "John", text: "whatever" },
+            { image: '', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
+            { image: '', speaker: "John", text: "Ow! What the-" },
+
+            // Barrier
+            { image: '', speaker: "Narrator", text: "A brilliant, illuminant border, expanding limitlessly into the horizon, greets John." },
+            { image: '', speaker: "John", text: "Woah." },
+            { image: '', speaker: "Narrator", text: "John tries to put his hand through, but an invisible wall seems to stop him from passing through." },
+            { image: '', speaker: "John", text: "...Well, this is something. Doesn't solve me being jobless though." },
+            { image: '', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
+
+            // A shadow at the border
+            { image: '', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
+            { image: '', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
+
+            // The man--a dude who literally is drawn in pencil, seemingly by a child--stands in front of John with his hands in his pockets, his intentions unknown.
+            { image: '', speaker: "Narrator", text: "..." },
+
+            {
+                image: '',
+                speaker: "Narrator",
+                text: 'Should you talk to him?',
+                options: [
+                    { text: 'I need friends', leadsTo: "1A2A3C4A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C" },
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "1C2B3C4A",
+        scenes: [
+            { image: '', speaker: "???", text: "►○★┼╬▬○┬■-!★☐┬││▼╠┬▼✦○☐▲-┼▼│┼○╬❏○││○╬-?" },
+            { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
+            { image: '', speaker: "John", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
+
+            {
+                image: '',
+                speaker: "Narrator",
+                text: '...How do you want to approach this?',
+                options: [
+                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "1C2B3C4A5A",
+        scenes: [
+            { puzzle: "Decipher" },
+            { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
+            { image: '', speaker: "John", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
+
+            {
+                image: '',
+                speaker: "Narrator",
+                text: '...How do you want to approach this?',
+                options: [
+                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
+                ]
+            }
+        ]
+    },
+
+    
 ]

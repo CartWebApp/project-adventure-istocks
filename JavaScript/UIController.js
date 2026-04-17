@@ -44,6 +44,12 @@ function initiateScene() {
     dialogue.textContent = currentScene.text;
     speakerTag.textContent = currentScene.speaker
 
+    // Comes into play once we make text gradually generating
+    // Autoskips the dialogue if autoskip
+    if (currentScene.autoskip) {
+        // Code here
+    }
+
     // If there are options, show the options
     const options = currentScene.options
     if (options) {
