@@ -10,6 +10,11 @@
     --border-radius: 15px;
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 button:hover {
     cursor: pointer;
 }
