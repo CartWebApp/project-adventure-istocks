@@ -400,6 +400,9 @@ export const data = [
         scenes: [
             // John is begging in a cardboard box with a cup for change
             { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
+            { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
+            { image: '', speaker: "Narrator", text: "John isn't taking this verbal abuse today. He's getting out of there!" },
+            //
             { image: '', speaker: "Narrator", text: "" },
 
             {
