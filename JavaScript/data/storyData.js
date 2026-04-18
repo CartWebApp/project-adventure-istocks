@@ -514,8 +514,25 @@ export const data = [
         id: "1C2B3C4A5A",
         scenes: [
             { puzzle: "Decipher" },
+            /* { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
+
+            {
+                image: '',
+                speaker: "Narrator",
+                text: '...How do you want to approach this?',
+                options: [
+                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
+                ]
+            } */
+        ]
+    },
+
+    {
+        id: "1C2B3C4A5B",
+        scenes: [
             { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
-            { image: '', speaker: "John", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
 
             {
                 image: '',
