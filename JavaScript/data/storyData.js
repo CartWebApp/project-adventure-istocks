@@ -24,8 +24,8 @@ export const data = [
         id: "1A",
         scenes: [
             { image: 'images/Visuals/Intro/John-job-searching.jpg', speaker: "Narrator", text: "John is a Good Person so he brushes his teeth, gets, dressed, and begins his commute to his work office at ReStock facilities." },
-            { image: 'images/Visuals/Intro/John-job-searching.jpg', speaker: "Narrator", text: "He walks a long, boring trail until he reaches his office." },
-            { image: 'images/Visuals/Intro/John-job-searching.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
+            { image: 'images/Visuals/Intro/john image 1 1.png', speaker: "Narrator", text: "He walks a long, boring trail until he reaches his office." },
+            { image: 'images/Visuals/Intro/john-facing-restock.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
             { image: 'images/Visuals/', speaker: "???", text: "Wait!" },
             { image: 'images/Visuals/', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
             // Change image here
