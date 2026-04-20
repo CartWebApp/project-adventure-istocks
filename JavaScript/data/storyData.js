@@ -13,7 +13,7 @@ export const data = [
                 speaker: "John",
                 text: "What should I do?",
                 options: [
-                    { text: "Go to work you lazy bum", leadsTo: "1A"},
+                    { text: "Go to work you lazy bum", leadsTo: "1A" },
                     { text: "Ditch your job and wander off", leadsTo: "1B" },
                     { text: "Get a liiittle bit more sleep...", leadsTo: "1C" },
                 ]
@@ -26,16 +26,16 @@ export const data = [
             { image: 'images/Visuals/Intro/John-job-searching.jpg', speaker: "Narrator", text: "John is a Good Person so he brushes his teeth, gets, dressed, and begins his commute to his work office at ReStock facilities." },
             { image: 'images/Visuals/Intro/john image 1 1.png', speaker: "Narrator", text: "He walks a long, boring trail until he reaches his office." },
             { image: 'images/Visuals/Intro/john-facing-restock.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
-            { image: 'images/Visuals/', speaker: "???", text: "Wait!" },
-            { image: 'images/Visuals/', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
+            { image: 'images/Visuals/Intro/low-budget-man-raising-hand.jpg', speaker: "???", text: "Wait!" },
+            { image: 'images/Visuals/Intro/john-meets-hooded-man1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
             // Change image here
-            { image: 'images/Visuals/', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
-            { image: 'images/Visuals/', speaker: "???", text: "You there. How are you this evening?" },
-            { image: 'images/Visuals/', speaker: "John", text: "Err... fine, I guess." },
-            { image: 'images/Visuals/', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },
+            { image: 'images/Visuals/Intro/john-meets-hooded-man1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
+            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "???", text: "You there. How are you this evening?" },
+            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "John", text: "Err... fine, I guess." },
+            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/what-should-john-do.jpg',
                 text: 'This is probably the fishiest encounter you could ever have. Do you wanna listen to this dude?',
                 options: [
                     { text: "Listen to him", leadsTo: "1A2A" },
@@ -64,7 +64,7 @@ export const data = [
             { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
 
             // Image of him with his hood off --- stickman in a hoodie!!!!
-            { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/low-budget-man-real-self.png', speaker: "Narrator", text: "..." },
 
             // Image of them staring at each other
             { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
@@ -85,7 +85,7 @@ export const data = [
                 text: 'Should John heed the words of Low-Budget Man?',
                 options: [
                     { text: "Yes, we probably should...", leadsTo: "1A2A3A" },
-                    { text: "Let's fight, nerd.", leadsTo: "1A2A3B",  },
+                    { text: "Let's fight, nerd.", leadsTo: "1A2A3B", },
                     { text: "What a load of blasphemy.", leadsTo: "1A2A3C" }
                 ]
             }
@@ -121,18 +121,18 @@ export const data = [
 
             // Back to the border visual
             { image: '', speaker: "Low-Budget Man", text: "To pass through the border, normally you would have to pass a guardian or snag a key from someone." },
-            { image: '', speaker: "Low-Budget Man", text: "However, I still have my key from before I was banished. Since I cannot return, I will lend it to you.", getItem: "Layer1Key"},
+            { image: '', speaker: "Low-Budget Man", text: "However, I still have my key from before I was banished. Since I cannot return, I will lend it to you.", getItem: "Layer1Key" },
 
             // John gets the key
             { image: '', speaker: "Low-Budget Man", text: "I urge you to use it quick or it will melt into the poisonous royalty-free airs of this world." },
 
             {
                 image: '',
-                speaker: "Low-Budget Man", 
+                speaker: "Low-Budget Man",
                 text: "So hurry! Approach the gate and use the key!",
                 options: [
                     { text: "Open the gate", leadsTo: "1A2A3A4A" },
-                    { text: "I'm kinda scared..", leadsTo: "1A2A3A4B"}
+                    { text: "I'm kinda scared..", leadsTo: "1A2A3A4B" }
                 ]
             }
         ]
@@ -143,20 +143,20 @@ export const data = [
         id: "1A2A3A4A",
         scenes: [
             // John and Low-Budget man watch the gate open.
-            {image:'', speaker: "Narrator", text: "The gate hinges open with a winded creak."},
-            {image:'', speaker: "Low-Budget Man", text: "Once more, congratulations."},
-            {image:'', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?"},
-            {image:'', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms."},
-            {image:'', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job."},
-            {image:'', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely"},
-            {image:'', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through."},
+            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
+            { image: '', speaker: "Low-Budget Man", text: "Once more, congratulations." },
+            { image: '', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
+            { image: '', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
+            { image: '', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job." },
+            { image: '', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
+            { image: '', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
 
-            {image:'', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone."},
-            {image:'', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine."},
-            {image:'', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through."},
+            { image: '', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
+            { image: '', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
+            { image: '', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through." },
 
-             /* Transition to Layer 1*/
-            {image:'', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1"},
+            /* Transition to Layer 1*/
+            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1" },
         ]
     },
 
@@ -164,17 +164,17 @@ export const data = [
         id: "1A2A3A4B",
         scenes: [
             // John and Low-Budget man watch the gate open.
-            {image:'', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore."},
-            {image:'', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-"},
+            { image: '', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
+            { image: '', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
 
             // The key turns into a stock image key.
-            {image:'', speaker: "Narrator", text: "."},
-            {image:'', speaker: "John", text: "..."},
-            {image:'', speaker: "Low-Budget Man", text: "..."},
-            {image:'', speaker: "John", text: "So, is it possible to unlock the gate with this thing..?"},
-            {image:'', speaker: "Low-Budget Man", text: "You're useless."},
+            { image: '', speaker: "Narrator", text: "." },
+            { image: '', speaker: "John", text: "..." },
+            { image: '', speaker: "Low-Budget Man", text: "..." },
+            { image: '', speaker: "John", text: "So, is it possible to unlock the gate with this thing..?" },
+            { image: '', speaker: "Low-Budget Man", text: "You're useless." },
 
-            {gameOver: "Don't be so hesitant next time..."}
+            { gameOver: "Don't be so hesitant next time..." }
         ]
     },
 
@@ -185,27 +185,29 @@ export const data = [
             { image: '', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
-            { image: '', speaker: "Narrator", text: "", damage: -1},
-            { image: '', speaker: "John", text: "AUUUGHH!!"},
+            { image: '', speaker: "Narrator", text: "", damage: -1 },
+            { image: '', speaker: "John", text: "AUUUGHH!!" },
             { image: '', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
             { image: '', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
             { image: '', speaker: "Low-Budget Man", text: "I don't care. Look, you have something to do." },
-            { image: '', 
-                speaker: "Low-Budget Man", 
+            {
+                image: '',
+                speaker: "Low-Budget Man",
                 text: "Maybe that beating put some sense into you. Now, will you accept my offer or not?",
                 options: [
                     { text: "ig bro", leadsTo: "1A2A3A" },
-                    { text: "What a load of blasphemy", leadsTo: "1A2A3C"}
-                ] },
+                    { text: "What a load of blasphemy", leadsTo: "1A2A3C" }
+                ]
+            },
         ]
     },
 
     {
         id: "1A2A3C",
         scenes: [
-            { image: '', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work."},
+            { image: '', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
-            { image: '', speaker: "Narrator", text: "", leadsTo: "1A2B"}
+            { image: '', speaker: "Narrator", text: "", leadsTo: "1A2B" }
         ]
     },
 
@@ -213,16 +215,16 @@ export const data = [
         id: "1A2B",
         scenes: [
             // Remove Low-Budget Man from view; john and his building
-            { image: '', speaker: "Narrator", text: "John ultimately decides to ignore the random guy and goes into his building to work."},
+            { image: '', speaker: "Narrator", text: "John ultimately decides to ignore the random guy and goes into his building to work." },
             // John works at building
-            { image: '', speaker: "Narrator", text: "In the building, John gets to work at ReStock facilities. He is typing monotonous copyrights for triangle-shaped objects that are passed to him."},
-            { image: '', speaker: "Narrator", text: "Then, something strange is passed to him."},
+            { image: '', speaker: "Narrator", text: "In the building, John gets to work at ReStock facilities. He is typing monotonous copyrights for triangle-shaped objects that are passed to him." },
+            { image: '', speaker: "Narrator", text: "Then, something strange is passed to him." },
 
             // Object  - circular charm with a strange design
-            { image: '', speaker: "Narrator", text: "A circle? In the ReStock factory? How queer! John has never seen such a thing- this must be inquired about with his supervisor post-haste!"},
-            { image: '', speaker: "John", text: "i guess we doin circles now"},
-            { image: '', speaker: "John", text: "Wait a minute- there's a written tag on this."},
-            { image: '', speaker: "The Tag", text: "Don't deny freedom - "},
+            { image: '', speaker: "Narrator", text: "A circle? In the ReStock factory? How queer! John has never seen such a thing- this must be inquired about with his supervisor post-haste!" },
+            { image: '', speaker: "John", text: "i guess we doin circles now" },
+            { image: '', speaker: "John", text: "Wait a minute- there's a written tag on this." },
+            { image: '', speaker: "The Tag", text: "Don't deny freedom - " },
         ]
     },
 
@@ -238,59 +240,63 @@ export const data = [
 
             // John frolicks around in a grass field :sob:
             { image: 'starting-john-page.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
-            { image: '', speaker: "Narrator", text: "He skips further into the distance, and further, and further..."},
-            { image: '', speaker: "Narrator", text: "Until he comes across something strange."},
-            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it."},
-            { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?"},
-            { image: '', 
-                speaker: "Narrator", 
+            { image: '', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
+            { image: '', speaker: "Narrator", text: "Until he comes across something strange." },
+            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
+            { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
+            {
+                image: '',
+                speaker: "Narrator",
                 text: "What should John do about this discovery?",
                 options: [
                     { text: "Pursue The Secrets", leadsTo: "1B2A" },
-                    { text: "Ignore this and continue being mindless", leadsTo: "1B2B"} 
+                    { text: "Ignore this and continue being mindless", leadsTo: "1B2B" }
                     /* Uh oh. I just realized I forgot to map out a story for 1B2B completely. I'll do that soon. */
-                ] },
+                ]
+            },
         ]
     },
 
     {
         id: "1B2A",
         scenes: [
-            { image: '', speaker: "Narrator", text: "Soon, travelling along the border, John finds a towering gate with a visible lock. It demands a key to pass through."},
-            { image: '', speaker: "Narrator", text: "Unfortunately, as one could probably anticipate, John doesn't have this key."},
-            { image: '', speaker: "Narrator", text: "Before he can decide on the next course of action, however, he hears someone approaching."},
+            { image: '', speaker: "Narrator", text: "Soon, travelling along the border, John finds a towering gate with a visible lock. It demands a key to pass through." },
+            { image: '', speaker: "Narrator", text: "Unfortunately, as one could probably anticipate, John doesn't have this key." },
+            { image: '', speaker: "Narrator", text: "Before he can decide on the next course of action, however, he hears someone approaching." },
 
             // Change image
-            { image: '', speaker: "Narrator", text: "Two people, actually... there's another stock guy... and a stick figure?"},
-            { image: '', speaker: "John", text: "Who are you guys?"},
-            { image: '', speaker: "Stick Figure", text: "It appears there's another man here."},
-            { image: '', speaker: "Other Stock Guy", text: "What, was he trying to unlock the gate too?"},
-            { image: '', speaker: "John", text: "Unlock the gate? You can do that?"},
-            { image: '', speaker: "Other Stock Guy", text: "Woah bud, back off! This gate is MINE to pass, because I..."},
+            { image: '', speaker: "Narrator", text: "Two people, actually... there's another stock guy... and a stick figure?" },
+            { image: '', speaker: "John", text: "Who are you guys?" },
+            { image: '', speaker: "Stick Figure", text: "It appears there's another man here." },
+            { image: '', speaker: "Other Stock Guy", text: "What, was he trying to unlock the gate too?" },
+            { image: '', speaker: "John", text: "Unlock the gate? You can do that?" },
+            { image: '', speaker: "Other Stock Guy", text: "Woah bud, back off! This gate is MINE to pass, because I..." },
 
             // he holds up the layer 1 key in his hands
-            { image: '', speaker: "Other Stock Guy", text: "Have the key for it in my hands!"},
-            { image: '', speaker: "John", text: "Woah. I want that."},
+            { image: '', speaker: "Other Stock Guy", text: "Have the key for it in my hands!" },
+            { image: '', speaker: "John", text: "Woah. I want that." },
 
-            { image: '', speaker: "Stick Figure", text: "You cannot receive it. I only have one key, and only one person can pass at a time."},
-            { image: '', speaker: "John", text: "Serious? I bet you're giving it to the most basic guy ever. His name is probably \"James Stock\" or something."},
-            { image: '', speaker: "James Stock", text: "dude how did you know"},
-            { image: '', speaker: "John", text: "...dude"},
-            { image: '', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter."},
-            { image: '', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling."},
-            { image: '', speaker: "John", text: "Shoot. I'm named John Stock, so I actually don't have much of a chance here."},
-            { image: '', speaker: "John", text: "But look, I don't need to just be unique. I'm sure we can negotiate."},
-            { image: '', speaker: "Stick Figure", text: "You have one chance to convince me."},
-            { image: '', speaker: "James", text: "You really think you can do anything, huh?"},
+            { image: '', speaker: "Stick Figure", text: "You cannot receive it. I only have one key, and only one person can pass at a time." },
+            { image: '', speaker: "John", text: "Serious? I bet you're giving it to the most basic guy ever. His name is probably \"James Stock\" or something." },
+            { image: '', speaker: "James Stock", text: "dude how did you know" },
+            { image: '', speaker: "John", text: "...dude" },
+            { image: '', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter." },
+            { image: '', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling." },
+            { image: '', speaker: "John", text: "Shoot. I'm named John Stock, so I actually don't have much of a chance here." },
+            { image: '', speaker: "John", text: "But look, I don't need to just be unique. I'm sure we can negotiate." },
+            { image: '', speaker: "Stick Figure", text: "You have one chance to convince me." },
+            { image: '', speaker: "James", text: "You really think you can do anything, huh?" },
 
-            { image: '', 
-                speaker: "John", 
+            {
+                image: '',
+                speaker: "John",
                 text: "Yeah, I sure can. How about this?",
                 options: [
                     { text: "Friendly competition", leadsTo: "1B2A3A" },
-                    { text: "Let's Fight, nerd", leadsTo: "1B2A3B"},
-                    { text: "Let's share the key!", leadsTo: "1B2A3C"},
-                ] },
+                    { text: "Let's Fight, nerd", leadsTo: "1B2A3B" },
+                    { text: "Let's share the key!", leadsTo: "1B2A3C" },
+                ]
+            },
         ]
     },
     {
@@ -298,7 +304,7 @@ export const data = [
         scenes: [
             { image: '', speaker: "James", text: "Competition, eh? You know what, I got an idea..." },
             { image: '', speaker: "James", text: "I'm quite the rock-paper-scissors guy myself. And it's not just skill; I've got a hidden talent. See for yourself, buddy." },
-        
+
             { puzzle: "RockPaperScissors" }
         ]
     },
@@ -317,8 +323,8 @@ export const data = [
             { image: '', speaker: "Narrator", text: "You lunge at the stick figure" },
             { image: '', speaker: "Narrator", text: "That... doesn't go well. He pulls a weapon on you, then James and the Stick Figure beat you until you're unconscious." },
             { image: '', speaker: "Narrator", text: "...Seems like you'll be staying in the hospital for a while. If anyone finds you here, that is." },
-        
-            { gameOver: "You're way too eager to fight..."}
+
+            { gameOver: "You're way too eager to fight..." }
         ]
     },
 
@@ -331,8 +337,8 @@ export const data = [
             { image: '', speaker: "James", text: "Unfortunately, I shall humbly decline your request, for it is clear I am the humbler man here." },
             { image: '', speaker: "Narrator", text: "You helplessly watch in pain as the stick figure and James humbly pass through the gate." },
             { image: '', speaker: "Narrator", text: "The gate closes shut; now, you have no way of getting past there ever, and it's useless to try anything more." },
-        
-            { gameOver: "I guess you just weren't humble enough."}
+
+            { gameOver: "I guess you just weren't humble enough." }
         ]
     },
 
@@ -382,7 +388,7 @@ export const data = [
                 options: [
                     { text: 'Listen', leadsTo: "1A2A" },
                     { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3B" },
-                    { text: 'Get away from me!', leadsTo: '1C2B3C'},
+                    { text: 'Get away from me!', leadsTo: '1C2B3C' },
                 ]
             }
         ]
@@ -563,9 +569,9 @@ export const data = [
                 text: 'Hmm, where should I start?',
                 options: [
                     { text: 'Sleep somewhere nearby', leadsTo: "L1-1A", hideCondition: "Layer1Hotel" },
-                    { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass"},
-                    { text: 'Run straight for the next world', leadsTo: "L1-1C"},
-                    { text: 'Go to your friend\'s house', leadsTo: "L1-1D", condition: "madeAFriend"}, // If you went the 1C route
+                    { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass" },
+                    { text: 'Run straight for the next world', leadsTo: "L1-1C" },
+                    { text: 'Go to your friend\'s house', leadsTo: "L1-1D", condition: "madeAFriend" }, // If you went the 1C route
                 ]
             }
         ]
@@ -579,18 +585,18 @@ export const data = [
             { image: '', speaker: "John", text: "Hey, can I sleep here?." },
             { image: '', speaker: "Attendant", text: "Ho ho. Rest? Sleep? Recovery? It's yours my friend, as long as you have enough money." },
             { image: '', speaker: "John", text: "...What?" },
-           
+
             {
                 image: '',
                 speaker: "Narrator",
                 text: 'Pay?',
                 options: [
                     { text: 'I\'ll just stay up man', leadsTo: "L1-1A2A", giveChoice: "layer1Hotel" }, // Depends on if you have money or not, also only visible first time you've looped here
-                    { text: 'Sure...', leadsTo: "L1-1A2B", useItem: "Money", giveChoice: "layer1Hotel"},
+                    { text: 'Sure...', leadsTo: "L1-1A2B", useItem: "Money", giveChoice: "layer1Hotel" },
                 ]
             }
         ]
-    },   
+    },
 
     {
         id: "L1-1A2A",
@@ -598,14 +604,14 @@ export const data = [
             { image: '', speaker: "John", text: "Uh, actually, I'm good, thanks." },
             { image: '', speaker: "Attendant", text: "Come back when you're a little... mmm... richer!", leadsTo: 'L1' },
         ]
-    }, 
+    },
 
     {
         id: "L1-1A2A",
         scenes: [
             { image: '', speaker: "Attendant", text: "Good choice, my friend!" },
-            { image: '', speaker: "John", text: "Yeah alright man."},
-            { image: '', speaker: "Narrator", text: "John rests up, and feels a little healthier.", heal: 1, leadsTo: 'L1'},
+            { image: '', speaker: "John", text: "Yeah alright man." },
+            { image: '', speaker: "Narrator", text: "John rests up, and feels a little healthier.", heal: 1, leadsTo: 'L1' },
         ]
     },
 
@@ -637,9 +643,9 @@ export const data = [
                 speaker: "John",
                 text: 'I\'m not even as mobile as he is... do I take this on?',
                 options: [
-                    { text: 'Can we talk this out?', leadsTo: "L1-1B2A", giveCondition: "Layer1TouchedGrass"},
-                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1B2B", giveCondition: "Layer1TouchedGrass"},
-                    { text: 'Nah, but my dagger can', leadsTo: "L1-1B2C", useItem: "Dagger", giveCondition: "Layer1TouchedGrass"}, // If you went the 1C route
+                    { text: 'Can we talk this out?', leadsTo: "L1-1B2A", giveCondition: "Layer1TouchedGrass" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1B2B", giveCondition: "Layer1TouchedGrass" },
+                    { text: 'Nah, but my dagger can', leadsTo: "L1-1B2C", useItem: "Dagger", giveCondition: "Layer1TouchedGrass" }, // If you went the 1C route
                 ]
             }
         ]
@@ -657,14 +663,14 @@ export const data = [
             { image: '', speaker: "John", text: "So because stock images are used by people universally around the world, we're not that bad, y'know?" },
             { image: '', speaker: "???", text: "WHY... YOU..." },
             // He punches down
-            { image: '', speaker: "John", text: "Ow!", damage: 1},
+            { image: '', speaker: "John", text: "Ow!", damage: 1 },
             { image: '', speaker: "John", text: "Why did you do that?!" },
             { image: '', speaker: "???", text: "I AGREED WITH WHAT YOU WERE SAYING AND I DID NOT LIKE THAT." },
             { image: '', speaker: "John", text: "I- Whatever man! Leave now, alright?" },
             { image: '', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day." },
             // He leaves
             { image: '', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
-            { image: '', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A"},
+            { image: '', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A" },
         ]
     },
 
@@ -682,8 +688,8 @@ export const data = [
             { image: '', speaker: "John", text: "Huh? seems like he dropped something on the ground, though..." },
             { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
             // He leaves
-            { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money"},
-            { image: '', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A"},
+            { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
+            { image: '', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
         ]
     },
 
@@ -704,13 +710,13 @@ export const data = [
             { image: '', speaker: "John", text: "Shouldn't have messed around, man." },
             { image: '', speaker: "John", text: "I wonder what loot you drop..." },
 
-            { image: '', speaker: "John", text: "Dang...",  getItem: "Money"},
+            { image: '', speaker: "John", text: "Dang...", getItem: "Money" },
             { image: '', speaker: "John", text: "Dang! you're rich dude!", getItem: "Money" },
             { image: '', speaker: "John", text: "Sick, thanks so much! You can keep the dagger. I don't think I can take that thing out of you anyways." },
-            { image: '', speaker: "John", text: "Wouldn't you agree?",  },
+            { image: '', speaker: "John", text: "Wouldn't you agree?", },
 
             // Zoomed in image of his dead face: X_X
-            { image: '', speaker: "???", text: "X_X", leadsTo: "1A"},
+            { image: '', speaker: "???", text: "X_X", leadsTo: "1A" },
         ]
     },
 
