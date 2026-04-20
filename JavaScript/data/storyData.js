@@ -714,9 +714,235 @@ export const data = [
         ]
     },
 
+    {
+        id: "L1-1C",
+        scenes: [
+            // Black screen
+            { image: '', speaker: "Narrator", text: "John bolts for the border, ready to conquer all that awaits him." },
+
+            // Border -- 
+            { image: '', speaker: "John", text: "Here I am." },
+            { image: '', speaker: "Narrator", text: "Here he is." },
+            { image: '', speaker: "John", text: "Wait.. I don't have a key. I don't know why I didn't account for that. What am I doing?" },
+            { image: '', speaker: "John", text: "I'm a fool. I just walked here for nothing. I-" },
+            { image: '', speaker: "???", text: "Woah, who's on the opposite side here?" },
+            { image: '', speaker: "John", text: "Eh?" },
+
+            // Shadow of the person
+            { image: '', speaker: "Narrator", text: "..." },
+            // He steps out, revealing himself to be a man drawn as if he were from an animated show.
+            // He's smoothly drawn with muscles and sharp, flashy glasses--most of all, he's actually colored.
+            { image: '', speaker: "???", text: "Well well well, what do we have here? A commoner? And from the Zeroth dimension as well." },
+            { image: '', speaker: "John", text: "Do people like you always just camp these borders or something?" },
+            { image: '', speaker: "Guy from Layer 2", text: "Why, it's tradition for us advanced Layer 2 peoples to jeer at simpletons. I'm surprised an animal like you even figured out how to ascend." },
+            { image: '', speaker: "John", text: "Uh, yeah whatever. So dude, you got a key to get past this border or something?" },
+            { image: '', speaker: "Guy from Layer 2", text: "Ha! This is also why I come here. I revel in your pleas to pass. You wouldn't believe how many beggars from Layer 1 come around here and beg." },
+            { image: '', speaker: "John", text: "I guess not. So you got a key?" },
+            { image: '', speaker: "Guy from Layer 2", text: "Ha Ha! You're even lower than those peasants! Why would I give you a key?" },
+            { image: '', speaker: "John", text: "Iunno. Can I get a key?" },
+
+            // The man begins looking disappointed
+            { image: '', speaker: "Guy from Layer 2", text: "...Am I talking to an NPC or something? Do you only have one dialogue option?" },
+            { image: '', speaker: "John", text: "I don't know what you expected, dude. I need a key." },
+            { image: '', speaker: "Guy from Layer 2", text: "Well, you know what? Maybe I'll entertain you. It'd be interesting to see how an uncoordinated specimen like you wobbles around in our world." },
+            { image: '', speaker: "John", text: "Awesome. Can I have it?" },
+            { image: '', speaker: "Guy from Layer 2", text: "Not for free. I still want to play around with you a bit. Why don't I give you a fun little challenge?" },
+            { image: '', speaker: "John", text: "Oh, come on, man-" },
+
+            {
+                image: '',
+                speaker: "Guy from Layer 2",
+                text: 'Well?! Pick your poison!',
+                options: [
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1C2A"},
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
+                    { text: 'Keep begging to have the key', leadsTo: "L1-1B2C"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1C2A",
+        scenes: [
+            { image: '', speaker: "John", text: "RAAGH!!" },
+            { image: '', speaker: "Narrator", text: "Are you serious?! The dude has muscles!" },
+
+            // Yeah John gets beat up
+            { image: '', speaker: "Guy from Layer 2", text: "Wow! I didn't think anyone could be stupid as you are!", damage: 2},
+            { image: '', speaker: "Guy from Layer 2", text: "You know what, I applaud your bravo. I didn't know losers could fight back." },
+            { image: '', speaker: "Guy from Layer 2", text: "Of course, That doesn't mean I'm gonna give this key for free. It just makes me more intrigued to see how you'll struggle in my little game." },
+            {
+                image: '',
+                speaker: "Guy from Layer 2",
+                text: 'Come on now, get up!',
+                options: [
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
+                    { text: 'Beg to have the key', leadsTo: "L1-1B2C"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1C2B",
+        scenes: [
+            { image: '', speaker: "Guy from Layer 2", text: "Hah! You'll be stumped by this!" },
+            { puzzle: 'holesAndShapes'},
+            { image: '', speaker: "Guy from Layer 2", text: "Why, color me surprised. You really are that smart."},
+        ]
+    },
+
+
+    // Personal note to continue this here after the puzzle ensues
+
+    {
+        id: "L1-1C2C",
+        scenes: [
+            { image: '', speaker: "Guy from Layer 2", text: "..." },
+            {
+                image: '',
+                speaker: "Guy from Layer 2",
+                text: "Bro, come on, you gonna keep resorting to begging?",
+                options: [
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
+                    { text: 'Beg', leadsTo: "L1-1B2C-#2"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1C2C-#2",
+        scenes: [
+            {
+                image: '',
+                speaker: "Guy from Layer 2",
+                text: "Maybe animals like you don't understand the concept of earning what you want. Are you that dense? Do you need me to drill it in your head?",
+                options: [
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
+                    { text: 'Beg', leadsTo: "L1-1B2C-#3"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1C2C-#3",
+        scenes: [
+            // Rolls up his sleeves
+            { image: '', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
+            // Punching ensues - Different images of punching per scenes below
+            { image: '', speaker: "Guy from Layer 2", text: "Learn!", damage: 1},
+            { image: '', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
+            { image: '', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
+            // John lies on the ground, battered
+            { image: '', speaker: "John", text: "..." },
+            {
+                image: '',
+                speaker: "Guy from Layer 2",
+                text: "", // Left intentionally empty
+                options: [
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
+                    { text: 'Beg', leadsTo: "L1-1B2C-#4"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1C2C-#4",
+        scenes: [
+            // He stands above John's body, but has an angry expression
+            { image: '', speaker: "Guy from Layer 2", text: "...Why?!" },
+            { image: '', speaker: "Guy from Layer 2", text: "Why are you still begging?! You had the most brutal beatdown of your life, and yet you-!"},
+            { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!"},
+            // He angrily tosses the key next to his side
+            { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!"},
+            { image: '', speaker: "Narrator", text: "...He stomps away." },
+            // Back to John being beat up on the ground
+            { image: '', speaker: "John", text: "..." },
+            { image: '', speaker: "Narrator", text: "You got a key!" },
+            { image: '', speaker: "John", text: "yay.....", leadsTo: "L1-Ending"},
+        ]
+    },
+
+    {
+        id: "L1-Ending",
+        scenes: [
+            // Black screen
+            { image: '', speaker: "Narrator", text: "..." },
+            // Gate - John holding a colored key in his hands.
+            { image: '', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
+            { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this."},
+            { image: '', speaker: "John", text: "I guess all that's left is to use the key now."},
+            // The key is pushed into the gate.
+            { image: '', speaker: "John", text: "Well, here goes."},
+            { image: '', speaker: "Narrator", text: "..." },
+            // The gate opens.
+            { image: '', speaker: "Narrator", text: "..." },
+            // Back to John, who is now looking at the gate opening toward the endless light
+            { image: '', speaker: "John", text: "..." },
+            { image: '', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2"},
+        ]
+    },
+
+
+
+
+
+
+    {
+        id: "L2",
+        scenes: [
+            // Black screen
+            { image: '', speaker: "Narrator", text: "..." },
+            // John in a city - looks like he's in an anime. Only that he sticks out like a store thumb since he still looks like a stock image.
+            { image: '', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
+            // Gate - John holding a colored key in his hands.
+            { image: '', speaker: "John", text: "If things move this much in the higher world, I'm curious what it's like in the upper worlds." },
+            { image: '', speaker: "John", text: "Guess I'll get going, so I can get there as soon as possible-"},
+            { image: '', speaker: "???", text: "Woah, is that John Stock?!" },
+            { image: '', speaker: "???", text: "John Stock?! Where!? I've got to meet him!" },
+            { image: '', speaker: "John", text: "Wh-what..?" },
+            // Next thing he knows, there's a crowd of people (still all in animation style) bunching up all around him. John nervously raises his hands to try to ward them off.
+            // One of them is up at his face asking questions.
+            { image: '', speaker: "???", text: "John Stock! You gotta tell us about your adventures!" },
+            { image: '', speaker: "John", text: "Okay, slow down here for a moment! How do all of you know me?" },
+            { image: '', speaker: "???", text: "News spreads fast! People have seen you traversing the lands, and now you're here!" },
+            // Someone excitely shoves at John's side, really wanting to interject with a question
+            { image: '', speaker: "???", text: "John, I gotta get a photo! And you gotta tell us how you even found out about the border at the Zeroth layer!" },
+            { image: '', speaker: "John", text: "Okay, wait! Seriously, give me some room to speak!" },
+            { image: '', speaker: "John", text: "Before I answer any of your questions, I've just gotta know: where's the next border?" },
+            // The crowd falls apart - they make a path for an old man in an animated style. John is at the far right of the screen, and the old man. is clearly in view at the left.
+            // Long beard, top hat, and suit. He looks like the mayor.
+            { image: '', speaker: "???", text: "Next border, hmm?" },
+            { image: '', speaker: "John", text: "Yeah. Also, who are you?" },
+            { image: '', speaker: "Mayor", text: "I'm the mayor of this animated city. We have many here, and this land expands wider, much unlike the previous layers." },
+            { image: '', speaker: "John", text: "Great. More walking." },
+            { image: '', speaker: "Mayor", text: "Fret not, adventurer, you are at the last destination. As soon as you reach the limit, you meet your final challenge." },
+            { image: '', speaker: "John", text: "That's awesome. Can I get a key?" },
+            { image: '', speaker: "Mayor", text: "Ho ho ho! You don't need a key! You simply need to be worthy. That's why none of us have attempted to pass; the guardian that protects the gate heeds us a shattered heart." },
+            { image: '', speaker: "John", text: "...A guardian? You serious dude? Is there a knight with a sword blocking the gate?" },
+            { image: '', speaker: "Mayor", text: "...Yes, precisely like that." },
+            { image: '', speaker: "John", text: "bro" },
+            { image: '', speaker: "Mayor", text: "Fret not once more. We will all be supporting you, just like your mentor has been." },
+            { image: '', speaker: "John", text: "My mentor?" },
+            { image: '', speaker: "Mayor", text: "The little figure who had guided you to this point?" },
+            { image: '', speaker: "John", text: "Huh??? I mean, I met a guy, but it's not like he taught me anything-" },
+
+            { image: '', speaker: "Narrator", text: "People begin to cheer from the crowd." },
+            { image: '', speaker: "???", text: "Ah ha! I knew that was him! I had already given him so many gifts" },
+            { image: '', speaker: "???", text: "I gave him a full set of armor! Hopefully he reunites with John to open the gates for us all!" },
+            { image: '', speaker: "John", text: "What in the- my goodness." },
+        ]
+    },
+
+
+
 
 
 
     // L2 merchant dialogue plan:
-    // "What in the $2.99 license scam is this?!"
+    // "What kind of $40.99 license scam is this?!"
 ]
