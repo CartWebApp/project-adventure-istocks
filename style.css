@@ -125,6 +125,7 @@ button:hover {
     left: 10px;
     width: 260px;
     text-align: center;
+    text-wrap: nowrap;
 
     background-color: var(--main-black);
     color: var(--main-white);

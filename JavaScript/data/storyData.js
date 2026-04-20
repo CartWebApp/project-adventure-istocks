@@ -503,8 +503,7 @@ export const data = [
                 text: '...How do you want to approach this?',
                 options: [
                     { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
-                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
+                    { text: 'GIVE ME A JOB!!!', leadsTo: "1C2B3B4A5B" },
                 ]
             }
         ]
@@ -514,38 +513,210 @@ export const data = [
         id: "1C2B3C4A5A",
         scenes: [
             { puzzle: "Decipher" },
-            /* { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
-
-            {
-                image: '',
-                speaker: "Narrator",
-                text: '...How do you want to approach this?',
-                options: [
-                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
-                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
-                ]
-            } */
         ]
     },
+
+    /* Ryan self-note: after puzzle */
 
     {
         id: "1C2B3C4A5B",
         scenes: [
-            { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
+            { image: '', speaker: "Narrator", text: "Terrified by John's incomprehensible yelling, he runs off." },
+            { image: '', speaker: "John", text: "Oh." },
+            { image: '', speaker: "Narrator", text: "You attain nothing valuable from this...", leadsTo: "1C2B3C-4-5-6" }
+        ]
+    },
 
+    {
+        id: "1C2B3C4B",
+        scenes: [
+            { image: '', speaker: "Narrator", text: "John simply walks away, refusing to acknowledge the shadow." },
+            { image: '', speaker: "Narrator", text: "Alright, keep being sad, I guess..." },
+        ]
+    },
+
+    // Ryan self note: Uh, maybe I should expand 1C2B3C-3-5-6 options... and I need to do something about 1C-2B-3C-4C cause that is so useless right now
+
+
+
+
+
+    /* Layer 1 Interactions */
+
+    {
+        id: "L1",
+        scenes: [
+            // Black screen
+            { image: '', speaker: "Narrator", text: "..." },
+            // Image - the whole world looks like it'd been hand-drawn
+            { image: '', speaker: "Narrator", text: "John arrives through the portal." },
+            { image: '', speaker: "John", text: "Woah, this place is way different from where I live." },
+            { image: '', speaker: "John", text: "Things are actually moving... they're not still images! They're not conformed to predetermined poses!" },
+            { image: '', speaker: "John", text: "Okay, gotta admit that's pretty awesome." },
+
+            // Should time serve, I will add extra dialogue about John's hands here, but I'm realizing I need to be fast
+
+            { image: '', speaker: "John", text: "I've heard that there's higher worlds out there though, so I've got some exploring to do." },
             {
                 image: '',
-                speaker: "Narrator",
-                text: '...How do you want to approach this?',
+                speaker: "John",
+                text: 'Hmm, where should I start?',
                 options: [
-                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
-                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4A5B" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4A5C" },
+                    { text: 'Sleep somewhere nearby', leadsTo: "L1-1A", hideCondition: "Layer1Hotel" },
+                    { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass"},
+                    { text: 'Run straight for the next world', leadsTo: "L1-1C"},
+                    { text: 'Go to your friend\'s house', leadsTo: "L1-1D", condition: "madeAFriend"}, // If you went the 1C route
                 ]
             }
         ]
     },
 
-    
+    {
+        id: "L1-1A",
+        scenes: [
+            { image: '', speaker: "Narrator", text: "John find a nearby inn to rest." },
+            // At the front desk with a hand-drawn attendant
+            { image: '', speaker: "John", text: "Hey, can I sleep here?." },
+            { image: '', speaker: "Attendant", text: "Ho ho. Rest? Sleep? Recovery? It's yours my friend, as long as you have enough money." },
+            { image: '', speaker: "John", text: "...What?" },
+           
+            {
+                image: '',
+                speaker: "Narrator",
+                text: 'Pay?',
+                options: [
+                    { text: 'I\'ll just stay up man', leadsTo: "L1-1A2A", giveChoice: "layer1Hotel" }, // Depends on if you have money or not, also only visible first time you've looped here
+                    { text: 'Sure...', leadsTo: "L1-1A2B", useItem: "Money", giveChoice: "layer1Hotel"},
+                ]
+            }
+        ]
+    },   
+
+    {
+        id: "L1-1A2A",
+        scenes: [
+            { image: '', speaker: "John", text: "Uh, actually, I'm good, thanks." },
+            { image: '', speaker: "Attendant", text: "Come back when you're a little... mmm... richer!", leadsTo: 'L1' },
+        ]
+    }, 
+
+    {
+        id: "L1-1A2A",
+        scenes: [
+            { image: '', speaker: "Attendant", text: "Good choice, my friend!" },
+            { image: '', speaker: "John", text: "Yeah alright man."},
+            { image: '', speaker: "Narrator", text: "John rests up, and feels a little healthier.", heal: 1, leadsTo: 'L1'},
+        ]
+    },
+
+    {
+        id: "L1-1B",
+        scenes: [
+            { image: '', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
+            { image: '', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
+            { image: '', speaker: "John", text: "Really feels like I can move around more, though!" },
+            { image: '', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
+            { image: '', speaker: "Narrator", text: "By the time he notices, it's too late. John bumps into someone." },
+            { image: '', speaker: "John", text: "Ow! What the-" },
+            { image: '', speaker: "???", text: "WHAT THE?!-" },
+
+            // Introduce him - another hand-drawn person, though not drawn very well. He's drawn with squiggly lines and hardly has a defined body at all.
+            // The man's got an angry expression... which literally looks like a >:(
+            { image: '', speaker: "John", text: "Oooops... my bad, I'll just get going here-" },
+            { image: '', speaker: "???", text: "WHAT ARE YOU DOING HERE?! ROYALTY FREE MEN ARE NOT MEANT TO BE IN OUR WORLD." },
+            { image: '', speaker: "John", text: "Wha- hey! Highly offensive. And what's wrong with me being here?!" },
+            { image: '', speaker: "???", text: "WE ARE ADVANCED PEOPLE. YOU ARE THE LOWEST OF US ALL. YOU HAVE NO RIGHTS OVER YOUR OWN LIVES - ANYONE CAN USE YOU AS THEY PLEASE." },
+            { image: '', speaker: "John", text: "Alright, well why do you think I'm here then?! I'm tryna find some peace, dude." },
+            { image: '', speaker: "???", text: "UNACCEPTABLE. I WILL NOT ALLOW SUCH LOWLEY PERSONS TO GRACE OUR GROUNDS." },
+
+            // He raises his fists.
+            { image: '', speaker: "John", text: "...This guy's seriously about to throw hands with me." },
+
+            {
+                image: '',
+                speaker: "John",
+                text: 'I\'m not even as mobile as he is... do I take this on?',
+                options: [
+                    { text: 'Can we talk this out?', leadsTo: "L1-1B2A", giveCondition: "Layer1TouchedGrass"},
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1B2B", giveCondition: "Layer1TouchedGrass"},
+                    { text: 'Nah, but my dagger can', leadsTo: "L1-1B2C", useItem: "Dagger", giveCondition: "Layer1TouchedGrass"}, // If you went the 1C route
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-1B2A",
+        scenes: [
+            { image: '', speaker: "John", text: "Hey, I'm sure we can have a civil discussion. Let's just chill for a moment and talk, alright?" },
+            { image: '', speaker: "???", text: "WHAT COULD A THING LIKE YOU POSSIBLY SAY TO PERSUADE ME?" },
+            { image: '', speaker: "John", text: "Let's sit down and see." },
+
+            // Black screen
+            { image: '', speaker: "John", text: "..." },
+            { image: '', speaker: "John", text: "So because stock images are used by people universally around the world, we're not that bad, y'know?" },
+            { image: '', speaker: "???", text: "WHY... YOU..." },
+            // He punches down
+            { image: '', speaker: "John", text: "Ow!", damage: 1},
+            { image: '', speaker: "John", text: "Why did you do that?!" },
+            { image: '', speaker: "???", text: "I AGREED WITH WHAT YOU WERE SAYING AND I DID NOT LIKE THAT." },
+            { image: '', speaker: "John", text: "I- Whatever man! Leave now, alright?" },
+            { image: '', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day." },
+            // He leaves
+            { image: '', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
+            { image: '', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A"},
+        ]
+    },
+
+    {
+        id: "L1-1B2B",
+        scenes: [
+            { image: '', speaker: "John", text: "RAAGH!!!" },
+            { image: '', speaker: "Narrator", text: "You know what, it's pretty valid to expect to fight this time." },
+            { image: '', speaker: "Narrator", text: "I mean, that doesn't make it a good idea." },
+            { image: '', speaker: "Narrator", text: "They exchange blows, John taking more damage than the man does.", damage: 2 },
+
+            { image: '', speaker: "John", text: "However, he scares the man off to the point he flees." },
+            { image: '', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
+            { image: '', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
+            { image: '', speaker: "John", text: "Huh? seems like he dropped something on the ground, though..." },
+            { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
+            // He leaves
+            { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money"},
+            { image: '', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A"},
+        ]
+    },
+
+    {
+        id: "L1-1B2C",
+        scenes: [
+            // Black screen
+            { image: '', speaker: "Narrator", text: "You are about to see something very, very graphic." },
+            { image: '', speaker: "Narrator", text: "It involves a man stabbing another very violently." },
+            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people canoot witness this without puking.", damage: 2 },
+            { image: '', speaker: "Narrator", text: "Are you ready?" },
+
+            // The "t" thing is stabbed very poorly into the dude--a hole was scribbled into him and the dagger stabs inside. He's screaming.
+            { image: '', speaker: "Narrator", text: "..." },
+            { image: '', speaker: "???", text: "AUGH!!!!!!!!!!!!" },
+
+            // He collapses to the ground. John stares down at him.
+            { image: '', speaker: "John", text: "Shouldn't have messed around, man." },
+            { image: '', speaker: "John", text: "I wonder what loot you drop..." },
+
+            { image: '', speaker: "John", text: "Dang...",  getItem: "Money"},
+            { image: '', speaker: "John", text: "Dang! you're rich dude!", getItem: "Money" },
+            { image: '', speaker: "John", text: "Sick, thanks so much! You can keep the dagger. I don't think I can take that thing out of you anyways." },
+            { image: '', speaker: "John", text: "Wouldn't you agree?",  },
+
+            // Zoomed in image of his dead face: X_X
+            { image: '', speaker: "???", text: "X_X", leadsTo: "1A"},
+        ]
+    },
+
+
+
+
+    // L2 merchant dialogue plan:
+    // "What in the $2.99 license scam is this?!"
 ]
