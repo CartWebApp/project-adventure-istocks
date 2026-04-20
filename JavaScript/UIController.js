@@ -82,3 +82,7 @@ function nextScene() {
 /* Event Listeners */
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
+
+/* Auto Typing Dialogue Effect */
+
+/* Auto Typing Effect code will be placed here */

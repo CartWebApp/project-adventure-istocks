@@ -92,7 +92,6 @@ button:hover {
 #mainContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: stretch;
     padding-top:4em;
     gap:55px;
@@ -134,12 +133,12 @@ button:hover {
 
 #dialogueBoxStyle {
     font-size: 20px;
-    background-color: var(--main-white);
-    border: 10px solid var(--main-black);
+    border: 15px solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
+    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
-    width: 100%;
+    width:98.4%;
     height: 200px;
     justify-self: center;
 
@@ -158,6 +157,7 @@ button:hover {
     width: 284px;
     height: 98px;
     font-size: 30px;
+    justify-self:flex-end;
 }
 
 #next.hidden {
