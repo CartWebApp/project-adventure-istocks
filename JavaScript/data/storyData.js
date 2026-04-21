@@ -1121,8 +1121,10 @@ export const data = [
     {
         id: "L2-1B2A-End",
         scenes: [
-            { image: '', speaker: "John", text: "I'm good, thanks.",  },
-            { image: '', speaker: "Narrator", text: "John walks into the store.",  },
+            // John walking away
+            { image: '', speaker: "John", text: "Thanks for your scam, I guess...",  },
+            { image: '', speaker: "Merchant", text: "Heheh. Come again another time.",  },
+            { image: '', speaker: "John", text: "I guess.", leadsTo: "L2" },
         ]
     },
 
@@ -1200,7 +1202,19 @@ export const data = [
         ]
     },
 
-
+    {
+        id: "L2-1C",
+        scenes: [
+            { image: '', speaker: "John", text: "I guess.", leadsTo: "L2" },
+            {
+                image: '', speaker: "John", text: "Nuh uh.", // Left intentionally empty
+                options: [
+                    { text: 'Of course', leadsTo: "L2-1B2A"},
+                    { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction"},
+                ]
+            }
+        ]
+    },
 
 
     // L2 merchant dialogue plan:
