@@ -27,15 +27,15 @@ export const data = [
             { image: 'images/Visuals/Intro/john image 1 1.png', speaker: "Narrator", text: "He walks a long, boring trail until he reaches his office." },
             { image: 'images/Visuals/Intro/john-facing-restock.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
             { image: 'images/Visuals/Intro/low-budget-man-raising-hand.jpg', speaker: "???", text: "Wait!" },
-            { image: 'images/Visuals/Intro/john-meets-hooded-man1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
+            { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
             // Change image here
             { image: 'images/Visuals/Intro/john-meets-hooded-man1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
-            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "???", text: "You there. How are you this evening?" },
-            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "John", text: "Err... fine, I guess." },
-            { image: 'images/Visuals/Intro/low-budget-man-and-john-stock-interacting.jpg', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },
+            { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "You there. How are you this evening?" },
+            { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "John", text: "Err... fine, I guess." },
+            { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },
 
             {
-                image: 'images/Visuals/Intro/what-should-john-do.jpg',
+                image: 'images/Visuals/Intro/what-should-john-do 1.jpg',
                 text: 'This is probably the fishiest encounter you could ever have. Do you wanna listen to this dude?',
                 options: [
                     { text: "Listen to him", leadsTo: "1A2A" },
@@ -48,23 +48,23 @@ export const data = [
     {
         id: "1A2A",
         scenes: [
-            { image: 'images/Visuals/', speaker: "Narrator", text: "The man takes you by the wrist. His grip is... thin, if that even makes sense. He guides you behind an alley." },
-            { image: 'images/Visuals/', speaker: "???", text: "Congratulations. You have been chosen to learn the truth of your world." },
-            { image: 'images/Visuals/', speaker: "John", text: "The what now?" },
-            { image: 'images/Visuals/', speaker: "???", text: "How foolishly blind you are to it. Don't you realize how still and monotonous your world is? It's as if you are all perfectly aligned stocks puppetered by a greater hand." },
-            { image: 'images/Visuals/', speaker: "John", text: "My fellow watermarked man, what are you on about? This is how I've lived my whole life. I don't see anything wrong with the way I live." },
-            { image: 'images/Visuals/', speaker: "???", text: "Not until you realize what lies beyond this world." },
-            { image: 'images/Visuals/', speaker: "John", text: "..." },
-            { image: 'images/Visuals/', speaker: "John", text: "Look dude, I got a job to get to, so can you stop vaguely skimming the line of your argument and get to the point?" },
-            { image: 'images/Visuals/', speaker: "Narrator", text: "The hooded man chuckles to himself." },
-            { image: 'images/Visuals/', speaker: "???", text: "Alright then. Don't say I didn't warn you." },
-            { image: 'images/Visuals/', speaker: "Narrator", text: "Then, he unmasks himself..." },
+            { image: 'images/Visuals/Intro/low-budget-man-holding-johns-hand 1.jpg', speaker: "Narrator", text: "The man takes you by the wrist. His grip is... thin, if that even makes sense. He guides you behind an alley." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "???", text: "Congratulations. You have been chosen to learn the truth of your world." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "The what now?" },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "???", text: "How foolishly blind you are to it. Don't you realize how still and monotonous your world is? It's as if you are all perfectly aligned stocks puppetered by a greater hand." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "My fellow watermarked man, what are you on about? This is how I've lived my whole life. I don't see anything wrong with the way I live." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "???", text: "Not until you realize what lies beyond this world." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg/', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "Look dude, I got a job to get to, so can you stop vaguely skimming the line of your argument and get to the point?" },
+            { image: 'images/Visuals/Intro/low-budget-man-sadness 1.jpg', speaker: "Narrator", text: "The hooded man chuckles to himself." },
+            { image: 'images/Visuals/low-budget-man-sadness 1.jpg', speaker: "???", text: "Alright then. Don't say I didn't warn you." },
+            { image: 'images/Visuals/Intro/low budget man being depressed.jpg', speaker: "Narrator", text: "Then, he unmasks himself..." },
 
             // Black screen
-            { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
 
             // Image of him with his hood off --- stickman in a hoodie!!!!
-            { image: 'images/Visuals/Intro/low-budget-man-real-self.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/low budget man being depressed (1).jpg', speaker: "Narrator", text: "..." },
 
             // Image of them staring at each other
             { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
@@ -951,4 +951,5 @@ export const data = [
 
     // L2 merchant dialogue plan:
     // "What kind of $40.99 license scam is this?!"
+    // "That's peak." - Mateo Siechert 4/21/2026 1:22 P.M PST @ Center for Advanced Research and Technology (CART)
 ]

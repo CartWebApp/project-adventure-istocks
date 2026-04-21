@@ -105,6 +105,7 @@ button:hover {
     border: 10px solid #2E2E2E;
     max-width: 950px;
     align-self: center;
+    background-position:static;
 
 }
 
