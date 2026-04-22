@@ -45,6 +45,8 @@ export const data = [
         ]
     },
 
+    // Scene Images here are now mostly done, still needs polishing but mostly complete!
+
     {
         id: "1A2A",
         scenes: [
@@ -64,21 +66,21 @@ export const data = [
             { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
 
             // Image of him with his hood off --- stickman in a hoodie!!!!
-            { image: 'images/Visuals/Intro/low budget man being depressed (1).jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/low-budget-man-exposed 1.jpg', speaker: "Narrator", text: "..." },
 
             // Image of them staring at each other
-            { image: 'images/Visuals/', speaker: "Narrator", text: "..." },
-            { image: 'images/Visuals/', speaker: "John", text: "What... are you?" },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "Why, call me Low-Budget man. That is what they would call me in the world I descended from." },
-            { image: 'images/Visuals/', speaker: "John", text: "Why do you have such a self-deprecating name..?" },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "That's what they call all of us- look, surely you see now something is astray." },
-            { image: 'images/Visuals/', speaker: "John", text: "Dang. I guess so. You look real weird, buddy." },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "Let me inform you of the rest then." },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "The universe we reside in has several connected layers, extending up to Layer 3." },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "Each layer offers you a greater freedom than the last—and you, my friend, unfortunately reside in the zeroth, where you are blissfully unaware of the existence of the layers." },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "I come from the first, but I have been banished. They sought unfair punishment against me. So now, I come here to offer others like you to take my place, and perhaps rise higher than I have." },
-            { image: 'images/Visuals/', speaker: "John", text: "...Sounds rough. And crazy. I don't even know if I should believe all of that." },
-            { image: 'images/Visuals/', speaker: "Low-Budget Man", text: "Follow my words, and I will show you the evidence." },
+            { image: 'images/Visuals/Intro/low-budget-man-exposed 1.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "What... are you?" },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Why, call me Low-Budget man. That is what they would call me in the world I descended from." },
+            { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "Why do you have such a self-deprecating name..?" },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "That's what they call all of us- look, surely you see now something is astray." },
+            { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "Dang. I guess so. You look real weird, buddy." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Let me inform you of the rest then." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "The universe we reside in has several connected layers, extending up to Layer 3." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Each layer offers you a greater freedom than the last—and you, my friend, unfortunately reside in the zeroth, where you are blissfully unaware of the existence of the layers." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "I come from the first, but I have been banished. They sought unfair punishment against me. So now, I come here to offer others like you to take my place, and perhaps rise higher than I have." },
+            { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "...Sounds rough. And crazy. I don't even know if I should believe all of that." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Follow my words, and I will show you the evidence." },
 
             {
                 image: '',
@@ -97,10 +99,10 @@ export const data = [
         id: "1A2A3A",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "Low-Budget Man convinces John to have him follow him... again." },
-            { image: '', speaker: "Low-Budget Man", text: "You'll slap yourself for never thinking of this." },
-            { image: '', speaker: "Narrator", text: "You follow Low-Budget man to somewhere you've never gone before. Usually, it had always been the same concrete sidewalk simply going to work, then immediately back home." },
-            { image: '', speaker: "Narrator", text: "But today... John walks onto grass." },
+            { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "Low-Budget Man convinces John to have him follow him... again." },
+            { image: 'images/Visuals/Intro/low-budget-man-speaking 1.jpg', speaker: "Low-Budget Man", text: "You'll slap yourself for never thinking of this." },
+            { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "You follow Low-Budget man to somewhere you've never gone before. Usually, it had always been the same concrete sidewalk simply going to work, then immediately back home." },
+            { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "But today... John walks onto grass." },
             { image: '', speaker: "Narrator", text: "And before he knows it.." },
 
             // Now an actual visual appears - Them at the border
