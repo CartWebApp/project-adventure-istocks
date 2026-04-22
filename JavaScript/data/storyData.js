@@ -26,16 +26,17 @@ export const data = [
             { image: 'images/Visuals/Intro/John-job-searching.jpg', speaker: "Narrator", text: "John is a Good Person so he brushes his teeth, gets, dressed, and begins his commute to his work office at ReStock facilities." },
             { image: 'images/Visuals/Intro/john image 1 1.png', speaker: "Narrator", text: "He walks a long, boring trail until he reaches his office." },
             { image: 'images/Visuals/Intro/john-facing-restock.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
-            { image: 'images/Visuals/Intro/low-budget-man-raising-hand.jpg', speaker: "???", text: "Wait!" },
+            { image: 'images/Visuals/Intro/low-budget-man-raising-hand 1.jpg', speaker: "???", text: "Wait!" },
             { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
             // Change image here
-            { image: 'images/Visuals/Intro/john-meets-hooded-man1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
+            { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "You there. How are you this evening?" },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "John", text: "Err... fine, I guess." },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },
 
             {
                 image: 'images/Visuals/Intro/what-should-john-do 1.jpg',
+                speaker: "Narrator",
                 text: 'This is probably the fishiest encounter you could ever have. Do you wanna listen to this dude?',
                 options: [
                     { text: "Listen to him", leadsTo: "1A2A" },
@@ -45,7 +46,7 @@ export const data = [
         ]
     },
 
-    // Scene Images here are now mostly done, still needs polishing but mostly complete!
+    // Scene Images are now complete in section 1! - Mateo
 
     {
         id: "1A2A",
@@ -56,10 +57,10 @@ export const data = [
             { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "???", text: "How foolishly blind you are to it. Don't you realize how still and monotonous your world is? It's as if you are all perfectly aligned stocks puppetered by a greater hand." },
             { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "My fellow watermarked man, what are you on about? This is how I've lived my whole life. I don't see anything wrong with the way I live." },
             { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "???", text: "Not until you realize what lies beyond this world." },
-            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg/', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "..." },
             { image: 'images/Visuals/Intro/john and low budget man interacting.jpg', speaker: "John", text: "Look dude, I got a job to get to, so can you stop vaguely skimming the line of your argument and get to the point?" },
             { image: 'images/Visuals/Intro/low-budget-man-sadness 1.jpg', speaker: "Narrator", text: "The hooded man chuckles to himself." },
-            { image: 'images/Visuals/low-budget-man-sadness 1.jpg', speaker: "???", text: "Alright then. Don't say I didn't warn you." },
+            { image: 'images/Visuals/Intro/low-budget-man-sadness 1.jpg', speaker: "???", text: "Alright then. Don't say I didn't warn you." },
             { image: 'images/Visuals/Intro/low budget man being depressed.jpg', speaker: "Narrator", text: "Then, he unmasks himself..." },
 
             // Black screen
@@ -75,16 +76,17 @@ export const data = [
             { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "Why do you have such a self-deprecating name..?" },
             { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "That's what they call all of us- look, surely you see now something is astray." },
             { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "Dang. I guess so. You look real weird, buddy." },
-            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Let me inform you of the rest then." },
-            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "The universe we reside in has several connected layers, extending up to Layer 3." },
-            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Each layer offers you a greater freedom than the last—and you, my friend, unfortunately reside in the zeroth, where you are blissfully unaware of the existence of the layers." },
-            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "I come from the first, but I have been banished. They sought unfair punishment against me. So now, I come here to offer others like you to take my place, and perhaps rise higher than I have." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low Budget Man", text: "Let me inform you of the rest then." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low Budget Man", text: "The universe we reside in has several connected layers, extending up to Layer 3." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low Budget Man", text: "Each layer offers you a greater freedom than the last—and you, my friend, unfortunately reside in the zeroth, where you are blissfully unaware of the existence of the layers." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low Budget Man", text: "I come from the first, but I have been banished. They sought unfair punishment against me. So now, I come here to offer others like you to take my place, and perhaps rise higher than I have." },
             { image: 'images/Visuals/Intro/john-stock-centered 1.jpg', speaker: "John", text: "...Sounds rough. And crazy. I don't even know if I should believe all of that." },
-            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low-Budget Man", text: "Follow my words, and I will show you the evidence." },
+            { image: 'images/Visuals/Intro/low-budget-man-centered 1.jpg', speaker: "Low Budget Man", text: "Follow my words, and I will show you the evidence." },
 
             {
                 image: '',
-                text: 'Should John heed the words of Low-Budget Man?',
+                text: 'Should John heed the words of Low Budget Man?',
+                speaker: 'Narrator',
                 options: [
                     { text: "Yes, we probably should...", leadsTo: "1A2A3A" },
                     { text: "Let's fight, nerd.", leadsTo: "1A2A3B", },
@@ -100,24 +102,24 @@ export const data = [
         scenes: [
             // Black screen
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "Low-Budget Man convinces John to have him follow him... again." },
-            { image: 'images/Visuals/Intro/low-budget-man-speaking 1.jpg', speaker: "Low-Budget Man", text: "You'll slap yourself for never thinking of this." },
+            { image: 'images/Visuals/Intro/low-budget-man-speaking 1.jpg', speaker: "Low Budget Man", text: "You'll slap yourself for never thinking of this." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "You follow Low-Budget man to somewhere you've never gone before. Usually, it had always been the same concrete sidewalk simply going to work, then immediately back home." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "But today... John walks onto grass." },
-            { image: '', speaker: "Narrator", text: "And before he knows it.." },
+            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "And before he knows it.." },
 
             // Now an actual visual appears - Them at the border
-            { image: '', speaker: "Low-Budget Man", text: "Here we are." },
-            { image: '', speaker: "John", text: "What... is that?" },
-            { image: '', speaker: "Low-Budget Man", text: "The border between your world and Layer 1. They are fairly simple distances apart, but no one usually has the mind to travel toward them; not here, at least." },
-            { image: '', speaker: "Narrator", text: "Low-Budget man taps your shoulder and hands you something." },
-            { image: '', speaker: "Low-Budget Man", text: "You are to travel through here and begin your path to freedom. To help you, I've got you a gift." },
+            { image: 'images/Visuals/Intro/low-budget-man-john-stock-at-border 1.jpg', speaker: "Low-Budget Man", text: "Here we are." },
+            { image: 'images/Visuals/Intro/john-solo-at-border 1.jpg', speaker: "John", text: "What... is that?" },
+            { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "The border between your world and Layer 1. They are fairly simple distances apart, but no one usually has the mind to travel toward them; not here, at least." },
+            { image: 'images/Visuals/Intro/low-budget-man-john-stock-at-border 1.jpg', speaker: "Narrator", text: "Low-Budget man taps your shoulder and hands you something." },
+            { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "You are to travel through here and begin your path to freedom. To help you, I've got you a gift." },
 
             // Image of the object
             { image: '', speaker: "Narrator", text: "", getItem: "Dagger" },
 
             // John looks at the object in his hand, confused
-            { image: '', speaker: "John", text: "Why did you give me a letter t?" },
-            { image: '', speaker: "Low-Budget Man", text: "That's a dagger. Clearly you've never drawn in your life." },
+            { image: 'images/Visuals/Intro/john-stock-holding-sword 1.jpg', speaker: "John", text: "Why did you give me a letter t?" },
+            { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "That's a dagger. Clearly you've never drawn in your life." },
             { image: '', speaker: "John", text: "What is drawing." },
             { image: '', speaker: "Low-Budget Man", text: "I should have expected that. Fear not, for you will learn." },
 
