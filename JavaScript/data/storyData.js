@@ -762,9 +762,9 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: 'Well?! Pick your poison!',
                 options: [
-                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1C2A"},
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
-                    { text: 'Keep begging to have the key', leadsTo: "L1-1B2C"}, // If you went the 1C route
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1C2A" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
+                    { text: 'Keep begging to have the key', leadsTo: "L1-1B2C" }, // If you went the 1C route
                 ]
             }
         ]
@@ -777,7 +777,7 @@ export const data = [
             { image: '', speaker: "Narrator", text: "Are you serious?! The dude has muscles!" },
 
             // Yeah John gets beat up
-            { image: '', speaker: "Guy from Layer 2", text: "Wow! I didn't think anyone could be stupid as you are!", damage: 2},
+            { image: '', speaker: "Guy from Layer 2", text: "Wow! I didn't think anyone could be stupid as you are!", damage: 2 },
             { image: '', speaker: "Guy from Layer 2", text: "You know what, I applaud your bravo. I didn't know losers could fight back." },
             { image: '', speaker: "Guy from Layer 2", text: "Of course, That doesn't mean I'm gonna give this key for free. It just makes me more intrigued to see how you'll struggle in my little game." },
             {
@@ -785,8 +785,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: 'Come on now, get up!',
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
-                    { text: 'Beg to have the key', leadsTo: "L1-1B2C"}, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
+                    { text: 'Beg to have the key', leadsTo: "L1-1B2C" }, // If you went the 1C route
                 ]
             }
         ]
@@ -796,8 +796,8 @@ export const data = [
         id: "L1-1C2B",
         scenes: [
             { image: '', speaker: "Guy from Layer 2", text: "Hah! You'll be stumped by this!" },
-            { puzzle: 'holesAndShapes'},
-            { image: '', speaker: "Guy from Layer 2", text: "Why, color me surprised. You really are that smart."},
+            { puzzle: 'holesAndShapes' },
+            { image: '', speaker: "Guy from Layer 2", text: "Why, color me surprised. You really are that smart." },
         ]
     },
 
@@ -813,8 +813,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Bro, come on, you gonna keep resorting to begging?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
-                    { text: 'Beg', leadsTo: "L1-1B2C-#2"}, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
+                    { text: 'Beg', leadsTo: "L1-1B2C-#2" }, // If you went the 1C route
                 ]
             }
         ]
@@ -828,8 +828,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Maybe animals like you don't understand the concept of earning what you want. Are you that dense? Do you need me to drill it in your head?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
-                    { text: 'Beg', leadsTo: "L1-1B2C-#3"}, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
+                    { text: 'Beg', leadsTo: "L1-1B2C-#3" }, // If you went the 1C route
                 ]
             }
         ]
@@ -841,7 +841,7 @@ export const data = [
             // Rolls up his sleeves
             { image: '', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
             // Punching ensues - Different images of punching per scenes below
-            { image: '', speaker: "Guy from Layer 2", text: "Learn!", damage: 1},
+            { image: '', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
             { image: '', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
             { image: '', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
             // John lies on the ground, battered
@@ -851,8 +851,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "", // Left intentionally empty
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B"},
-                    { text: 'Beg', leadsTo: "L1-1B2C-#4"}, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
+                    { text: 'Beg', leadsTo: "L1-1B2C-#4" }, // If you went the 1C route
                 ]
             }
         ]
@@ -863,15 +863,15 @@ export const data = [
         scenes: [
             // He stands above John's body, but has an angry expression
             { image: '', speaker: "Guy from Layer 2", text: "...Why?!" },
-            { image: '', speaker: "Guy from Layer 2", text: "Why are you still begging?! You had the most brutal beatdown of your life, and yet you-!"},
-            { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!"},
+            { image: '', speaker: "Guy from Layer 2", text: "Why are you still begging?! You had the most brutal beatdown of your life, and yet you-!" },
+            { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!" },
             // He angrily tosses the key next to his side
-            { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!"},
+            { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!" },
             { image: '', speaker: "Narrator", text: "...He stomps away." },
             // Back to John being beat up on the ground
             { image: '', speaker: "John", text: "..." },
             { image: '', speaker: "Narrator", text: "You got a key!" },
-            { image: '', speaker: "John", text: "yay.....", leadsTo: "L1-Ending"},
+            { image: '', speaker: "John", text: "yay.....", leadsTo: "L1-Ending" },
         ]
     },
 
@@ -882,16 +882,16 @@ export const data = [
             { image: '', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
             { image: '', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
-            { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this."},
-            { image: '', speaker: "John", text: "I guess all that's left is to use the key now."},
+            { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
+            { image: '', speaker: "John", text: "I guess all that's left is to use the key now." },
             // The key is pushed into the gate.
-            { image: '', speaker: "John", text: "Well, here goes."},
+            { image: '', speaker: "John", text: "Well, here goes." },
             { image: '', speaker: "Narrator", text: "..." },
             // The gate opens.
             { image: '', speaker: "Narrator", text: "..." },
             // Back to John, who is now looking at the gate opening toward the endless light
             { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2"},
+            { image: '', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2" },
         ]
     },
 
@@ -909,7 +909,7 @@ export const data = [
             { image: '', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
             // Gate - John holding a colored key in his hands.
             { image: '', speaker: "John", text: "If things move this much in the higher world, I'm curious what it's like in the upper worlds." },
-            { image: '', speaker: "John", text: "Guess I'll get going, so I can get there as soon as possible-"},
+            { image: '', speaker: "John", text: "Guess I'll get going, so I can get there as soon as possible-" },
             { image: '', speaker: "???", text: "Woah, is that John Stock?!" },
             { image: '', speaker: "???", text: "John Stock?! Where!? I've got to meet him!" },
             { image: '', speaker: "John", text: "Wh-what..?" },
@@ -926,7 +926,7 @@ export const data = [
             // Long beard, top hat, and suit. He looks like the mayor.
             { image: '', speaker: "???", text: "Next border, hmm?" },
             { image: '', speaker: "John", text: "Yeah. Also, who are you?" },
-            { image: '', speaker: "Mayor", text: "I'm the mayor of this animated city. We have many here, and this land expands wider, much unlike the previous layers." },
+            { image: '', speaker: "Mayor", text: "I'm the mayor of this animated city, of this layer which we call the Animation. We have many here, and this land expands wider, much unlike the previous layers." },
             { image: '', speaker: "John", text: "Great. More walking." },
             { image: '', speaker: "Mayor", text: "Fret not, adventurer, you are at the last destination. As soon as you reach the limit, you meet your final challenge." },
             { image: '', speaker: "John", text: "That's awesome. Can I get a key?" },
@@ -956,10 +956,10 @@ export const data = [
                 text: "Alright then. What should I do now..?",
                 options: [
                     { text: 'Rest somewhere nearby', leadsTo: "L2-1A", useItem: "Money", },
-                    { text: 'Stroll around the city', leadsTo: "L2-1B"},
-                    { text: 'Bolt for the Border', leadsTo: "L2-1C"},
+                    { text: 'Stroll around the city', leadsTo: "L2-1B" },
+                    { text: 'Bolt for the Border', leadsTo: "L2-1C" },
                 ]
-            } 
+            }
         ]
     },
 
@@ -972,17 +972,17 @@ export const data = [
             { image: '', speaker: "Narrator", text: "..." },
             { image: '', speaker: "John", text: "Uh... who are you guys?" },
             { image: '', speaker: "Narrator", text: "They remain unnervingly silent, staring into John's soul." },
-            
+
             {
                 image: '',
                 speaker: "John",
-                text: "Uhm...", 
+                text: "Uhm...",
                 options: [
-                    { text: 'What do you want?', leadsTo: "L2-1A2A"},
-                    { text: 'Not interested.', leadsTo: "L2-1A2B", giveCondition: "unfriendlyInteraction"},
-                    { text: 'Let\'s Fight, nerds', leadsTo: "L2-1A2C", giveCondition: "unfriendlyInteraction"},
+                    { text: 'What do you want?', leadsTo: "L2-1A2A" },
+                    { text: 'Not interested.', leadsTo: "L2-1A2B", giveCondition: "unfriendlyInteraction" },
+                    { text: 'Let\'s Fight, nerds', leadsTo: "L2-1A2C", giveCondition: "unfriendlyInteraction" },
                 ]
-            } 
+            }
         ]
     },
 
@@ -1025,9 +1025,9 @@ export const data = [
             { image: '', speaker: "Narrator", text: "The men depart, and John is finally allowed to rest." },
 
             // 
-            { image: '', speaker: "Narrator", text: "[...John is sleeping.]"},
-            { image: '', speaker: "Narrator", text: "[i don't know what else to say]"},
-            { image: '', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2"},
+            { image: '', speaker: "Narrator", text: "[...John is sleeping.]" },
+            { image: '', speaker: "Narrator", text: "[i don't know what else to say]" },
+            { image: '', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2" },
         ]
     },
 
@@ -1045,7 +1045,7 @@ export const data = [
             { image: '', speaker: "John", text: "Thank god. Now let me sleep!" },
 
             // Black screen
-            { image: '', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2"},
+            { image: '', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2" },
         ]
     },
 
@@ -1056,8 +1056,8 @@ export const data = [
             { image: '', speaker: "John", text: "RAAGH!!" },
             { image: '', speaker: "Narrator", text: "You gotta start controlling your violent tendencies, dude." },
             { image: '', speaker: "Narrator", text: "John gets beat up, and the people flee.", damage: 1 },
-            { image: '', speaker: "Narrator", text: "As a result of your actions, John cannot sleep well."},
-            { image: '', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2"},
+            { image: '', speaker: "Narrator", text: "As a result of your actions, John cannot sleep well." },
+            { image: '', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2" },
         ]
     },
 
@@ -1066,18 +1066,18 @@ export const data = [
         scenes: [
 
             { image: '', speaker: "Narrator", text: "As John walks along the city, he hears a voice call out to him." },
-            { image: '', speaker: "???", text: "Hey, John! Over here, in this store! I've got some stuff for you."},
-            { image: '', speaker: "John", text: "Woah. Free stuff?"},
-            { image: '', speaker: "???", text: "Free."},
-            { image: '', speaker: "John", text: "Hmmmmmm........"},
+            { image: '', speaker: "???", text: "Hey, John! Over here, in this store! I've got some stuff for you." },
+            { image: '', speaker: "John", text: "Woah. Free stuff?" },
+            { image: '', speaker: "???", text: "Free." },
+            { image: '', speaker: "John", text: "Hmmmmmm........" },
 
             {
                 image: '',
                 speaker: "John",
                 text: "What do you think? Should I go to this really awesome store with more free stuff with me?",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-1",},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-1", },
                 ]
             }
         ]
@@ -1086,35 +1086,35 @@ export const data = [
     {
         id: "L2-1B2A",
         scenes: [
-            { image: '', speaker: "John", text: "Oh yeah! Lemme get some of that free stuff.",  },
-            { image: '', speaker: "Narrator", text: "John walks into the store.",  },
+            { image: '', speaker: "John", text: "Oh yeah! Lemme get some of that free stuff.", },
+            { image: '', speaker: "Narrator", text: "John walks into the store.", },
             // Black screen
-            { image: '', speaker: "John", text: "...Hello? Why's it so dark in here?",  },
-            { image: '', speaker: "???", text: "Aha... welcome, John. Come see my wares.",  },
+            { image: '', speaker: "John", text: "...Hello? Why's it so dark in here?", },
+            { image: '', speaker: "???", text: "Aha... welcome, John. Come see my wares.", },
             // John in the store with a merchant in eccentric magician's clothing. He is looking at the items for sale.
-            { image: '', speaker: "Narrator", text: "He pulls a string, and the lights flicker on.",  },
-            { image: '', speaker: "John", text: "Woah. You're a merchant? Your free stuff is cool!",  },
-            { image: '', speaker: "Merchant", text: "Of course. Please take as you would like.",  },
+            { image: '', speaker: "Narrator", text: "He pulls a string, and the lights flicker on.", },
+            { image: '', speaker: "John", text: "Woah. You're a merchant? Your free stuff is cool!", },
+            { image: '', speaker: "Merchant", text: "Of course. Please take as you would like.", },
             // John reaches for some strange tool in the shape of an eraser.
-            { image: '', speaker: "John", text: "How about this?",  },
+            { image: '', speaker: "John", text: "How about this?", },
             // But suddenly, the merchant lunges forth and grabs John by the hand.
-            { image: '', speaker: "Merchant", text: "Wait!",  },
-            { image: '', speaker: "John", text: "Huh?",  },
-            { image: '', speaker: "Merchant", text: "You can't take that. It costs money",  },
-            { image: '', speaker: "John", text: "...I thought you said everything was free.",  },
-            { image: '', speaker: "Merchant", text: "Of course. Free for a price of $20 dollars.",  },
-            { image: '', speaker: "John", text: "Wh- What kind of free download online for a premium license kinda scheme is this?!",  },
-            { image: '', speaker: "Merchant", text: "You're already here. Do you have money to buy anything?",  },
-            { image: '', speaker: "John", text: "...I was kind of expecting to not have to buy anything.",  },
-            { image: '', speaker: "Merchant", text: "Doesn't matter. I assure what I sell will be of use to you, but I will certainly be earning my money's worth.",  },
+            { image: '', speaker: "Merchant", text: "Wait!", },
+            { image: '', speaker: "John", text: "Huh?", },
+            { image: '', speaker: "Merchant", text: "You can't take that. It costs money", },
+            { image: '', speaker: "John", text: "...I thought you said everything was free.", },
+            { image: '', speaker: "Merchant", text: "Of course. Free for a price of $20 dollars.", },
+            { image: '', speaker: "John", text: "Wh- What kind of free download online for a premium license kinda scheme is this?!", },
+            { image: '', speaker: "Merchant", text: "You're already here. Do you have money to buy anything?", },
+            { image: '', speaker: "John", text: "...I was kind of expecting to not have to buy anything.", },
+            { image: '', speaker: "Merchant", text: "Doesn't matter. I assure what I sell will be of use to you, but I will certainly be earning my money's worth.", },
             {
                 image: '',
                 speaker: "Merchant",
                 text: "Now, choose what you need.",
                 options: [
-                    { text: 'The Eraser',},
-                    { text: 'Good-Luck Charm',},
-                    { text: 'I\'m alright now', leadsTo: "L2-1B2A-End"},
+                    { text: 'The Eraser', },
+                    { text: 'Good-Luck Charm', },
+                    { text: 'I\'m alright now', leadsTo: "L2-1B2A-End" },
                 ]
             }
         ]
@@ -1124,8 +1124,8 @@ export const data = [
         id: "L2-1B2A-End",
         scenes: [
             // John walking away
-            { image: '', speaker: "John", text: "Thanks for your scam, I guess...",  },
-            { image: '', speaker: "Merchant", text: "Heheh. Come again another time.",  },
+            { image: '', speaker: "John", text: "Thanks for your scam, I guess...", },
+            { image: '', speaker: "Merchant", text: "Heheh. Come again another time.", },
             { image: '', speaker: "John", text: "I guess.", leadsTo: "L2" },
         ]
     },
@@ -1137,8 +1137,8 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Hm.... iunno. Think about how long it took me to walk here.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-2",},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-2", },
                 ]
             }
         ]
@@ -1149,8 +1149,8 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Yeah, but then I'd have to turn away from the store... and get my legs to move again...",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-3",},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-3", },
                 ]
             }
         ]
@@ -1161,8 +1161,8 @@ export const data = [
             {
                 image: '', speaker: "John", text: "This all just kind of feels like a waste of time, doesn't it?",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-Loop1",},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop1", },
                 ]
             }
         ]
@@ -1173,8 +1173,8 @@ export const data = [
             {
                 image: '', speaker: "John", text: "I'm not gonna do that.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-Loop2", giveCondition: "unfriendlyInteraction"},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop2", giveCondition: "unfriendlyInteraction" },
                 ]
             }
         ]
@@ -1183,10 +1183,10 @@ export const data = [
         id: "L2-1B2B-Loop2",
         scenes: [
             {
-                image: '', speaker: "John", text: "Nope.", // Left intentionally empty
+                image: '', speaker: "John", text: "Nope.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-Loop3", giveCondition: "unfriendlyInteraction"},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop3", giveCondition: "unfriendlyInteraction" },
                 ]
             }
         ]
@@ -1195,10 +1195,10 @@ export const data = [
         id: "L2-1B2B-Loop3",
         scenes: [
             {
-                image: '', speaker: "John", text: "Nuh uh.", // Left intentionally empty
+                image: '', speaker: "John", text: "Nuh uh.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction"},
+                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction" },
                 ]
             }
         ]
@@ -1207,18 +1207,182 @@ export const data = [
     {
         id: "L2-1C",
         scenes: [
-            { image: '', speaker: "John", text: "I guess.", leadsTo: "L2" },
+            { image: '', speaker: "Narrator", text: "With what is assumed to all be done, John heads for the border to meet his final challenge." },
+            { image: '', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
+            { image: '', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
+            // John on a mountain looks at the barrier - A titan with seraph wings and a flaming greatsword guards the miniature border.
+            { image: '', speaker: "Narrator", text: "...Of course, the guardian." },
+            { image: '', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
+            // Now John, hardly even the side of one of the titan's fingers, stands below it. He looks above it as the titan looks down at him with its mighty greatsword pierced into the Earth.
+            { image: '', speaker: "Guardian", text: "...Welcome, John Stock." },
+            { image: '', speaker: "John", text: "...Hey. You look swell." },
+            { image: '', speaker: "Guardian", text: "I presume you are here solely to pass this border." },
+            { image: '', speaker: "John", text: "How'd you know, man? What do you think I've been doing, getting through all the other borders before this?" },
+            { image: '', speaker: "Guardian", text: "Very well. We shall not waste time in scrutinizing your worth." },
+            { image: '', speaker: "Guardian", text: "You will be tested for the trials you have faced on this journey - If you are to fail, you will be rightfully punished." },
+            { image: '', speaker: "Guardian", text: "Survive the preliminary audit, and the test shall truly begin." },
             {
-                image: '', speaker: "John", text: "Nuh uh.", // Left intentionally empty
+                image: '', speaker: "Guardian", text: "Shall you accept these trials?", // Left intentionally empty
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A"},
-                    { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction"},
+                    { text: 'Beg to have the key', leadsTo: "L2-1C2A" },
+                    { text: 'Yes, I\'m ready', leadsTo: "Climax" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L2-1C2B" },
                 ]
             }
         ]
     },
 
+    {
+        id: "L2-1C",
+        scenes: [
+            { image: '', speaker: "John", text: "Please guardian I need this..." },
+            { image: '', speaker: "John", text: "My download is kinda licenseless..." },
+            { image: '', speaker: "Guardian", text: "..." },
+            // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
+            { image: '', speaker: "Guardian", text: "" },
+            { gameOver: "You didn't come here just to earn your way to victory." },
+        ]
+    },
+    {
+        id: "L2-1C",
+        scenes: [
+            { image: '', speaker: "John", text: "RAAAG-" },
+            { gameOver: "No." },
+        ]
+    },
 
-    // L2 merchant dialogue plan:
-    // "What kind of $40.99 license scam is this?!"
+    {
+        id: "Climax",
+        scenes: [
+            { image: '', speaker: "Guardian", text: "Then, onto the first evaluation." },
+            {
+                sceneCondition: "Amiable",
+                conditionMetScenes: [
+                    { image: '', speaker: "Guardian", text: "You have been determined to be of a consistently kind character when warranted, returning the favors of those who support you." },
+                    { image: '', speaker: "Guardian", text: "Amiability is the first of three evaluations. You pass the first audit." },
+                ],
+                conditionNotMetScenes: [
+                    { image: '', speaker: "Guardian", text: "Your actions do not reflect gratitude for those who assist you." },
+                    { image: '', speaker: "Guardian", text: "Amiability is the first of three evaluations. You shall be punished for failing the first audit.", damage: 1 },
+                ],
+            },
+            {
+                sceneCondition: "Tenacious",
+                conditionMetScenes: [
+                    { image: '', speaker: "Guardian", text: "Though the odds seemed bleak, you continued to fight in the face of failure." },
+                    { image: '', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You pass the second audit." },
+                ],
+                conditionNotMetScenes: [
+                    { image: '', speaker: "Guardian", text: "When given the option to fight the beating heart of danger, you ignorantly skipped past without the courage to stand." },
+                    { image: '', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 1 },
+                ],
+            },
+            {
+                sceneCondition: "Intellect",
+                conditionMetScenes: [
+                    { image: '', speaker: "Guardian", text: "Lastly, you have willingly solved the riddles spread throughout your journey and demonstrated your worth beyond these gates." },
+                    { image: '', speaker: "Guardian", text: "Intellect is the last of three evaluations. You pass the last audit." },
+                ],
+                conditionNotMetScenes: [
+                    { image: '', speaker: "Guardian", text: "By avoiding the challenge of mind, you deny the growth necessary to prove you will succeed beyond these gates." },
+                    { image: '', speaker: "Guardian", text: "Intellect is the last of three evaluations. You shall be punished for failing the third audit.", damage: 1 },
+                ],
+            },
+            { image: '', speaker: "Guardian", text: "..." },
+            { image: '', speaker: "Guardian", text: "So, it seems you survive the audit. Whether that be by the health you preserved to this point or having demonstrated excellent character, it is time for your test to truly begin." },
+            { image: '', speaker: "Guardian", text: "The test is merely a three-question trial to prove the learnings of your journey. If you have passed the audit, then it is likely you will pass these verifications as well." },
+            { image: '', speaker: "Guardian", text: "Stand ready for the first question." },
+
+            {
+                image: '',
+                speaker: "Guardian",
+                text: "Name the source of your monotony in your residing world.", // Left intentionally empty
+                options: [
+                    { text: 'Stillbody Tech', leadsTo: "Climax-Q1-Wrong" },
+                    { text: 'iStock', leadsTo: "Climax-Q1-Correct" },
+                    { text: "ReStock Facilities", leadsTo: "Climax-Q1-Wrong" }
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "Climax-Q1-Wrong",
+        scenes: [{ image: '', speaker: "Guardian", text: "Incorrect. You will be punished for your lack of remembrance.", damage: 1, leadsTo: "Climax-Q2" },]
+    },
+    {
+        id: "Climax-Q1-Correct",
+        scenes: [{ image: '', speaker: "Guardian", text: "Correct. Your remembrance of your past demonstrates reflection.", leadsTo: "Climax-Q2" },]
+    },
+
+    {
+        id: "Climax-Q2",
+        scenes: [
+            { image: '', speaker: "Guardian", text: "Next question." },
+            {
+                image: '',
+                speaker: "Guardian",
+                text: "What is the common name for this layer?", // Left intentionally empty
+                options: [
+                    { text: 'The Color Palette', leadsTo: "Climax-Q2-Wrong" },
+                    { text: 'The Still World', leadsTo: "Climax-Q2-Correct" },
+                    { text: "The Freeform", leadsTo: "Climax-Q2-Wrong" }
+                ]
+            }
+        ]
+    },
+    {
+        id: "Climax-Q2-Wrong",
+        scenes: [{ image: '', speaker: "Guardian", text: "Incorrect. You will be punished for your heedless explorations.", damage: 1, leadsTo: "Climax-Q3" },]
+    },
+    {
+        id: "Climax-Q2-Correct",
+        scenes: [{ image: '', speaker: "Guardian", text: "Correct. Your calling expresses you hold dear the experiences you undergo.", leadsTo: "Climax-Q3" },]
+    },
+
+    {
+        id: "Climax-Q3",
+        scenes: [
+            { image: '', speaker: "Guardian", text: "Congratulations. As the trials seem to determine, you are worthy for entry." },
+            { image: '', speaker: "John", text: "Woah, what?! I thought I had to answer one more question-" },
+            { image: '', speaker: "John", text: "(Wait, maybe I shouldn't say anything...)" },
+            { image: '', speaker: "Guardian", text: "Worry not your restless soul. The last question is a mere child's play — it shall be the easiest you face. You have been guaranteed entry long since your trials began." },
+            { image: '', speaker: "Guardian", text: "As such, it is expected you are capable of answering this dilemma without fault. Shall you blunder once, you will face the most grievous, divine punishment for misleading oneself." },
+            { image: '', speaker: "Guardian", text: "Without further stalling, the simple question goes as follows:" },
+            {
+                image: '',
+                speaker: "Guardian",
+                // Get ready.
+
+                text: `A block of mass m1 = 3.00kg rests on a rough inclined plane angled at θ = 37∘ above the horizontal. 
+                The coefficient of kinetic friction between the block and the incline is μk = 0.25, and the coefficient of static friction is μs = 0.40. 
+                The block is connected via a light, inextensible string over a frictionless, massless pulley to a second block of mass m2 = 5.00kg, which hangs vertically. 
+                The pulley is mounted on a cart of mass M = 10.0kg, which can roll without friction along a horizontal track. 
+                The cart is attached to a horizontal spring with spring constant k = 200 N/m, fixed to a wall. 
+                Initially, the spring is unstretched. 
+                At time t = 0, the system is released from rest. 
+                Meanwhile, a small charged sphere of charge q=2.0 μC and mass 0.50 kg is attached to the hanging mass m2 via a rigid, massless rod of length L=0.50 m, forming a pendulum. 
+                A uniform electric field E=1.0×10^4 N/C points horizontally to the right. 
+                Air resistance is negligible. 
+                If the electric field suddenly switches direction at maximum spring compression, describe qualitatively how the motion of the pendulum changes.`,
+                
+                options: [
+                    { text: `When the electric field reverses direction at maximum spring compression, the pendulum is momentarily at rest. 
+                        Since its velocity is zero at that instant, reversing the electric field does not immediately affect its motion. 
+                        The pendulum will continue oscillating in the same way as before, with the same equilibrium angle, because the system’s inertia dominates over the electric force at that instant.`, leadsTo: "True-Climax" },
+                    { text: `When the electric field reverses, the pendulum will simply swing to the exact same angle on the opposite side and then continue oscillating symmetrically about the vertical. 
+                        The motion remains unchanged except for being mirrored horizontally, because the electric force has simply flipped direction while keeping the same magnitude.`, leadsTo: "True-Climax" },
+                    { text: "What", leadsTo: "True-Climax" }
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "True-Climax",
+        scenes: [
+            { image: '', speaker: "Guardian", text: "You are-"},
+            { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion, a brilliant bolt illuminates from the horizon behind you."},
+        ]
+    },
 ]
