@@ -1381,8 +1381,15 @@ export const data = [
     {
         id: "True-Climax",
         scenes: [
-            { image: '', speaker: "Guardian", text: "You are-"},
+            { image: '', speaker: "Guardian", text: "..."},
             { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion, a brilliant bolt illuminates from the horizon behind you."},
+            // Same image and perspective, but a brilliant white light shines behind John
+            { image: '', speaker: "Narrator", text: "."},
+            // Switch perspectives to John's face. John shades his eyes from the light, still trying to look up.
+            { image: '', speaker: "John", text: "Wha.."},
+            // The Guardian has brandished its blade, preparing to fight the source.
+            { image: '', speaker: "Guardian", text: ""},
+            // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
         ]
     },
 ]
