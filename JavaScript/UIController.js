@@ -51,9 +51,9 @@ function initiateScene() {
     }
 
     // If there are options, show the options
-    const options = currentScene.options
+    const options = currentScene.options;
     if (options) {
-        nextBtn.classList.add("hidden")
+        nextBtn.classList.add("hidden");
 
         for (const option of options) {
             const newLi = document.createElement('li');
@@ -63,9 +63,7 @@ function initiateScene() {
 
             // Load the next encounter the option leads to
             newLi.addEventListener("click", () => {
-                nextEncounter(option.leadsTo)
-                console.log(currentEncounter)
-                console.log(storyData)
+                nextEncounter(option.leadsTo);
             }, {once: true});
 
             newLi.appendChild(newP);
@@ -75,8 +73,11 @@ function initiateScene() {
 }
 
 function nextScene() {
-    currentSceneIndex += 1
-    initiateScene()
+    if (currentScene.leadsTo) {
+        nextEncounter(currentScene.leadsTo);
+    }
+    currentSceneIndex += 1;
+    initiateScene();
 }
 
 /* Event Listeners */
