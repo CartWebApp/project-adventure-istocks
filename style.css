@@ -192,10 +192,19 @@ button:hover {
 
 /* Mechanics */
 
-#health {
+#healthbarSection {
     order: -1;
     align-self:center;
     justify-self:center;
+    height: 100%;
+}
+
+#healthbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 90%;
 }
 
 #inventoryButton {
@@ -208,6 +217,10 @@ p {
     font-size: 35px;
     font-family: var(--font-family);
 }
+
+
+
+/* Media Queries for Landscape Mobile Phone*/
 
 @media (max-width: 874px) {
 main {grid-area: 2 / span 3;}
