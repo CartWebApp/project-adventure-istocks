@@ -115,23 +115,23 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "You are to travel through here and begin your path to freedom. To help you, I've got you a gift." },
 
             // Image of the object
-            { image: '', speaker: "Narrator", text: "", getItem: "Dagger" },
+            { image: 'images/Visuals/Intro/dragger-center.jpg', speaker: "Narrator", text: "", getItem: "Dagger" },
 
             // John looks at the object in his hand, confused
             { image: 'images/Visuals/Intro/john-stock-holding-sword 1.jpg', speaker: "John", text: "Why did you give me a letter t?" },
             { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "That's a dagger. Clearly you've never drawn in your life." },
-            { image: '', speaker: "John", text: "What is drawing..?" },
-            { image: '', speaker: "Low-Budget Man", text: "I should have expected that. Fear not, for you will learn." },
+            { image: 'images/Visuals/Intro/john-stock-holding-sword 1.jpg', speaker: "John", text: "What is drawing..?" },
+            { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "I should have expected that. Fear not, for you will learn." },
 
             // Back to the border visual
-            { image: '', speaker: "Low-Budget Man", text: "To pass through the border, normally you would have to pass a guardian or snag a key from someone." },
-            { image: '', speaker: "Low-Budget Man", text: "However, I still have my key from before I was banished. Since I cannot return, I will lend it to you.", getItem: "Layer1Key" },
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate 1.jpg', speaker: "Low-Budget Man", text: "To pass through the border, normally you would have to pass a guardian or snag a key from someone." },
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate 1.jpg', speaker: "Low-Budget Man", text: "However, I still have my key from before I was banished. Since I cannot return, I will lend it to you.", getItem: "Layer1Key" },
 
             // John gets the key
-            { image: '', speaker: "Low-Budget Man", text: "I urge you to use it quick, or it will melt into the poisonous royalty-free airs of this world." },
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate 1.jpg', speaker: "Low-Budget Man", text: "I urge you to use it quick, or it will melt into the poisonous royalty-free airs of this world." },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg',
                 speaker: "Low-Budget Man",
                 text: "So hurry! Approach the gate and use the key!",
                 options: [

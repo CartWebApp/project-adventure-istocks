@@ -208,3 +208,7 @@ p {
     font-size: 35px;
     font-family: var(--font-family);
 }
+
+@media (max-height:480px) {
+   
+}
