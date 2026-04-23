@@ -218,6 +218,10 @@ p {
     font-family: var(--font-family);
 }
 
-@media (max-height:480px) {
-   
+@media (max-width: 874px) {
+main {grid-area: 2 / span 3;}
+}
+
+@media (max-height: 402px) {
+main {grid-area: 2 / span 3;}
 }
