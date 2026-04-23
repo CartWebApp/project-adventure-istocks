@@ -22,6 +22,12 @@
                     <button type="button" id="startGame">Play Game</button>
                     <button type="button">Achievements</button>
                     <button type="button">Credits</button>
+
+                    <section id="tempNavForDevs">
+                        <label for="sceneNavigate">Go to a specific scene - For dev use</label>
+                        <input type="text" id="sceneNavigate" placeholder="Input the ID of the desired scene">
+                        <button type="button" id="submitSceneNavigate"></button>
+                    </section>
                 </section>
             </div>
         </section>
@@ -50,8 +56,14 @@
                 </ul>
             </section>
 
-            <section id="health">
-                <img src="images/Mechanics/health.png">
+            <section id="health" >
+                <ul filledHeartImg="images/Mechanics/filledHeart.svg" unfilledHeartImg="images/Mechanics/unfilledHeart.svg">
+                    <li active="true"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li active="true"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li active="true"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li active="true"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li active="true"><img src="images/Mechanics/filledHeart.svg"></li>
+                </ul>
             </section>
 
             <button id="inventoryButton">
