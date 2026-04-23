@@ -40,38 +40,48 @@ function nextEncounter(encounterID) {
 }
 
 function initiateScene() {
-    /* Loads the image and text of the next scene */
     const currentScene = currentEncounter.scenes[currentSceneIndex]
+
+    nextBtn.classList.add("hidden");
+    const options = currentScene.options;
+
+    /* Loads the image and text of the next scene */
     imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
     speakerTag.textContent = currentScene.speaker;
 
     // Generate text one character at a time
     const sceneText = currentScene.text;
-    const maxChars = sceneText.length
-    const index = 0
+    const maxChars = sceneText.length;
+    let index = 0;
     const iterateACharacter = () => {
-        if (index < maxChars) {
-            const textSection = sceneText.slice(0, i);
+        // Add a character for as long as all characters have not finished generating yet
+        if (index <= maxChars) {
+            const textSection = sceneText.slice(0, index);
             dialogue.textContent = textSection;
+            index++
+
             // Recursive: Repeat the function after the given time (in ms)
-            setTimeout(iterateACharacter, 2000);
+            // Change the wait time for the next character if the last character was a punctuation mark
+            const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
+            let waitTime = 20;
+            if (character === "." || character === "?" || character === "!") {
+                waitTime = 500;
+            }
+            setTimeout(iterateACharacter, waitTime);
+        } else {
+            if (currentScene.autoskip) {
+                // Autoskips the dialogue the moment it finishes rendering if autoskip
+            }
+
+
+            if (!currentScene.options) {
+                nextBtn.classList.remove("hidden");
+            }
         }
     }
-
-
-    for (let i=0; i<sceneText.length; i++) {
-        const textSection = sceneText.slice(0, i);
-        dialogue.textContent = textSection;
-    }
-
-    // Comes into play once we make text gradually generating
-    // Autoskips the dialogue the moment it finishes rendering if autoskip
-    if (currentScene.autoskip) {
-        // Code here
-    }
+    iterateACharacter()
 
     // If there are options, show the options
-    const options = currentScene.options;
     if (options) {
         nextBtn.classList.add("hidden");
 
