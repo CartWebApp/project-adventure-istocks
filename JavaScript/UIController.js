@@ -86,6 +86,17 @@ function nextScene() {
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
 
+
+
+// Temp easy scene navigate for devs
+const navSceneInput = document.querySelector("#sceneNavigate")
+const navigateSceneButton = document.querySelector("#submitSceneNavigate")
+navigateSceneButton.addEventListener("click", () => {
+    beginGame();
+    const sceneID = navSceneInput.value;
+    nextEncounter(sceneID);
+})
+
 /* Auto Typing Dialogue Effect */
 
 /* Auto Typing Effect code will be placed here */
