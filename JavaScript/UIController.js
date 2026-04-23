@@ -73,10 +73,12 @@ function initiateScene() {
 }
 
 function nextScene() {
+    const currentScene = currentEncounter.scenes[currentSceneIndex]
     if (currentScene.leadsTo) {
         nextEncounter(currentScene.leadsTo);
+    } else {
+        currentSceneIndex += 1;
     }
-    currentSceneIndex += 1;
     initiateScene();
 }
 

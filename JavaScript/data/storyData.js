@@ -1216,7 +1216,8 @@ export const data = [
             // John on a mountain looks at the barrier - A titan with seraph wings and a flaming greatsword guards the miniature border.
             { image: '', speaker: "Narrator", text: "...Of course, the guardian." },
             { image: '', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
-            // Now John, hardly even the side of one of the titan's fingers, stands below it. He looks above it as the titan looks down at him with its mighty greatsword pierced into the Earth.
+            // Now John, hardly even the size of one of the titan's fingers, stands below it. He looks above it as the titan looks down at him with its mighty greatsword pierced into the Earth.
+            // Noter: You can practically use this image for most of the guardian/John dialogue
             { image: '', speaker: "Guardian", text: "...Welcome, John Stock." },
             { image: '', speaker: "John", text: "...Hey. You look swell." },
             { image: '', speaker: "Guardian", text: "I presume you are here solely to pass this border." },
@@ -1474,30 +1475,6 @@ export const data = [
     },
 
     {
-        id: "True-Climax-1A",
-        scenes: [
-            { image: '', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning."},
-            { image: '', speaker: "John", text: "soo... let me come with?"},
-            { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?"},
-            { image: '', speaker: "John", text: "...Huh. That's a good question-"},
-            // Low-Budget man speedblitzes him - stabs through John's body with his blade -
-            { image: '', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5},
-            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well."},
-            // John X_X on the floor as Low-Budget Man waves off and walks through the gate
-            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off."},
-            {
-                itemCondition: "Good-Luck Charm",
-                conditionMetScenes: [
-                    { image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2"},
-                ],
-                conditionNotMetScenes: [
-                    { image: '', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
-                ],
-            },
-        ]
-    },
-
-    {
         id: "True-Climax-1B",
         scenes: [
             { image: '', speaker: "John", text: "RAAGH!!!"},
@@ -1518,7 +1495,11 @@ export const data = [
             {
                 itemCondition: "Good-Luck Charm",
                 conditionMetScenes: [
-                    { image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2"},
+                    { 
+                        itemCondition: "The Eraser",
+                        conditionMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3"}],
+                        conditionNotMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2"}],
+                    }
                 ],
                 conditionNotMetScenes: [
                     { image: '', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
@@ -1543,6 +1524,8 @@ export const data = [
     {
         id: "Ending-2",
         scenes: [
+            // An image of the good-luck charm shattering flashes by.
+            { image: '', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
             { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
             // ** The next several scenes will be in the perspective of John; keep this in mind
@@ -1564,23 +1547,72 @@ export const data = [
     {
         id: "Ending-3-Pt1",
         scenes: [
+            // An image of the good-luck charm shattering flashes by.
+            { image: '', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
-            { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
-            // ** The next several scenes will be in the perspective of John; keep this in mind
-            // He wakes to an empty field.. except for a permanently shut border and the dissipating body of the Guardian.
-
-            // John wakes in time to strike back against Low-Budget Man (because)
-            { image: '', speaker: "John's Internal Monologue", text: "Oh hey, I'm still alive." },
+            { image: '', speaker: "Narrator", text: "..." },
+            // Transition to Low-Budget Man's face with John's body behind him
+            { image: '', speaker: "Low-Budget Man", text: "..." },
+            // He covers his face with his helmet buy once more and begins walking to the gate.
+            { image: '', speaker: "Low-Budget Man", text: "..." },  
+            // Have a perspective that is facing Low-Budget Man's back, as Low-Budget Man faces the gate.
+            { image: '', speaker: "Low-Budget Man", text: "..." },
+            // Then, the shadow of a man blocks the screen.
+            { image: '', speaker: "John", text: "..." },
+            // Pan back to the original perspective, but this time John is standing up - he's gone beyond his stock image form. He's animated..!
+            { image: '', speaker: "John", text: "Hey man." },
+            { image: '', speaker: "Low-Budget Man", text: "Huh?" },
+            {
+                image: '',
+                speaker: "John",
+                text: "",
+                options: [
+                    { text: 'Brandish the Eraser', leadsTo: "Ending-3-Pt2" },
+                ]
+            }
         ]
-    },   
+    },
+
     {
         id: "Ending-3-Pt2",
         scenes: [
-            // Black screen
-            { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
-            // ** The next several scenes will be in the perspective of John; keep this in mind
-            // He wakes to an empty field.. except for a permanently shut border and the dissipating body of the Guardian.
-            { image: '', speaker: "John's Internal Monologue", text: "Oh hey, I'm still alive." },
+            // John swipes Low-Budget man with the eraser, striking through the armor and splitting him in half
+            { image: '', speaker: "Low-Budget Man", text: "..!" },
+            { image: '', speaker: "Low-Budget Man", text: "What?!" },
+            // Low-Budget Man's upper half falls to the ground, where John stands above you
+            { image: '', speaker: "Low-Budget Man", text: "How?! How did you survive?" },
+            { image: '', speaker: "John", text: "Dang. Guess my plot armor's stronger." },
+            // Do you know those two panels with Gojo and Sukuna? 
+            { image: '', speaker: "Low-Budget Man", text: "This can't be..." },
+            // You'll see the reference if you search up the two lines below (change Low-Budget Man to Gojo)
+            { image: '', speaker: "John", text: "You were magnificent, Low-Budget Man." },
+            { image: '', speaker: "John", text: "I won't forget you for as long as I live." },
+
+            { image: '', speaker: "Low-Budget Man", text: "Don't..!" },
+
+            { image: '', speaker: "Narrator", text: "He's too late to object. John erases the rest of him with the Eraser." },
+            { image: '', speaker: "John", text: "Man, finally..!" },
+            // 
+            { image: '', speaker: "Narrator", text: "John retrieves the key from his body." },
+            { image: '', speaker: "John", text: "Well, I have this. What do I do now?" },
+            { image: '', speaker: "John", text: "So it turns out I can't free the people here after all... but maybe I'll find a way when I step through this border." },
+            { image: '', speaker: "John", text: "Hope they don't think too much about it." },
+            // He steps to the gate.
+            { image: '', speaker: "John", text: "Alright. Time to do this." },
+            // Inserts the key
+            { image: '', speaker: "John", text: "..." },
+            // The gate opens
+            { image: '', speaker: "John", text: "..." },
+            // Perspective of camera behind John, with the light shining from his figure.
+            { image: '', speaker: "John", text: "..." },
+            // He turns back.
+            { image: '', speaker: "John", text: "..." },
+            // Gives a thumbs up or a wave and smiles
+            { image: '', speaker: "John", text: "See you!" },
+            // Then he walks through, being enguled by the light...
+            { image: '', speaker: "Narrator", text: "..." },
+            // And the gates shut.
+            { image: '', speaker: "Narrator", text: "..." },
             { endGame: "Ending3" },
         ]
     },  
