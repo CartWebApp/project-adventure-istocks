@@ -1416,7 +1416,7 @@ export const data = [
             { image: '', speaker: "Low-Budget Man", text: "Finally, the key to true freedom."},
             { image: '', speaker: "John", text: "You mean you could've just sniped that thing this whole time?!"},
             { image: '', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here."},
-            { image: '', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not It gave me enough opportunity to arrive at this moment, armed."},
+            { image: '', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed."},
 
             { image: '', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates."},
             { image: '', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?"},

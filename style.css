@@ -218,6 +218,10 @@ p {
     font-family: var(--font-family);
 }
 
+
+
+/* Media Queries for Landscape Mobile Phone*/
+
 @media (max-width: 874px) {
 main {grid-area: 2 / span 3;}
 }
