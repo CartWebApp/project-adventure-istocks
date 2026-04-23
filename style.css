@@ -208,3 +208,12 @@ p {
     font-size: 35px;
     font-family: var(--font-family);
 }
+
+@media (max-width: 874px) {
+main {grid-area: 2 / span 3;}
+
+}
+
+@media (max-height: 402px) {
+main {grid-area: 2 / span 3;}
+}
