@@ -14,6 +14,8 @@ const speakerTag = document.querySelector('#speakerTag');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
+const hearts = document.querySelectorAll(".heart")
+
 /* Variables */
 let currentEncounter = storyData.find(object => object.id = "Intro");
 let currentSceneIndex = 0;
@@ -41,11 +43,29 @@ function initiateScene() {
     /* Loads the image and text of the next scene */
     const currentScene = currentEncounter.scenes[currentSceneIndex]
     imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
-    dialogue.textContent = currentScene.text;
-    speakerTag.textContent = currentScene.speaker
+    speakerTag.textContent = currentScene.speaker;
+
+    // Generate text one character at a time
+    const sceneText = currentScene.text;
+    const maxChars = sceneText.length
+    const index = 0
+    const iterateACharacter = () => {
+        if (index < maxChars) {
+            const textSection = sceneText.slice(0, i);
+            dialogue.textContent = textSection;
+            // Recursive: Repeat the function after the given time (in ms)
+            setTimeout(iterateACharacter, 2000);
+        }
+    }
+
+
+    for (let i=0; i<sceneText.length; i++) {
+        const textSection = sceneText.slice(0, i);
+        dialogue.textContent = textSection;
+    }
 
     // Comes into play once we make text gradually generating
-    // Autoskips the dialogue if autoskip
+    // Autoskips the dialogue the moment it finishes rendering if autoskip
     if (currentScene.autoskip) {
         // Code here
     }
@@ -92,9 +112,12 @@ startGameButton.addEventListener("click", beginGame);
 const navSceneInput = document.querySelector("#sceneNavigate")
 const navigateSceneButton = document.querySelector("#submitSceneNavigate")
 navigateSceneButton.addEventListener("click", () => {
-    beginGame();
     const sceneID = navSceneInput.value;
-    nextEncounter(sceneID);
+    let currentEncounter = storyData.find(object => object.id = "Intro");
+    if (currentEncounter) {
+        beginGame();
+        nextEncounter(sceneID);
+    }
 })
 
 /* Auto Typing Dialogue Effect */
