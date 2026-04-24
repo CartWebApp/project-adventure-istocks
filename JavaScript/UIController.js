@@ -45,7 +45,7 @@ function nextEncounter(encounterID) {
 function initiateScene() {
     const currentScene = currentEncounter.scenes[currentSceneIndex]
 
-    // Immediately fire to gameLogic.js to begin mechanics evaluation
+    // Fire to gameLogic.js to begin mechanics evaluation: see gameLogic.js for that code
     window.dispatchEvent(new Event("evaluateScene"))
 
     // Hide next button if options are about to appear
@@ -59,11 +59,6 @@ function initiateScene() {
     /* Loads the image and text of the next scene */
     imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
     speakerTag.textContent = currentScene.speaker;
-
-    // Generate text one character at a time
-    const sceneText = currentScene.text;
-    const maxChars = sceneText.length;
-    let index = 0;
 
     const loadOptions = () => {
         // If there are options, show the options
@@ -88,6 +83,10 @@ function initiateScene() {
     }
 
     // Rolling text
+    const sceneText = currentScene.text;
+    const maxChars = sceneText.length;
+    let index = 0;
+
     const iterateACharacter = () => {
         if (index <= maxChars) {
             const textSection = sceneText.slice(0, index);
