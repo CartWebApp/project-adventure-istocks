@@ -28,7 +28,7 @@ function beginGame(tempDisableVar) {
     startingScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
 
-    if (!tempDisableVar) {
+    if (tempDisableVar = "3784NT") {
         initiateScene();
     }
 }
@@ -154,7 +154,7 @@ navigateSceneButton.addEventListener("click", () => {
     const sceneID = navSceneInput.value;
     let currentEncounter = storyData.find(object => object.id = "Intro");
     if (currentEncounter) {
-        beginGame("932N328FJHFR8AHN345R9IUR28YH9FO0R2J0I124H");
+        beginGame("3784NT");
         nextEncounter(sceneID);
     }
 })
