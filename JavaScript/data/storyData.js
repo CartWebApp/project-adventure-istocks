@@ -189,7 +189,7 @@ export const data = [
             { image: '', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
-            { image: '', speaker: "Narrator", text: "", damage: -1 },
+            { image: '', speaker: "Narrator", text: "", damage: 1 },
             { image: '', speaker: "John", text: "AUUUGHH!!" },
             { image: '', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
             { image: '', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
@@ -704,7 +704,7 @@ export const data = [
             // Black screen
             { image: '', speaker: "Narrator", text: "You are about to see something very, very graphic." },
             { image: '', speaker: "Narrator", text: "It involves a man stabbing another very violently." },
-            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people canoot witness this without puking.", damage: 2 },
+            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people canoot witness this without puking." },
             { image: '', speaker: "Narrator", text: "Are you ready?" },
 
             // The "t" thing is stabbed very poorly into the dude--a hole was scribbled into him and the dagger stabs inside. He's screaming.

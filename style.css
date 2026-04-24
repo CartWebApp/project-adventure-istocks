@@ -83,6 +83,8 @@ button:hover {
     display: grid;
     grid-template: auto / 5vw 80vw 5vw;
     gap: 100px;
+
+    height: 99vh;
 }
 
 #actualGame.hidden {
@@ -103,7 +105,7 @@ button:hover {
     border: 3px solid var(--main-black);
     margin-bottom: 30px;
     border: 10px solid #2E2E2E;
-    max-width: 950px;
+    max-width: 1400px;
     align-self: center;
     background-position:static;
 
@@ -134,7 +136,6 @@ button:hover {
 }
 
 #dialogueBoxStyle {
-    font-size: 20px;
     border: 15px solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
@@ -145,7 +146,8 @@ button:hover {
     justify-self: center;
 
     & p {
-        margin: 30px;
+        font-size: 2.65em;
+        margin: 40px;
     }
 }
 

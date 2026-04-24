@@ -20,6 +20,9 @@ const hearts = document.querySelectorAll(".heart")
 let currentEncounter = storyData.find(object => object.id = "Intro");
 let currentSceneIndex = 0;
 
+// Export to gameLogic.js
+export { currentEncounter, currentSceneIndex }
+
 /* Functions */
 function beginGame() {
     startingScreen.classList.add('hidden');
@@ -42,8 +45,16 @@ function nextEncounter(encounterID) {
 function initiateScene() {
     const currentScene = currentEncounter.scenes[currentSceneIndex]
 
-    nextBtn.classList.add("hidden");
+    // Immediately fire to gameLogic.js to begin mechanics evaluation
+    window.dispatchEvent(new Event("evaluateScene"))
+
+    // Hide next button if options are about to appear
     const options = currentScene.options;
+    if (!options) {
+        nextBtn.classList.remove("hidden")
+    } else {
+        nextBtn.classList.add("hidden")
+    }
 
     /* Loads the image and text of the next scene */
     imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
@@ -53,53 +64,67 @@ function initiateScene() {
     const sceneText = currentScene.text;
     const maxChars = sceneText.length;
     let index = 0;
+
+    const loadOptions = () => {
+        // If there are options, show the options
+        if (options) {
+            nextBtn.classList.add("hidden");
+
+            for (const option of options) {
+                const newLi = document.createElement('li');
+                const newP = document.createElement('p');
+
+                newP.textContent = option.text;
+
+                // Load the next encounter the option leads to
+                newLi.addEventListener("click", () => {
+                    nextEncounter(option.leadsTo);
+                }, { once: true });
+
+                newLi.appendChild(newP);
+                optionsRow.appendChild(newLi);
+            }
+        }
+    }
+
+    // Rolling text
     const iterateACharacter = () => {
-        // Add a character for as long as all characters have not finished generating yet
         if (index <= maxChars) {
             const textSection = sceneText.slice(0, index);
             dialogue.textContent = textSection;
             index++
 
             // Recursive: Repeat the function after the given time (in ms)
-            // Change the wait time for the next character if the last character was a punctuation mark
             const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
-            let waitTime = 20;
+            let waitTime = 25;
             if (character === "." || character === "?" || character === "!") {
-                waitTime = 500;
+                waitTime = 300;
             }
             setTimeout(iterateACharacter, waitTime);
         } else {
+            // When text finishes loading
+            // Make nextBtn go to next scene again
+            nextBtn.removeEventListener("click", skipDialogue)
+            nextBtn.addEventListener("click", nextScene)
+
             if (currentScene.autoskip) {
                 // Autoskips the dialogue the moment it finishes rendering if autoskip
+                nextScene()
             }
 
-
-            if (!currentScene.options) {
-                nextBtn.classList.remove("hidden");
-            }
+            loadOptions()
         }
     }
-    iterateACharacter()
+    iterateACharacter();
 
-    // If there are options, show the options
-    if (options) {
-        nextBtn.classList.add("hidden");
-
-        for (const option of options) {
-            const newLi = document.createElement('li');
-            const newP = document.createElement('p');
-
-            newP.textContent = option.text;
-
-            // Load the next encounter the option leads to
-            newLi.addEventListener("click", () => {
-                nextEncounter(option.leadsTo);
-            }, {once: true});
-
-            newLi.appendChild(newP);
-            optionsRow.appendChild(newLi);
-        }
-    }
+    // Skip the rolling dialogue if tap anywhere on the screen
+    const skipDialogue = () => {
+        dialogue.textContent = sceneText;
+        index = maxChars;
+    };
+    // Make nextBtn skip dialogue instead of going to the next scene
+    nextBtn.addEventListener("click", skipDialogue, { once: true });
+    nextBtn.removeEventListener("click", nextScene)
 }
 
 function nextScene() {
@@ -118,6 +143,9 @@ startGameButton.addEventListener("click", beginGame);
 
 
 
+
+
+
 // Temp easy scene navigate for devs
 const navSceneInput = document.querySelector("#sceneNavigate")
 const navigateSceneButton = document.querySelector("#submitSceneNavigate")
@@ -129,7 +157,3 @@ navigateSceneButton.addEventListener("click", () => {
         nextEncounter(sceneID);
     }
 })
-
-/* Auto Typing Dialogue Effect */
-
-/* Auto Typing Effect code will be placed here */
