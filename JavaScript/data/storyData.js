@@ -135,7 +135,7 @@ export const data = [
                 speaker: "Low-Budget Man",
                 text: "So hurry! Approach the gate and use the key!",
                 options: [
-                    { text: "Open the gate", leadsTo: "1A2A3A4A" },
+                    { text: "Open the gate", leadsTo: "1A2A3A4A", useItem: "Layer1Key" },
                     { text: "I'm kinda scared..", leadsTo: "1A2A3A4B" }
                 ]
             }

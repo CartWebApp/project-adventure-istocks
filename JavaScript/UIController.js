@@ -1,4 +1,5 @@
 import { data as storyData } from "./data/storyData.js";
+import { status } from "./gameLogic.js";
 
 /* Visuals */
 const startingScreen = document.querySelector('#startingScreen');
@@ -81,15 +82,27 @@ function initiateScene() {
                 newP.textContent = option.text;
                 newLi.setAttribute("id", option.text)
 
-                // Load the next encounter the option leads to
-                newLi.addEventListener("click", () => {
-                    nextEncounter(option.leadsTo);
-                    // Fire to gameLogic.js
-                    window.dispatchEvent(new CustomEvent("evaluateScene", {detail: option}))
-                }, { once: true });
-
                 newLi.appendChild(newP);
                 optionsRow.appendChild(newLi);
+
+                const clickedEvent = () => {
+                    // Load the next full encounter
+                    nextEncounter(option.leadsTo);
+                    // Fire to gameLogic.js
+                    window.dispatchEvent(new CustomEvent("evaluateScene", {detail: option}));
+                }
+
+                // If option needs an item, only allow the option to be clicked if you have the item
+                if (option.useItem) {
+                    if (status.Inventory[option.useItem]) {
+                        newLi.addEventListener("click", clickedEvent, { once: true });
+                    } else {
+                        newLi.style.opacity = 0.5;
+                    }
+                // Let the option be regularly clickable otherwise
+                } else {
+                    newLi.addEventListener("click", clickedEvent, { once: true });
+                }
             }
         }
     }

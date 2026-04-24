@@ -1,7 +1,3 @@
-import { data as storyData } from "./data/storyData.js";
-import { currentEncounter, currentSceneIndex } from "./UIController.js";
-
-
 const optionsRow = document.querySelector('#optionsRow')
 
 const inventory = document.querySelector('#inventory')
@@ -18,6 +14,8 @@ const status = {
 
     }
 };
+
+export { status }
 
 /* Classes */
 class Item {
