@@ -2,7 +2,7 @@ import { data as storyData } from "./data/storyData.js";
 import { currentEncounter, currentSceneIndex } from "./UIController.js";
 
 const healthbar = document.querySelector("#healthbar");
-const hearts = document.querySelectorAll(".heart");
+const hearts = document.querySelectorAll(".heart img");
 
 const status = {
     Health: 5,
@@ -23,6 +23,24 @@ class Item {
     }
 };
 
+
+/* Functions */
+
+function modifyHealth(change) {
+    status.Health += change;
+
+    // Reset health bar
+    for (const heartImg of hearts) {
+        heartImg.src = "images/Mechanics/unfilledHeart.svg"
+    }
+
+    // Fill in each heart you have left
+    for (let i=0; i<status.Health; i++) {
+        const heartImg = hearts[i];
+        heartImg.src = "images/Mechanics/filledHeart.svg";
+    }
+}
+
 // Evaluate mechanics per scene, have they exist at least
 window.addEventListener("evaluateScene", () => {
     const evaluateMechanics = (sceneObject) => {
@@ -35,9 +53,18 @@ window.addEventListener("evaluateScene", () => {
         const gameOver = sceneObject.gameOver;
         const endGame = sceneObject.endGame;
 
-        status.Health -= damage
-        if (status.Health < status.MaxHealth) { status.Health += heal }
         console.log(status)
+        modifyHealth(-damage);
+        if (status.Health < status.MaxHealth) { modifyHealth(heal); }
+
+        if (getItem) {
+            let imageUrl = `images/Mechanics/ItemImages/${getItem}.svg`
+            status.Inventory[getItem] = Item(getItem, imageUrl)
+        }
+
+        if (useItem) {
+            delete status.Inventory[useItem]
+        }
 
         if (gameOver) {
             // gameOver == message to display

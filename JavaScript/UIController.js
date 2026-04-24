@@ -24,11 +24,13 @@ let currentSceneIndex = 0;
 export { currentEncounter, currentSceneIndex }
 
 /* Functions */
-function beginGame() {
+function beginGame(tempDisableVar) {
     startingScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
 
-    initiateScene();
+    if (!tempDisableVar) {
+        initiateScene();
+    }
 }
 
 function nextEncounter(encounterID) {
@@ -145,14 +147,14 @@ startGameButton.addEventListener("click", beginGame);
 
 
 
-// Temp easy scene navigate for devs
+// Temp easy scene navigate for devs // Remeber to delete in html too
 const navSceneInput = document.querySelector("#sceneNavigate")
 const navigateSceneButton = document.querySelector("#submitSceneNavigate")
 navigateSceneButton.addEventListener("click", () => {
     const sceneID = navSceneInput.value;
     let currentEncounter = storyData.find(object => object.id = "Intro");
     if (currentEncounter) {
-        beginGame();
+        beginGame("932N328FJHFR8AHN345R9IUR28YH9FO0R2J0I124H");
         nextEncounter(sceneID);
     }
 })
