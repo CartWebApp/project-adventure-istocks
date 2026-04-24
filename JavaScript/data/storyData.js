@@ -155,19 +155,19 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
             { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
 
-            { image: '', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
-            { image: '', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
-            { image: '', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through." },
+            { image: 'images/Visuals/Intro/low-budget-man-high-five.jpg', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
+            { image: 'images/Visuals/Intro/john-stock-entering-gate.jpg', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through." },
 
             /* Transition to Layer 1*/
-            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1" },
+            { image: 'images/Visuals/Intro/border-gate-solo-image.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1" },
         ]
     },
 
     {
         id: "1A2A3A4B",
         scenes: [
-            // John and Low-Budget man watch the gate open.
+            
             { image: '', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
             { image: '', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
 
