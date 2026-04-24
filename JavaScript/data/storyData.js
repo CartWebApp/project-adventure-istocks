@@ -147,13 +147,13 @@ export const data = [
         id: "1A2A3A4A",
         scenes: [
             // John and Low-Budget man watch the gate open.
-            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
-            { image: '', speaker: "Low-Budget Man", text: "Once more, congratulations." },
-            { image: '', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
-            { image: '', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
-            { image: '', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job." },
-            { image: '', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
-            { image: '', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate-doors.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Once more, congratulations." },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job." },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
 
             { image: '', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
             { image: '', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
