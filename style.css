@@ -86,7 +86,7 @@ button:hover {
     height: 99vh;
 }
 
-#actualGame.hidden {
+#actualGame.hidden, #dialogueBox.hidden, #inventorySection.hidden {
     display: none;
 }
 
@@ -134,7 +134,7 @@ button:hover {
     border-radius: var(--border-radius);
 }
 
-#dialogueBoxStyle {
+#dialogueBoxStyle, #inventorySection {
     border: 15px solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
@@ -147,6 +147,21 @@ button:hover {
     & p {
         font-size: 2.65em;
         margin: 40px;
+    }
+}
+
+/* Inventory list*/
+#inventory {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+    line-height: 0px;
+
+    & li {
+        /* Inventory Items */
+        display: flex;
+        align-items: center;
     }
 }
 

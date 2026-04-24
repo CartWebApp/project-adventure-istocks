@@ -1,6 +1,8 @@
 import { data as storyData } from "./data/storyData.js";
 import { currentEncounter, currentSceneIndex } from "./UIController.js";
 
+
+const inventory = document.querySelector('#inventory')
 const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
 
@@ -18,20 +20,19 @@ const status = {
 /* Classes */
 class Item {
     constructor(name, image) {
-        this.name = name
-        this.image = image
+        this.name = name;
+        this.image = image;
     }
 };
 
 
 /* Functions */
-
 function modifyHealth(change) {
     status.Health += change;
 
     // Reset health bar
     for (const heartImg of hearts) {
-        heartImg.src = "images/Mechanics/unfilledHeart.svg"
+        heartImg.src = "images/Mechanics/unfilledHeart.svg";
     }
 
     // Fill in each heart you have left
@@ -39,6 +40,22 @@ function modifyHealth(change) {
         const heartImg = hearts[i];
         heartImg.src = "images/Mechanics/filledHeart.svg";
     }
+}
+
+function addToInventory(itemName) {
+    let imageUrl = `images/Mechanics/ItemImages/${itemName}.svg`;
+    status.Inventory[itemName] = new Item(itemName, imageUrl);
+
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    const text = document.createElement('p');
+
+    img.src = imageUrl;
+    text.textContent = itemName;
+
+    li.appendChild(img);
+    li.appendChild(text);
+    inventory.appendChild(li);
 }
 
 // Evaluate mechanics per scene, have they exist at least
@@ -49,6 +66,7 @@ window.addEventListener("evaluateScene", () => {
         const heal = sceneObject.heal || 0;
         const getItem = sceneObject.getItem;
         const useItem = sceneObject.useItem;
+        const giveCondition = sceneObject.giveCondition;
         const puzzle = sceneObject.puzzle;
         const gameOver = sceneObject.gameOver;
         const endGame = sceneObject.endGame;
@@ -58,12 +76,15 @@ window.addEventListener("evaluateScene", () => {
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
         if (getItem) {
-            let imageUrl = `images/Mechanics/ItemImages/${getItem}.svg`
-            status.Inventory[getItem] = Item(getItem, imageUrl)
+            addToInventory(getItem);
         }
 
         if (useItem) {
             delete status.Inventory[useItem]
+        }
+
+        if (giveCondition) {
+
         }
 
         if (gameOver) {

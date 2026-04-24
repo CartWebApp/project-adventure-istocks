@@ -9,16 +9,23 @@ const imageVisual = document.querySelector('#mainVisual');
 /* Interactables */
 const startGameButton = document.querySelector('#startGame');
 
+const dialogueBox = document.querySelector('#dialogueBox')
 const dialogue = document.querySelector('#dialogueBox #dialogue');
 const speakerTag = document.querySelector('#speakerTag');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
-const hearts = document.querySelectorAll(".heart")
+const inventorySection = document.querySelector('#inventorySection');
+
+const inventoryBtn = document.querySelector('#inventoryButton')
+
+const hearts = document.querySelectorAll(".heart");
 
 /* Variables */
 let currentEncounter = storyData.find(object => object.id = "Intro");
 let currentSceneIndex = 0;
+
+let inventoryEnabled = false;
 
 // Export to gameLogic.js
 export { currentEncounter, currentSceneIndex }
@@ -89,9 +96,20 @@ function initiateScene() {
     const maxChars = sceneText.length;
     let index = 0;
 
+    // Skip the rolling dialogue if tap anywhere on the screen
+    const skipDialogue = () => {
+        if (!inventoryEnabled) {
+            dialogue.textContent = sceneText;
+            index = maxChars;
+        }
+    };
+    // Make nextBtn skip dialogue instead of going to the next scene
+    nextBtn.addEventListener("click", skipDialogue, { once: true });
+    nextBtn.removeEventListener("click", nextScene)
+
     const iterateACharacter = () => {
-        if (index <= maxChars) {
-            const textSection = sceneText.slice(0, index);
+        if (index < maxChars) {
+            const textSection = sceneText.slice(0, index + 1);
             dialogue.textContent = textSection;
             index++
 
@@ -117,31 +135,37 @@ function initiateScene() {
         }
     }
     iterateACharacter();
-
-    // Skip the rolling dialogue if tap anywhere on the screen
-    const skipDialogue = () => {
-        dialogue.textContent = sceneText;
-        index = maxChars;
-    };
-    // Make nextBtn skip dialogue instead of going to the next scene
-    nextBtn.addEventListener("click", skipDialogue, { once: true });
-    nextBtn.removeEventListener("click", nextScene)
 }
 
 function nextScene() {
-    const currentScene = currentEncounter.scenes[currentSceneIndex]
-    if (currentScene.leadsTo) {
-        nextEncounter(currentScene.leadsTo);
-    } else {
-        currentSceneIndex += 1;
+    if (!inventoryEnabled) {
+        const currentScene = currentEncounter.scenes[currentSceneIndex]
+        if (currentScene.leadsTo) {
+            nextEncounter(currentScene.leadsTo);
+        } else {
+            currentSceneIndex += 1;
+        }
+        initiateScene();
     }
-    initiateScene();
+}
+
+/* Mechanic-related Functions */
+function toggleInventory() {
+    if (!inventoryEnabled) {
+        dialogueBox.classList.add("hidden");
+        inventorySection.classList.remove("hidden");
+        inventoryEnabled = true;
+    } else {
+        dialogueBox.classList.remove("hidden");
+        inventorySection.classList.add("hidden");
+        inventoryEnabled = false;
+    }
 }
 
 /* Event Listeners */
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
-
+inventoryBtn.addEventListener("click", toggleInventory);
 
 
 
