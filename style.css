@@ -83,7 +83,6 @@ button:hover {
     display: grid;
     grid-template: auto / 5vw 80vw 5vw;
     gap: 100px;
-
     height: 99vh;
 }
 
@@ -96,7 +95,7 @@ button:hover {
     flex-direction: column;
     align-items: stretch;
     padding-top:4em;
-    gap:55px;
+    gap:36.55px;
 }
 
 #mainVisual {
@@ -105,7 +104,7 @@ button:hover {
     border: 3px solid var(--main-black);
     margin-bottom: 30px;
     border: 10px solid #2E2E2E;
-    max-width: 1400px;
+    max-width:70%;
     align-self: center;
     background-position:static;
 
