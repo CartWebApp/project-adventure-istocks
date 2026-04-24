@@ -2,6 +2,8 @@ import { data as storyData } from "./data/storyData.js";
 import { currentEncounter, currentSceneIndex } from "./UIController.js";
 
 
+const optionsRow = document.querySelector('#optionsRow')
+
 const inventory = document.querySelector('#inventory')
 const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
@@ -50,6 +52,7 @@ function addToInventory(itemName) {
     const img = document.createElement('img');
     const text = document.createElement('p');
 
+    li.classList.add(itemName)
     img.src = imageUrl;
     text.textContent = itemName;
 
@@ -57,9 +60,15 @@ function addToInventory(itemName) {
     li.appendChild(text);
     inventory.appendChild(li);
 }
+function deleteFromInventory(itemName) {
+    delete status.Inventory[itemName]
+
+    const foundItem = inventory.querySelector(`.${itemName}`)
+    foundItem.remove()
+}
 
 // Evaluate mechanics per scene, have they exist at least
-window.addEventListener("evaluateScene", () => {
+window.addEventListener("evaluateScene", (e) => {
     const evaluateMechanics = (sceneObject) => {
         // Checks for mechanics - fallback on nothings if there aren't
         const damage = sceneObject.damage || 0;
@@ -75,13 +84,8 @@ window.addEventListener("evaluateScene", () => {
         modifyHealth(-damage);
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
-        if (getItem) {
-            addToInventory(getItem);
-        }
-
-        if (useItem) {
-            delete status.Inventory[useItem]
-        }
+        if (getItem) { addToInventory(getItem); }
+        if (useItem) { deleteFromInventory(useItem); }
 
         if (giveCondition) {
 
@@ -109,20 +113,8 @@ window.addEventListener("evaluateScene", () => {
         }
     }
 
-    // See if the current scene has any mechanics
-    const currentScene = currentEncounter.scenes[currentSceneIndex];
+    // See if the current scene/option has any mechanics
+    const currentScene = e.detail;
     evaluateMechanics(currentScene)
-
-    // See if the options activate any mechanics
-    if (currentScene.options) {
-        for (const option of currentScene.options) {
-            evaluateMechanics(option)
-        }
-    }
 });
-
-
-
-// Put Data for Hearts here, must adapt based on the different probabilities throuhgout the story.
-// Have a default set where it's 5 hearts in the beginning of the user journey
 

@@ -55,7 +55,7 @@ function initiateScene() {
     const currentScene = currentEncounter.scenes[currentSceneIndex]
 
     // Fire to gameLogic.js to begin mechanics evaluation: see gameLogic.js for that code
-    window.dispatchEvent(new Event("evaluateScene"))
+    window.dispatchEvent(new CustomEvent("evaluateScene", {detail: currentScene}))
 
     // Hide next button if options are about to appear
     const options = currentScene.options;
@@ -79,10 +79,13 @@ function initiateScene() {
                 const newP = document.createElement('p');
 
                 newP.textContent = option.text;
+                newLi.setAttribute("id", option.text)
 
                 // Load the next encounter the option leads to
                 newLi.addEventListener("click", () => {
                     nextEncounter(option.leadsTo);
+                    // Fire to gameLogic.js
+                    window.dispatchEvent(new CustomEvent("evaluateScene", {detail: option}))
                 }, { once: true });
 
                 newLi.appendChild(newP);
