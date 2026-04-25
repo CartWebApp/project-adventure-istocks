@@ -29,7 +29,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-raising-hand 1.jpg', speaker: "???", text: "Wait!" },
             { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
             // Change image here
-            { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
+            { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his fDace completely obscured in shadow. Yet, something about his form seems strange..." },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "You there. How are you this evening?" },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "John", text: "Err... fine, I guess." },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "Wonderful. It is about to become even better. I have something splendid to tell you. Come with me, and I can tell you what I know." },

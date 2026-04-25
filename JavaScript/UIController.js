@@ -187,7 +187,7 @@ inventoryBtn.addEventListener("click", toggleInventory);
 
 
 
-// Temp easy scene navigate for devs // Remeber to delete in html too
+// Temp easy scene navigate for devs // Remember to delete in html too
 const navSceneInput = document.querySelector("#sceneNavigate")
 const navigateSceneButton = document.querySelector("#submitSceneNavigate")
 navigateSceneButton.addEventListener("click", () => {
