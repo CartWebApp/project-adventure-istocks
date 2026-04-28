@@ -30,8 +30,6 @@ let lastOptionScene = undefined;
 
 let inventoryEnabled = false;
 
-let inventoryEnabled = false;
-
 // Export to gameLogic.js
 export { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene }
 
@@ -132,22 +130,16 @@ function initiateScene() {
             const maxChars = sceneText.length;
             let index = 0;
 
-    // Skip the rolling dialogue if tap anywhere on the screen
-    const skipDialogue = () => {
-        if (!inventoryEnabled) {
-            dialogue.textContent = sceneText;
-            index = maxChars;
-        }
-    };
-    // Make nextBtn skip dialogue instead of going to the next scene
-    nextBtn.addEventListener("click", skipDialogue, { once: true });
-    nextBtn.removeEventListener("click", nextScene)
-
-    const iterateACharacter = () => {
-        if (index < maxChars) {
-            const textSection = sceneText.slice(0, index + 1);
-            dialogue.textContent = textSection;
-            index++
+            // Skip the rolling dialogue if tap anywhere on the screen
+            const skipDialogue = () => {
+                if (!inventoryEnabled) {
+                    dialogue.textContent = sceneText;
+                    index = maxChars;
+                }
+            };
+            // Make nextBtn skip dialogue instead of going to the next scene
+            nextBtn.addEventListener("click", skipDialogue, { once: true });
+            nextBtn.removeEventListener("click", nextScene)
 
             const iterateACharacter = () => {
                 if (index < maxChars) {
@@ -187,16 +179,11 @@ function initiateScene() {
         } else {
             currentScene = currentEncounter.conditionNotMetScenes[currentSceneIndex];
         }
-<<<<<<< HEAD
-    }
-    iterateACharacter();
-=======
     }; */
 
     loadScene();
     loadOptions();
     loadText();
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 }
 
 function nextScene() {
@@ -228,8 +215,6 @@ function toggleInventory() {
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
 inventoryBtn.addEventListener("click", toggleInventory);
-<<<<<<< HEAD
-=======
 // Fired from gameLogic.js
 window.addEventListener("nextEncounter", (e) => {
     nextEncounter(e.detail)
@@ -251,7 +236,6 @@ function holesAndShapesPuzzle() {
 
 }
 
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 
 
 

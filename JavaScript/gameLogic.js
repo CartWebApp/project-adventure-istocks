@@ -1,14 +1,9 @@
 import { data as storyData } from "./data/storyData.js";
 import { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene } from './UIController.js'
 
-<<<<<<< HEAD
-
-const inventory = document.querySelector('#inventory')
-=======
 const optionsRow = document.querySelector('#optionsRow');
 
 const inventory = document.querySelector('#inventory');
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
 
@@ -58,10 +53,7 @@ function addToInventory(itemName) {
     const img = document.createElement('img');
     const text = document.createElement('p');
 
-<<<<<<< HEAD
-=======
     li.classList.add(itemName)
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
     img.src = imageUrl;
     text.textContent = itemName;
 
@@ -69,15 +61,12 @@ function addToInventory(itemName) {
     li.appendChild(text);
     inventory.appendChild(li);
 }
-<<<<<<< HEAD
-=======
 function deleteFromInventory(itemName) {
     delete status.Inventory[itemName]
 
     const foundItem = inventory.querySelector(`.${itemName}`)
     foundItem.remove()
 }
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 
 // Evaluate mechanics per scene, have they exist at least
 window.addEventListener("evaluateScene", (e) => {
@@ -96,21 +85,11 @@ window.addEventListener("evaluateScene", (e) => {
         modifyHealth(-damage);
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
-<<<<<<< HEAD
-        if (getItem) {
-            addToInventory(getItem);
-        }
-=======
         if (getItem) { addToInventory(getItem); }
         if (useItem) { deleteFromInventory(useItem); }
->>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 
         if (giveCondition) {
             status.ImportantDecisions.push(giveCondition)
-        }
-
-        if (giveCondition) {
-
         }
 
         if (gameOver) {
