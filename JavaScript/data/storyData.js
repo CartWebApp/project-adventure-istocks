@@ -324,7 +324,7 @@ export const data = [
             { image: '', speaker: "John", text: "RAAGH!!!" },
 
             // Beating up - black screen
-            { image: '', speaker: "Narrator", text: "You lunge at the stick figure" },
+            { image: '', speaker: "Narrator", text: "You lunge at the stick figure." },
             { image: '', speaker: "Narrator", text: "That... doesn't go well. He pulls a weapon on you, then James and the Stick Figure beat you until you're unconscious." },
             { image: '', speaker: "Narrator", text: "...Seems like you'll be staying in the hospital for a while. If anyone finds you here, that is." },
 

@@ -206,6 +206,8 @@ button:hover {
     }
 }
 
+
+
 /* Mechanics */
 
 #healthbarSection {
@@ -234,6 +236,21 @@ button:hover {
 p {
     font-size: 35px;
     font-family: var(--font-family);
+}
+
+
+
+/* Game Over */
+
+#gameOverPopup {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+#gameOverPopup::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); /* Adds a blur effect to the page background */
 }
 
 

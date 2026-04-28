@@ -1,18 +1,21 @@
-const optionsRow = document.querySelector('#optionsRow')
+import { data as storyData } from "./data/storyData.js";
+import { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene } from './UIController.js'
 
-const inventory = document.querySelector('#inventory')
+const optionsRow = document.querySelector('#optionsRow');
+
+const inventory = document.querySelector('#inventory');
 const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
+
+const gameOverPopup = document.querySelector("#gameOverPopup");
+const gameOverRetry = document.querySelector("#retryChoice");
+const gameOverRestart = document.querySelector("#restartGame");
 
 const status = {
     Health: 5,
     MaxHealth: 5,
-    Inventory: {
-
-    },
-    ImportantDecisions: {
-
-    }
+    Inventory: {},
+    ImportantDecisions: [],
 };
 
 export { status }
@@ -86,12 +89,24 @@ window.addEventListener("evaluateScene", (e) => {
         if (useItem) { deleteFromInventory(useItem); }
 
         if (giveCondition) {
-
+            status.ImportantDecisions.push(giveCondition)
         }
 
         if (gameOver) {
+            gameOverPopup.showModal()
             // gameOver == message to display
             // Make a black screen that shows the gameOver text, and a retry button
+            gameOverRetry.addEventListener("click", () => {
+                gameOverPopup.close();
+
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }))
+            }, {once: true});
+
+            gameOverRestart.addEventListener("click", () => {
+                gameOverPopup.close();
+
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }))
+            }, {once: true});
         }
 
         switch (endGame) {
