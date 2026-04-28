@@ -109,6 +109,8 @@ function initiateScene() {
                     } else {
                         newLi.addEventListener("click", clickedEvent, { once: true });
                     }
+
+                    // If option requires having made a previous choice to click then
                 }
             }
         }
