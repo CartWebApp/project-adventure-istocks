@@ -46,120 +46,144 @@ function beginGame(tempDisableVar) {
 function nextEncounter(encounterID) {
     lastEncounter = currentEncounter
     // Set next encounter
-    currentEncounter = storyData.find(object => object.id === encounterID)
-    currentSceneIndex = 0
-    nextBtn.classList.remove("hidden")
+    currentEncounter = storyData.find(object => object.id === encounterID);
+    currentSceneIndex = 0;
+    nextBtn.classList.remove("hidden");
 
     /* Clear options */
-    optionsRow.replaceChildren()
+    optionsRow.replaceChildren();
 
-    initiateScene()
+    initiateScene();
 }
 
 function initiateScene() {
-    const currentScene = currentEncounter.scenes[currentSceneIndex]
-    // Fire to gameLogic.js to begin mechanics evaluation: see gameLogic.js for that code
-    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: currentScene }))
+    let currentScene = currentEncounter.scenes[currentSceneIndex];
+    
+    const loadScene = () => {
+        imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
+        speakerTag.textContent = currentScene.speaker;
+    }
 
-    // Do all of this only if there's actual text (some mechanics scenes do not have text)
-    if (currentScene.text) {
+    const loadOptions = () => {
+        // If there are options, show the options
         // Hide next button if options are about to appear
         const options = currentScene.options;
         if (!options) {
             nextBtn.classList.remove("hidden")
         } else {
+            // Load options
             nextBtn.classList.add("hidden")
-        }
+            lastOptionScene = currentScene
 
-        /* Loads the image and text of the next scene */
-        imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
-        speakerTag.textContent = currentScene.speaker;
+            for (const option of options) {
+                const newLi = document.createElement('li');
+                const newP = document.createElement('p');
 
-        const loadOptions = () => {
-            // If there are options, show the options
-            if (options) {
-                lastOptionScene = currentScene
-                nextBtn.classList.add("hidden");
+                newP.textContent = option.text;
+                newLi.setAttribute("id", option.text)
 
-                for (const option of options) {
-                    const newLi = document.createElement('li');
-                    const newP = document.createElement('p');
+                newLi.appendChild(newP);
+                optionsRow.appendChild(newLi);
 
-                    newP.textContent = option.text;
-                    newLi.setAttribute("id", option.text)
+                const clickedEvent = () => {
+                    // Load the next full encounter
+                    nextEncounter(option.leadsTo);
+                    // Fire to gameLogic.js
+                    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: option }));
+                }
 
-                    newLi.appendChild(newP);
-                    optionsRow.appendChild(newLi);
-
-                    const clickedEvent = () => {
-                        // Load the next full encounter
-                        nextEncounter(option.leadsTo);
-                        // Fire to gameLogic.js
-                        window.dispatchEvent(new CustomEvent("evaluateScene", { detail: option }));
+                // Evaluate if user does not have necessary item or has not made a necessary choice
+                let doesNotMeetRequirement = false;
+                if (option.useItem) {
+                    if (!status.Inventory[option.useItem]) {
+                        doesNotMeetRequirement = true;
                     }
-
-                    // If option needs an item, only allow the option to be clicked if you have the item
-                    if (option.useItem) {
-                        if (status.Inventory[option.useItem]) {
-                            newLi.addEventListener("click", clickedEvent, { once: true });
-                        } else {
-                            newLi.style.opacity = 0.5;
-                        }
-                        // Let the option be regularly clickable otherwise
-                    } else {
-                        newLi.addEventListener("click", clickedEvent, { once: true });
+                }
+                if (option.condition) {
+                    if (!status.ImportantDecisions.find(option.condition)) {
+                        doesNotMeetRequirement = true;
                     }
+                }
+                // This one's unique cause they don't meet requirement if they DO have the condition
+                if (option.hideCondition) {
+                    if (status.ImportantDecisions.find(option.condition)) {
+                        doesNotMeetRequirement = true;
+                    }
+                }
 
-                    // If option requires having made a previous choice to click then
+                // If does not meet requirement then do not allow them to click the button
+                if (doesNotMeetRequirement) {
+                    newLi.style.opacity = 0.5;
+                } else {
+                    newLi.addEventListener("click", clickedEvent, { once: true });
+                    newLi.style.opacity = 1;
                 }
             }
         }
-
-        // Rolling text
-        const sceneText = currentScene.text;
-        const maxChars = sceneText.length;
-        let index = 0;
-
-        // Skip the rolling dialogue if tap anywhere on the screen
-        const skipDialogue = () => {
-            if (!inventoryEnabled) {
-                dialogue.textContent = sceneText;
-                index = maxChars;
-            }
-        };
-        // Make nextBtn skip dialogue instead of going to the next scene
-        nextBtn.addEventListener("click", skipDialogue, { once: true });
-        nextBtn.removeEventListener("click", nextScene)
-
-        const iterateACharacter = () => {
-            if (index < maxChars) {
-                const textSection = sceneText.slice(0, index + 1);
-                dialogue.textContent = textSection;
-                index++
-
-                // Recursive: Repeat the function after the given time (in ms)
-                const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
-                let waitTime = 25;
-                if (character === "." || character === "?" || character === "!") {
-                    waitTime = 300;
-                }
-                setTimeout(iterateACharacter, waitTime);
-            } else {
-                // When text finishes loading
-                // Make nextBtn go to next scene again
-                nextBtn.removeEventListener("click", skipDialogue)
-                nextBtn.addEventListener("click", nextScene)
-
-                if (currentScene.autoskip) {
-                    // Autoskips the dialogue the moment it finishes rendering if autoskip
-                    nextScene()
-                }
-
-                loadOptions()
-            }
-        }
-        iterateACharacter();
     }
+
+    const loadText = () => {
+        // Do all of this only if there's actual text (some mechanics scenes do not have text)
+        if (currentScene.text) {
+            // Rolling text
+            const sceneText = currentScene.text;
+            const maxChars = sceneText.length;
+            let index = 0;
+
+            // Skip the rolling dialogue if tap anywhere on the screen
+            const skipDialogue = () => {
+                if (!inventoryEnabled) {
+                    dialogue.textContent = sceneText;
+                    index = maxChars;
+                }
+            };
+            // Make nextBtn skip dialogue instead of going to the next scene
+            nextBtn.addEventListener("click", skipDialogue, { once: true });
+            nextBtn.removeEventListener("click", nextScene)
+
+            const iterateACharacter = () => {
+                if (index < maxChars) {
+                    const textSection = sceneText.slice(0, index + 1);
+                    dialogue.textContent = textSection;
+                    index++
+
+                    // Recursive: Repeat the function after the given time (in ms)
+                    const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
+                    let waitTime = 25;
+                    if (character === "." || character === "?" || character === "!") {
+                        waitTime = 300;
+                    }
+                    setTimeout(iterateACharacter, waitTime);
+                } else {
+                    // When text finishes loading
+                    // Make nextBtn go to next scene again
+                    nextBtn.removeEventListener("click", skipDialogue)
+                    nextBtn.addEventListener("click", nextScene)
+
+                    if (currentScene.autoskip) {
+                        // Autoskips the dialogue the moment it finishes rendering if autoskip
+                        nextScene()
+                    }
+
+                    loadOptions()
+                }
+            }
+            iterateACharacter();
+        }
+    }
+
+    /* I gotta do something about conditional dialogue
+    if (currentScene.sceneCondition) {
+        if (status.ImportantDecisions[currentScene.sceneCondition]) {
+            currentScene = currentEncounter.conditionMetScenes[currentSceneIndex];
+        } else {
+            currentScene = currentEncounter.conditionNotMetScenes[currentSceneIndex];
+        }
+    }; */
+
+    loadScene();
+    loadOptions();
+    loadText();
 }
 
 function nextScene() {
@@ -195,6 +219,30 @@ inventoryBtn.addEventListener("click", toggleInventory);
 window.addEventListener("nextEncounter", (e) => {
     nextEncounter(e.detail)
 })
+
+
+
+
+/* *Sigh* alright. time for the puzzles... */
+function decipherPuzzle() {
+
+}
+
+function rockPaperScissorsPuzzle() {
+
+}
+
+function holesAndShapesPuzzle() {
+
+}
+
+
+
+
+
+
+
+
 
 
 

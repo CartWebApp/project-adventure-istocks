@@ -39,7 +39,7 @@ function modifyHealth(change) {
     }
 
     // Fill in each heart you have left
-    for (let i=0; i<status.Health; i++) {
+    for (let i = 0; i < status.Health; i++) {
         const heartImg = hearts[i];
         heartImg.src = "images/Mechanics/filledHeart.svg";
     }
@@ -99,14 +99,14 @@ window.addEventListener("evaluateScene", (e) => {
             gameOverRetry.addEventListener("click", () => {
                 gameOverPopup.close();
 
-                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }))
-            }, {once: true});
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }));
+            }, { once: true });
 
             gameOverRestart.addEventListener("click", () => {
                 gameOverPopup.close();
 
-                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }))
-            }, {once: true});
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }));
+            }, { once: true });
         }
 
         switch (endGame) {
@@ -122,6 +122,21 @@ window.addEventListener("evaluateScene", (e) => {
                 break;
             default:
                 // If there isn't an endGame
+                break;
+        }
+
+        switch (puzzle) {
+            case "decipher":
+
+                break;
+            case "rockPaperScissors":
+
+                break;
+            case "holesAndShapes":
+                
+                break;
+            default:
+                console.log("Invalid puzzle");
                 break;
         }
     }
