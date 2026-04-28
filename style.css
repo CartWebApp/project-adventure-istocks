@@ -13,6 +13,7 @@ body {
     margin: 0px;
     padding: 0px;
     background: #FFF8F0;
+    cursor:none;
 }
 
 button:hover {
@@ -271,6 +272,15 @@ p {
     display: flex;
     justify-content: space-between;
     width: 80%;
+}
+
+
+.circle {
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events: none;
+    opacity:90%;
 }
 
 
