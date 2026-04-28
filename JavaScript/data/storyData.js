@@ -168,15 +168,15 @@ export const data = [
         id: "1A2A3A4B",
         scenes: [
             
-            { image: '', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
-            { image: '', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
+            { image: 'images/Visuals/Intro/john-looking-really-nervous.jpg', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
+            { image: 'images/Visuals/Intro/low-budget-man-saying-wait.jpg', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
 
             // The key turns into a stock image key.
-            { image: '', speaker: "Narrator", text: "." },
-            { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "Low-Budget Man", text: "..." },
-            { image: '', speaker: "John", text: "So, is it possible to unlock the gate with this thing..?" },
-            { image: '', speaker: "Low-Budget Man", text: "You're useless." },
+            { image: 'images/Visuals/Intro/john-with-cartoon-ah-key.jpg', speaker: "Narrator", text: "." },
+            { image: 'images/Visuals/Intro/john-with-cartoon-ah-key.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "..." },
+            { image: 'images/Visuals/Intro/john-with-cartoon-ah-key.jpg', speaker: "John", text: "So, is it possible to unlock the gate with this thing..?" },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "You're useless." },
 
             { gameOver: "Don't be so hesitant next time..." }
         ]
@@ -186,7 +186,8 @@ export const data = [
         id: "1A2A3B",
         scenes: [
             // Image of an enraged John punching at the camera
-            { image: '', speaker: "John", text: "RAAAGH!!!" },
+            {image: 'images/Visuals/Intro/john-and-low-budget-man-fighting.jpg', speaker: "Narrator", text: "..."},
+            { image: 'images/Visuals/Intro/john-stock-yelling.jpg', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
             { image: '', speaker: "Narrator", text: "Low-Budget man beats him up.", damage: 1 },
@@ -214,6 +215,8 @@ export const data = [
             { image: '', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
     },
+
+ // Do NOT do 1A2B *yet* 
 
     {
         id: "1A2B",
