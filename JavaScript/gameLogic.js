@@ -1,54 +1,93 @@
 import { data as storyData } from "./data/storyData.js";
-import { currentEncounter, currentSceneIndex } from "./UIController.js";
+import { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene } from './UIController.js'
 
+<<<<<<< HEAD
+
+const inventory = document.querySelector('#inventory')
+=======
+const optionsRow = document.querySelector('#optionsRow');
+
+const inventory = document.querySelector('#inventory');
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
+
+const gameOverPopup = document.querySelector("#gameOverPopup");
+const gameOverRetry = document.querySelector("#retryChoice");
+const gameOverRestart = document.querySelector("#restartGame");
 
 const status = {
     Health: 5,
     MaxHealth: 5,
-    Inventory: {
-
-    },
-    ImportantDecisions: {
-
-    }
+    Inventory: {},
+    ImportantDecisions: [],
 };
+
+export { status }
 
 /* Classes */
 class Item {
     constructor(name, image) {
-        this.name = name
-        this.image = image
+        this.name = name;
+        this.image = image;
     }
 };
 
 
 /* Functions */
-
 function modifyHealth(change) {
     status.Health += change;
 
     // Reset health bar
     for (const heartImg of hearts) {
-        heartImg.src = "images/Mechanics/unfilledHeart.svg"
+        heartImg.src = "images/Mechanics/unfilledHeart.svg";
     }
 
     // Fill in each heart you have left
-    for (let i=0; i<status.Health; i++) {
+    for (let i = 0; i < status.Health; i++) {
         const heartImg = hearts[i];
         heartImg.src = "images/Mechanics/filledHeart.svg";
     }
 }
 
+function addToInventory(itemName) {
+    let imageUrl = `images/Mechanics/ItemImages/${itemName}.svg`;
+    status.Inventory[itemName] = new Item(itemName, imageUrl);
+
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    const text = document.createElement('p');
+
+<<<<<<< HEAD
+=======
+    li.classList.add(itemName)
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
+    img.src = imageUrl;
+    text.textContent = itemName;
+
+    li.appendChild(img);
+    li.appendChild(text);
+    inventory.appendChild(li);
+}
+<<<<<<< HEAD
+=======
+function deleteFromInventory(itemName) {
+    delete status.Inventory[itemName]
+
+    const foundItem = inventory.querySelector(`.${itemName}`)
+    foundItem.remove()
+}
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
+
 // Evaluate mechanics per scene, have they exist at least
-window.addEventListener("evaluateScene", () => {
+window.addEventListener("evaluateScene", (e) => {
     const evaluateMechanics = (sceneObject) => {
         // Checks for mechanics - fallback on nothings if there aren't
         const damage = sceneObject.damage || 0;
         const heal = sceneObject.heal || 0;
         const getItem = sceneObject.getItem;
         const useItem = sceneObject.useItem;
+        const giveCondition = sceneObject.giveCondition;
         const puzzle = sceneObject.puzzle;
         const gameOver = sceneObject.gameOver;
         const endGame = sceneObject.endGame;
@@ -57,18 +96,38 @@ window.addEventListener("evaluateScene", () => {
         modifyHealth(-damage);
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
+<<<<<<< HEAD
         if (getItem) {
-            let imageUrl = `images/Mechanics/ItemImages/${getItem}.svg`
-            status.Inventory[getItem] = Item(getItem, imageUrl)
+            addToInventory(getItem);
+        }
+=======
+        if (getItem) { addToInventory(getItem); }
+        if (useItem) { deleteFromInventory(useItem); }
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
+
+        if (giveCondition) {
+            status.ImportantDecisions.push(giveCondition)
         }
 
-        if (useItem) {
-            delete status.Inventory[useItem]
+        if (giveCondition) {
+
         }
 
         if (gameOver) {
+            gameOverPopup.showModal()
             // gameOver == message to display
             // Make a black screen that shows the gameOver text, and a retry button
+            gameOverRetry.addEventListener("click", () => {
+                gameOverPopup.close();
+
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }));
+            }, { once: true });
+
+            gameOverRestart.addEventListener("click", () => {
+                gameOverPopup.close();
+
+                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }));
+            }, { once: true });
         }
 
         switch (endGame) {
@@ -86,22 +145,25 @@ window.addEventListener("evaluateScene", () => {
                 // If there isn't an endGame
                 break;
         }
-    }
 
-    // See if the current scene has any mechanics
-    const currentScene = currentEncounter.scenes[currentSceneIndex];
-    evaluateMechanics(currentScene)
+        switch (puzzle) {
+            case "decipher":
 
-    // See if the options activate any mechanics
-    if (currentScene.options) {
-        for (const option of currentScene.options) {
-            evaluateMechanics(option)
+                break;
+            case "rockPaperScissors":
+
+                break;
+            case "holesAndShapes":
+                
+                break;
+            default:
+                console.log("Invalid puzzle");
+                break;
         }
     }
+
+    // See if the current scene/option has any mechanics
+    const currentScene = e.detail;
+    evaluateMechanics(currentScene)
 });
-
-
-
-// Put Data for Hearts here, must adapt based on the different probabilities throuhgout the story.
-// Have a default set where it's 5 hearts in the beginning of the user journey
 

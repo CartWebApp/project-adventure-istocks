@@ -115,7 +115,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "Low-Budget Man", text: "You are to travel through here and begin your path to freedom. To help you, I've got you a gift." },
 
             // Image of the object
-            { image: 'images/Visuals/Intro/dragger-center.jpg', speaker: "Narrator", text: "", getItem: "Dagger" },
+            { image: 'images/Visuals/Intro/dragger-center.jpg', speaker: "Narrator", text: " ", getItem: "Dagger" },
 
             // John looks at the object in his hand, confused
             { image: 'images/Visuals/Intro/john-stock-holding-sword 1.jpg', speaker: "John", text: "Why did you give me a letter t?" },
@@ -135,7 +135,7 @@ export const data = [
                 speaker: "Low-Budget Man",
                 text: "So hurry! Approach the gate and use the key!",
                 options: [
-                    { text: "Open the gate", leadsTo: "1A2A3A4A" },
+                    { text: "Open the gate", leadsTo: "1A2A3A4A", useItem: "Layer1Key" },
                     { text: "I'm kinda scared..", leadsTo: "1A2A3A4B" }
                 ]
             }
@@ -147,27 +147,27 @@ export const data = [
         id: "1A2A3A4A",
         scenes: [
             // John and Low-Budget man watch the gate open.
-            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
-            { image: '', speaker: "Low-Budget Man", text: "Once more, congratulations." },
-            { image: '', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
-            { image: '', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
-            { image: '', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job." },
-            { image: '', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
-            { image: '', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate-doors.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Once more, congratulations." },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Well, maybe I'll try it. This whole layer thing seems pretty exciting compared to my job." },
+            { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "I wish you luck on your adventures. I will be making sure to watch your progress closely" },
+            { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Thanks, dude. Now stop adding extra dialogue to this scene and let me go through." },
 
-            { image: '', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
-            { image: '', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
-            { image: '', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through." },
+            { image: 'images/Visuals/Intro/low-budget-man-high-five.jpg', speaker: "Narrator", text: "Low-Budget man and John wave goodbye before John faces the border alone." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "He does not take a deep breath because stock images don't know how to breathe, but chills run up his unmoving spine." },
+            { image: 'images/Visuals/Intro/john-stock-entering-gate.jpg', speaker: "Narrator", text: "Then, at last, he gains the courage and steps through." },
 
             /* Transition to Layer 1*/
-            { image: '', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1" },
+            { image: 'images/Visuals/Intro/border-gate-solo-image.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak.", leadsTo: "L1" },
         ]
     },
 
     {
         id: "1A2A3A4B",
         scenes: [
-            // John and Low-Budget man watch the gate open.
+            
             { image: '', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
             { image: '', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
 
@@ -189,7 +189,7 @@ export const data = [
             { image: '', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
-            { image: '', speaker: "Narrator", text: "", damage: 1 },
+            { image: '', speaker: "Narrator", text: "Low-Budget man beats him up.", damage: 1 },
             { image: '', speaker: "John", text: "AUUUGHH!!" },
             { image: '', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
             { image: '', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
@@ -211,7 +211,7 @@ export const data = [
         scenes: [
             { image: '', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
-            { image: '', speaker: "Narrator", text: "", leadsTo: "1A2B" }
+            { image: '', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
     },
 
@@ -324,7 +324,7 @@ export const data = [
             { image: '', speaker: "John", text: "RAAGH!!!" },
 
             // Beating up - black screen
-            { image: '', speaker: "Narrator", text: "You lunge at the stick figure" },
+            { image: '', speaker: "Narrator", text: "You lunge at the stick figure." },
             { image: '', speaker: "Narrator", text: "That... doesn't go well. He pulls a weapon on you, then James and the Stick Figure beat you until you're unconscious." },
             { image: '', speaker: "Narrator", text: "...Seems like you'll be staying in the hospital for a while. If anyone finds you here, that is." },
 
@@ -852,7 +852,7 @@ export const data = [
             {
                 image: '',
                 speaker: "Guy from Layer 2",
-                text: "", // Left intentionally empty
+                text: " ", // Left intentionally empty
                 options: [
                     { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
                     { text: 'Beg', leadsTo: "L1-1B2C-#4" }, // If you went the 1C route
@@ -1243,7 +1243,7 @@ export const data = [
             { image: '', speaker: "John", text: "My download is kinda licenseless..." },
             { image: '', speaker: "Guardian", text: "..." },
             // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
-            { image: '', speaker: "Guardian", text: "" },
+            { image: '', speaker: "Guardian", text: " " },
             { gameOver: "You didn't come here just to earn your way to victory." },
         ]
     },
@@ -1394,7 +1394,7 @@ export const data = [
             // The Guardian has brandished its blade, preparing to fight the source.
             { image: '', speaker: "Guardian", text: "..."},
             // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
-            { image: '', speaker: "Narrator", text: ""},
+            { image: '', speaker: "Narrator", text: " "},
             // The guardian collapses onto the ground. A great cloud of dust where it falls, its colossal body crashing right in front of the gate.
             { image: '', speaker: "Narrator", text: "The Guardian falls with a single strike."},
             { image: '', speaker: "John", text: "What..!"},
@@ -1403,7 +1403,7 @@ export const data = [
             // And his eyes widen.
             { image: '', speaker: "John", text: "..!"},
             // It's someone clad in full magical, animated armor! A mystic sword in one hand and a bow of light in the other, he stands opposite to John.
-            { image: '', speaker: "???", text: ""},
+            { image: '', speaker: "???", text: " "},
             { image: '', speaker: "???", text: "It's been a while."},
             // He moves his helmet up... revealing him to be Low-Budget man.
             { image: '', speaker: "Low-Budget Man", text: "How has your adventure been, John?"},
@@ -1488,7 +1488,7 @@ export const data = [
                     { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5},
                 ]
             },
-            { image: '', speaker: "Low-Budget Man", text: "", falseDamage: 5},
+            { image: '', speaker: "Low-Budget Man", text: " ", falseDamage: 5},
             { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well."},
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
             { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off."},
@@ -1565,7 +1565,7 @@ export const data = [
             {
                 image: '',
                 speaker: "John",
-                text: "",
+                text: " ",
                 options: [
                     { text: 'Brandish the Eraser', leadsTo: "Ending-3-Pt2" },
                 ]

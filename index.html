@@ -35,7 +35,11 @@
 
         <section id="actualGame" class="hidden">
             <section id="mainContent">
-                <img src="" id="mainVisual">
+<<<<<<< HEAD
+                <img src="/JavaScript/data/storyData.js" id="mainVisual" alt="main visual">
+=======
+                <img src="" alt='Game visual' id="mainVisual">
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
 
                 <section id="dialogueBox">
                     <p id="speakerTag">Speaker</p>
@@ -44,9 +48,13 @@
                     </div>
                 </section>
 
-                <section id="inventoryList" class="hidden">
-                    <ul>
-
+                <section id="inventorySection" class="hidden">
+<<<<<<< HEAD
+=======
+                    <p>Inventory</p>
+>>>>>>> 3470d9a13fff11ccf0df2374effc0aec35eeb670
+                    <ul id="inventory">
+                        
                     </ul>
                 </section>
 
@@ -59,18 +67,27 @@
 
             <section id="healthbarSection">
                 <ul id="healthbar">
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart"><img src="images/Mechanics/filledHeart.svg" alt="heart"></li>
+                    <li class="heart"><img src="images/Mechanics/filledHeart.svg" alt="heart"></li>
+                    <li class="heart"><img src="images/Mechanics/filledHeart.svg" alt="heart"></li>
+                    <li class="heart"><img src="images/Mechanics/filledHeart.svg" alt="heart"></li>
+                    <li class="heart"><img src="images/Mechanics/filledHeart.svg" alt="heart"></li>
                 </ul>
             </section>
 
             <button id="inventoryButton">
-                <img src="images/Mechanics/inventoryButton.png">
+                <img src="images/Mechanics/inventoryButton.png" alt="inventory">
             </button>
         </section>
+
+        <dialog id="gameOverPopup">
+            <p>Game Over!</p>
+            <p id="gameOverMessage"></p>
+            <div id="gameOverOptions">
+                <button type="button" id="retryChoice">Retry Choice</button>
+                <button type="button" id="restartGame">Restart Game</button>
+            </div>
+        </dialog>
     </main>
     <footer>
 
@@ -78,7 +95,6 @@
 
     <script src="JavaScript/UIController.js" type="module"></script>
     <script src="JavaScript/gameLogic.js" type="module"></script>
-    </section>
 </body>
 
 </html>
