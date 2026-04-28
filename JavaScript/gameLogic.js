@@ -22,6 +22,15 @@ const status = {
 export { status }
 
 /* Classes */
+class Player {
+    constructor() {
+        this.Health = 5;
+        this.MaxHealth = 5;
+        this.Inventory = {};
+        this.ImportantDecisions = [];
+    }
+};
+
 class Item {
     constructor(name, image) {
         this.name = name;
