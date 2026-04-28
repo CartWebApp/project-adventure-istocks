@@ -246,11 +246,31 @@ p {
     border: none;
     border-radius: var(--border-radius);
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameOverPopup p:first-child {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#gameOverMessage {
+    font-size: 20px;
 }
 
 #gameOverPopup::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px); /* Adds a blur effect to the page background */
+}
+
+#gameOverOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
 
