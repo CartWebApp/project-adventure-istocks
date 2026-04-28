@@ -58,7 +58,17 @@ function nextEncounter(encounterID) {
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
-    
+    // Fire to gameLogic.js
+    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: currentScene }));
+
+    // Putting this outside of loadOptions() to deal with my cheap coding
+    const options = currentScene.options;
+    if (!options) {
+        nextBtn.classList.remove("hidden");
+    } else {
+        nextBtn.classList.add("hidden");
+    }
+
     const loadScene = () => {
         imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
         speakerTag.textContent = currentScene.speaker;
@@ -68,12 +78,8 @@ function initiateScene() {
         // If there are options, show the options
         // Hide next button if options are about to appear
         const options = currentScene.options;
-        if (!options) {
-            nextBtn.classList.remove("hidden")
-        } else {
-            // Load options
-            nextBtn.classList.add("hidden")
-            lastOptionScene = currentScene
+        if (options) {
+            lastOptionScene = currentScene;
 
             for (const option of options) {
                 const newLi = document.createElement('li');
@@ -130,7 +136,7 @@ function initiateScene() {
             const maxChars = sceneText.length;
             let index = 0;
 
-            // Skip the rolling dialogue if tap anywhere on the screen
+            // Skip the rolling dialogue
             const skipDialogue = () => {
                 if (!inventoryEnabled) {
                     dialogue.textContent = sceneText;
@@ -155,8 +161,7 @@ function initiateScene() {
                     }
                     setTimeout(iterateACharacter, waitTime);
                 } else {
-                    // When text finishes loading
-                    // Make nextBtn go to next scene again
+                    // When text finishes loading, make nextBtn go to next scene again
                     nextBtn.removeEventListener("click", skipDialogue)
                     nextBtn.addEventListener("click", nextScene)
 
@@ -182,7 +187,6 @@ function initiateScene() {
     }; */
 
     loadScene();
-    loadOptions();
     loadText();
 }
 

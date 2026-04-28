@@ -8,6 +8,7 @@ const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
 
 const gameOverPopup = document.querySelector("#gameOverPopup");
+const gameOverMessage = document.querySelector('#gameOverMessage');
 const gameOverRetry = document.querySelector("#retryChoice");
 const gameOverRestart = document.querySelector("#restartGame");
 
@@ -43,6 +44,10 @@ function modifyHealth(change) {
         const heartImg = hearts[i];
         heartImg.src = "images/Mechanics/filledHeart.svg";
     }
+
+    if (status.Health <= 0) {
+        showGameOver("You lost all your health...")
+    }
 }
 
 function addToInventory(itemName) {
@@ -66,6 +71,25 @@ function deleteFromInventory(itemName) {
 
     const foundItem = inventory.querySelector(`.${itemName}`)
     foundItem.remove()
+}
+
+function showGameOver(message) {
+    gameOverPopup.showModal();
+    gameOverMessage.textContent = message;
+
+    // gameOver == message to display
+    // Make a black screen that shows the gameOver text, and a retry button
+    gameOverRetry.addEventListener("click", () => {
+        gameOverPopup.close();
+
+        window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }));
+    }, { once: true });
+
+    gameOverRestart.addEventListener("click", () => {
+        gameOverPopup.close();
+
+        window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }));
+    }, { once: true });
 }
 
 // Evaluate mechanics per scene, have they exist at least
@@ -93,20 +117,7 @@ window.addEventListener("evaluateScene", (e) => {
         }
 
         if (gameOver) {
-            gameOverPopup.showModal()
-            // gameOver == message to display
-            // Make a black screen that shows the gameOver text, and a retry button
-            gameOverRetry.addEventListener("click", () => {
-                gameOverPopup.close();
-
-                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }));
-            }, { once: true });
-
-            gameOverRestart.addEventListener("click", () => {
-                gameOverPopup.close();
-
-                window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }));
-            }, { once: true });
+           showGameOver(gameOver)
         }
 
         switch (endGame) {
@@ -136,7 +147,7 @@ window.addEventListener("evaluateScene", (e) => {
                 
                 break;
             default:
-                console.log("Invalid puzzle");
+
                 break;
         }
     }
