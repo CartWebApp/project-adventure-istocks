@@ -28,7 +28,6 @@ export const data = [
             { image: 'images/Visuals/Intro/john-facing-restock.jpg', speaker: "John", text: "Ah, finally arrived. Now I can-" },
             { image: 'images/Visuals/Intro/low-budget-man-raising-hand 1.jpg', speaker: "???", text: "Wait!" },
             { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A voice he has never heard calls out to him. John turns to the voice." },
-            // Change image here
             { image: 'images/Visuals/Intro/john-meets-stock-image-man-first-time 1.jpg', speaker: "Narrator", text: "A hooded man stands to the side of him, his face completely obscured in shadow. Yet, something about his form seems strange..." },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "???", text: "You there. How are you this evening?" },
             { image: 'images/Visuals/Intro/john-talking-with-low-budget-man.jpg', speaker: "John", text: "Err... fine, I guess." },
@@ -190,13 +189,13 @@ export const data = [
             { image: 'images/Visuals/Intro/john-stock-yelling.jpg', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
-            { image: '', speaker: "Narrator", text: "Low-Budget man beats him up.", damage: 1 },
-            { image: '', speaker: "John", text: "AUUUGHH!!" },
-            { image: '', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
-            { image: '', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
-            { image: '', speaker: "Low-Budget Man", text: "I don't care. Look, you have something to do." },
+            { image: 'images/Visuals/Intro/low-budget-man-beating-john-up.jpg', speaker: "Narrator", text: "Low-Budget man beats him up.", damage: 1 },
+            { image: 'images/Visuals/Intro/john-fight-close-up.jpg', speaker: "John", text: "AUUUGHH!!" },
+            { image: 'images/Visuals/Intro/low-budget-man-close-up.jpg', speaker: "Low-Budget Man", text: "Are you deranged? You see a man beyond your form, and your primal response is to fight them?" },
+            { image: 'images/Visuals/Intro/john-fight-close-up.jpg', speaker: "John", text: "Sorry man. I just do that sometimes it's like a little quirk of mine. I'm like a scorpio or something so it kinda lines up and stuff." },
+            { image: 'images/Visuals/Intro/low-budget-man-close-up.jpg', speaker: "Low-Budget Man", text: "I don't care. Look, you have something to do." },
             {
-                image: '',
+                image: 'images/Visuals/Intro/low-budget-man-close-up.jpg',
                 speaker: "Low-Budget Man",
                 text: "Maybe that beating put some sense into you. Now, will you accept my offer or not?",
                 options: [

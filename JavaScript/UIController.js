@@ -265,7 +265,7 @@ navigateSceneButton.addEventListener("click", () => {
 })
 
 
-// Custom Cursor
+// Custom Cursor (can alter styling with a different image or CSS styling, do not need to adjust JavaScript logic).
 
 const coords = {x: 0, y: 0};
 const circles = document.querySelectorAll (".circle");
