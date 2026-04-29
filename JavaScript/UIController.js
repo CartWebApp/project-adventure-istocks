@@ -327,15 +327,15 @@ function holesAndShapesPuzzle() {
 
     // Makin an example shape right now...
     const shapes = [
-        new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
-        new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole).desiredHole,
-        new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole).desiredHole,
-        new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
-        new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
-        new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
+        new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole),
+        new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole),
+        new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
     ]
-    const triangle = shapes[0]
-    // triangle.shapeInDOM()
+    draggableShape = shapes[0]
+    draggableShape.shapeInDOM()
 
     const getHoleDraggingOver = (container, draggingX) => {
         const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
