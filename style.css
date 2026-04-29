@@ -109,7 +109,6 @@ button:hover {
     border: 10px solid #2E2E2E;
     max-width: 70%;
     align-self: center;
-    background-position: static;
 
 }
 
@@ -381,14 +380,91 @@ p {
 
 /* Media Queries for Landscape Mobile Phone*/
 
-@media (max-width: 874px) {
-    main {
-        grid-area: 2 / span 3;
+@media (orientation: landscape) and (max-height: 402px) {
+main {grid-area: 2 / span 3;}
+
+
+.circle {
+    display:none;
+}
+
+
+#next {
+    width:175px;
+    height:75px;
+}
+
+
+#actualGame {
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:0px;
+}
+
+#dialogueBpx {
+   margin-left:0px;
+   margin-right:0px;
+}
+
+
+#dialogueBoxStyle, #inventorySection {
+    width:622px;
+    height:132.422px;
+
+    & #dialogue {
+        font-size:25px;
     }
 }
 
-@media (max-height: 402px) {
-    main {
-        grid-area: 2 / span 3;
+#speakerTag {
+    display:flex;
+    width:109px;
+    height:41px;
+    border-radius:15px;
+    font-size:25px;
+    padding:5px;
+    top:-50px;
+    align-items:center;
+    justify-content:center;
+}
+
+#mainVisual {
+    justify-self:center;
+    align-self:center;
+    display:flex;
+    margin-right:0px;
+    margin-left:0px
+}   
+
+#healthbar ul {
+    gap:10px;
+}
+
+#healthbar img {
+    height:70px;
+}
+
+#healthbar li {
+    height:30px;
+    width:30px;
+}
+
+.heart {
+    gap:10px;
+}
+
+#healthbar {
+    height:30%;
+}
+
+#inventoryButton {
+    width:37px;
+    height:37px;
+
+    & img {
+        width:37px;
+        height:37px;
     }
+}
+
 }
