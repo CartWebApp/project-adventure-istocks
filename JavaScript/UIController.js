@@ -31,7 +31,7 @@ const RPSPuzzleScreen = document.querySelector('#rockPaperScissorsPuzzle');
 const decipherPuzzleScreen = document.querySelector('#decipherPuzzle');
 
 /* Variables */
-let currentEncounter = storyData.find(object => object.id = "Intro");
+let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
 let lastEncounter = undefined;
 let lastOptionScene = undefined;
@@ -287,6 +287,10 @@ function rockPaperScissorsPuzzle() {
 }
 
 function holesAndShapesPuzzle() {
+    // Find the mini scenes list of the scene triggering the holes and shapes puzzle
+    const puzzleScenes = storyData.find(obj => obj.id == "L1-1C2B").scenes.find(s => s.puzzle != undefined).scenes
+    console.log(puzzleScenes)
+
     const draggableShapeContainer = document.querySelector('#draggableShapeContainer');
     const boxOfHoles = document.querySelector('#boxOfHoles');
     const triangleHole = document.querySelector('#triangleHole');
@@ -326,16 +330,14 @@ function holesAndShapesPuzzle() {
     }
 
     // Makin an example shape right now...
-    const shapes = [
-        new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole),
-        new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole),
-        new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-    ]
-    draggableShape = shapes[0]
-    draggableShape.shapeInDOM()
+    const shapes = {
+        triangle: new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        circle: new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole),
+        star: new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole),
+        heart: new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        key: new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        guyFromLayer2: new Shape("GuyFromLayer2", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+    }
 
     const getHoleDraggingOver = (container, draggingX) => {
         const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
@@ -382,10 +384,8 @@ function holesAndShapesPuzzle() {
         const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX)
         if (holeDraggingOver) {
             if (holeDraggingOver.getAttribute('id') == draggableShape.getAttribute('data-desiredHole')) {
-                // Initiate the next scene, and make the next shape
-                // Will that logic be in here, or in the class? That's up to me to decide later
-
-                // Also, there's a gag you can drop everything into the square hole.
+                draggableShape.setAttribute("draggable", false)
+                toNextEncounter();
             } else if (holeDraggingOver.getAttribute('id') == squareHole.getAttribute('id')) {
                 // Gag dialogue
             } else {
@@ -393,6 +393,71 @@ function holesAndShapesPuzzle() {
             }
         }
     });
+
+
+
+    // Puzzle-exclusive scenes 
+    // "Encounters & scenes" inside the puzzle element
+    let currentMiniEncounter = "Intro"
+    let miniSceneIndex = 0;
+    const toNextEncounter = (nextEncounterName) => {
+        currentMiniEncounter = puzzleScenes[nextEncounterName]
+        miniSceneIndex = 0;
+        toNextMiniScene();
+    }
+    const toNextMiniScene = () => {
+        initiateMiniScene();
+        miniSceneIndex++;
+    }
+    const initiateMiniScene = () => {
+        const currentMiniScene = currentMiniEncounter[miniSceneIndex];
+        const miniNext = document.querySelector('#skipGL2dialogue')
+
+        const GL2dialogue = document.querySelector("#GL2dialogue");
+        GL2dialogue.textContent = currentMiniScene.text;
+
+        const sceneText = currentMiniScene.text;
+        const maxChars = sceneText.length;
+        let index = 0;
+
+        // Skip the rolling dialogue
+        const skipDialogue = () => {
+            if (!inventoryEnabled) {
+                GL2dialogue.textContent = sceneText;
+                index = maxChars;
+            }
+        };
+        // Make nextBtn skip dialogue instead of going to the next scene
+        miniNext.addEventListener("click", skipDialogue, { once: true });
+        miniNext.removeEventListener("click", nextScene)
+
+        const iterateACharacter = () => {
+            if (index < maxChars) {
+                const textSection = sceneText.slice(0, index + 1);
+                GL2dialogue.textContent = textSection;
+                index++
+
+                const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
+                let waitTime = 25;
+                if (character === "." || character === "?" || character === "!") {
+                    waitTime = 300;
+                }
+                setTimeout(iterateACharacter, waitTime);
+            } else {
+                miniNext.removeEventListener("click", skipDialogue);
+                // Do not allow proceeding to next scene
+
+                if (currentMiniScene.shape) {
+                    shapes[currentMiniEncounter.shape].shapeInDOM();
+                } else {
+                    miniNext.addEventListener("click", toNextMiniScene, {once: true});
+                }
+            }
+        }
+        iterateACharacter();
+    }
+
+    toNextEncounter("Intro")
 }
 
 holesAndShapesPuzzle()

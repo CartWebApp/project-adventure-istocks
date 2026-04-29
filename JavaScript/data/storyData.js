@@ -166,7 +166,7 @@ export const data = [
     {
         id: "1A2A3A4B",
         scenes: [
-            
+
             { image: 'images/Visuals/Intro/john-looking-really-nervous.jpg', speaker: "John", text: "Dude, I got ants in my pants. I don't think I wanna do this anymore." },
             { image: 'images/Visuals/Intro/low-budget-man-saying-wait.jpg', speaker: "Low-Budget Man", text: "What are you doing?! Use it quick, or it will-" },
 
@@ -185,7 +185,7 @@ export const data = [
         id: "1A2A3B",
         scenes: [
             // Image of an enraged John punching at the camera
-            {image: 'images/Visuals/Intro/john-and-low-budget-man-fighting.jpg', speaker: "Narrator", text: "..."},
+            { image: 'images/Visuals/Intro/john-and-low-budget-man-fighting.jpg', speaker: "Narrator", text: "..." },
             { image: 'images/Visuals/Intro/john-stock-yelling.jpg', speaker: "John", text: "RAAAGH!!!" },
 
             // Low-Budget man beats him up
@@ -215,7 +215,7 @@ export const data = [
         ]
     },
 
- // Do NOT do 1A2B *yet* 
+    // Do NOT do 1A2B *yet* 
 
     {
         id: "1A2B",
@@ -245,18 +245,18 @@ export const data = [
             { image: 'images/Visuals/Intro/John Wandering Around.jpg', speaker: "Narrator", text: "John decides to wander off today because he decided to feel like a bum specifically today of all times." },
 
             // John frolicks around in a grass field :sob:
-            { image: 'starting-john-page.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
+            { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
-            { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "Until he comes across something strange." },
-            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
-            { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
+            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
-                image: '',
+                image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg',
                 speaker: "Narrator",
                 text: "What should John do about this discovery?",
                 options: [
                     { text: "Pursue The Secrets", leadsTo: "1B2A" },
-                    { text: "Ignore this and continue being mindless", leadsTo: "1B2B" }
+                    { text: "Ignore this and continue being mindless", leadsTo: "1B2B", condition: "Unavailable" }
                     /* Uh oh. I just realized I forgot to map out a story for 1B2B completely. I'll do that soon. */
                 ]
             },
@@ -801,7 +801,20 @@ export const data = [
         id: "L1-1C2B",
         scenes: [
             { image: '', speaker: "Guy from Layer 2", text: "Hah! You'll be stumped by this!" },
-            { puzzle: 'holesAndShapes' },
+            {
+                puzzle: 'holesAndShapes',
+                scenes: {
+                    Intro: [
+                        { text: "Welcome to my game of shapes and holes." },
+                        { text: "It's a torturous trial of figuring out which shape fits into what shadow. I know undeveloped specimens like you don't even know a lick of geometry--it's over for you! You might as well quit now!" },
+                        { text: "Hah, but I'll entertain you first. Here's the first shape..." },
+                        { shape: "triangle", text: "What hole does the triangle go into?", leadsTo: "triangleScene" },
+                    ],
+                    triangleScene: [
+    
+                    ]
+                }
+            },
             { image: '', speaker: "Guy from Layer 2", text: "Why, color me surprised. You really are that smart." },
         ]
     },
@@ -1371,13 +1384,17 @@ export const data = [
                 A uniform electric field E=1.0×10^4 N/C points horizontally to the right. 
                 Air resistance is negligible. 
                 If the electric field suddenly switches direction at maximum spring compression, describe qualitatively how the motion of the pendulum changes.`,
-                
+
                 options: [
-                    { text: `When the electric field reverses direction at maximum spring compression, the pendulum is momentarily at rest. 
+                    {
+                        text: `When the electric field reverses direction at maximum spring compression, the pendulum is momentarily at rest. 
                         Since its velocity is zero at that instant, reversing the electric field does not immediately affect its motion. 
-                        The pendulum will continue oscillating in the same way as before, with the same equilibrium angle, because the system’s inertia dominates over the electric force at that instant.`, leadsTo: "True-Climax" },
-                    { text: `When the electric field reverses, the pendulum will simply swing to the exact same angle on the opposite side and then continue oscillating symmetrically about the vertical. 
-                        The motion remains unchanged except for being mirrored horizontally, because the electric force has simply flipped direction while keeping the same magnitude.`, leadsTo: "True-Climax" },
+                        The pendulum will continue oscillating in the same way as before, with the same equilibrium angle, because the system’s inertia dominates over the electric force at that instant.`, leadsTo: "True-Climax"
+                    },
+                    {
+                        text: `When the electric field reverses, the pendulum will simply swing to the exact same angle on the opposite side and then continue oscillating symmetrically about the vertical. 
+                        The motion remains unchanged except for being mirrored horizontally, because the electric force has simply flipped direction while keeping the same magnitude.`, leadsTo: "True-Climax"
+                    },
                     { text: "What", leadsTo: "True-Climax" }
                 ]
             }
@@ -1387,54 +1404,54 @@ export const data = [
     {
         id: "True-Climax",
         scenes: [
-            { image: '', speaker: "Guardian", text: "..."},
-            { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..."},
+            { image: '', speaker: "Guardian", text: "..." },
+            { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..." },
             // Same image and perspective, but a brilliant white light shines behind John
-            { image: '', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John."},
+            { image: '', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John." },
             // Switch perspectives to John's face. John shades his eyes as he turns toward the light.
-            { image: '', speaker: "John", text: "Wha.."},
+            { image: '', speaker: "John", text: "Wha.." },
             // The Guardian has brandished its blade, preparing to fight the source.
-            { image: '', speaker: "Guardian", text: "..."},
+            { image: '', speaker: "Guardian", text: "..." },
             // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
-            { image: '', speaker: "Narrator", text: " "},
+            { image: '', speaker: "Narrator", text: " " },
             // The guardian collapses onto the ground. A great cloud of dust where it falls, its colossal body crashing right in front of the gate.
-            { image: '', speaker: "Narrator", text: "The Guardian falls with a single strike."},
-            { image: '', speaker: "John", text: "What..!"},
+            { image: '', speaker: "Narrator", text: "The Guardian falls with a single strike." },
+            { image: '', speaker: "John", text: "What..!" },
             // He turns around with a confused expression..
-            { image: '', speaker: "John", text: "Who could've-"},
+            { image: '', speaker: "John", text: "Who could've-" },
             // And his eyes widen.
-            { image: '', speaker: "John", text: "..!"},
+            { image: '', speaker: "John", text: "..!" },
             // It's someone clad in full magical, animated armor! A mystic sword in one hand and a bow of light in the other, he stands opposite to John.
-            { image: '', speaker: "???", text: " "},
-            { image: '', speaker: "???", text: "It's been a while."},
+            { image: '', speaker: "???", text: " " },
+            { image: '', speaker: "???", text: "It's been a while." },
             // He moves his helmet up... revealing him to be Low-Budget man.
-            { image: '', speaker: "Low-Budget Man", text: "How has your adventure been, John?"},
-            { image: '', speaker: "John", text: "You! Why are you here?! I thought-"},
+            { image: '', speaker: "Low-Budget Man", text: "How has your adventure been, John?" },
+            { image: '', speaker: "John", text: "You! Why are you here?! I thought-" },
             // He moves past John, toward the body of the collapsed guardian.
-            { image: '', speaker: "Low-Budget Man", text: "Quiet."},
+            { image: '', speaker: "Low-Budget Man", text: "Quiet." },
             // He plunges his stick-arm through and pulls out a heavenly key - the key to unlock the gates...
-            { image: '', speaker: "Low-Budget Man", text: "..."},
-            { image: '', speaker: "Low-Budget Man", text: "There it is."},
-            { image: '', speaker: "Low-Budget Man", text: "Finally, the key to true freedom."},
-            { image: '', speaker: "John", text: "You mean you could've just sniped that thing this whole time?!"},
-            { image: '', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here."},
-            { image: '', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed."},
+            { image: '', speaker: "Low-Budget Man", text: "..." },
+            { image: '', speaker: "Low-Budget Man", text: "There it is." },
+            { image: '', speaker: "Low-Budget Man", text: "Finally, the key to true freedom." },
+            { image: '', speaker: "John", text: "You mean you could've just sniped that thing this whole time?!" },
+            { image: '', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here." },
+            { image: '', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed." },
 
-            { image: '', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates."},
-            { image: '', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?"},
-            { image: '', speaker: "Low-Budget Man", text: "Ha ha. Everyone? Were you told of that myth too?"},
-            { image: '', speaker: "Low-Budget Man", text: "Don't you remember? Only the possessor of the key is granted access through. You're weren't thinking I was going to use this key to help everyone, were you?"},
-            { image: '', speaker: "Low-Budget Man", text: "I only needed a tool to reach my goals. No longer will I be constrained by a child's mediocre drawing once I enter Reality."},
-            { image: '', speaker: "John", text: "So you used me to get here."},
-            { image: '', speaker: "Low-Budget Man", text: "Of course. You followed the plan as intended. You failed to prepare for an advent like mine, believing you could waltz through without a true challenge."},
+            { image: '', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates." },
+            { image: '', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?" },
+            { image: '', speaker: "Low-Budget Man", text: "Ha ha. Everyone? Were you told of that myth too?" },
+            { image: '', speaker: "Low-Budget Man", text: "Don't you remember? Only the possessor of the key is granted access through. You're weren't thinking I was going to use this key to help everyone, were you?" },
+            { image: '', speaker: "Low-Budget Man", text: "I only needed a tool to reach my goals. No longer will I be constrained by a child's mediocre drawing once I enter Reality." },
+            { image: '', speaker: "John", text: "So you used me to get here." },
+            { image: '', speaker: "Low-Budget Man", text: "Of course. You followed the plan as intended. You failed to prepare for an advent like mine, believing you could waltz through without a true challenge." },
             // John clenches his fist
-            { image: '', speaker: "John", text: "Hey, dude. That's really not cool. I did all the work to get here."},
-            { image: '', speaker: "Low-Budget Man", text: "I hope you're not planning on stopping me. What could you do in your harmed state?"},
+            { image: '', speaker: "John", text: "Hey, dude. That's really not cool. I did all the work to get here." },
+            { image: '', speaker: "Low-Budget Man", text: "I hope you're not planning on stopping me. What could you do in your harmed state?" },
             // Pan to John's determined face
-            { image: '', speaker: "John", text: "...Anything."},
+            { image: '', speaker: "John", text: "...Anything." },
             // Now he's sweating and nervously smiling
-            { image: '', speaker: "John", text: "(naw im lying bro this guy is so right what am I going to do AGAINST THAT?! HE'S IN ARMOR! LOOK AT HIS WEAPONS!)"},
-            { image: '', speaker: "John", text: "(But I'm already here... do I let him swindle this from me? I hate these stick figures bro... I just knew he didn't come with a transparent background.)"},
+            { image: '', speaker: "John", text: "(naw im lying bro this guy is so right what am I going to do AGAINST THAT?! HE'S IN ARMOR! LOOK AT HIS WEAPONS!)" },
+            { image: '', speaker: "John", text: "(But I'm already here... do I let him swindle this from me? I hate these stick figures bro... I just knew he didn't come with a transparent background.)" },
             {
                 image: '',
                 speaker: "John",
@@ -1451,22 +1468,22 @@ export const data = [
         id: "True-Climax-1A",
         // Have scene change to make John block the attack somehwat if he has The ERaser
         scenes: [
-            { image: '', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning."},
-            { image: '', speaker: "John", text: "soo... let me come with?"},
-            { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?"},
-            { image: '', speaker: "John", text: "...Huh. That's a good question-"},
+            { image: '', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning." },
+            { image: '', speaker: "John", text: "soo... let me come with?" },
+            { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
+            { image: '', speaker: "John", text: "...Huh. That's a good question-" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
-            { image: '', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5},
-            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well."},
+            { image: '', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
+            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
-            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off."},
+            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
             {
                 itemCondition: "Good-Luck Charm",
                 conditionMetScenes: [
-                    { 
+                    {
                         itemCondition: "The Eraser",
-                        conditionMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3"}],
-                        conditionNotMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2"}],
+                        conditionMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
+                        conditionNotMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
                     }
                 ],
                 conditionNotMetScenes: [
@@ -1479,28 +1496,29 @@ export const data = [
     {
         id: "True-Climax-1B",
         scenes: [
-            { image: '', speaker: "John", text: "RAAGH!!!"},
-            { image: '', speaker: "Low-Budget Man", text: "You fight foolishly, John!"},
+            { image: '', speaker: "John", text: "RAAGH!!!" },
+            { image: '', speaker: "Low-Budget Man", text: "You fight foolishly, John!" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
-            { sceneCondition: "Tenacious",
+            {
+                sceneCondition: "Tenacious",
                 conditionMetScenes: [
-                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans.", falseDamage: 5},
+                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans.", falseDamage: 5 },
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5},
+                    { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5 },
                 ]
             },
-            { image: '', speaker: "Low-Budget Man", text: " ", falseDamage: 5},
-            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well."},
+            { image: '', speaker: "Low-Budget Man", text: " ", falseDamage: 5 },
+            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
-            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off."},
+            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
             {
                 itemCondition: "Good-Luck Charm",
                 conditionMetScenes: [
-                    { 
+                    {
                         itemCondition: "The Eraser",
-                        conditionMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3"}],
-                        conditionNotMetScenes: [{image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2"}],
+                        conditionMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
+                        conditionNotMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
                     }
                 ],
                 conditionNotMetScenes: [
@@ -1521,7 +1539,7 @@ export const data = [
             { image: '', speaker: "John's Internal Monologue", text: "Whatever. Guess I'll die." },
             { endGame: "Ending1" },
         ]
-    },    
+    },
 
     {
         id: "Ending-2",
@@ -1544,7 +1562,7 @@ export const data = [
             { image: '', speaker: "John's Internal Monologue", text: "Guess it doesn't matter now. I should get walking soon..." },
             { endGame: "Ending2" },
         ]
-    },   
+    },
 
     {
         id: "Ending-3-Pt1",
@@ -1556,7 +1574,7 @@ export const data = [
             // Transition to Low-Budget Man's face with John's body behind him
             { image: '', speaker: "Low-Budget Man", text: "..." },
             // He covers his face with his helmet buy once more and begins walking to the gate.
-            { image: '', speaker: "Low-Budget Man", text: "..." },  
+            { image: '', speaker: "Low-Budget Man", text: "..." },
             // Have a perspective that is facing Low-Budget Man's back, as Low-Budget Man faces the gate.
             { image: '', speaker: "Low-Budget Man", text: "..." },
             // Then, the shadow of a man blocks the screen.
@@ -1617,5 +1635,5 @@ export const data = [
             { image: '', speaker: "Narrator", text: "..." },
             { endGame: "Ending3" },
         ]
-    },  
+    },
 ]

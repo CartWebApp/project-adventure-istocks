@@ -13,7 +13,7 @@ body {
     margin: 0px;
     padding: 0px;
     background: #FFF8F0;
-    cursor:none;
+    cursor: none;
 }
 
 button:hover {
@@ -87,7 +87,9 @@ button:hover {
     height: 99vh;
 }
 
-#actualGame.hidden, #dialogueBox.hidden, #inventorySection.hidden {
+#actualGame.hidden,
+#dialogueBox.hidden,
+#inventorySection.hidden {
     display: none;
 }
 
@@ -95,7 +97,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding-top:4em;
+    padding-top: 4em;
     gap: 36.55px;
 }
 
@@ -105,9 +107,9 @@ button:hover {
     border: 3px solid var(--main-black);
     margin-bottom: 30px;
     border: 10px solid #2E2E2E;
-    max-width:70%;
+    max-width: 70%;
     align-self: center;
-    background-position:static;
+    background-position: static;
 
 }
 
@@ -135,13 +137,14 @@ button:hover {
     border-radius: var(--border-radius);
 }
 
-#dialogueBoxStyle, #inventorySection {
+#dialogueBoxStyle,
+#inventorySection {
     border: 15px solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
-    width:98.4%;
+    width: 98.4%;
     height: 200px;
     justify-self: center;
 
@@ -176,7 +179,7 @@ button:hover {
     width: 284px;
     height: 98px;
     font-size: 30px;
-    justify-self:flex-end;
+    justify-self: flex-end;
 }
 
 #next.hidden {
@@ -213,8 +216,8 @@ button:hover {
 
 #healthbarSection {
     order: -1;
-    align-self:center;
-    justify-self:center;
+    align-self: center;
+    justify-self: center;
     height: 100%;
 }
 
@@ -230,8 +233,8 @@ button:hover {
     order: 1;
     height: 80px;
     width: 80px;
-    margin-right:10px;
-    margin-top:10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 p {
@@ -252,13 +255,36 @@ p {
     gap: 100px;
 
     width: 100%;
-    height: 99vh; 
+    height: 99vh;
 }
 
-#holesAndShapesPuzzle p {
+#holesAndShapesPuzzle>p {
     text-wrap: nowrap;
     font-size: 60px;
     font-weight: 700;
+}
+
+#holesAndShapesPuzzle #GL2Profile {
+
+
+    & div {
+        border: 15px solid var(--main-black);
+        border-radius: var(--border-radius);
+        background-color: #F9F9F9;
+        box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
+
+        width: 80%;
+        height: 400px;
+        justify-self: center;
+
+        & p {
+            font-size: 25px;
+        }
+    }
+
+    & img {
+        max-width: 200px;
+    }
 }
 
 #holesAndShapesPuzzle #draggableShapeContainer {
@@ -266,7 +292,8 @@ p {
 }
 
 #holesAndShapesPuzzle #boxOfHoles {
-    order: 2; /* Ensure will always be at the bottom when object is being dragged */
+    order: 2;
+    /* Ensure will always be at the bottom when object is being dragged */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,16 +333,16 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:410px;
-    height:250px;
+    width: 410px;
+    height: 250px;
 
     & button {
         background-color: #2E2E2E;
-        color:white;
-        border-radius:15px;
-        width:160px;
-        height:75px;
-        font-size:30px;
+        color: white;
+        border-radius: 15px;
+        width: 160px;
+        height: 75px;
+        font-size: 30px;
     }
 }
 
@@ -330,23 +357,24 @@ p {
 
 #gameOverPopup::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px); /* Adds a blur effect to the page background */
+    backdrop-filter: blur(4px);
+    /* Adds a blur effect to the page background */
 }
 
 #gameOverOptions {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    gap:20px;
+    gap: 20px;
 }
 
 
 .circle {
-    position:fixed;
-    top:0;
-    left:0;
+    position: fixed;
+    top: 0;
+    left: 0;
     pointer-events: none;
-    opacity:90%;
+    opacity: 90%;
 }
 
 
@@ -354,9 +382,13 @@ p {
 /* Media Queries for Landscape Mobile Phone*/
 
 @media (max-width: 874px) {
-main {grid-area: 2 / span 3;}
+    main {
+        grid-area: 2 / span 3;
+    }
 }
 
 @media (max-height: 402px) {
-main {grid-area: 2 / span 3;}
+    main {
+        grid-area: 2 / span 3;
+    }
 }
