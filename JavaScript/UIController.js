@@ -38,6 +38,8 @@ let lastOptionScene = undefined;
 
 let inventoryEnabled = false;
 
+
+
 /* Functions */
 function beginGame(tempDisableVar) {
     startingScreen.classList.add('hidden');
@@ -285,12 +287,104 @@ function rockPaperScissorsPuzzle() {
 }
 
 function holesAndShapesPuzzle() {
-    HSPuzzleScreen.classList.remove("hidden")
+    const draggableShapeContainer = document.querySelector('#draggableShapeContainer');
+    const boxOfHoles = document.querySelector('#boxOfHoles');
+    const triangleHole = document.querySelector('#triangleHole');
+    const circleHole = document.querySelector('#circleHole');
+    const squareHole = document.querySelector('#squareHole');
+    const starHole = document.querySelector('#starHole');
 
-    const newShape = (shape) => {
-        
+    let draggableShape = null;
+
+    HSPuzzleScreen.classList.remove("hidden");
+
+    class Shape {
+        constructor(name, shapeImg, desiredHoleElement) {
+            this.name = name
+            this.img = shapeImg,
+            this.desiredHole = desiredHoleElement
+        }
+
+        get hole() {
+            return this.desiredHole;
+        }
+
+        shapeInDOM() {
+            const newShapeElement = document.createElement("img");
+            newShapeElement.src = this.img;
+            newShapeElement.alt = this.name;
+            newShapeElement.setAttribute('draggable', true);
+            draggableShapeContainer.appendChild(newShapeElement);
+
+            draggableShape = newShapeElement;
+
+            // These event listeners currently don't do anything at the moment
+            newShapeElement.addEventListener("dragstart", (event) => {
+                draggableShape.classList.add("dragging");
+            });
+            newShapeElement.addEventListener('dragend', (event) => {
+                draggableShape.classList.remove("dragging");
+            });
+        }
     }
+
+    const getHoleDraggingOver = (container, draggingX) => {
+        const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
+        const holes = container.querySelectorAll('.imgContainer');
+        for (const hole of holes) {
+            const holeSize = hole.getBoundingClientRect();
+            const offset = draggingX - holeSize.left - holeSize.width / 2;
+
+            // If this item is dragged over the hole and is the closest in distance, accept it
+            if (Math.abs(offset) < holeSize.width && offset > closest.offset) {
+                closest.element = hole;
+                closest.offset = offset;
+            }
+        }
+        // ** This can return as null if nothing was below where we were dragging
+        return closest.element;
+    }
+
+    // Show a shadow of the dragged shape over the hole
+    boxOfHoles.addEventListener('dragover', function (event) {
+        event.preventDefault();
+
+        const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX);
+        if (holeDraggingOver === null) {
+            draggableShapeContainer.appendChild(draggableShape)
+            // Return to original size
+            draggableShape.style.position = "relative"
+            draggableShape.style.width = '150px';
+            draggableShape.style.height = '150px';
+        } else {
+            holeDraggingOver.appendChild(draggableShape)
+            draggableShape.style.position = 'absolute'
+            draggableShape.style.inset = '0'
+            draggableShape.style.width = '100%';
+            draggableShape.style.height = '100%';
+            // Otherwise, do logic for whichever hole you tried to drop the object into
+        }
+    });
+
+    boxOfHoles.addEventListener('drop', function (event) {
+        event.preventDefault();
+
+        // Find element of the item we were dragging over
+        const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX)
+        if (holeDraggingOver) {
+            // Initiate the next scene, and make the next shape
+            // Will that logic be in here, or in the class? That's up to me to decide later
+
+            // Also, there's a gag you can drop everything into the square hole.
+        }
+    });
+
+    // Makin an example shape right now...
+    const triangle = new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole);
+    triangle.shapeInDOM()
 }
+
+holesAndShapesPuzzle()
 
 
 
@@ -319,15 +413,15 @@ navigateSceneButton.addEventListener("click", () => {
 
 // Custom Cursor (can alter styling with a different image or CSS styling, do not need to adjust JavaScript logic).
 
-const coords = {x: 0, y: 0};
-const circles = document.querySelectorAll (".circle");
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
 
 circles.forEach(function (circle) {
     circle.x = 0;
     circle.y = 0;
 });
 
-window.addEventListener("mousemove", function(e) {
+window.addEventListener("mousemove", function (e) {
     coords.x = e.clientX;
     coords.y = e.clientY;
 
@@ -339,9 +433,9 @@ function animateCircles() {
     let x = coords.x;
     let y = coords.y;
 
-      circles.forEach(function(circle, index) {
+    circles.forEach(function (circle, index) {
         circle.style.left = x - 12 + "px";
-        circle.style.top =  y - 12 + "px";
+        circle.style.top = y - 12 + "px";
         circle.x = x;
         circle.y = y;
 

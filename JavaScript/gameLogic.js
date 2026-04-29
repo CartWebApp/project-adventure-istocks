@@ -11,15 +11,6 @@ const status = {
 export { status }
 
 /* Classes */
-class Player {
-    // This is currently unused
-    constructor() {
-        this.Health = 5;
-        this.MaxHealth = 5;
-        this.Inventory = {};
-        this.ImportantDecisions = [];
-    }
-};
 
 class Item {
     constructor(name, image) {
