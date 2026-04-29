@@ -17,10 +17,18 @@ const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
 const inventorySection = document.querySelector('#inventorySection');
-
 const inventoryBtn = document.querySelector('#inventoryButton')
 
 const hearts = document.querySelectorAll(".heart");
+
+const gameOverPopup = document.querySelector("#gameOverPopup");
+const gameOverMessage = document.querySelector('#gameOverMessage');
+const gameOverRetry = document.querySelector("#retryChoice");
+const gameOverRestart = document.querySelector("#restartGame");
+
+const HSPuzzleScreen = document.querySelector('#holesAndShapesPuzzle');
+const RPSPuzzleScreen = document.querySelector('#rockPaperScissorsPuzzle');
+const decipherPuzzleScreen = document.querySelector('#decipherPuzzle');
 
 /* Variables */
 let currentEncounter = storyData.find(object => object.id = "Intro");
@@ -29,9 +37,6 @@ let lastEncounter = undefined;
 let lastOptionScene = undefined;
 
 let inventoryEnabled = false;
-
-// Export to gameLogic.js
-export { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene }
 
 /* Functions */
 function beginGame(tempDisableVar) {
@@ -215,6 +220,29 @@ function toggleInventory() {
     }
 }
 
+// Game Over
+function showGameOver(e) {
+    gameOverPopup.showModal();
+    gameOverPopup.classList.remove("hidden");
+    gameOverMessage.textContent = e.detail;
+
+    // gameOver == message to display
+    // Make a black screen that shows the gameOver text, and a retry button
+    gameOverRetry.addEventListener("click", () => {
+        gameOverPopup.close();
+        gameOverPopup.classList.add("hidden");
+
+        nextEncounter(lastEncounter.id)
+    }, { once: true });
+
+    gameOverRestart.addEventListener("click", () => {
+        gameOverPopup.close();
+        gameOverPopup.classList.add("hidden");
+
+        nextEncounter("Intro")
+    }, { once: true });
+}
+
 /* Event Listeners */
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
@@ -223,11 +251,31 @@ inventoryBtn.addEventListener("click", toggleInventory);
 window.addEventListener("nextEncounter", (e) => {
     nextEncounter(e.detail)
 })
+window.addEventListener("earlyGameOver", showGameOver)
 
 
 
 
 /* *Sigh* alright. time for the puzzles... */
+window.addEventListener("showPuzzle", (e) => {
+    switch (e.detail) {
+        case "holesAndShapes":
+            holesAndShapesPuzzle()
+            break;
+        case "decipher":
+
+            break;
+        case "rockPaperScissors":
+
+            break;
+        default:
+            console.log("Invalid puzzle")
+            break;
+    }
+})
+
+
+
 function decipherPuzzle() {
 
 }
@@ -237,7 +285,11 @@ function rockPaperScissorsPuzzle() {
 }
 
 function holesAndShapesPuzzle() {
+    HSPuzzleScreen.classList.remove("hidden")
 
+    const newShape = (shape) => {
+        
+    }
 }
 
 

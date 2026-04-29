@@ -1,16 +1,5 @@
-import { data as storyData } from "./data/storyData.js";
-import { currentEncounter, currentSceneIndex, lastEncounter, lastOptionScene } from './UIController.js'
-
-const optionsRow = document.querySelector('#optionsRow');
-
 const inventory = document.querySelector('#inventory');
-const healthbar = document.querySelector("#healthbar");
 const hearts = document.querySelectorAll(".heart img");
-
-const gameOverPopup = document.querySelector("#gameOverPopup");
-const gameOverMessage = document.querySelector('#gameOverMessage');
-const gameOverRetry = document.querySelector("#retryChoice");
-const gameOverRestart = document.querySelector("#restartGame");
 
 const status = {
     Health: 5,
@@ -23,6 +12,7 @@ export { status }
 
 /* Classes */
 class Player {
+    // This is currently unused
     constructor() {
         this.Health = 5;
         this.MaxHealth = 5;
@@ -56,6 +46,7 @@ function modifyHealth(change) {
 
     if (status.Health <= 0) {
         showGameOver("You lost all your health...")
+        window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: "You lost all your health..." }))
     }
 }
 
@@ -82,24 +73,6 @@ function deleteFromInventory(itemName) {
     foundItem.remove()
 }
 
-function showGameOver(message) {
-    gameOverPopup.showModal();
-    gameOverMessage.textContent = message;
-
-    // gameOver == message to display
-    // Make a black screen that shows the gameOver text, and a retry button
-    gameOverRetry.addEventListener("click", () => {
-        gameOverPopup.close();
-
-        window.dispatchEvent(new CustomEvent("nextEncounter", { detail: lastEncounter.id }));
-    }, { once: true });
-
-    gameOverRestart.addEventListener("click", () => {
-        gameOverPopup.close();
-
-        window.dispatchEvent(new CustomEvent("nextEncounter", { detail: "Intro" }));
-    }, { once: true });
-}
 
 // Evaluate mechanics per scene, have they exist at least
 window.addEventListener("evaluateScene", (e) => {
@@ -126,7 +99,7 @@ window.addEventListener("evaluateScene", (e) => {
         }
 
         if (gameOver) {
-           showGameOver(gameOver)
+           window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: gameOver }))
         }
 
         switch (endGame) {
@@ -145,19 +118,8 @@ window.addEventListener("evaluateScene", (e) => {
                 break;
         }
 
-        switch (puzzle) {
-            case "decipher":
-
-                break;
-            case "rockPaperScissors":
-
-                break;
-            case "holesAndShapes":
-                
-                break;
-            default:
-
-                break;
+        if (puzzle) {
+            window.dispatchEvent(new CustomEvent("showPuzzle", { detail: puzzle }));
         }
     }
 
