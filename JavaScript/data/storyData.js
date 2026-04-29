@@ -248,7 +248,7 @@ export const data = [
             { image: 'starting-john-page.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: '', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
             { image: '', speaker: "Narrator", text: "Until he comes across something strange." },
-            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
+            { image: 'images/Visuals/Intro/low-budget-man-solo-at-border 1.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
             { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
                 image: '',

@@ -334,7 +334,8 @@ function holesAndShapesPuzzle() {
         new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
         new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
     ]
-    const triangle = shapes[0]
+    const shapeIndex = 0;
+    const triangle = shapes[shapeIndex]
     triangle.shapeInDOM()
 
     const getHoleDraggingOver = (container, draggingX) => {
