@@ -209,7 +209,7 @@ export const data = [
     {
         id: "1A2A3C",
         scenes: [
-            { image: '', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
+            { image: 'images/Visuals/Intro/john-after-the-fight (1).jpg', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
             { image: '', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
