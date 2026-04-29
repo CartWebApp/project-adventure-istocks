@@ -211,7 +211,7 @@ export const data = [
         scenes: [
             { image: 'images/Visuals/Intro/john-after-the-fight (1).jpg', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
-            { image: '', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
+            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
     },
 
@@ -221,16 +221,16 @@ export const data = [
         id: "1A2B",
         scenes: [
             // Remove Low-Budget Man from view; john and his building
-            { image: '', speaker: "Narrator", text: "John ultimately decides to ignore the random guy and goes into his building to work." },
+            { image: 'images/Visuals/Intro/john image 1 1.png', speaker: "Narrator", text: "John ultimately decides to ignore the random guy and goes into his building to work." },
             // John works at building
-            { image: '', speaker: "Narrator", text: "In the building, John gets to work at ReStock facilities. He is typing monotonous copyrights for triangle-shaped objects that are passed to him." },
-            { image: '', speaker: "Narrator", text: "Then, something strange is passed to him." },
+            { image: 'images/Visuals/Intro/John Inside Restock Facility.jpg', speaker: "Narrator", text: "In the building, John gets to work at ReStock facilities. He is typing monotonous copyrights for triangle-shaped objects that are passed to him." },
+            { image: 'images/Visuals/Intro/John Inside Restock Facility.jpg', speaker: "Narrator", text: "Then, something strange is passed to him." },
 
             // Object  - circular charm with a strange design
-            { image: '', speaker: "Narrator", text: "A circle? In the ReStock factory? How queer! John has never seen such a thing- this must be inquired about with his supervisor post-haste!" },
-            { image: '', speaker: "John", text: "i guess we doin circles now" },
-            { image: '', speaker: "John", text: "Wait a minute- there's a written tag on this." },
-            { image: '', speaker: "The Tag", text: "Don't deny freedom - " },
+            { image: 'images/Visuals/Intro/John Jump Scared by Circle.jpg', speaker: "Narrator", text: "A circle? In the ReStock factory? How queer! John has never seen such a thing- this must be inquired about with his supervisor post-haste!" },
+            { image: 'images/Visuals/Intro/John Jump Scared by Circle.jpg', speaker: "John", text: "i guess we doin circles now?" },
+            { image: 'images/Visuals/Intro/John Jump Scared by Circle.jpg', speaker: "John", text: "Wait a minute- there's a written tag on this." },
+            { image: 'images/Visuals/Intro/Dont Deny Freedom Letter.jpg', speaker: "The Tag", text: "Don't deny freedom - " },
         ]
     },
 
@@ -242,12 +242,12 @@ export const data = [
     {
         id: "1B",
         scenes: [
-            { image: 'starting-john-page.jpg', speaker: "Narrator", text: "John decides to wander off today because he decided to feel like a bum specifically today of all times." },
+            { image: 'images/Visuals/Intro/John Wandering Around.jpg', speaker: "Narrator", text: "John decides to wander off today because he decided to feel like a bum specifically today of all times." },
 
             // John frolicks around in a grass field :sob:
             { image: 'starting-john-page.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
-            { image: '', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
-            { image: '', speaker: "Narrator", text: "Until he comes across something strange." },
+            { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
+            { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "Until he comes across something strange." },
             { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
             { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
