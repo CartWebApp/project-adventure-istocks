@@ -335,7 +335,7 @@ function holesAndShapesPuzzle() {
         new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
     ]
     const triangle = shapes[0]
-    triangle.shapeInDOM()
+    // triangle.shapeInDOM()
 
     const getHoleDraggingOver = (container, draggingX) => {
         const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
