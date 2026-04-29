@@ -199,7 +199,7 @@ export const data = [
                 speaker: "Low-Budget Man",
                 text: "Maybe that beating put some sense into you. Now, will you accept my offer or not?",
                 options: [
-                    { text: "ig bro", leadsTo: "1A2A3A" },
+                    { text: "i guess bro", leadsTo: "1A2A3A" },
                     { text: "What a load of blasphemy", leadsTo: "1A2A3C" }
                 ]
             },
