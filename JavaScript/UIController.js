@@ -305,15 +305,12 @@ function holesAndShapesPuzzle() {
             this.desiredHole = desiredHoleElement
         }
 
-        get hole() {
-            return this.desiredHole;
-        }
-
         shapeInDOM() {
             const newShapeElement = document.createElement("img");
             newShapeElement.src = this.img;
             newShapeElement.alt = this.name;
             newShapeElement.setAttribute('draggable', true);
+            newShapeElement.setAttribute('data-desiredHole', this.desiredHole)
             draggableShapeContainer.appendChild(newShapeElement);
 
             draggableShape = newShapeElement;
@@ -327,6 +324,18 @@ function holesAndShapesPuzzle() {
             });
         }
     }
+
+    // Makin an example shape right now...
+    const shapes = [
+        new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
+        new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole).desiredHole,
+        new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole).desiredHole,
+        new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
+        new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
+        new Shape("GuyFromLayer1", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole).desiredHole,
+    ]
+    const triangle = shapes[0]
+    triangle.shapeInDOM()
 
     const getHoleDraggingOver = (container, draggingX) => {
         const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
@@ -372,16 +381,18 @@ function holesAndShapesPuzzle() {
         // Find element of the item we were dragging over
         const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX)
         if (holeDraggingOver) {
-            // Initiate the next scene, and make the next shape
-            // Will that logic be in here, or in the class? That's up to me to decide later
+            if (holeDraggingOver.getAttribute('id') == draggableShape.getAttribute('data-desiredHole')) {
+                // Initiate the next scene, and make the next shape
+                // Will that logic be in here, or in the class? That's up to me to decide later
 
-            // Also, there's a gag you can drop everything into the square hole.
+                // Also, there's a gag you can drop everything into the square hole.
+            } else if (holeDraggingOver.getAttribute('id') == squareHole.getAttribute('id')) {
+                // Gag dialogue
+            } else {
+                // fail
+            }
         }
     });
-
-    // Makin an example shape right now...
-    const triangle = new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole);
-    triangle.shapeInDOM()
 }
 
 holesAndShapesPuzzle()
