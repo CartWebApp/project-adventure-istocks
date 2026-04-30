@@ -314,7 +314,7 @@ function holesAndShapesPuzzle() {
             newShapeElement.src = this.img;
             newShapeElement.alt = this.name;
             newShapeElement.setAttribute('draggable', true);
-            newShapeElement.setAttribute('data-desiredHole', this.desiredHole)
+            newShapeElement.setAttribute('data-desiredHole', this.desiredHole.id)
             draggableShapeContainer.appendChild(newShapeElement);
 
             draggableShape = newShapeElement;
@@ -383,9 +383,10 @@ function holesAndShapesPuzzle() {
         // Find element of the item we were dragging over
         const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX)
         if (holeDraggingOver) {
+            console.log(holeDraggingOver.getAttribute('id'), draggableShape.getAttribute('data-desiredHole'))
             if (holeDraggingOver.getAttribute('id') == draggableShape.getAttribute('data-desiredHole')) {
                 draggableShape.setAttribute("draggable", false)
-                toNextEncounter();
+                toNextEncounter(currentMiniEncounter[miniSceneIndex].leadsTo);
             } else if (holeDraggingOver.getAttribute('id') == squareHole.getAttribute('id')) {
                 // Gag dialogue
             } else {
@@ -448,7 +449,7 @@ function holesAndShapesPuzzle() {
                 // Do not allow proceeding to next scene
 
                 if (currentMiniScene.shape) {
-                    shapes[currentMiniEncounter.shape].shapeInDOM();
+                    shapes[currentMiniScene.shape].shapeInDOM();
                 } else {
                     miniNext.addEventListener("click", toNextMiniScene, {once: true});
                 }
