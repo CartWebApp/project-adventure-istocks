@@ -468,7 +468,7 @@ p {
 
 
 
-/* Media Queries for Landscape Mobile Phone*/
+/* Media Queries for Landscape Mobile Phones*/
 
 @media (orientation: landscape) and (max-height: 402px) and (max-width:874px) {
 
@@ -485,13 +485,11 @@ p {
     }
 
 
-
     #next {
         width: 175px;
         height: 75px;
         margin-left: 70%;
     }
-
 
     #chatBox {
         display: none;
@@ -500,7 +498,6 @@ p {
     #actualGame {
         gap: 20px;
     }
-
 
     #mainContent {
         position: relative;
@@ -513,7 +510,6 @@ p {
         align-items: center;
 
     }
-
 
     #dialogueBoxStyle,
     #inventorySection {
@@ -591,7 +587,6 @@ p {
         }
     }
 
-
     #holesAndShapesPuzzle>p {
         display: none;
     }
@@ -606,6 +601,5 @@ p {
     #startingScreen div {
         gap: 15px;
     }
-
 
 }
