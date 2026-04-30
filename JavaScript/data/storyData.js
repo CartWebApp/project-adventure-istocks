@@ -811,7 +811,8 @@ export const data = [
                         { shape: "triangle", text: "What hole does the triangle go into?", leadsTo: "triangleScene" },
                     ],
                     triangleScene: [
-    
+                        { text: "Woah, aren't you smart?" },
+                        { shape: "circle", text: "Let's see if you can do that again." },
                     ]
                 }
             },
