@@ -704,7 +704,7 @@ export const data = [
             // Black screen
             { image: '', speaker: "Narrator", text: "You are about to see something very, very graphic." },
             { image: '', speaker: "Narrator", text: "It involves a man stabbing another very violently." },
-            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people canoot witness this without puking." },
+            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people cannot witness this without puking." },
             { image: '', speaker: "Narrator", text: "Are you ready?" },
 
             // The "t" thing is stabbed very poorly into the dude--a hole was scribbled into him and the dagger stabs inside. He's screaming.
@@ -721,7 +721,7 @@ export const data = [
             { image: '', speaker: "John", text: "Wouldn't you agree?", },
 
             // Zoomed in image of his dead face: X_X
-            { image: '', speaker: "???", text: "X_X", leadsTo: "1A" },
+            { image: '', speaker: "???", text: "X_X", leadsTo: "L1" },
         ]
     },
 
