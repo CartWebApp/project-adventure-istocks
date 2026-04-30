@@ -459,6 +459,7 @@ p {
         display: none;
     }
 
+    
 
     #next {
         width: 175px;
@@ -549,7 +550,6 @@ p {
         }
     }
 
-
     #tempNavForDevs {
         display:none;
     }
@@ -557,15 +557,13 @@ p {
 
     #startButtons {
         margin-top:0px;
+        gap:15px;
         
         & button {
             font-size:20px;
+            width: 184px;
+            height: 54px;
         }
-    }
-
-
-    #backgroundImage {
-        gap:10px;
     }
 
 
@@ -573,21 +571,15 @@ p {
         display: none;
     }
 
-    #startButtons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        & button {
-            width: 184px;
-            height: 54px;
-        }
-    }
 
     #startingScreen h1 {
         text-align: center;
         font-size:35px;
         border: 5px solid #2E2E2E;
+    }
+
+    #startingScreen div {
+        gap:15px;
     }
 
 
