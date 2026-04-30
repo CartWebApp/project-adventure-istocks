@@ -82,8 +82,8 @@ button:hover {
 #actualGame {
     /* Splits layouts for health, main content, and inventory button */
     display: grid;
-    grid-template: auto / 5vw 80vw 5vw;
-    gap: 100px;
+    grid-template-columns: 5vw 1fr 5vw;
+    column-gap:20px;
     height: 99vh;
 }
 
@@ -98,7 +98,7 @@ button:hover {
     flex-direction: column;
     align-items: stretch;
     padding-top: 4em;
-    gap: 36.55px;
+    gap: 100px;
 }
 
 #mainVisual {
@@ -225,15 +225,17 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
-    height: 90%;
+    height: 50%;
 }
 
 #inventoryButton {
     order: 1;
     height: 80px;
     width: 80px;
-    margin-right: 10px;
-    margin-top: 10px;
+    justify-self:center;
+    display:flex;
+    margin-top:20px;
+   
 }
 
 p {
@@ -380,91 +382,105 @@ p {
 
 /* Media Queries for Landscape Mobile Phone*/
 
-@media (orientation: landscape) and (max-height: 402px) {
-main {grid-area: 2 / span 3;}
-
-
-.circle {
-    display:none;
-}
-
-
-#next {
-    width:175px;
-    height:75px;
-}
-
-
-#actualGame {
-    display:grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap:0px;
-}
-
-#dialogueBpx {
-   margin-left:0px;
-   margin-right:0px;
-}
-
-
-#dialogueBoxStyle, #inventorySection {
-    width:622px;
-    height:132.422px;
-
-    & #dialogue {
-        font-size:25px;
+@media (orientation: landscape) and (max-height: 402px) and (max-width:874px){
+    main {
+        grid-area: 2 / span 3;
     }
-}
 
-#speakerTag {
+    .circle {
+        display: none;
+    }
+
+
+    #next {
+        width: 175px;
+        height: 75px;
+        margin-left:70%;
+    }
+
+
+    #chatBox {
+        display:none;
+    }
+
+    #actualGame {
+       gap:20px;
+    }
+
+
+    #mainContent {
+        position:relative;
+        margin-top:0px;
+        gap:0px;
+        padding-top:.5em;
+    }
+
+    #dialogueBox {
+        align-items:center;
+
+    }
+
+
+    #dialogueBoxStyle,
+    #inventorySection {
+        width: 622px;
+        height: 132.422px;
+
+        & #dialogue {
+            font-size: 25px;
+        }
+    }
+
+    #speakerTag {
+        display: flex;
+        width: 109px;
+        height: 41px;
+        border-radius: 15px;
+        font-size: 25px;
+        padding: 5px;
+        top: -50px;
+        left:35px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #mainVisual {
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        margin-right: 0px;
+        margin-left: 0px
+    }
+
+   #healthbar {
     display:flex;
-    width:109px;
-    height:41px;
-    border-radius:15px;
-    font-size:25px;
-    padding:5px;
-    top:-50px;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
-}
-
-#mainVisual {
-    justify-self:center;
-    align-self:center;
-    display:flex;
-    margin-right:0px;
-    margin-left:0px
-}   
-
-#healthbar ul {
-    gap:10px;
-}
-
-#healthbar img {
-    height:70px;
-}
-
-#healthbar li {
-    height:30px;
-    width:30px;
-}
-
-.heart {
-    gap:10px;
-}
-
-#healthbar {
-    height:30%;
-}
-
-#inventoryButton {
-    width:37px;
-    height:37px;
+    width:50px;
+    height:350px;
+    gap:20px;
 
     & img {
-        width:37px;
-        height:37px;
+        width:50px;
+        height:50px;
     }
-}
+   }
+
+    #inventoryButton {
+        width:27px;
+        height:27px;
+
+        & img {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    }
+
+    #holesAndShapesPuzzle>p {
+        display: none;
+    }
+
 
 }
