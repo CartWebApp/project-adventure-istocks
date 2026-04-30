@@ -5,6 +5,7 @@ import { status } from "./gameLogic.js";
 const startingScreen = document.querySelector('#startingScreen');
 
 const gameScreen = document.querySelector('#actualGame');
+const visuals = document.querySelector('#visuals')
 const imageVisual = document.querySelector('#mainVisual');
 
 /* Interactables */
@@ -114,12 +115,6 @@ function initiateScene() {
                 }
                 if (option.condition) {
                     if (!status.ImportantDecisions.find(option.condition)) {
-                        doesNotMeetRequirement = true;
-                    }
-                }
-                // This one's unique cause they don't meet requirement if they DO have the condition
-                if (option.hideCondition) {
-                    if (status.ImportantDecisions.find(option.condition)) {
                         doesNotMeetRequirement = true;
                     }
                 }
@@ -289,24 +284,27 @@ function rockPaperScissorsPuzzle() {
 function holesAndShapesPuzzle() {
     // Find the mini scenes list of the scene triggering the holes and shapes puzzle
     const puzzleScenes = storyData.find(obj => obj.id == "L1-1C2B").scenes.find(s => s.puzzle != undefined).scenes
-    console.log(puzzleScenes)
 
     const draggableShapeContainer = document.querySelector('#draggableShapeContainer');
-    const boxOfHoles = document.querySelector('#boxOfHoles');
     const triangleHole = document.querySelector('#triangleHole');
     const circleHole = document.querySelector('#circleHole');
     const squareHole = document.querySelector('#squareHole');
     const starHole = document.querySelector('#starHole');
 
+    let currentMiniEncounter = "Intro";
+    let miniSceneIndex = 0;
+
     let draggableShape = null;
 
     HSPuzzleScreen.classList.remove("hidden");
+    visuals.classList.add("hidden");
 
     class Shape {
-        constructor(name, shapeImg, desiredHoleElement) {
+        constructor(name, shapeImg, desiredHoleElement, nextEncounter) {
             this.name = name
             this.img = shapeImg,
-            this.desiredHole = desiredHoleElement
+                this.desiredHole = desiredHoleElement
+            this.nextEncounter = nextEncounter
         }
 
         shapeInDOM() {
@@ -314,7 +312,8 @@ function holesAndShapesPuzzle() {
             newShapeElement.src = this.img;
             newShapeElement.alt = this.name;
             newShapeElement.setAttribute('draggable', true);
-            newShapeElement.setAttribute('data-desiredHole', this.desiredHole.id)
+            newShapeElement.setAttribute('data-desiredHole', this.desiredHole.id);
+            newShapeElement.setAttribute('data-nextEncounter', this.nextEncounter)
             draggableShapeContainer.appendChild(newShapeElement);
 
             draggableShape = newShapeElement;
@@ -331,76 +330,100 @@ function holesAndShapesPuzzle() {
 
     // Makin an example shape right now...
     const shapes = {
-        triangle: new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        circle: new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", circleHole),
-        star: new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", starHole),
-        heart: new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        key: new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
-        guyFromLayer2: new Shape("GuyFromLayer2", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole),
+        triangle: new Shape("Triangle", "images/Mechanics/Puzzles/holesAndShapes/triangleShape.svg", triangleHole, "triangleScene"),
+        circle: new Shape("Circle", "images/Mechanics/Puzzles/holesAndShapes/circleShape.svg", circleHole, "circleScene"),
+        star: new Shape("Star", "images/Mechanics/Puzzles/holesAndShapes/starShape.svg", starHole, "starScene"),
+        heart: new Shape("Heart", "images/Mechanics/Puzzles/holesAndShapes/heartShape.svg", squareHole, "heartScene"),
+        key: new Shape("Key", "images/Mechanics/Puzzles/holesAndShapes/layer2Key.svg", inventoryBtn, "keyScene"),
     }
 
-    const getHoleDraggingOver = (container, draggingX) => {
-        const closest = { element: null, offset: Number.NEGATIVE_INFINITY };
-        const holes = container.querySelectorAll('.imgContainer');
+    const getHoleDraggingOver = (draggingX, draggingY) => {
+        const closest = { element: null, offsetX: Number.NEGATIVE_INFINITY, offsetY: Number.NEGATIVE_INFINITY };
+        const holes = document.querySelectorAll('.imgContainer, .interactableWithPH');
         for (const hole of holes) {
             const holeSize = hole.getBoundingClientRect();
-            const offset = draggingX - holeSize.left - holeSize.width / 2;
+            const offsetX = draggingX - holeSize.left - holeSize.width / 2;
+            const offsetY = draggingY - holeSize.top - holeSize.height / 2
 
             // If this item is dragged over the hole and is the closest in distance, accept it
-            if (Math.abs(offset) < holeSize.width && offset > closest.offset) {
+            if (Math.abs(offsetX) < holeSize.width && Math.abs(offsetY) < holeSize.height) {
+                if (offsetX > closest.offsetX && offsetY > closest.offsetY)
                 closest.element = hole;
-                closest.offset = offset;
+                closest.offsetX = offsetX;
+                closest.offsetY = offsetY;
             }
         }
         // ** This can return as null if nothing was below where we were dragging
         return closest.element;
     }
+    const normalSize = (item) => {
+        draggableShapeContainer.appendChild(item)
+        item.style.position = "relative"
+        item.style.width = '150px';
+        item.style.height = '150px';
+    }
+    const fitToHole = (item, hole) => {
+        hole.appendChild(item)
+        // Key shape will always be bigger than the holes it hovers over
+        if (item.getAttribute('alt') != "Key") {
+            item.style.position = 'absolute';
+            item.style.inset = '0';
+            item.style.width = '100%';
+            item.style.height = '100%';
+        } else {
+            item.style.position = "absolute";
+            item.style.inset = '0';
+            item.style.width = '200px';
+            item.style.height = '200px';
+        }
+    }
 
     // Show a shadow of the dragged shape over the hole
-    boxOfHoles.addEventListener('dragover', function (event) {
+    window.addEventListener('dragover', function (event) {
         event.preventDefault();
 
-        const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX);
+        const holeDraggingOver = getHoleDraggingOver(event.clientX, event.clientY);
         if (holeDraggingOver === null) {
             draggableShapeContainer.appendChild(draggableShape)
             // Return to original size
-            draggableShape.style.position = "relative"
-            draggableShape.style.width = '150px';
-            draggableShape.style.height = '150px';
+            normalSize(draggableShape)
         } else {
-            holeDraggingOver.appendChild(draggableShape)
-            draggableShape.style.position = 'absolute'
-            draggableShape.style.inset = '0'
-            draggableShape.style.width = '100%';
-            draggableShape.style.height = '100%';
-            // Otherwise, do logic for whichever hole you tried to drop the object into
+            fitToHole(draggableShape, holeDraggingOver)
         }
     });
 
-    boxOfHoles.addEventListener('drop', function (event) {
+    window.addEventListener('drop', function (event) {
         event.preventDefault();
 
         // Find element of the item we were dragging over
-        const holeDraggingOver = getHoleDraggingOver(boxOfHoles, event.clientX)
+        const holeDraggingOver = getHoleDraggingOver(event.clientX, event.clientY)
         if (holeDraggingOver) {
             console.log(holeDraggingOver.getAttribute('id'), draggableShape.getAttribute('data-desiredHole'))
             if (holeDraggingOver.getAttribute('id') == draggableShape.getAttribute('data-desiredHole')) {
-                draggableShape.setAttribute("draggable", false)
-                toNextEncounter(currentMiniEncounter[miniSceneIndex].leadsTo);
-            } else if (holeDraggingOver.getAttribute('id') == squareHole.getAttribute('id')) {
-                // Gag dialogue
+                draggableShape.remove()
+                toNextEncounter(draggableShape.getAttribute('data-nextEncounter'));
             } else {
-                // fail
+                console.log(draggableShape.alt)
+                console.log(status.Health, status.MaxHealth)
+                // Unique encounter if you drag the heart shape over an unfilled heart
+                if (draggableShape.alt == "Heart" && holeDraggingOver.classList.contains('heart') && status.Health < status.MaxHealth) {
+                    draggableShape.remove()
+                    toNextEncounter("heartToHeart");
+                } else {
+                    // fail
+                    normalSize(draggableShape)
+                    toNextEncounter("wrong");
+                }
             }
         }
     });
+
+    // Seperate listener for the inventory button which is not included 
 
 
 
     // Puzzle-exclusive scenes 
     // "Encounters & scenes" inside the puzzle element
-    let currentMiniEncounter = "Intro"
-    let miniSceneIndex = 0;
     const toNextEncounter = (nextEncounterName) => {
         currentMiniEncounter = puzzleScenes[nextEncounterName]
         miniSceneIndex = 0;
@@ -412,7 +435,7 @@ function holesAndShapesPuzzle() {
     }
     const initiateMiniScene = () => {
         const currentMiniScene = currentMiniEncounter[miniSceneIndex];
-        const miniNext = document.querySelector('#skipGL2dialogue')
+        const miniNext = document.querySelector('#skipGL2dialogue');
 
         const GL2dialogue = document.querySelector("#GL2dialogue");
         GL2dialogue.textContent = currentMiniScene.text;
@@ -420,6 +443,9 @@ function holesAndShapesPuzzle() {
         const sceneText = currentMiniScene.text;
         const maxChars = sceneText.length;
         let index = 0;
+
+        // Fire to gameLogic.js
+        window.dispatchEvent(new CustomEvent("evaluateScene", { detail: currentMiniScene }));
 
         // Skip the rolling dialogue
         const skipDialogue = () => {
@@ -430,13 +456,13 @@ function holesAndShapesPuzzle() {
         };
         // Make nextBtn skip dialogue instead of going to the next scene
         miniNext.addEventListener("click", skipDialogue, { once: true });
-        miniNext.removeEventListener("click", nextScene)
+        miniNext.removeEventListener("click", nextScene);
 
         const iterateACharacter = () => {
             if (index < maxChars) {
                 const textSection = sceneText.slice(0, index + 1);
                 GL2dialogue.textContent = textSection;
-                index++
+                index++;
 
                 const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
                 let waitTime = 25;
@@ -446,12 +472,22 @@ function holesAndShapesPuzzle() {
                 setTimeout(iterateACharacter, waitTime);
             } else {
                 miniNext.removeEventListener("click", skipDialogue);
-                // Do not allow proceeding to next scene
+                if (!currentMiniScene.endPuzzle) {
+                    // Do not allow proceeding to next scene
+                    if (miniSceneIndex < currentMiniEncounter.length) {
+                        miniNext.addEventListener("click", toNextMiniScene, { once: true });
+                    }
 
-                if (currentMiniScene.shape) {
-                    shapes[currentMiniScene.shape].shapeInDOM();
+                    if (currentMiniScene.shape) {
+                        shapes[currentMiniScene.shape].shapeInDOM();
+                    }
                 } else {
-                    miniNext.addEventListener("click", toNextMiniScene, {once: true});
+                    // End scene on clicking next
+                    miniNext.addEventListener("click", () => {
+                        HSPuzzleScreen.classList.add("hidden");
+                        visuals.classList.remove("hidden");
+                        nextEncounter("L1-1C2B-AfterPuzzle");
+                    }, { once: true });
                 }
             }
         }
@@ -460,8 +496,6 @@ function holesAndShapesPuzzle() {
 
     toNextEncounter("Intro")
 }
-
-holesAndShapesPuzzle()
 
 
 

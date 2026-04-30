@@ -42,27 +42,28 @@
 
         <section id="actualGame" class="hidden">
             <section id="mainContent">
-                <img src="/images/Visuals/Intro/BLACK SCREEN.png" alt='Game visual' id="mainVisual">
-
-                <section id="dialogueBox">
-                    <p id="speakerTag">Speaker</p>
-                    <div id="dialogueBoxStyle">
-                        <p id="dialogue">Text Goes Here</p>
-                    </div>
-                </section>
-
-                <section id="inventorySection" class="hidden">
-                    <p>Inventory</p>
-                    <ul id="inventory">
-
+                <section id="visuals">
+                    <img src="/images/Visuals/Intro/BLACK SCREEN.png" alt='Game visual' id="mainVisual">
+                    <section id="dialogueBox">
+                        <p id="speakerTag">Speaker</p>
+                        <div id="dialogueBoxStyle">
+                            <p id="dialogue">Text Goes Here</p>
+                        </div>
+                    </section>
+    
+                    <section id="inventorySection" class="hidden">
+                        <p>Inventory</p>
+                        <ul id="inventory">
+    
+                        </ul>
+                    </section>
+    
+                    <button id="next" type="button">Next</button>
+    
+                    <ul id="optionsRow">
+    
                     </ul>
                 </section>
-
-                <button id="next" type="button">Next</button>
-
-                <ul id="optionsRow">
-
-                </ul>
 
                 <!-- Puzzles lay below... -->
                 <section id="rockPaperScissorsPuzzle" class="hidden">
@@ -73,20 +74,20 @@
 
                 </section>
 
-                <section id="holesAndShapesPuzzle">
+                <section id="holesAndShapesPuzzle" class="hidden">
                     <p>What hole does this shape go in?</p>
                     <div id="draggableShapeContainer">
                         
                     </div>
 
                     <ul id="boxOfHoles">
-                        <li class="imgContainer"><img id="triangleHole" class="shapeHole"
+                        <li id="triangleHole" class="imgContainer"><img class="shapeHole"
                                 src="images/Mechanics/Puzzles/holesAndShapes/triangleHole.svg" alt="Given shape"></li>
-                        <li class="imgContainer"><img id="circleHole" class="shapeHole"
+                        <li id="circleHole" class="imgContainer"><img class="shapeHole"
                                 src="images/Mechanics/Puzzles/holesAndShapes/circleHole.svg" alt="Given shape"></li>
-                        <li class="imgContainer"><img id="squareHole" class="shapeHole"
+                        <li id="squareHole" class="imgContainer"><img class="shapeHole"
                                 src="images/Mechanics/Puzzles/holesAndShapes/squareHole.svg" alt="Given shape"></li>
-                        <li class="imgContainer"><img id="starHole" class="shapeHole"
+                        <li id="starHole" class="imgContainer"><img class="shapeHole"
                                 src="images/Mechanics/Puzzles/holesAndShapes/starHole.svg" alt="Given shape"></li>
                     </ul>
 
@@ -102,15 +103,15 @@
 
             <section id="healthbarSection">
                 <ul id="healthbar">
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
-                    <li class="heart"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart interactableWithPH"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart interactableWithPH"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart interactableWithPH"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart interactableWithPH"><img src="images/Mechanics/filledHeart.svg"></li>
+                    <li class="heart interactableWithPH"><img src="images/Mechanics/filledHeart.svg"></li>
                 </ul>
             </section>
 
-            <button id="inventoryButton">
+            <button id="inventoryButton" class="interactableWithPH">
                 <img src="images/Mechanics/inventoryButton.png">
             </button>
         </section>
