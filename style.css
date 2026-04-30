@@ -387,7 +387,7 @@ p {
 /* Media Query for if a user plays on vertical device*/
 
 
-@media (orientation: portrait) and (max-width:430px) and (max-height: 932px) {
+@media (orientation: portrait) and (max-width:440px) and (max-height: 956px) {
     #vertical-pop-up {
         border: 5px solid black;
         display:flex;
