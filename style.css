@@ -349,6 +349,10 @@ p {
     }
 }
 
+#resultDisplay {
+    font-size:50px;
+}
+
 /* Game Over */
 #gameOverPopup.hidden {
     display: none;
