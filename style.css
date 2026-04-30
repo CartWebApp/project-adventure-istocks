@@ -391,7 +391,6 @@ p {
     
 
     main {
-        padding-top:75%;
         justify-self:center;
         align-self:center;
         align-items:center;
@@ -400,6 +399,7 @@ p {
 
 
     #vertical-pop-up {
+        margin-top:100%;
         border: 5px solid black;
         border-radius:20px;
         display:flex;
