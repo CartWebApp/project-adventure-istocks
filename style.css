@@ -17,7 +17,7 @@ body {
 }
 
 #vertical-pop-up {
-    display:none;
+    display: none;
 }
 
 button:hover {
@@ -87,7 +87,7 @@ button:hover {
     /* Splits layouts for health, main content, and inventory button */
     display: grid;
     grid-template-columns: 5vw 1fr 5vw;
-    column-gap:20px;
+    column-gap: 20px;
     height: 99vh;
 }
 
@@ -236,10 +236,10 @@ button:hover {
     order: 1;
     height: 80px;
     width: 80px;
-    justify-self:center;
-    display:flex;
-    margin-top:20px;
-   
+    justify-self: center;
+    display: flex;
+    margin-top: 20px;
+
 }
 
 p {
@@ -388,46 +388,55 @@ p {
 
 
 @media (orientation: portrait) and (max-width:440px) and (max-height: 956px) {
-    
 
-    main {
-        justify-self:center;
-        align-self:center;
-        align-items:center;
-        align-content:center;
+    #startingScreen {
+        display: none;
+    }
+
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
     }
 
 
+    main {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #vertical-pop-up {
-        margin-top:100%;
         border: 5px solid black;
-        border-radius:20px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        text-align:left;
-        gap:20px;
-        width:300px;
-        height:200px;
-        
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+        width: 300px;
+        height: 200px;
+
 
 
         & p {
-            font-size:25px;
+            font-size: 25px;
         }
 
         & img {
-            width:78px;
-            height:78px;
+            width: 78px;
+            height: 78px;
         }
     }
 
     #actualGame {
-        display:none;
+        display: none;
     }
 
     .circle {
-        display:none;
+        display: none;
     }
 
 }
@@ -437,13 +446,13 @@ p {
 
 /* Media Queries for Landscape Mobile Phone*/
 
-@media (orientation: landscape) and (max-height: 402px) and (max-width:874px){
+@media (orientation: landscape) and (max-height: 402px) and (max-width:874px) {
     main {
         grid-area: 2 / span 3;
     }
 
     #vertical-pop-up {
-        display:none;
+        display: none;
     }
 
     .circle {
@@ -454,28 +463,28 @@ p {
     #next {
         width: 175px;
         height: 75px;
-        margin-left:70%;
+        margin-left: 70%;
     }
 
 
     #chatBox {
-        display:none;
+        display: none;
     }
 
     #actualGame {
-       gap:20px;
+        gap: 20px;
     }
 
 
     #mainContent {
-        position:relative;
-        margin-top:0px;
-        gap:0px;
-        padding-top:.5em;
+        position: relative;
+        margin-top: 0px;
+        gap: 0px;
+        padding-top: .5em;
     }
 
     #dialogueBox {
-        align-items:center;
+        align-items: center;
 
     }
 
@@ -498,7 +507,7 @@ p {
         font-size: 25px;
         padding: 5px;
         top: -50px;
-        left:35px;
+        left: 35px;
         align-items: center;
         justify-content: center;
     }
@@ -509,33 +518,33 @@ p {
         display: flex;
         margin-right: 0px;
         margin-left: 0px;
-        width:511px;
-        height:170px;
+        width: 511px;
+        height: 170px;
     }
 
-   #healthbar {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    width:50px;
-    height:350px;
-    gap:20px;
-
-    & img {
-        width:50px;
-        height:50px;
-    }
-   }
-
-    #inventoryButton {
-        width:27px;
-        height:27px;
+    #healthbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 350px;
+        gap: 20px;
 
         & img {
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    #inventoryButton {
+        width: 27px;
+        height: 27px;
+
+        & img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
     }
