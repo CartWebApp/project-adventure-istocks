@@ -31,6 +31,7 @@ const HSPuzzleScreen = document.querySelector('#holesAndShapesPuzzle');
 const RPSPuzzleScreen = document.querySelector('#rockPaperScissorsPuzzle');
 const decipherPuzzleScreen = document.querySelector('#decipherPuzzle');
 
+
 /* Variables */
 let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
@@ -278,6 +279,43 @@ function decipherPuzzle() {
 }
 
 function rockPaperScissorsPuzzle() {
+
+const choices = ["rock", "paper", "scissors"];
+const playerDisplay = document.getElementById("playerDisplay");
+const enemyDisplay = document.getElementById("enemyDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+
+resultDisplay.classList.remove("greenText", "redText");
+
+window.playGame = function (playerChoice) {
+    const enemyChoice = choices[Math.floor(Math.random() * 3)];
+    let result = "";
+
+    if (playerChoice === enemyChoice) {
+        result = "It's a tie!";
+    }
+    else {
+        switch (playerChoice) {
+            case "rock":
+                result = (enemyChoice === "scissors") ? "John wins!" : "John, aka YOU lost!";
+                break;
+
+            case "paper":
+                result = (enemyChoice === "rock") ? "John wins!" : "John, aka YOU lost!";
+                break;
+
+            case "scissors":
+                result = (enemyChoice === "paper") ? "John wins!" : "John, aka YOU lost!";
+                break;
+        }
+    }
+
+    playerDisplay.textContent = `JOHN: ${playerChoice}`;
+    enemyDisplay.textContent = `Enemy: ${enemyChoice}`;
+    resultDisplay.textContent = result;
+
+    console.log(enemyChoice);
+};
 
 }
 
@@ -555,3 +593,4 @@ function animateCircles() {
         y += (nextCircle.y - y) * 0.15;
     });
 }
+rockPaperScissorsPuzzle()
