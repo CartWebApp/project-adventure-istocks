@@ -387,7 +387,7 @@ p {
 /* Media Query for if a user plays on vertical device*/
 
 
-@media (orientation: portrait) and (max-width:410px) and (max-height: 900px) {
+@media (orientation: portrait) and (max-width:430px) and (max-height: 932px) {
     #vertical-pop-up {
         border: 5px solid black;
         display:flex;
@@ -413,7 +413,12 @@ p {
         display:none;
     }
 
+    .circle {
+        display:none;
+    }
+
 }
+
 
 
 
