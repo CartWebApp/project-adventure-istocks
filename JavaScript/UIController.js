@@ -334,7 +334,9 @@ function rockPaperScissorsPuzzle() {
 
         playerScoreDisplay.textContent = playerScore;
         enemyScoreDisplay.textContent = enemyScore;
-
+        
+        playerDisplay.textContent = "Stock de John:";
+        enemyDisplay.textContent = "Stock de James:";
 
         resultDisplay.textContent = "Let's See What You got!"
         resultDisplay.classList.remove("greenText", "redText", "blackText");
