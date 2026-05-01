@@ -259,11 +259,9 @@ p {
 
 /* Puzzle Screens */
 
-#rockPaperScissorsPuzzle.hidden {
-    
-}
-
-#holesAndShapesPuzzle.hidden {
+#holesAndShapesPuzzle.hidden, 
+#rockPaperScissorsPuzzle.hidden,
+#decipherPuzzle.hidden {
     display: none;
 }
 
