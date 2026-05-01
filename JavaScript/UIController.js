@@ -65,6 +65,60 @@ function nextEncounter(encounterID) {
     initiateScene();
 }
 
+function loadText(scene, whenFinishFunction) {
+    // Do all of this only if there's actual text (some mechanics scenes do not have text)
+    if (scene.text) {
+        // Rolling text
+        const sceneText = scene.text;
+        const maxChars = sceneText.length;
+        let index = 0;
+
+        // Skip the rolling dialogue
+        const skipDialogue = () => {
+            if (!inventoryEnabled) {
+                dialogue.textContent = sceneText;
+                index = maxChars;
+            }
+        };
+        // Make nextBtn skip dialogue instead of going to the next scene
+        nextBtn.addEventListener("click", skipDialogue, { once: true });
+        nextBtn.removeEventListener("click", nextScene)
+
+        const iterateACharacter = () => {
+            if (index < maxChars) {
+                const textSection = sceneText.slice(0, index + 1);
+                dialogue.textContent = textSection;
+                index++
+
+                // Recursive: Repeat the function after the given time (in ms)
+                const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
+                let waitTime = 25;
+                if (character === "." || character === "?" || character === "!") {
+                    waitTime = 300;
+                }
+                setTimeout(iterateACharacter, waitTime);
+            } else {
+                // When text finishes loading, make nextBtn go to next scene again
+                nextBtn.removeEventListener("click", skipDialogue)
+                nextBtn.addEventListener("click", nextScene)
+
+                if (scene.autoskip) {
+                    // Autoskips the dialogue the moment it finishes rendering if autoskip
+                    nextScene()
+                }
+
+                // Perform anything else that is needed
+                whenFinishFunction()
+            }
+        }
+
+        iterateACharacter();
+    }
+}
+
+
+
+
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
     // Fire to gameLogic.js
@@ -78,9 +132,9 @@ function initiateScene() {
         nextBtn.classList.add("hidden");
     }
 
-    const loadScene = () => {
-        imageVisual.src = currentScene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
-        speakerTag.textContent = currentScene.speaker;
+    const loadScene = (scene) => {
+        imageVisual.src = scene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
+        speakerTag.textContent = scene.speaker;
     }
 
     const loadOptions = () => {
@@ -131,66 +185,18 @@ function initiateScene() {
         }
     }
 
-    const loadText = () => {
-        // Do all of this only if there's actual text (some mechanics scenes do not have text)
-        if (currentScene.text) {
-            // Rolling text
-            const sceneText = currentScene.text;
-            const maxChars = sceneText.length;
-            let index = 0;
 
-            // Skip the rolling dialogue
-            const skipDialogue = () => {
-                if (!inventoryEnabled) {
-                    dialogue.textContent = sceneText;
-                    index = maxChars;
-                }
-            };
-            // Make nextBtn skip dialogue instead of going to the next scene
-            nextBtn.addEventListener("click", skipDialogue, { once: true });
-            nextBtn.removeEventListener("click", nextScene)
 
-            const iterateACharacter = () => {
-                if (index < maxChars) {
-                    const textSection = sceneText.slice(0, index + 1);
-                    dialogue.textContent = textSection;
-                    index++
-
-                    // Recursive: Repeat the function after the given time (in ms)
-                    const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
-                    let waitTime = 25;
-                    if (character === "." || character === "?" || character === "!") {
-                        waitTime = 300;
-                    }
-                    setTimeout(iterateACharacter, waitTime);
-                } else {
-                    // When text finishes loading, make nextBtn go to next scene again
-                    nextBtn.removeEventListener("click", skipDialogue)
-                    nextBtn.addEventListener("click", nextScene)
-
-                    if (currentScene.autoskip) {
-                        // Autoskips the dialogue the moment it finishes rendering if autoskip
-                        nextScene()
-                    }
-
-                    loadOptions()
-                }
-            }
-            iterateACharacter();
-        }
-    }
-
-    /* I gotta do something about conditional dialogue
     if (currentScene.sceneCondition) {
         if (status.ImportantDecisions[currentScene.sceneCondition]) {
-            currentScene = currentEncounter.conditionMetScenes[currentSceneIndex];
+            const miniScene = currentEncounter.conditionMetScenes[currentSceneIndex];
         } else {
             currentScene = currentEncounter.conditionNotMetScenes[currentSceneIndex];
         }
-    }; */
-
-    loadScene();
-    loadText();
+    } else {
+        loadScene(currentScene);
+        loadText(currentScene, loadOptions);
+    }
 }
 
 function nextScene() {
@@ -458,24 +464,11 @@ function holesAndShapesPuzzle() {
     }
     const normalSize = (item) => {
         draggableShapeContainer.appendChild(item)
-        item.style.position = "relative"
-        item.style.width = '150px';
-        item.style.height = '150px';
+        item.classList.remove("fitting")
     }
     const fitToHole = (item, hole) => {
         hole.appendChild(item)
-        // Key shape will always be bigger than the holes it hovers over
-        if (item.getAttribute('alt') != "Key") {
-            item.style.position = 'absolute';
-            item.style.inset = '0';
-            item.style.width = '100%';
-            item.style.height = '100%';
-        } else {
-            item.style.position = "absolute";
-            item.style.inset = '0';
-            item.style.width = '200px';
-            item.style.height = '200px';
-        }
+        item.classList.add("fitting")
     }
 
     // Show a shadow of the dragged shape over the hole

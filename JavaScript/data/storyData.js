@@ -1244,7 +1244,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Hm.... iunno. Think about how long it took me to walk here.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-2", },
                 ]
             }
@@ -1256,7 +1256,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Yeah, but then I'd have to turn away from the store... and get my legs to move again...",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-3", },
                 ]
             }
@@ -1268,7 +1268,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "This all just kind of feels like a waste of time, doesn't it?",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-Loop1", },
                 ]
             }
@@ -1280,7 +1280,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "I'm not gonna do that.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-Loop2", giveCondition: "unfriendlyInteraction" },
                 ]
             }
@@ -1292,7 +1292,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Nope.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-Loop3", giveCondition: "unfriendlyInteraction" },
                 ]
             }
@@ -1304,7 +1304,7 @@ export const data = [
             {
                 image: '', speaker: "John", text: "Nuh uh.",
                 options: [
-                    { text: 'Of course', leadsTo: "L2-1B2A" },
+                    { text: 'Go into the shop', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction" },
                 ]
             }
@@ -1344,7 +1344,7 @@ export const data = [
         id: "L2-1C",
         scenes: [
             { image: '', speaker: "John", text: "Please guardian I need this..." },
-            { image: '', speaker: "John", text: "My download is kinda licenseless..." },
+            { image: '', speaker: "John", text: "My royalties are kind of free..." },
             { image: '', speaker: "Guardian", text: "..." },
             // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
             { image: '', speaker: "Guardian", text: " " },
@@ -1388,7 +1388,7 @@ export const data = [
             {
                 sceneCondition: "Intellect",
                 conditionMetScenes: [
-                    { image: '', speaker: "Guardian", text: "Lastly, you have willingly solved the riddles spread throughout your journey and demonstrated your worth beyond these gates." },
+                    { image: '', speaker: "Guardian", text: "You have willingly solved the riddles spread throughout your journey and demonstrated your worth beyond these gates." },
                     { image: '', speaker: "Guardian", text: "Intellect is the last of three evaluations. You pass the last audit." },
                 ],
                 conditionNotMetScenes: [
