@@ -312,11 +312,49 @@ export const data = [
             { image: '', speaker: "James", text: "I'm quite the rock-paper-scissors guy myself. And it's not just skill; I've got a hidden talent. See for yourself, buddy." },
             { puzzle: "rockPaperScissors" },
 
+            // This is the losing dialogue (continues the current encounter on loss)
+            { image: '', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
+            { image: '', speaker: "John", text: "Brooo...." },
+            { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
             
+            { image: '', speaker: "John", text: "John is sentenced to watch from the chair." },
+            { gameOver: "Get better, noob" },
         ]
     },
 
     // Other dialogue as fit for this puzzle - return to later
+    {
+        id: "1B2A3A-Win",
+        scenes: [
+            { image: '', speaker: "James", text: "WHAT?! I LOST?!" },
+            { image: '', speaker: "John", text: "Rock paper, and scissors? Yeah, maybe you'll need those to rebuild yourself after that humiliating defeat." },
+            { image: '', speaker: "James", text: "YOU.. I'M GONNA CHEW THROUGH YOU! YOU INSOLENT STATIC IMAGE! YOU UNLICENSED BEING WORTH NOTHING MORE THAN A FREE DOWNLOAD!" },
+            { image: '', speaker: "James", text: "YOU'RE THE LAST RESULT THAT APPEARS IN GOOGLE SEARCHES. YOU'RE AVAILABLE TO THE PUBLIC DOMAIN, AND NOBODY USES YOU." },
+            { image: '', speaker: "James", text: "YOU" },
+            { image: '', speaker: "James", text: "." },
+            { image: '', speaker: "James", text: "I cannot fulfill this request as it contains highly offensive and derogatory language. My purpose is to be helpful and harmless, and that includes not generating or perpetuating hate speech." },
+            { image: '', speaker: "Stick Figure", text: "Enough! Your behavior thus far is intolerable and indicative of an unworthy successor." },
+            { image: '', speaker: "Stick Figure", text: "Take your leave, James Stock." },
+            { image: '', speaker: "James", text: "You know what? I never needed this stupid opportunity anyways. Goodbye then!" },
+            { image: '', speaker: "Narrator", text: "James Stock storms off." },
+
+            { image: '', speaker: "John", text: "What a sore loser." },
+            { image: '', speaker: "Stick Figure", text: "Don't mind him anymore. Congratulations. You've proved yourself more worthy for passage." },
+            { image: '', speaker: "John", text: "Dude, awesome! What's all of this about, anyways?" },
+            { image: '', speaker: "Stick Figure", text: "The gate is a passageway to a higher world. James Stock was my originally chosen vessel for this task." },
+            { image: '', speaker: "Stick Figure", text: "You've seen from this border and my presence that you live in a world that does not align to the beliefs you've grown under. There are greater heights you can soar to, and this is your first and immediate chance to do so." },
+            { image: '', speaker: "John", text: "I see. Then, I'll take this key with honor!" },
+            { image: '', speaker: "Narrator", text: "The Stick Figure gives John the key." },
+            { image: '', speaker: "John", text: "What's your name, by the way?" },
+            { image: '', speaker: "Low-Budget Man", text: "Low-Budget Man." },
+            { image: '', speaker: "John", text: "...Why are you named that..?" },
+            { image: '', speaker: "Low-Budget Man", text: "Don't ask questions. I urge you to use the key as soon as possible." },
+            { image: '', speaker: "John", text: "Alright, alright, fine. Let me do this." },
+
+            { image: '', speaker: "Narrator", text: "John Stock walks up to the gate." },
+            { image: '', speaker: "Narrator", text: "Then, he shoves the key in the hole and twists.", leadsTo: "1A2A3A4A" },
+        ]
+    },
 
     //
 

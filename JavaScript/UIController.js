@@ -290,7 +290,7 @@ function rockPaperScissorsPuzzle() {
     const resultDisplay = document.getElementById("resultDisplay");
 
     RPSPuzzleScreen.classList.remove('hidden')
-    visuals.classList.add('hidden')
+    visuals.classList.remove('hidden')
 
     // Images that are used to show the duel between John and James Stock
 

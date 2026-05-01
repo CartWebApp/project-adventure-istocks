@@ -1,5 +1,5 @@
-const inventory = document.querySelector('inventory');
-const hearts = document.querySelectorAll(".heart img");
+const inventory = document.querySelector('#inventory');
+let hearts = document.querySelectorAll(".heart img");
 
 const status = {
     Health: 5,
@@ -21,11 +21,9 @@ class Item {
 
 
 /* Functions */
-function modifyHealth(change) {
-    status.Health += change;
-
-    // Reset health bar
-    for (const heartImg of hearts) {
+function updateVisualHealth() {
+     // Reset health bar
+     for (const heartImg of hearts) {
         heartImg.src = "images/Mechanics/unfilledHeart.svg";
     }
 
@@ -36,13 +34,35 @@ function modifyHealth(change) {
     }
 
     if (status.Health <= 0) {
-        showGameOver("You lost all your health...")
         window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: "You lost all your health..." }))
     }
+}
+function modifyHealth(change) {
+    status.Health += change;
+    updateVisualHealth()
 }
 function modifyMaxHealth(change) {
     status.MaxHealth += change;
     status.Health += change;
+
+    // make a new heart object per max health added
+    if (status.MaxHealth > hearts.length) {
+        const healthbar = document.querySelector('#healthbar')
+        for (let i=hearts.length; i<status.MaxHealth; i++) {
+            const li = document.createElement('li');
+            li.classList.add("heart")
+        
+            const img = document.createElement('img');
+            img.alt = "heart"
+        
+            li.appendChild(img)
+            healthbar.appendChild(li)
+            // To update the amount of hearts the player has for DOM
+            hearts = document.querySelectorAll(".heart img");
+        }
+    }
+
+    updateVisualHealth()
 }
 
 function addToInventory(itemName) {
@@ -75,7 +95,7 @@ window.addEventListener("evaluateScene", (e) => {
         // Checks for mechanics - fallback on nothings if there aren't
         const damage = sceneObject.damage || 0;
         const heal = sceneObject.heal || 0;
-        const maxHealthChange = sceneObject.maxHealth || 0;
+        const maxHealthChange = sceneObject.maxHealthChange || 0;
         const getItem = sceneObject.getItem;
         const useItem = sceneObject.useItem;
         const giveCondition = sceneObject.giveCondition;
@@ -85,6 +105,7 @@ window.addEventListener("evaluateScene", (e) => {
 
         console.log(status)
         modifyHealth(-damage);
+        modifyMaxHealth(maxHealthChange)
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
 
