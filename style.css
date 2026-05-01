@@ -238,7 +238,7 @@ button:hover {
     justify-content: space-around;
     list-style-type: none;
     height: 100%;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 #inventoryButton {
@@ -624,7 +624,7 @@ p {
         height: 92.422px;
 
         & #dialogue {
-            font-size:20px;
+            font-size: 20px;
         }
     }
 
@@ -648,7 +648,7 @@ p {
         margin-right: 0px;
         margin-left: 0px;
         width: 400px;
-        aspect-ratio:3/1;
+        aspect-ratio: 3/1;
     }
 
     #healthbar {
@@ -674,7 +674,7 @@ p {
             display: flex;
             justify-content: center;
             align-items: center;
-            height:40px;
+            height: 40px;
 
         }
     }
@@ -717,47 +717,102 @@ p {
     }
 
     #visuals {
-    margin-top:0px;
-    padding-top:0px;
-    gap:5px;
-}
-
-
-/* Puzzle Media Queries */
-
-   
-/* Rock, Paper, Scissors Mobile*/
-
-
-    #rockPaperScissorsPuzzle {
+        margin-top: 0px;
+        padding-top: 0px;
+        gap: 5px;
     }
+
+
+    /* Puzzle Media Queries */
+
+
+    /* Rock, Paper, Scissors Mobile*/
+
 
 
     #resultDisplay {
-        font-size:20px;
+        font-size: 20px;
     }
 
     #choices {
-        height:50px;
+        height: 50px;
 
         & button {
-            width:200px;
-            height:50px;
+            width: 200px;
+            height: 50px;
         }
     }
 
     .scoreDisplay {
-        font-size:20px;
+        font-size: 20px;
     }
 
 
     #rockPaperScissorsDuel {
-        gap:150px;
+        gap: 150px;
 
         & aside div {
-            font-size:20px;
+            font-size: 20px;
         }
     }
+
+
+    /* Holes and Shapes Mobile */
+
+
+    #draggableShapeContainer img  {
+        width:50px;
+        height:50px;
+    }
+
+    #holesAndShapesPuzzle #draggableShapeContainer > img {
+
+        width:50px;
+        height:50px;
+    }
+
+    element.style {
+        width:50px;
+        height:50px;
+    }
+    }
+
+
+    #holesAndShapesPuzzle #boxOfHoles {
+        margin-top: 0px;
+
+        & img {
+            width:50px;
+            height:50px;
+        }
+    }
+
+
+    #holesAndShapesPuzzle #GL2Profile {
+        margin-bottom: 55px;
+        gap:200px;
+
+        & div {
+            width: 300px;
+            height: 100px;
+
+            & button {
+                width: 100px;
+                top:5px;
+                font-size:25px;
+            }
+
+            & p {
+                font-size: 13px;
+            }
+        }
+
+        & img {
+            width: 120px;
+        }
+    }
+
+
 
 
 }
