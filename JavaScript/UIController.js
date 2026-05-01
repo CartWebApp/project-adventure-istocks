@@ -254,6 +254,8 @@ window.addEventListener("earlyGameOver", showGameOver)
 
 /* *Sigh* alright. time for the puzzles... */
 
+const sceneIDs = ["L1-1C2B", "1B2A3A"];
+
 window.addEventListener("showPuzzle", (e) => {
     switch (e.detail) {
         case "holesAndShapes":
@@ -262,8 +264,9 @@ window.addEventListener("showPuzzle", (e) => {
         case "decipher":
 
             break;
-        case "rockPaperScissors":
 
+        case "rockPaperScissors":
+            rockPaperScissorsPuzzle()
             break;
         default:
             console.log("Invalid puzzle")
@@ -279,12 +282,14 @@ function decipherPuzzle() {
 
 function rockPaperScissorsPuzzle() {
 
+    const puzzleScenes = storyData.find(obj => obj.id == "1B2A3A").scenes.find(s => s.puzzle != undefined).scenes
+
     const choices = ["rock", "paper", "scissors"];
     const playerDisplay = document.getElementById("playerDisplay");
     const enemyDisplay = document.getElementById("enemyDisplay");
     const resultDisplay = document.getElementById("resultDisplay");
 
-    // Images that are used to show the duel between John Stock and James Stock!
+    // Images that are used to show the duel between John and James Stock
 
     const handImages = {
         rock: "images/Other/john-rock-removebg-preview.png",
@@ -296,6 +301,8 @@ function rockPaperScissorsPuzzle() {
     const enemyHand = document.getElementById("enemyHand");
 
     resultDisplay.classList.remove("greenText", "redText");
+
+    // Rock, Paper, Scissors Logic below
 
     window.playGame = function (playerChoice) {
         const enemyChoice = choices[Math.floor(Math.random() * 3)];
@@ -320,6 +327,8 @@ function rockPaperScissorsPuzzle() {
             }
         }
 
+        // Shows the game to the DOM alongside pre-done text
+
         playerDisplay.textContent = `Stock de John picked ${playerChoice}!`;
         enemyDisplay.textContent = `Stock de James picked ${enemyChoice}!`;
         resultDisplay.textContent = result;
@@ -333,6 +342,7 @@ function rockPaperScissorsPuzzle() {
         console.log(enemyChoice);
     };
 }
+
 
 function holesAndShapesPuzzle() {
     // Find the mini scenes list of the scene triggering the holes and shapes puzzle
@@ -474,8 +484,8 @@ function holesAndShapesPuzzle() {
     // Seperate listener for the inventory button which is not included 
 
 
-
     // Puzzle-exclusive scenes 
+
     // "Encounters & scenes" inside the puzzle element
     const toNextEncounter = (nextEncounterName) => {
         currentMiniEncounter = puzzleScenes[nextEncounterName]
@@ -507,7 +517,9 @@ function holesAndShapesPuzzle() {
                 index = maxChars;
             }
         };
+
         // Make nextBtn skip dialogue instead of going to the next scene
+
         miniNext.addEventListener("click", skipDialogue, { once: true });
         miniNext.removeEventListener("click", nextScene);
 
@@ -608,4 +620,3 @@ function animateCircles() {
         y += (nextCircle.y - y) * 0.15;
     });
 }
-rockPaperScissorsPuzzle()
