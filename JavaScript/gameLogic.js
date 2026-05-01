@@ -1,4 +1,4 @@
-const inventory = document.querySelector('#inventory');
+const inventory = document.querySelector('inventory');
 const hearts = document.querySelectorAll(".heart img");
 
 const status = {
@@ -89,8 +89,8 @@ window.addEventListener("evaluateScene", (e) => {
             status.ImportantDecisions.push(giveCondition)
         }
 
-        if (gameOver) {
-           window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: gameOver }))
+        if (gameOver) { 
+            window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: gameOver }))
         }
 
         switch (endGame) {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>iStock</title>
     <link rel="icon" type="image/x-icon" href="images/Visuals/Intro/iStock-logo.jpg">
-    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -50,24 +50,43 @@
                             <p id="dialogue">Text Goes Here</p>
                         </div>
                     </section>
-    
+
                     <section id="inventorySection" class="hidden">
                         <p>Inventory</p>
                         <ul id="inventory">
-    
+
                         </ul>
                     </section>
-    
+
                     <button id="next" type="button">Next</button>
-    
+
                     <ul id="optionsRow">
-    
+
                     </ul>
                 </section>
 
                 <!-- Puzzles lay below... -->
-                <section id="rockPaperScissorsPuzzle" class="hidden">
+                <section id="rockPaperScissrosPuzzle" class="hidden">
 
+                    <div id="choices">
+                        <button onclick="playGame('rock')">Rock</button>
+                        <button onclick="playGame('paper')">Paper</button>
+                        <button onclick="playGame('scissors')">Scissors</button>
+                    </div>
+                    <div id="resultDisplay"></div>
+                    <section id="rockPaperScissorsDuel">
+                        <aside>
+                            <img id="playerHand" src="images/Other/john-rock-removebg-preview.png"
+                                alt="john-hand-position">
+                            <div id="playerDisplay">Stock de John:</div>
+
+                        </aside>
+                        <aside>
+                            <img id="enemyHand" src="images/Other/john-rock-removebg-preview.png"
+                                alt="enemy-hand-position">
+                            <div id="enemyDisplay">Stock de James:</div>
+                        </aside>
+                    </section>
                 </section>
 
                 <section id="decipherPuzzle" class="hidden">
@@ -77,7 +96,7 @@
                 <section id="holesAndShapesPuzzle" class="hidden">
                     <p>What hole does this shape go in?</p>
                     <div id="draggableShapeContainer">
-                        
+
                     </div>
 
                     <ul id="boxOfHoles">
@@ -115,6 +134,10 @@
                 <img src="images/Mechanics/inventoryButton.png">
             </button>
         </section>
+
+        <button id="historyButton" class="interactableWithPH">
+
+        </button>
 
         <dialog id="gameOverPopup" class="hidden">
             <p>Game Over!</p>
