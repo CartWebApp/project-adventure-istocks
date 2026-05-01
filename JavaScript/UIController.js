@@ -252,9 +252,8 @@ window.addEventListener("nextEncounter", (e) => {
 window.addEventListener("earlyGameOver", showGameOver)
 
 
-
-
 /* *Sigh* alright. time for the puzzles... */
+
 window.addEventListener("showPuzzle", (e) => {
     switch (e.detail) {
         case "holesAndShapes":
@@ -280,43 +279,59 @@ function decipherPuzzle() {
 
 function rockPaperScissorsPuzzle() {
 
-const choices = ["rock", "paper", "scissors"];
-const playerDisplay = document.getElementById("playerDisplay");
-const enemyDisplay = document.getElementById("enemyDisplay");
-const resultDisplay = document.getElementById("resultDisplay");
+    const choices = ["rock", "paper", "scissors"];
+    const playerDisplay = document.getElementById("playerDisplay");
+    const enemyDisplay = document.getElementById("enemyDisplay");
+    const resultDisplay = document.getElementById("resultDisplay");
 
-resultDisplay.classList.remove("greenText", "redText");
+    // Images that are used to show the duel between John Stock and James Stock!
 
-window.playGame = function (playerChoice) {
-    const enemyChoice = choices[Math.floor(Math.random() * 3)];
-    let result = "";
+    const handImages = {
+        rock: "images/Other/john-rock-removebg-preview.png",
+        paper: "images/Other/john-paper-removebg-preview.png",
+        scissors: "images/Other/john-scissors-removebg-preview.png"
+    };
 
-    if (playerChoice === enemyChoice) {
-        result = "It's a tie!";
-    }
-    else {
-        switch (playerChoice) {
-            case "rock":
-                result = (enemyChoice === "scissors") ? "John wins!" : "John, aka YOU lost!";
-                break;
+    const playerHand = document.getElementById("playerHand");
+    const enemyHand = document.getElementById("enemyHand");
 
-            case "paper":
-                result = (enemyChoice === "rock") ? "John wins!" : "John, aka YOU lost!";
-                break;
+    resultDisplay.classList.remove("greenText", "redText");
 
-            case "scissors":
-                result = (enemyChoice === "paper") ? "John wins!" : "John, aka YOU lost!";
-                break;
+    window.playGame = function (playerChoice) {
+        const enemyChoice = choices[Math.floor(Math.random() * 3)];
+        let result = "";
+
+        if (playerChoice === enemyChoice) {
+            result = "TIE BREAKER! Duel Again!";
         }
-    }
+        else {
+            switch (playerChoice) {
+                case "rock":
+                    result = (enemyChoice === "scissors") ? "John, aka YOU win!" : "John, aka YOU lost!";
+                    break;
 
-    playerDisplay.textContent = `JOHN: ${playerChoice}`;
-    enemyDisplay.textContent = `Enemy: ${enemyChoice}`;
-    resultDisplay.textContent = result;
+                case "paper":
+                    result = (enemyChoice === "rock") ? "John, aka YOU win!" : "John, aka YOU lost!";
+                    break;
 
-    console.log(enemyChoice);
-};
+                case "scissors":
+                    result = (enemyChoice === "paper") ? "John, aka YOU win!" : "John, aka YOU lost!";
+                    break;
+            }
+        }
 
+        playerDisplay.textContent = `Stock de John picked ${playerChoice}!`;
+        enemyDisplay.textContent = `Stock de James picked ${enemyChoice}!`;
+        resultDisplay.textContent = result;
+
+        playerHand.src = handImages[playerChoice];
+        enemyHand.src = handImages[enemyChoice];
+
+
+        playerHand.alt = `John picked ${playerChoice}`;
+        enemyHand.alt = `James picked ${enemyChoice}`;
+        console.log(enemyChoice);
+    };
 }
 
 function holesAndShapesPuzzle() {
@@ -386,7 +401,7 @@ function holesAndShapesPuzzle() {
             // If this item is dragged over the hole and is the closest in distance, accept it
             if (Math.abs(offsetX) < holeSize.width && Math.abs(offsetY) < holeSize.height) {
                 if (offsetX > closest.offsetX && offsetY > closest.offsetY)
-                closest.element = hole;
+                    closest.element = hole;
                 closest.offsetX = offsetX;
                 closest.offsetY = offsetY;
             }

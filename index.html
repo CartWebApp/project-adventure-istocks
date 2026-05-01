@@ -66,22 +66,27 @@
                 </section>
 
                 <!-- Puzzles lay below... -->
-                <section id="rockPaperScissorsPuzzle" class="hidden">
+                <section id="rockPaperScissrosPuzzle" class="hidden">
 
                     <div id="choices">
                         <button onclick="playGame('rock')">Rock</button>
                         <button onclick="playGame('paper')">Paper</button>
                         <button onclick="playGame('scissors')">Scissors</button>
                     </div>
-
-                    <div id="playerDisplay">Stock de John:
-                    <img id= "playerHand" src="images/Other/john-rock-removebg-preview.png" alt="john-hand-position">
-                    </div>
-                    <div id="enemyDisplay">Stock de James
-                    <img id="enemyHand" src="images/Other/john-rock-removebg-preview.png" alt="enemy-hand-position">
-                    </div>
                     <div id="resultDisplay"></div>
+                    <section id="rockPaperScissorsDuel">
+                        <aside>
+                            <img id="playerHand" src="images/Other/john-rock-removebg-preview.png"
+                                alt="john-hand-position">
+                            <div id="playerDisplay">Stock de John:</div>
 
+                        </aside>
+                        <aside>
+                            <img id="enemyHand" src="images/Other/john-rock-removebg-preview.png"
+                                alt="enemy-hand-position">
+                            <div id="enemyDisplay">Stock de James:</div>
+                        </aside>
+                    </section>
                 </section>
 
                 <section id="decipherPuzzle" class="hidden">
@@ -130,9 +135,9 @@
             </button>
         </section>
 
-            <button id="historyButton" class="interactableWithPH">
+        <button id="historyButton" class="interactableWithPH">
 
-            </button>
+        </button>
 
         <dialog id="gameOverPopup" class="hidden">
             <p>Game Over!</p>

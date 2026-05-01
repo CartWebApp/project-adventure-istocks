@@ -412,14 +412,42 @@ p {
 }
 
 
+/* Rock Paper Scissors styling : ) */
+
+
 #rockPaperScissorsPuzzle {
     font-family: var(--font-family);
 }
 
 
-#enemyHand {
+#rockPaperScissorsDuel {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+
+
+    & aside div {
+        font-size:30px;
+        font-family:var(--font-family);
+        align-self:flex-end;
+    }
+
+    & img {
+        height:50vh;
+        justify-self:flex-start;
+    }
+}
+
+#playerHand {
     transform: scaleX(-1);
 }
+
+#resultDisplay {
+    font-family:var(--font-family);
+    justify-self:center;
+    padding:.5em;
+}
+
 
 #choices {
     display:flex;
