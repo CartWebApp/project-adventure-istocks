@@ -191,7 +191,7 @@ function initiateScene() {
     if (currentScene.sceneCondition) {
         // Setting up "mini scenes", as the conditional dialogue is formatted a lil different from main dialogue
         let miniSceneIndex = 0;
-        const hasCondition = status.ImportantDecisions[currentScene.sceneCondition]
+        const hasCondition = status.ImportantDecisions.includes(currentScene.sceneCondition)
         const conditionMetScenes = currentScene.conditionMetScenes;
         const conditionNotMetScenes = currentScene.conditionNotMetScenes;
 
