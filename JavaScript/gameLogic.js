@@ -71,6 +71,7 @@ window.addEventListener("evaluateScene", (e) => {
         // Checks for mechanics - fallback on nothings if there aren't
         const damage = sceneObject.damage || 0;
         const heal = sceneObject.heal || 0;
+        const maxHealthChange = sceneObject.maxHealth || 0;
         const getItem = sceneObject.getItem;
         const useItem = sceneObject.useItem;
         const giveCondition = sceneObject.giveCondition;
@@ -82,8 +83,12 @@ window.addEventListener("evaluateScene", (e) => {
         modifyHealth(-damage);
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
+
+
         if (getItem) { addToInventory(getItem); }
         if (useItem) { deleteFromInventory(useItem); }
+
+        if (maxHealthChange) {  }
 
         if (giveCondition) {
             status.ImportantDecisions.push(giveCondition)

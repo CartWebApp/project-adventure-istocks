@@ -459,7 +459,7 @@ function holesAndShapesPuzzle() {
                 console.log(draggableShape.alt)
                 console.log(status.Health, status.MaxHealth)
                 // Unique encounter if you drag the heart shape over an unfilled heart
-                if (draggableShape.alt == "Heart" && holeDraggingOver.classList.contains('heart') && status.Health < status.MaxHealth) {
+                if (draggableShape.alt == "Heart" && holeDraggingOver.classList.contains('heart')) {
                     draggableShape.remove()
                     toNextEncounter("heartToHeart");
                 } else {

@@ -833,7 +833,7 @@ export const data = [
                     ],
 
                     heartToHeart: [
-                        { text: "What the-?! That's not even a hole! You just cheated!", heal: 1 },
+                        { text: "What the-?! That's not even a hole! You just cheated!", maxHealthChange: 1 },
                         { text: "No way, I'm letting you get away with too much! That's it!" },
                         { shape: "key", text: "I dare you to try fitting THE KEY somewhere!" },
                     ],
