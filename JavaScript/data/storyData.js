@@ -308,10 +308,11 @@ export const data = [
     {
         id: "1B2A3A",
         scenes: [
+            { puzzle: "RockPaperScissors" },
             { image: '', speaker: "James", text: "Competition, eh? You know what, I got an idea..." },
             { image: '', speaker: "James", text: "I'm quite the rock-paper-scissors guy myself. And it's not just skill; I've got a hidden talent. See for yourself, buddy." },
 
-            { puzzle: "RockPaperScissors" }
+            
         ]
     },
 
