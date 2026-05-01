@@ -47,7 +47,7 @@ function beginGame(tempDisableVar) {
     startingScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
 
-    if (tempDisableVar = "3784NT") {
+    if (tempDisableVar != "3784NT") {
         initiateScene();
     }
 }
@@ -65,64 +65,12 @@ function nextEncounter(encounterID) {
     initiateScene();
 }
 
-function loadText(scene, whenFinishFunction) {
-    // Do all of this only if there's actual text (some mechanics scenes do not have text)
-    if (scene.text) {
-        // Rolling text
-        const sceneText = scene.text;
-        const maxChars = sceneText.length;
-        let index = 0;
-
-        // Skip the rolling dialogue
-        const skipDialogue = () => {
-            if (!inventoryEnabled) {
-                dialogue.textContent = sceneText;
-                index = maxChars;
-            }
-        };
-        // Make nextBtn skip dialogue instead of going to the next scene
-        nextBtn.addEventListener("click", skipDialogue, { once: true });
-        nextBtn.removeEventListener("click", nextScene)
-
-        const iterateACharacter = () => {
-            if (index < maxChars) {
-                const textSection = sceneText.slice(0, index + 1);
-                dialogue.textContent = textSection;
-                index++
-
-                // Recursive: Repeat the function after the given time (in ms)
-                const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
-                let waitTime = 25;
-                if (character === "." || character === "?" || character === "!") {
-                    waitTime = 300;
-                }
-                setTimeout(iterateACharacter, waitTime);
-            } else {
-                // When text finishes loading, make nextBtn go to next scene again
-                nextBtn.removeEventListener("click", skipDialogue)
-                nextBtn.addEventListener("click", nextScene)
-
-                if (scene.autoskip) {
-                    // Autoskips the dialogue the moment it finishes rendering if autoskip
-                    nextScene()
-                }
-
-                // Perform anything else that is needed
-                whenFinishFunction()
-            }
-        }
-
-        iterateACharacter();
-    }
-}
-
 
 
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
-    // Fire to gameLogic.js
-    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: currentScene }));
+    console.log(currentScene)
 
     // Putting this outside of loadOptions() to deal with my cheap coding
     const options = currentScene.options;
@@ -185,27 +133,111 @@ function initiateScene() {
         }
     }
 
+    function loadText(scene, whenFinishFunction) {
+        // Do all of this only if there's actual text (some mechanics scenes do not have text)
+        if (scene.text) {
+            // Rolling text
+            const sceneText = scene.text;
+            const maxChars = sceneText.length;
+            let index = 0;
 
+            // Skip the rolling dialogue
+            const skipDialogue = () => {
+                if (!inventoryEnabled) {
+                    dialogue.textContent = sceneText;
+                    index = maxChars;
+                }
+            };
+            // Make nextBtn skip dialogue instead of going to the next scene
+            nextBtn.addEventListener("click", skipDialogue, { once: true });
+            nextBtn.removeEventListener("click", nextScene)
 
-    if (currentScene.sceneCondition) {
-        if (status.ImportantDecisions[currentScene.sceneCondition]) {
-            const miniScene = currentEncounter.conditionMetScenes[currentSceneIndex];
-        } else {
-            currentScene = currentEncounter.conditionNotMetScenes[currentSceneIndex];
+            const iterateACharacter = () => {
+                if (index < maxChars) {
+                    const textSection = sceneText.slice(0, index + 1);
+                    dialogue.textContent = textSection;
+                    index++
+
+                    // Recursive: Repeat the function after the given time (in ms)
+                    const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
+                    let waitTime = 25;
+                    if (character === "." || character === "?" || character === "!") {
+                        waitTime = 300;
+                    }
+                    setTimeout(iterateACharacter, waitTime);
+                } else {
+                    // When text finishes loading, make nextBtn go to next scene again
+                    // The event listener to make the next button proceed to the next scene must be in whenFinishFunction, since it's different across the various times this function is called
+                    nextBtn.removeEventListener("click", skipDialogue)
+                    // Fire to gameLogic.js, evaluate mechanics now that dialogue has finished loading.
+                    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));
+
+                    if (scene.autoskip) {
+                        // Autoskips the dialogue the moment it finishes rendering if autoskip
+                        nextScene()
+                    }
+
+                    // Perform anything else that is needed
+                    whenFinishFunction()
+                }
+            }
+
+            iterateACharacter();
         }
+    }
+
+    // Some dialogue is conditional; it changes based on decisions users made in the past
+    // We account for that here
+    if (currentScene.sceneCondition) {
+        // Setting up "mini scenes", as the conditional dialogue is formatted a lil different from main dialogue
+        let miniSceneIndex = 0;
+        const hasCondition = status.ImportantDecisions[currentScene.sceneCondition]
+        const conditionMetScenes = currentScene.conditionMetScenes;
+        const conditionNotMetScenes = currentScene.conditionNotMetScenes;
+
+        const scenesArray = hasCondition ? conditionMetScenes : conditionNotMetScenes;
+        let miniScene = scenesArray[miniSceneIndex];
+
+        const initMiniScene = () => {
+            miniScene = scenesArray[miniSceneIndex]
+            loadScene(miniScene);
+            loadText(miniScene, () => {
+                nextBtn.addEventListener("click", skipMiniScene, { once: true });
+            });
+        }
+        // this is played on nextBtn press
+        const skipMiniScene = () => {
+            // If that was the last option in the mini-scene then goes on to next normal scene
+            if (miniSceneIndex === scenesArray.length - 1) {
+                nextScene()
+            } else {
+                // move to next mini scene
+                miniSceneIndex++;
+                initMiniScene()
+            }
+        }
+
+        // Load the first mini scene
+        initMiniScene();
+
     } else {
+        // Load the regular dialogue if not conditional
         loadScene(currentScene);
-        loadText(currentScene, loadOptions);
+        loadText(currentScene, () => {
+            nextBtn.addEventListener("click", nextScene, { once: true })
+            loadOptions();
+        });
     }
 }
 
 function nextScene() {
+    // Only run if inventory isn't open
     if (!inventoryEnabled) {
         const currentScene = currentEncounter.scenes[currentSceneIndex]
         if (currentScene.leadsTo) {
             nextEncounter(currentScene.leadsTo);
         } else {
-            currentSceneIndex += 1;
+            currentSceneIndex++;
         }
         initiateScene();
     }
@@ -287,9 +319,6 @@ function decipherPuzzle() {
 }
 
 function rockPaperScissorsPuzzle() {
-
-    const puzzleScenes = storyData.find(obj => obj.id == "1B2A3A").scenes.find(s => s.puzzle != undefined).scenes
-
     const choices = ["rock", "paper", "scissors"];
     const playerDisplay = document.getElementById("playerDisplay");
     const enemyDisplay = document.getElementById("enemyDisplay");
@@ -609,7 +638,7 @@ const navSceneInput = document.querySelector("#sceneNavigate")
 const navigateSceneButton = document.querySelector("#submitSceneNavigate")
 navigateSceneButton.addEventListener("click", () => {
     const sceneID = navSceneInput.value;
-    let currentEncounter = storyData.find(object => object.id = "Intro");
+    currentEncounter = storyData.find(object => object.id == sceneID);
     if (currentEncounter) {
         beginGame("3784NT");
         nextEncounter(sceneID);

@@ -341,14 +341,6 @@ p {
     position: relative;
     width: 150px;
     height: 150px;
-
-
-    &.fitting[alt="key"] {
-        position: absolute;
-        inset: 0;
-        width: 175px;
-        height: 175px;
-    }
 }
 
 .fitting {

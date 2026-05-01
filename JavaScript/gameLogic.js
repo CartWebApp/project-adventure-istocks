@@ -103,7 +103,6 @@ window.addEventListener("evaluateScene", (e) => {
         const gameOver = sceneObject.gameOver;
         const endGame = sceneObject.endGame;
 
-        console.log(status)
         modifyHealth(-damage);
         modifyMaxHealth(maxHealthChange)
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
