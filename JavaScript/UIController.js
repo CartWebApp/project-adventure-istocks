@@ -288,6 +288,10 @@ function rockPaperScissorsPuzzle() {
     const playerDisplay = document.getElementById("playerDisplay");
     const enemyDisplay = document.getElementById("enemyDisplay");
     const resultDisplay = document.getElementById("resultDisplay");
+    const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+    const enemyScoreDisplay = document.getElementById("enemyScoreDisplay");
+    let playerScore = 0;
+    let enemyScore = 0;
 
     RPSPuzzleScreen.classList.remove('hidden')
     visuals.classList.remove('hidden')
@@ -303,7 +307,6 @@ function rockPaperScissorsPuzzle() {
     const playerHand = document.getElementById("playerHand");
     const enemyHand = document.getElementById("enemyHand");
 
-    resultDisplay.classList.remove("greenText", "redText");
 
     // Rock, Paper, Scissors Logic below
 
@@ -335,6 +338,33 @@ function rockPaperScissorsPuzzle() {
         playerDisplay.textContent = `Stock de John picked ${playerChoice}!`;
         enemyDisplay.textContent = `Stock de James picked ${enemyChoice}!`;
         resultDisplay.textContent = result;
+
+        // Changes color based on who wins
+
+        resultDisplay.classList.remove("greenText", "redText", "blackText");
+
+        switch (result) {
+            case "TIE BREAKER! Duel Again!":
+                resultDisplay.classList.add("blackText");
+                break;
+            case "John, aka YOU win!":
+                resultDisplay.classList.add("greenText");
+                playerScore++;
+                playerScoreDisplay.textContent = playerScore;
+                break;
+
+            case "John, aka YOU lost!":
+                resultDisplay.classList.add("redText");
+                enemyScore++;
+                enemyScoreDisplay.textContent = enemyScore;
+                break;
+        }
+
+        if (playerScore === 3) {
+            RPSPuzzleScreen.classList.add("hidden");
+            visuals.classList.remove("hidden");
+            nextEncounter("1B2A3A-AfterPuzzle");
+        }
 
         playerHand.src = handImages[playerChoice];
         enemyHand.src = handImages[enemyChoice];

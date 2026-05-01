@@ -73,7 +73,18 @@
                         <button onclick="playGame('paper')">Paper</button>
                         <button onclick="playGame('scissors')">Scissors</button>
                     </div>
+
                     <div id="resultDisplay"></div>
+
+                    <aside id="scores">
+                        <div class="scoreDisplay">John's Score
+                            <span id="playerScoreDisplay">0</span>
+                        </div>
+
+                        <div class="scoreDisplay">James' Score
+                            <span id="enemyScoreDisplay">0</span>
+                        </div>
+                    </aside>
                     <section id="rockPaperScissorsDuel">
                         <aside>
                             <img id="playerHand" src="images/Other/john-rock-removebg-preview.png"
@@ -81,6 +92,7 @@
                             <div id="playerDisplay">Stock de John:</div>
 
                         </aside>
+
                         <aside>
                             <img id="enemyHand" src="images/Other/john-rock-removebg-preview.png"
                                 alt="enemy-hand-position">
