@@ -249,7 +249,7 @@ button:hover {
     justify-self: center;
     display: flex;
     margin-top: 20px;
-    margin-right:45px;
+    margin-right: 45px;
     background-color: #ffffff00;
     border: 0;
 }
@@ -287,13 +287,14 @@ p {
 
     display: flex;
     flex-direction: row;
-    gap: 400px;
-    justify-content: center;
+    justify-content:center;
+    gap:300px;
     align-items: center;
 
     & img {
-        max-width: 500px;
-        max-height: 500px;
+        aspect-ratio:1/1;
+        max-width: 300px;
+        max-height:300px;
         border-radius: 20px;
         border: 5px solid #5E5E5E;
     }
@@ -332,6 +333,8 @@ p {
             align-self: center;
             top: 40px;
             width: 200px;
+            position:absolute;
+            margin-top:290px;
         }
     }
 
@@ -358,6 +361,8 @@ p {
     }
 }
 
+
+
 #holesAndShapesPuzzle #draggableShapeContainer {
     height: 150px;
 }
@@ -375,7 +380,6 @@ p {
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
     width: 80%;
-    margin-top: 200px;
     height: 200px;
 
     & li {
@@ -459,9 +463,9 @@ p {
 #rockPaperScissorsPuzzle {
     font-family: var(--font-family);
     border: 5px solid #2E2E2E;
-    border-radius:20px;
-    margin-bottom:35px;
-    margin-top:35px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    margin-top: 35px;
 }
 
 
@@ -489,6 +493,7 @@ p {
     transform: scaleX(-1);
 }
 
+
 #resultDisplay {
     font-family: var(--font-family);
     justify-self: center;
@@ -507,13 +512,13 @@ p {
     padding: 5px 10px;
     height: 200px;
     font-size: 30px;
-    
+
 
     & button {
         background-color: var(#FFF8F0);
         width: 250px;
         height: 100px;
-        gap:300px;
+        gap: 300px;
         font-size: 30px;
         border-radius: 20px;
         border: 5px solid #5E5E5E;
@@ -794,37 +799,35 @@ p {
     /* Holes and Shapes Mobile */
 
 
-    #draggableShapeContainer img  {
-        width:50px;
-        height:50px;
+    #draggableShapeContainer img {
+        width: 50px;
+        height: 50px;
     }
 
-    #holesAndShapesPuzzle #draggableShapeContainer > img {
+    #holesAndShapesPuzzle #draggableShapeContainer>img {
 
-        width:50px;
-        height:50px;
+        width: 50px;
+        height: 50px;
     }
 
     element.style {
-        width:50px;
-        height:50px;
+        width: 50px;
+        height: 50px;
     }
-    }
-
 
     #holesAndShapesPuzzle #boxOfHoles {
         margin-top: 0px;
 
         & img {
-            width:50px;
-            height:50px;
+            width: 120px;
+            height: 120px;
         }
     }
 
 
     #holesAndShapesPuzzle #GL2Profile {
         margin-bottom: 55px;
-        gap:200px;
+        gap: 200px;
 
         & div {
             width: 300px;
@@ -832,8 +835,8 @@ p {
 
             & button {
                 width: 100px;
-                top:5px;
-                font-size:25px;
+                top: 5px;
+                font-size: 25px;
             }
 
             & p {
@@ -845,3 +848,4 @@ p {
             width: 120px;
         }
     }
+}
