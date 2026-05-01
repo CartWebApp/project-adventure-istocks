@@ -360,6 +360,12 @@ function rockPaperScissorsPuzzle() {
                 break;
         }
 
+        if (playerScore === 3) {
+            RPSPuzzleScreen.classList.add("hidden");
+            visuals.classList.remove("hidden");
+            nextEncounter("1B2A3A-AfterPuzzle");
+        }
+
         playerHand.src = handImages[playerChoice];
         enemyHand.src = handImages[enemyChoice];
 
