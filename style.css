@@ -106,7 +106,7 @@ button:hover {
     flex-direction: column;
     align-items: stretch;
     padding-top: 4em;
-    gap: 100px;
+    gap: 50px;
 }
 
 #visuals.hidden {
@@ -249,6 +249,7 @@ button:hover {
     justify-self: center;
     display: flex;
     margin-top: 20px;
+    margin-right:45px;
     background-color: #ffffff00;
     border: 0;
 }
@@ -457,6 +458,10 @@ p {
 
 #rockPaperScissorsPuzzle {
     font-family: var(--font-family);
+    border: 5px solid #2E2E2E;
+    border-radius:20px;
+    margin-bottom:35px;
+    margin-top:35px;
 }
 
 
@@ -502,11 +507,13 @@ p {
     padding: 5px 10px;
     height: 200px;
     font-size: 30px;
+    
 
     & button {
         background-color: var(#FFF8F0);
         width: 250px;
         height: 100px;
+        gap:300px;
         font-size: 30px;
         border-radius: 20px;
         border: 5px solid #5E5E5E;
@@ -518,6 +525,16 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 5px 10px;
+}
+
+#playerDisplay {
+    padding: 5px 10px;
+}
+
+
+#enemyDisplay {
+    padding: 5px 10px;
 }
 
 .greenText,
