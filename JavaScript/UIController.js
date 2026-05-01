@@ -328,6 +328,19 @@ function rockPaperScissorsPuzzle() {
     let playerScore = 0;
     let enemyScore = 0;
 
+    document.getElementById("retryChoice").onclick = function () {
+        playerScore = 0;
+        enemyScore = 0;
+
+        playerScoreDisplay.textContent = playerScore;
+        enemyScoreDisplay.textContent = enemyScore;
+
+
+        resultDisplay.textContent = "Let's See What You got!"
+        resultDisplay.classList.remove("greenText", "redText", "blackText");
+        resultDisplay.classList.add("blackText");
+    }
+
     RPSPuzzleScreen.classList.remove('hidden')
     visuals.classList.add('hidden')
 
@@ -341,6 +354,7 @@ function rockPaperScissorsPuzzle() {
 
     const playerHand = document.getElementById("playerHand");
     const enemyHand = document.getElementById("enemyHand");
+
 
 
     // Rock, Paper, Scissors Logic below
