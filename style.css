@@ -238,6 +238,7 @@ button:hover {
     justify-content: space-around;
     list-style-type: none;
     height: 100%;
+    margin-right:20px;
 }
 
 #inventoryButton {
@@ -259,7 +260,7 @@ p {
 
 /* Puzzle Screens */
 
-#holesAndShapesPuzzle.hidden, 
+#holesAndShapesPuzzle.hidden,
 #rockPaperScissorsPuzzle.hidden,
 #decipherPuzzle.hidden {
     display: none;
@@ -270,7 +271,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
 
     width: 100%;
     height: 99vh;
@@ -284,6 +284,18 @@ p {
 
 #holesAndShapesPuzzle #GL2Profile {
 
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        max-width: 500px;
+        max-height: 500px;
+        border-radius: 20px;
+        border: 5px solid #5E5E5E;
+    }
 
     & div {
         display: flex;
@@ -295,12 +307,17 @@ p {
         background-color: #F9F9F9;
         box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
-        width: 300px;
+        width: 500px;
         height: 400px;
         justify-self: center;
+        align-self: center;
 
         & p {
-            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            text-align: left;
         }
 
         & button {
@@ -308,16 +325,18 @@ p {
             color: var(--main-white);
             border: 4px solid var(--option-border-black);
             border-radius: var(--border-radius);
-            padding: 5px 10px;
+            padding: 10px 10px;
             font-size: 30px;
-            justify-self: flex-end;
+            justify-self: center;
+            align-self: center;
+            top: 40px;
+            width: 200px;
         }
     }
 
-    & img {
-        max-width: 200px;
-    }
 }
+
+
 
 #holesAndShapesPuzzle #draggableShapeContainer {
     height: 150px;
@@ -336,8 +355,8 @@ p {
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
     width: 80%;
-    height: 400px;
-    justify-self: center;
+    margin-top: 200px;
+    height: 200px;
 
     & li {
         position: relative;
@@ -423,22 +442,22 @@ p {
 
 
 #rockPaperScissorsDuel {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:center;
-    align-items:center;
-    gap:300px;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
 
 
     & aside div {
-        font-size:30px;
-        font-family:var(--font-family);
-        align-self:flex-end;
+        font-size: 30px;
+        font-family: var(--font-family);
+        align-self: flex-end;
     }
 
     & img {
-        height:50vh;
-        justify-self:flex-start;
+        height: 50vh;
+        justify-self: flex-start;
     }
 }
 
@@ -447,16 +466,16 @@ p {
 }
 
 #resultDisplay {
-    font-family:var(--font-family);
-    justify-self:center;
-    padding:.5em;
+    font-family: var(--font-family);
+    justify-self: center;
+    padding: .5em;
 }
 
 
 #choices {
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--main-black);
     color: var(--main-white);
     border: 4px solid var(--option-border-black);
@@ -466,33 +485,35 @@ p {
     font-size: 30px;
 
     & button {
-        background-color:var(#FFF8F0);
-        width:250px;
-        height:100px;
-        font-size:30px;
-        border-radius:20px;
+        background-color: var(#FFF8F0);
+        width: 250px;
+        height: 100px;
+        font-size: 30px;
+        border-radius: 20px;
         border: 5px solid #5E5E5E;
     }
 }
 
 #scores {
-    font-size:30px;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.greenText, #playerScoreDisplay {
+.greenText,
+#playerScoreDisplay {
     color: hsl(130, 84%, 54%);
 }
 
-.redText, #enemyScoreDisplay {
+.redText,
+#enemyScoreDisplay {
     color: hsl(0, 84%, 60%)
 }
 
 
 .blackText {
-    color:black;
+    color: black;
 }
 
 /* Media Query for if a user plays on vertical device*/
@@ -572,7 +593,7 @@ p {
     #next {
         width: 175px;
         height: 75px;
-        margin-left: 70%;
+        margin-left: 67%;
     }
 
     #chatBox {
@@ -595,13 +616,15 @@ p {
 
     }
 
+
+
     #dialogueBoxStyle,
     #inventorySection {
-        width: 622px;
-        height: 132.422px;
+        width: 581px;
+        height: 92.422px;
 
         & #dialogue {
-            font-size: 25px;
+            font-size:20px;
         }
     }
 
@@ -613,7 +636,7 @@ p {
         font-size: 25px;
         padding: 5px;
         top: -50px;
-        left: 35px;
+        left: 70px;
         align-items: center;
         justify-content: center;
     }
@@ -624,8 +647,8 @@ p {
         display: flex;
         margin-right: 0px;
         margin-left: 0px;
-        width: 511px;
-        height: 170px;
+        width: 400px;
+        aspect-ratio:3/1;
     }
 
     #healthbar {
@@ -651,6 +674,7 @@ p {
             display: flex;
             justify-content: center;
             align-items: center;
+            height:40px;
 
         }
     }
@@ -685,5 +709,55 @@ p {
     #startingScreen div {
         gap: 15px;
     }
+
+    #tempNavForDevs {
+        font-size: 20px;
+        width: 184px;
+        height: 54px;
+    }
+
+    #visuals {
+    margin-top:0px;
+    padding-top:0px;
+    gap:5px;
+}
+
+
+/* Puzzle Media Queries */
+
+   
+/* Rock, Paper, Scissors Mobile*/
+
+
+    #rockPaperScissorsPuzzle {
+    }
+
+
+    #resultDisplay {
+        font-size:20px;
+    }
+
+    #choices {
+        height:50px;
+
+        & button {
+            width:200px;
+            height:50px;
+        }
+    }
+
+    .scoreDisplay {
+        font-size:20px;
+    }
+
+
+    #rockPaperScissorsDuel {
+        gap:150px;
+
+        & aside div {
+            font-size:20px;
+        }
+    }
+
 
 }
