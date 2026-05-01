@@ -316,13 +316,25 @@ export const data = [
             { image: '', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
             { image: '', speaker: "John", text: "Brooo...." },
             { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
-            
-            { image: '', speaker: "John", text: "John is sentenced to watch from the chair." },
+
+            { image: '', speaker: "Narrator", text: "John is sentenced to watching from the chair." },
             { gameOver: "Get better, noob" },
         ]
     },
 
-    // Other dialogue as fit for this puzzle - return to later
+    {
+        id: "1B2A3A-Lose",
+        scenes: [
+            // This is the losing dialogue (continues the current encounter on loss)
+            { image: '', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
+            { image: '', speaker: "John", text: "Brooo...." },
+            { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
+
+            { image: '', speaker: "Narrator", text: "John is sentenced to watching from the chair." },
+            { gameOver: "Get better, noob" },
+        ]
+    },
+
     {
         id: "1B2A3A-Win",
         scenes: [

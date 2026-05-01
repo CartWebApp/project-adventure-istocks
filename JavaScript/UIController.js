@@ -294,7 +294,7 @@ function rockPaperScissorsPuzzle() {
     let enemyScore = 0;
 
     RPSPuzzleScreen.classList.remove('hidden')
-    visuals.classList.remove('hidden')
+    visuals.classList.add('hidden')
 
     // Images that are used to show the duel between John and James Stock
 
@@ -363,7 +363,11 @@ function rockPaperScissorsPuzzle() {
         if (playerScore === 3) {
             RPSPuzzleScreen.classList.add("hidden");
             visuals.classList.remove("hidden");
-            nextEncounter("1B2A3A-AfterPuzzle");
+            nextEncounter("1B2A3A-Win");
+        } else if (enemyScore === 3) {
+            RPSPuzzleScreen.classList.add("hidden");
+            visuals.classList.remove("hidden");
+            nextScene("1B2A3A-Lose");
         }
 
         playerHand.src = handImages[playerChoice];
