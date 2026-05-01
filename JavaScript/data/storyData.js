@@ -63,7 +63,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low budget man being depressed.jpg', speaker: "Narrator", text: "Then, he unmasks himself..." },
 
             // Black screen
-            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
 
             // Image of him with his hood off --- stickman in a hoodie!!!!
             { image: 'images/Visuals/Intro/low-budget-man-exposed 1.jpg', speaker: "Narrator", text: "..." },
@@ -104,7 +104,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-speaking 1.jpg', speaker: "Low Budget Man", text: "You'll slap yourself for never thinking of this." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "You follow Low-Budget man to somewhere you've never gone before. Usually, it had always been the same concrete sidewalk simply going to work, then immediately back home." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "But today... John walks onto grass." },
-            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "And before he knows it.." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "And before he knows it.." },
 
             // Now an actual visual appears - Them at the border
             { image: 'images/Visuals/Intro/low-budget-man-john-stock-at-border 1.jpg', speaker: "Low-Budget Man", text: "Here we are." },
@@ -211,7 +211,7 @@ export const data = [
         scenes: [
             { image: 'images/Visuals/Intro/john-after-the-fight (1).jpg', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
-            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
     },
 
@@ -247,7 +247,7 @@ export const data = [
             // John frolicks around in a grass field :sob:
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
-            { image: 'images/Visuals/Intro/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
             { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
             { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
@@ -611,16 +611,16 @@ export const data = [
         id: "L1",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // Image - the whole world looks like it'd been hand-drawn
-            { image: '', speaker: "Narrator", text: "John arrives through the portal." },
-            { image: '', speaker: "John", text: "Woah, this place is way different from where I live." },
-            { image: '', speaker: "John", text: "Things are actually moving... they're not still images! They're not conformed to predetermined poses!" },
-            { image: '', speaker: "John", text: "Okay, gotta admit that's pretty awesome." },
+            { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "Narrator", text: "John arrives through the portal." },
+            { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "John", text: "Woah, this place is way different from where I live." },
+            { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "John", text: "Things are actually moving... they're not still images! They're not conformed to predetermined poses!" },
+            { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "John", text: "Okay, gotta admit that's pretty awesome." },
 
-            { image: '', speaker: "John", text: "I've heard that there's higher worlds out there though, so I've got some exploring to do." },
+            { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "John", text: "I've heard that there's higher worlds out there though, so I've got some exploring to do." },
             {
-                image: '',
+                image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg',
                 speaker: "John",
                 text: 'Hmm, where should I start?',
                 options: [
@@ -780,39 +780,40 @@ export const data = [
         id: "L1-1C",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "John bolts for the border, ready to conquer all that awaits him." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "John bolts for the border, ready to conquer all that awaits him." },
 
             // Border -- 
-            { image: '', speaker: "John", text: "Here I am." },
-            { image: '', speaker: "Narrator", text: "Here he is." },
-            { image: '', speaker: "John", text: "Wait.. I don't have a key. I don't know why I didn't account for that. What am I doing?" },
-            { image: '', speaker: "John", text: "I'm a fool. I just walked here for nothing. I-" },
-            { image: '', speaker: "???", text: "Woah, who's on the opposite side here?" },
-            { image: '', speaker: "John", text: "Eh?" },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "John", text: "Here I am." },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "Narrator", text: "Here he is." },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "John", text: "Wait.. I don't have a key. I don't know why I didn't account for that. What am I doing?" },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "John", text: "I'm a fool. I just walked here for nothing. I-" },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "???", text: "Woah, who's on the opposite side here?" },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "John", text: "Eh?" },
 
             // Shadow of the person
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Layer1/shadowBehindTheGate.jpg', speaker: "Narrator", text: "..." },
             // He steps out, revealing himself to be a man drawn as if he were from an animated show.
             // He's smoothly drawn with muscles and sharp, flashy glasses--most of all, he's actually colored.
-            { image: '', speaker: "???", text: "Well well well, what do we have here? A commoner? And from the Zeroth dimension as well." },
-            { image: '', speaker: "John", text: "Do people like you always just camp these borders or something?" },
-            { image: '', speaker: "Guy from Layer 2", text: "Why, it's tradition for us advanced Layer 2 peoples to jeer at simpletons. I'm surprised an animal like you even figured out how to ascend." },
-            { image: '', speaker: "John", text: "Uh, yeah whatever. So dude, you got a key to get past this border or something?" },
-            { image: '', speaker: "Guy from Layer 2", text: "Ha! This is also why I come here. I revel in your pleas to pass. You wouldn't believe how many beggars from Layer 1 come around here and beg." },
-            { image: '', speaker: "John", text: "I guess not. So you got a key?" },
-            { image: '', speaker: "Guy from Layer 2", text: "Ha Ha! You're even lower than those peasants! Why would I give you a key?" },
-            { image: '', speaker: "John", text: "Iunno. Can I get a key?" },
+            { image: 'images/Visuals/Layer1/GL2Appears.png', speaker: "???", text: "Well well well, what do we have here? A commoner? And from the Zeroth dimension as well." },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "John", text: "Do people like you always just camp these borders or something?" },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "Guy from Layer 2", text: "Why, it's tradition for us advanced Layer 2 peoples to jeer at simpletons. I'm surprised an animal like you even figured out how to ascend." },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "John", text: "Uh, yeah whatever. So dude, you got a key to get past this border or something?" },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "Guy from Layer 2", text: "Ha! This is also why I come here. I revel in your pleas to pass. You wouldn't believe how many beggars from Layer 1 come around here and beg." },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "John", text: "I guess not. So you got a key?" },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "Guy from Layer 2", text: "Ha Ha! You're even lower than those peasants! Why would I give you a key?" },
+            { image: 'images/Visuals/Layer1/JohnGL2InitialConvo.png', speaker: "John", text: "Iunno. Can I get a key?" },
 
             // The man begins looking disappointed
-            { image: '', speaker: "Guy from Layer 2", text: "...Am I talking to an NPC or something? Do you only have one dialogue option?" },
-            { image: '', speaker: "John", text: "I don't know what you expected, dude. I need a key." },
-            { image: '', speaker: "Guy from Layer 2", text: "Well, you know what? Maybe I'll entertain you. It'd be interesting to see how an uncoordinated specimen like you wobbles around in our world." },
-            { image: '', speaker: "John", text: "Awesome. Can I have it?" },
-            { image: '', speaker: "Guy from Layer 2", text: "Not for free. I still want to play around with you a bit. Why don't I give you a fun little challenge?" },
-            { image: '', speaker: "John", text: "Oh, come on, man-" },
+            { image: 'images/Visuals/Layer1/JohnGL2MutualAnnoyance.jpg', speaker: "Guy from Layer 2", text: "..." },
+            { image: 'images/Visuals/Layer1/JohnGL2MutualAnnoyance.jpg', speaker: "Guy from Layer 2", text: "...Am I talking to an NPC or something? Do you only have one dialogue option?" },
+            { image: 'images/Visuals/Layer1/JohnGL2MutualAnnoyance.jpg', speaker: "John", text: "I don't know what you expected, dude. I need a key." },
+            { image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg', speaker: "Guy from Layer 2", text: "Well, you know what? Maybe I'll entertain you. It'd be interesting to see how an uncoordinated specimen like you wobble around in our world." },
+            { image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg', speaker: "John", text: "Awesome. Can I have it?" },
+            { image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg', speaker: "Guy from Layer 2", text: "Not for free. I still want to play around with you a bit. Why don't I give you a fun little challenge?" },
+            { image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg', speaker: "John", text: "Oh, come on, man-" },
 
             {
-                image: '',
+                image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg',
                 speaker: "Guy from Layer 2",
                 text: 'Well?! Pick your poison!',
                 options: [
@@ -827,15 +828,15 @@ export const data = [
     {
         id: "L1-1C2A",
         scenes: [
-            { image: '', speaker: "John", text: "RAAGH!!" },
-            { image: '', speaker: "Narrator", text: "Are you serious?! The dude has muscles!" },
+            { image: 'images/Visuals/Layer1/JohnFightsGL2.jpg', speaker: "John", text: "RAAGH!!" },
+            { image: 'images/Visuals/Layer1/JohnFightsGL2.jpg', speaker: "Narrator", text: "Are you serious?! The dude has muscles!" },
 
             // Yeah John gets beat up
-            { image: '', speaker: "Guy from Layer 2", text: "Wow! I didn't think anyone could be stupid as you are!", damage: 2 },
-            { image: '', speaker: "Guy from Layer 2", text: "You know what, I applaud your bravo. I didn't know losers could fight back." },
-            { image: '', speaker: "Guy from Layer 2", text: "Of course, That doesn't mean I'm gonna give this key for free. It just makes me more intrigued to see how you'll struggle in my little game." },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Wow! I didn't think anyone could be stupid as you are!", damage: 2 },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "You know what, I applaud your bravo. I didn't know losers could fight back." },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Of course, That doesn't mean I'm gonna give this key for free. It just makes me more intrigued to see how you'll struggle in my little game." },
             {
-                image: '',
+                image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg',
                 speaker: "Guy from Layer 2",
                 text: 'Come on now, get up!',
                 options: [
@@ -849,7 +850,7 @@ export const data = [
     {
         id: "L1-1C2B",
         scenes: [
-            { image: '', speaker: "Guy from Layer 2", text: "Hah! You'll be stumped by this!" },
+            { image: 'images/Visuals/Layer1/GL2IsAbouttaDoThings.jpg', speaker: "Guy from Layer 2", text: "Hah! You'll be stumped by this!" },
             {
                 puzzle: 'holesAndShapes',
                 scenes: {
@@ -899,12 +900,12 @@ export const data = [
     {
         id: "L1-1C2B-AfterPuzzle",
         scenes: [
-            { image: '', speaker: "Guy from Layer 2", text: "Alright, I've had enough! If you want to play smart, so be it!" },
-            { image: '', speaker: "John", text: "Dude, you asked me to be smart, so that's what I'm doing!" },
-            { image: '', speaker: "Guy from Layer 2", text: "Ghh...! Rnnk..!" },
-            { image: '', speaker: "Guy from Layer 2", text: "FINE! Have that key then. I'm out of here!" },
-            { image: '', speaker: "Narrator", text: "He storms off, leaving John alone with the key." },
-            { image: '', speaker: "John", text: "...oh. Awesome!", leadsTo: 'L1-Ending' },
+            { image: 'images/Visuals/Layer1/GL2isFURIOUS.jpg', speaker: "Guy from Layer 2", text: "Alright, I've had enough! If you want to play smart, so be it!" },
+            { image: 'images/Visuals/Layer1/JohnConfusedAtGL2.jpg', speaker: "John", text: "Dude, you asked me to be smart, so that's what I'm doing!" },
+            { image: 'images/Visuals/Layer1/GL2isFURIOUS.jpg', speaker: "Guy from Layer 2", text: "Ghh...! Rnnk..!" },
+            { image: 'images/Visuals/Layer1/GL2Yells.jpg', speaker: "Guy from Layer 2", text: "FINE! Have that key then. I'm out of here!" },
+            { image: 'images/Visuals/Layer1/GL2StormsOff.jpg', speaker: "Narrator", text: "He storms off, leaving John alone with the key." },
+            { image: 'images/Visuals/Layer1/GoodbyeGL2.jpg', speaker: "John", text: "...oh. Awesome!", leadsTo: 'L1-Ending' },
         ]
     },
 
@@ -948,7 +949,7 @@ export const data = [
             // Rolls up his sleeves
             { image: '', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
             // Punching ensues - Different images of punching per scenes below
-            { image: '', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
             { image: '', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
             { image: '', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
             // John lies on the ground, battered
@@ -986,7 +987,7 @@ export const data = [
         id: "L1-Ending",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'image/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
             { image: '', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
             { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },

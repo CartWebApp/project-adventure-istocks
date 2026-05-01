@@ -70,7 +70,6 @@ function nextEncounter(encounterID) {
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
-    console.log(currentScene)
 
     // Putting this outside of loadOptions() to deal with my cheap coding
     const options = currentScene.options;
@@ -81,6 +80,8 @@ function initiateScene() {
     }
 
     const loadScene = (scene) => {
+        // Fire to gameLogic.js, evaluate mechanics now that dialogue has finished loading.
+        window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));
         imageVisual.src = scene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
         speakerTag.textContent = scene.speaker;
     }
@@ -169,8 +170,6 @@ function initiateScene() {
                     // When text finishes loading, make nextBtn go to next scene again
                     // The event listener to make the next button proceed to the next scene must be in whenFinishFunction, since it's different across the various times this function is called
                     nextBtn.removeEventListener("click", skipDialogue)
-                    // Fire to gameLogic.js, evaluate mechanics now that dialogue has finished loading.
-                    window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));
 
                     if (scene.autoskip) {
                         // Autoskips the dialogue the moment it finishes rendering if autoskip
@@ -200,6 +199,7 @@ function initiateScene() {
 
         const initMiniScene = () => {
             miniScene = scenesArray[miniSceneIndex]
+            // Fire to gameLogic.js, evaluate mechanics.
             loadScene(miniScene);
             loadText(miniScene, () => {
                 nextBtn.addEventListener("click", skipMiniScene, { once: true });
