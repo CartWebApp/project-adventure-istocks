@@ -40,6 +40,10 @@ function modifyHealth(change) {
         window.dispatchEvent(new CustomEvent("earlyGameOver", { detail: "You lost all your health..." }))
     }
 }
+function modifyMaxHealth(change) {
+    status.MaxHealth += change;
+    status.Health += change;
+}
 
 function addToInventory(itemName) {
     let imageUrl = `images/Mechanics/ItemImages/${itemName}.svg`;
