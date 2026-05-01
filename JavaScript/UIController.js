@@ -369,6 +369,10 @@ function rockPaperScissorsPuzzle() {
             visuals.classList.remove("hidden");
             nextScene("1B2A3A-Lose");
         }
+        
+        if (enemyScore === 3) {
+            // Game Over will be here:
+        }
 
         playerHand.src = handImages[playerChoice];
         enemyHand.src = handImages[enemyChoice];
