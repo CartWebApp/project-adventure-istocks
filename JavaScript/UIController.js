@@ -266,7 +266,7 @@ window.addEventListener("showPuzzle", (e) => {
             break;
 
         case "rockPaperScissors":
-
+            rockPaperScissorsPuzzle()
             break;
         default:
             console.log("Invalid puzzle")
@@ -342,7 +342,7 @@ function rockPaperScissorsPuzzle() {
         console.log(enemyChoice);
     };
 }
-rockPaperScissorsPuzzle()
+
 
 function holesAndShapesPuzzle() {
     // Find the mini scenes list of the scene triggering the holes and shapes puzzle
