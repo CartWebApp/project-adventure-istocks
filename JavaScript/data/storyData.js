@@ -248,8 +248,8 @@ export const data = [
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
-            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
-            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
+            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
+            { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
                 image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg',
                 speaker: "Narrator",
@@ -266,9 +266,9 @@ export const data = [
     {
         id: "1B2A",
         scenes: [
-            { image: '', speaker: "Narrator", text: "Soon, travelling along the border, John finds a towering gate with a visible lock. It demands a key to pass through." },
-            { image: '', speaker: "Narrator", text: "Unfortunately, as one could probably anticipate, John doesn't have this key." },
-            { image: '', speaker: "Narrator", text: "Before he can decide on the next course of action, however, he hears someone approaching." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "Soon, travelling along the border, John finds a towering gate with a visible lock. It demands a key to pass through." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "Unfortunately, as one could probably anticipate, John doesn't have this key." },
+            { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "Before he can decide on the next course of action, however, he hears someone approaching." },
 
             // Change image
             { image: '', speaker: "Narrator", text: "Two people, actually... there's another stock guy... and a stick figure?" },
@@ -840,8 +840,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: 'Come on now, get up!',
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
-                    { text: 'Beg to have the key', leadsTo: "L1-1B2C" }, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Beg to have the key', leadsTo: "L1-1C2C" }, // If you went the 1C route
                 ]
             }
         ]
@@ -921,8 +921,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Bro, come on, you gonna keep resorting to begging?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
-                    { text: 'Beg', leadsTo: "L1-1B2C-#2" }, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Beg', leadsTo: "L1-1C2C-#2" }, // If you went the 1C route
                 ]
             }
         ]
@@ -936,8 +936,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Maybe animals like you don't understand the concept of earning what you want. Are you that dense? Do you need me to drill it in your head?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
-                    { text: 'Beg', leadsTo: "L1-1B2C-#3" }, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Beg', leadsTo: "L1-1C2C-#3" }, // If you went the 1C route
                 ]
             }
         ]
@@ -959,8 +959,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: " ", // Left intentionally empty
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1B2B" },
-                    { text: 'Beg', leadsTo: "L1-1B2C-#4" }, // If you went the 1C route
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Beg', leadsTo: "L1-1C2C-#4" }, // If you went the 1C route
                 ]
             }
         ]
@@ -975,7 +975,7 @@ export const data = [
             { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!" },
             // He angrily tosses the key next to his side
             { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!" },
-            { image: '', speaker: "Narrator", text: "...He stomps away." },
+            { image: '', speaker: "Narrator", text: "...He stomps away.", getItem: "Layer2Key"},
             // Back to John being beat up on the ground
             { image: '', speaker: "John", text: "..." },
             { image: '', speaker: "Narrator", text: "You got a key!" },
@@ -989,7 +989,7 @@ export const data = [
             // Black screen
             { image: 'image/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
-            { image: '', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
+            { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
             { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
             { image: '', speaker: "John", text: "I guess all that's left is to use the key now." },
             // The key is pushed into the gate.
@@ -1408,8 +1408,8 @@ export const data = [
                 text: "Name the source of your monotony in your residing world.", // Left intentionally empty
                 options: [
                     { text: 'Stillbody Tech', leadsTo: "Climax-Q1-Wrong" },
-                    { text: 'iStock', leadsTo: "Climax-Q1-Correct" },
-                    { text: "ReStock Facilities", leadsTo: "Climax-Q1-Wrong" }
+                    { text: 'iStock', leadsTo: "Climax-Q1-Wrong" },
+                    { text: "ReStock Facilities", leadsTo: "Climax-Q1-Correct" }
                 ]
             }
         ]
@@ -1434,7 +1434,7 @@ export const data = [
                 text: "What is the common name for this layer?", // Left intentionally empty
                 options: [
                     { text: 'The Color Palette', leadsTo: "Climax-Q2-Wrong" },
-                    { text: 'The Still World', leadsTo: "Climax-Q2-Correct" },
+                    { text: 'The Animation', leadsTo: "Climax-Q2-Correct" },
                     { text: "The Freeform", leadsTo: "Climax-Q2-Wrong" }
                 ]
             }
