@@ -1315,9 +1315,9 @@ export const data = [
     {
         id: "L2-1C",
         scenes: [
-            { image: '', speaker: "Narrator", text: "With what is assumed to all be done, John heads for the border to meet his final challenge." },
-            { image: '', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
-            { image: '', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "With what is assumed to all be done, John heads for the border to meet his final challenge." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
             // John on a mountain looks at the barrier - A titan with seraph wings and a flaming greatsword guards the miniature border.
             { image: '', speaker: "Narrator", text: "...Of course, the guardian." },
             { image: '', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
