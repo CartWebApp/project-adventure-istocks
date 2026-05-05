@@ -991,15 +991,15 @@ export const data = [
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
             { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
-            { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
-            { image: '', speaker: "John", text: "I guess all that's left is to use the key now." },
+            { image: 'images/Visuals/Layer1/john-reaching-the-door.jpg', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
+            { image: 'images/Visuals/Layer1/john-reaching-the-door.jpg', speaker: "John", text: "I guess all that's left is to use the key now." },
             // The key is pushed into the gate.
-            { image: '', speaker: "John", text: "Well, here goes." },
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Layer1/layer-2-key.jpg', speaker: "John", text: "Well, here goes." },
+            { image: 'images/Visuals/Layer1/layer-2-key.jpg', speaker: "Narrator", text: "..." },
             // The gate opens.
-            { image: '', speaker: "Narrator", text: "..." },
-            { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2" },
+            { image: 'images/Visuals/Layer1/john-enters-the-gate.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Layer1/john-enters-the-gate.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer1/john-enters-the-gate.jpg', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2" },
         ]
     },
 
@@ -1014,49 +1014,48 @@ export const data = [
             // Black screen
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // John in a city - looks like he's in an anime. Only that he sticks out like a store thumb since he still looks like a stock image.
-            { image: '', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
-            // Gate - John holding a colored key in his hands.
-            { image: '', speaker: "John", text: "If things move this much in the higher world, I'm curious what it's like in the upper worlds." },
-            { image: '', speaker: "John", text: "Guess I'll get going, so I can get there as soon as possible-" },
+            { image: 'images/Visuals/Layer2/john-arrives-at-L2.jpg', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
+            { image: 'images/Visuals/Layer2/john-arrives-at-L2.jpg', speaker: "John", text: "If things move this much in the higher world, I'm curious what it's like in the upper worlds." },
+            { image: 'images/Visuals/Layer2/john-arrives-at-L2.jpg', speaker: "John", text: "Guess I'll get going, so I can get there as soon as possible-" },
             { image: '', speaker: "???", text: "Woah, is that John Stock?!" },
             { image: '', speaker: "???", text: "John Stock?! Where!? I've got to meet him!" },
             { image: '', speaker: "John", text: "Wh-what..?" },
             // Next thing he knows, there's a crowd of people (still all in animation style) bunching up all around him. John nervously raises his hands to try to ward them off.
             // One of them is up at his face asking questions.
-            { image: '', speaker: "???", text: "John Stock! You gotta tell us about your adventures!" },
-            { image: '', speaker: "John", text: "Okay, slow down here for a moment! How do all of you know me?" },
-            { image: '', speaker: "???", text: "News spreads fast! People have seen you traversing the lands, and now you're here!" },
+            { image: 'images/Visuals/Layer2/john-is-famous.jpg', speaker: "???", text: "John Stock! You gotta tell us about your adventures!" },
+            { image: 'images/Visuals/Layer2/john-is-famous.jpg', speaker: "John", text: "Okay, slow down here for a moment! How do all of you know me?" },
+            { image: 'images/Visuals/Layer2/john-is-famous.jpg', speaker: "???", text: "News spreads fast! People have seen you traversing the lands, and now you're here!" },
             // Someone excitely shoves at John's side, really wanting to interject with a question
-            { image: '', speaker: "???", text: "John, I gotta get a photo! And you gotta tell us how you even found out about the border at the Zeroth layer!" },
-            { image: '', speaker: "John", text: "Okay, wait! Seriously, give me some room to speak!" },
-            { image: '', speaker: "John", text: "Before I answer any of your questions, I've just gotta know: where's the next border?" },
+            { image: 'images/Visuals/Layer2/john-getting-a-picture-taken.jpg', speaker: "???", text: "John, I gotta get a photo! And you gotta tell us how you even found out about the border at the Zeroth layer!" },
+            { image: 'images/Visuals/Layer2/john-getting-a-picture-taken.jpg', speaker: "John", text: "Okay, wait! Seriously, give me some room to speak!" },
+            { image: 'images/Visuals/Layer2/john-getting-a-picture-taken.jpg', speaker: "John", text: "Before I answer any of your questions, I've just gotta know: where's the next border?" },
             // The crowd falls apart - they make a path for an old man in an animated style. John is at the far right of the screen, and the old man. is clearly in view at the left.
             // Long beard, top hat, and suit. He looks like the mayor.
-            { image: '', speaker: "???", text: "Next border, hmm?" },
-            { image: '', speaker: "John", text: "Yeah. Also, who are you?" },
-            { image: '', speaker: "Mayor", text: "I'm the mayor of this animated city, of this layer which we call the Animation. We have many here, and this land expands wider, much unlike the previous layers." },
-            { image: '', speaker: "John", text: "Great. More walking." },
-            { image: '', speaker: "Mayor", text: "Fret not, adventurer, you are at the last destination. As soon as you reach the limit, you meet your final challenge." },
-            { image: '', speaker: "John", text: "That's awesome. Can I get a key?" },
-            { image: '', speaker: "Mayor", text: "Ho ho ho! You don't need a key! You simply need to be worthy. That's why none of us have attempted to pass; the guardian that protects the gate heeds us a shattered heart." },
-            { image: '', speaker: "John", text: "...A guardian? You serious dude? Is there a knight with a sword blocking the gate?" },
-            { image: '', speaker: "Mayor", text: "...Yes, precisely like that." },
-            { image: '', speaker: "John", text: "bro" },
-            { image: '', speaker: "Mayor", text: "Fret not once more. We will all be supporting you, just like your mentor has been." },
-            { image: '', speaker: "John", text: "My mentor?" },
-            { image: '', speaker: "Mayor", text: "The little figure who had guided you to this point?" },
-            { image: '', speaker: "John", text: "Huh??? I mean, I met a guy, but it's not like he taught me anything-" },
+            { image: 'images/Visuals/Layer2/john-and-abraham-not-really.jpg', speaker: "???", text: "Next border, hmm?" },
+            { image: 'images/Visuals/Layer2/john-and-abraham-not-really.jpg', speaker: "John", text: "Yeah. Also, who are you?" },
+            { image: 'images/Visuals/Layer2/john-and-abraham-not-really.jpg', speaker: "Mayor", text: "I'm the mayor of this animated city, of this layer which we call the Animation. We have many here, and this land expands wider, much unlike the previous layers." },
+            { image: 'images/Visuals/Layer2/john-and-abraham-not-really.jpg', speaker: "John", text: "Great. More walking." },
+            { image: 'images/Visuals/Layer2/john-and-abraham-not-really.jpg', speaker: "Mayor", text: "Fret not, adventurer, you are at the last destination. As soon as you reach the limit, you meet your final challenge." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "That's awesome. Can I get a key?" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "Mayor", text: "Ho ho ho! You don't need a key! You simply need to be worthy. That's why none of us have attempted to pass; the guardian that protects the gate heeds us a shattered heart." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "...A guardian? You serious dude? Is there a knight with a sword blocking the gate?" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "Mayor", text: "...Yes, precisely like that." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "bro" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "Mayor", text: "Fret not once more. We will all be supporting you, just like your mentor has been." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "My mentor?" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "Mayor", text: "The little figure who had guided you to this point?" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "Huh??? I mean, I met a guy, but it's not like he taught me anything-" },
             // 
-            { image: '', speaker: "Narrator", text: "People begin to cheer from the crowd." },
-            { image: '', speaker: "???", text: "Ah ha! I knew that was him! I got his autograph!" },
-            { image: '', speaker: "???", text: "I gave him a full set of armor! Hopefully he reunites with John to open the gates for us all!" },
-            { image: '', speaker: "John", text: "What in the- yeah, alright, I guess so yeah. Yeah, I'll do that." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "Narrator", text: "People begin to cheer from the crowd." },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "???", text: "Ah ha! I knew that was him! I got his autograph!" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "???", text: "I gave him a full set of armor! Hopefully he reunites with John to open the gates for us all!" },
+            { image: 'images/Visuals/Layer2/john-talking-to-the-mayor.jpg', speaker: "John", text: "What in the- yeah, alright, I guess so yeah. Yeah, I'll do that." },
             // Mayor interjection
-            { image: '', speaker: "Mayor", text: "Enough, everyone! Let the man rest. He has a great adventure to go through." },
+            { image: 'images/Visuals/Layer2/mayor-looking-into-camera.jpg', speaker: "Mayor", text: "Enough, everyone! Let the man rest. He has a great adventure to go through." },
             // The crowd disperses, leaving only the mayor and John.
-            { image: '', speaker: "Mayor", text: "John, do what you must in this world. Indulge as you wish, but get the job done. We will be rooting for you in the shadows." },
+            { image: 'images/Visuals/Layer2/mayor-and-john-1&1.jpg', speaker: "Mayor", text: "John, do what you must in this world. Indulge as you wish, but get the job done. We will be rooting for you in the shadows." },
             // 
-            { image: '', speaker: "Narrator", text: "The mayor leaves you to your devices." },
+            { image: 'images/Visuals/Layer2/john-solo-at-L2.jpg', speaker: "Narrator", text: "The mayor leaves you to your devices." },
             { image: '', speaker: "John", text: "...Awesome. I love peer pressure." },
             {
                 image: '',
