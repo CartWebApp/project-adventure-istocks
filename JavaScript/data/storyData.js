@@ -587,7 +587,8 @@ export const data = [
         scenes: [
             { image: '', speaker: "Narrator", text: "Terrified by John's incomprehensible yelling, he runs off." },
             { image: '', speaker: "John", text: "Oh." },
-            { image: '', speaker: "Narrator", text: "You attain nothing valuable from this...", leadsTo: "1C2B3C-4-5-6" }
+            { image: '', speaker: "Narrator", text: "You attain nothing valuable from this..." },
+            { image: '', speaker: "Narrator", text: "And... now you're all alone here with no job and nothing to do here." }
         ]
     },
 
@@ -987,7 +988,7 @@ export const data = [
         id: "L1-Ending",
         scenes: [
             // Black screen
-            { image: 'image/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
             { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
             { image: '', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
@@ -997,7 +998,6 @@ export const data = [
             { image: '', speaker: "Narrator", text: "..." },
             // The gate opens.
             { image: '', speaker: "Narrator", text: "..." },
-            // Back to John, who is now looking at the gate opening toward the endless light
             { image: '', speaker: "John", text: "..." },
             { image: '', speaker: "John", text: "Alright, I don't want to waste time anymore. Let's do this.", leadsTo: "L2" },
         ]
@@ -1012,7 +1012,7 @@ export const data = [
         id: "L2",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // John in a city - looks like he's in an anime. Only that he sticks out like a store thumb since he still looks like a stock image.
             { image: '', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
             // Gate - John holding a colored key in his hands.

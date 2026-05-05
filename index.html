@@ -22,7 +22,6 @@
 
                 <section id="startButtons">
                     <button type="button" id="startGame">Play Game</button>
-                    <button type="button">Achievements</button>
                     <button type="button">Credits</button>
 
                     <section id="tempNavForDevs">
@@ -145,11 +144,23 @@
             <button id="inventoryButton" class="interactableWithPH">
                 <img src="images/Mechanics/inventoryButton.png">
             </button>
+
+            <button id="historyButton">
+                <!--WE NEED A BUTTON HERE!-->
+                <img src="images/Mechanics/.png">
+            </button>
         </section>
+        <section id="endingScreen" class="hidden">
+            <div id="endingBackground">
+                <h1>Stock Game: End!</h1>
 
-         <!-- <button id="historyButton" class="interactableWithPH"> -->
-
-        </button>
+                <section id="startButtons">
+                    <p>HP Remaining: <span id="hpAfter">#</span></p>
+                    <p>Ending: <span id="endingReceived">#</span> of 3</p>
+                    <button type="button" id="restartGame">Restart</button>
+                </section>
+            </div>
+        </section>
 
         <dialog id="gameOverPopup" class="hidden">
             <p>Game Over!</p>

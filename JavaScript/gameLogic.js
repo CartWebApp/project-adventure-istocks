@@ -1,16 +1,21 @@
 const inventory = document.querySelector('#inventory');
 let hearts = document.querySelectorAll(".heart img");
 
-const status = {
-    Health: 5,
-    MaxHealth: 5,
-    Inventory: {},
-    ImportantDecisions: [],
-};
-
-export { status }
-
 /* Classes */
+
+class Player {
+    constructor(health, maxHealth) {
+        this.Health = health;
+        this.MaxHealth = maxHealth;
+        this.Inventory = {};
+        this.ImportantDecisions = [];
+
+        // Tracking stats for the Guardian Evaluation
+        this.friendshipsMade = 0;
+        this.fightsEngaged = 0;
+        this.puzzlesCompleted = 0;
+    }
+}
 
 class Item {
     constructor(name, image) {
@@ -18,6 +23,9 @@ class Item {
         this.image = image;
     }
 };
+
+const status = new Player(5,5)
+export { status }
 
 
 /* Functions */
@@ -89,6 +97,13 @@ function deleteFromInventory(itemName) {
 }
 
 
+
+// Restart Stats when restarting game
+window.addEventListener("ResetStats", () => {
+    status = new Player(5,5)
+})
+
+
 // Evaluate mechanics per scene, have they exist at least
 window.addEventListener("evaluateScene", (e) => {
     const evaluateMechanics = (sceneObject) => {
@@ -112,8 +127,6 @@ window.addEventListener("evaluateScene", (e) => {
         if (getItem) { addToInventory(getItem); }
         if (useItem) { deleteFromInventory(useItem); }
 
-        if (maxHealthChange) {  }
-
         if (giveCondition) {
             status.ImportantDecisions.push(giveCondition)
         }
@@ -125,16 +138,13 @@ window.addEventListener("evaluateScene", (e) => {
         switch (endGame) {
             // Put end screens here, details information about your playthrough
             case "Ending1":
-
+                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 1}})
                 break;
             case "Ending2":
-
+                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 2}})
                 break;
             case "Ending3":
-
-                break;
-            default:
-                // If there isn't an endGame
+                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 3}})
                 break;
         }
 

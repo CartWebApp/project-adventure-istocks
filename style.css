@@ -615,6 +615,13 @@ p {
 }
 
 
+
+/* Ending Screen */
+#endingScreen.hidden {
+    display: none;
+}
+
+
 /* Media Queries for Landscape Mobile Phones*/
 
 @media (orientation: landscape) and (max-height: 402px) and (max-width:874px) {

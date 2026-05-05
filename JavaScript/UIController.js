@@ -31,6 +31,9 @@ const HSPuzzleScreen = document.querySelector('#holesAndShapesPuzzle');
 const RPSPuzzleScreen = document.querySelector('#rockPaperScissorsPuzzle');
 const decipherPuzzleScreen = document.querySelector('#decipherPuzzle');
 
+const endingScreen = document.querySelector("#endingScreen");
+const restartBtn = document.querySelector("#restartGame");
+
 
 /* Variables */
 let currentEncounter = storyData.find(object => object.id === "Intro");
@@ -220,6 +223,8 @@ function initiateScene() {
         // Load the first mini scene
         initMiniScene();
 
+    } else if (currentScene.itemCondition) {
+
     } else {
         // Load the regular dialogue if not conditional
         loadScene(currentScene);
@@ -256,6 +261,19 @@ function toggleInventory() {
     }
 }
 
+// Restart Game
+function restartGame() {
+    window.dispatchEvent(new Event("ResetStatus"));
+    gameOverPopup.close();
+    gameOverPopup.classList.add("hidden");
+
+    nextEncounter("Intro");
+}
+
+
+
+
+
 // Game Over
 function showGameOver(e) {
     gameOverPopup.showModal();
@@ -268,26 +286,32 @@ function showGameOver(e) {
         gameOverPopup.close();
         gameOverPopup.classList.add("hidden");
 
-        nextEncounter(lastEncounter.id)
+        nextEncounter(lastEncounter.id);
     }, { once: true });
 
-    gameOverRestart.addEventListener("click", () => {
-        gameOverPopup.close();
-        gameOverPopup.classList.add("hidden");
-
-        nextEncounter("Intro")
-    }, { once: true });
+    gameOverRestart.addEventListener("click", restartGame, { once: true });
 }
 
 /* Event Listeners */
 nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
 inventoryBtn.addEventListener("click", toggleInventory);
+restartBtn.addEventListener("click", restartGame);
+
 // Fired from gameLogic.js
 window.addEventListener("nextEncounter", (e) => {
-    nextEncounter(e.detail)
+    nextEncounter(e.detail);
 })
-window.addEventListener("earlyGameOver", showGameOver)
+window.addEventListener("earlyGameOver", showGameOver);
+
+// End Game
+window.addEventListener("endGame", () => {
+    endingScreen.classList.remove("hidden");
+    gameScreen.classList.add("hidden");
+
+    restartBtn.addEventListener("click", restartGame)
+})
+
 
 
 /* *Sigh* alright. time for the puzzles... */
@@ -297,17 +321,17 @@ const sceneIDs = ["L1-1C2B", "1B2A3A"];
 window.addEventListener("showPuzzle", (e) => {
     switch (e.detail) {
         case "holesAndShapes":
-            holesAndShapesPuzzle()
+            holesAndShapesPuzzle();
             break;
         case "decipher":
 
             break;
 
         case "rockPaperScissors":
-            rockPaperScissorsPuzzle()
+            rockPaperScissorsPuzzle();
             break;
         default:
-            console.log("Invalid puzzle")
+            console.log("Invalid puzzle");
             break;
     }
 })
