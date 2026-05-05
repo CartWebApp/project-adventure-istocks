@@ -190,41 +190,57 @@ function initiateScene() {
 
     // Some dialogue is conditional; it changes based on decisions users made in the past
     // We account for that here
+
+    // Function for loading mini scenes
+    const miniSceneHandle = (scenesArray) => {
+        let miniSceneIndex = 0;
+        let miniScene = scenesArray[miniSceneIndex];
+
+        const initMiniScene = () => {
+            miniScene = scenesArray[miniSceneIndex]
+            loadScene(miniScene);
+            loadText(miniScene, () => {
+                nextBtn.addEventListener("click", skipMiniScene, { once: true });
+            });
+        };
+        // this is played on nextBtn press
+        const skipMiniScene = () => {
+            // If there is a leadsTo into a normal encounter then go into that right away
+            if (miniScene.leadsTo) {
+                nextEncounter(miniScene.leadsTo);
+            } else {
+                // If that was the last option in the mini-scene then goes on to next normal scene
+                if (miniSceneIndex === scenesArray.length - 1) {
+                    nextScene()
+                } else {
+                    // move to next mini scene
+                    miniSceneIndex++;
+                    initMiniScene()
+                }
+            }
+        };
+
+        // Load the first mini scene
+        initMiniScene();
+    }
+
+    // Now actually check for the conditions
     if (currentScene.sceneCondition) {
         // Setting up "mini scenes", as the conditional dialogue is formatted a lil different from main dialogue
-        let miniSceneIndex = 0;
         const hasCondition = status.ImportantDecisions.includes(currentScene.sceneCondition)
         const conditionMetScenes = currentScene.conditionMetScenes;
         const conditionNotMetScenes = currentScene.conditionNotMetScenes;
 
         const scenesArray = hasCondition ? conditionMetScenes : conditionNotMetScenes;
-        let miniScene = scenesArray[miniSceneIndex];
-
-        const initMiniScene = () => {
-            miniScene = scenesArray[miniSceneIndex]
-            // Fire to gameLogic.js, evaluate mechanics.
-            loadScene(miniScene);
-            loadText(miniScene, () => {
-                nextBtn.addEventListener("click", skipMiniScene, { once: true });
-            });
-        }
-        // this is played on nextBtn press
-        const skipMiniScene = () => {
-            // If that was the last option in the mini-scene then goes on to next normal scene
-            if (miniSceneIndex === scenesArray.length - 1) {
-                nextScene()
-            } else {
-                // move to next mini scene
-                miniSceneIndex++;
-                initMiniScene()
-            }
-        }
-
-        // Load the first mini scene
-        initMiniScene();
-
+        miniSceneHandle(scenesArray);
     } else if (currentScene.itemCondition) {
+        // Basically the same thing, but checks if you have an item in your inventory instead
+        const hasItem = status.Inventory[currentScene.itemCondition]
+        const conditionMetScenes = currentScene.conditionMetScenes;
+        const conditionNotMetScenes = currentScene.conditionNotMetScenes;
 
+        const scenesArray = hasItem ? conditionMetScenes : conditionNotMetScenes;
+        miniSceneHandle(scenesArray);
     } else {
         // Load the regular dialogue if not conditional
         loadScene(currentScene);
@@ -266,12 +282,10 @@ function restartGame() {
     window.dispatchEvent(new Event("ResetStatus"));
     gameOverPopup.close();
     gameOverPopup.classList.add("hidden");
+    endingScreen.classList.add("hidden");
 
-    nextEncounter("Intro");
+    startingScreen.classList.remove("hidden");
 }
-
-
-
 
 
 // Game Over
@@ -306,10 +320,10 @@ window.addEventListener("earlyGameOver", showGameOver);
 
 // End Game
 window.addEventListener("endGame", () => {
-    endingScreen.classList.remove("hidden");
     gameScreen.classList.add("hidden");
+    endingScreen.classList.remove("hidden");
 
-    restartBtn.addEventListener("click", restartGame)
+    restartBtn.addEventListener('click', restartGame, { once: true });
 })
 
 
@@ -358,7 +372,7 @@ function rockPaperScissorsPuzzle() {
 
         playerScoreDisplay.textContent = playerScore;
         enemyScoreDisplay.textContent = enemyScore;
-        
+
         playerDisplay.textContent = "John:";
         enemyDisplay.textContent = "James:";
 
