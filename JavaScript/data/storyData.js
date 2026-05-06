@@ -976,7 +976,7 @@ export const data = [
             { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!" },
             // He angrily tosses the key next to his side
             { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!" },
-            { image: '', speaker: "Narrator", text: "...He stomps away.", getItem: "Layer2Key"},
+            { image: '', speaker: "Narrator", text: "...He stomps away.", getItem: "Layer2Key" },
             // Back to John being beat up on the ground
             { image: '', speaker: "John", text: "..." },
             { image: '', speaker: "Narrator", text: "You got a key!" },
@@ -1517,14 +1517,14 @@ export const data = [
             { image: 'images/Visuals/Climax/GuardianWithMaskedRemoved.jpg', speaker: "Low-Budget Man", text: "How has your adventure been, John?" },
             { image: '', speaker: "John", text: "You! Why are you here?! I thought-" },
             // He moves past John, toward the body of the collapsed guardian.
-            { image: '', speaker: "Low-Budget Man", text: "Quiet." },
+            { image: 'images/Visuals/Climax/LowBudgetManGoingToGate.jpg', speaker: "Low-Budget Man", text: "Quiet." },
             // He plunges his stick-arm through and pulls out a heavenly key - the key to unlock the gates...
-            { image: '', speaker: "Low-Budget Man", text: "..." },
-            { image: '', speaker: "Low-Budget Man", text: "There it is." },
-            { image: '', speaker: "Low-Budget Man", text: "Finally, the key to true freedom." },
-            { image: '', speaker: "John", text: "You mean you could've just sniped that thing this whole time?!" },
-            { image: '', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here." },
-            { image: '', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed." },
+            { image: 'images/Visuals/Climax/LowBudgetManEnteringKey.jpg', speaker: "Low-Budget Man", text: "..." },
+            { image: 'images/Visuals/Climax/LowBudgetManEnteringKey.jpg', speaker: "Low-Budget Man", text: "There it is." },
+            { image: 'images/Visuals/Climax/LowBudgetManEnteringKey.jpg', speaker: "Low-Budget Man", text: "Finally, the key to true freedom." },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "John", text: "You mean you could've just sniped that thing this whole time?!" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here." },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed." },
 
             { image: '', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates." },
             { image: '', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?" },
