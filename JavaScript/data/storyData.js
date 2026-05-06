@@ -1497,7 +1497,6 @@ export const data = [
             { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..." },
             // Same image and perspective, but a brilliant white light shines behind John
             { image: '', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John." },
-            // Switch perspectives to John's face. John shades his eyes as he turns toward the light.
             { image: '', speaker: "John", text: "Wha.." },
             // The Guardian has brandished its blade, preparing to fight the source.
             { image: '', speaker: "Guardian", text: "..." },

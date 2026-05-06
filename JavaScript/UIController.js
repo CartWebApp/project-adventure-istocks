@@ -19,14 +19,12 @@ const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
 const inventorySection = document.querySelector('#inventorySection');
-const inventoryBtn = document.querySelector('#inventoryButton')
-
-const hearts = document.querySelectorAll(".heart");
+const inventoryBtn = document.querySelector('#inventoryButton');
 
 const gameOverPopup = document.querySelector("#gameOverPopup");
 const gameOverMessage = document.querySelector('#gameOverMessage');
 const gameOverRetry = document.querySelector("#retryChoice");
-const gameOverRestart = document.querySelector("#restartGame");
+const gameOverRestart = document.querySelector("#gameOverRestartBtn");
 
 const endingScreen = document.querySelector("#endingScreen");
 const restartBtn = document.querySelector("#restartGame");
@@ -136,7 +134,7 @@ function initiateScene() {
         }
     }
 
-    function loadText(scene, whenFinishFunction) {
+    const loadText = (scene, whenFinishFunction) => {
         // Do all of this only if there's actual text (some mechanics scenes do not have text)
         if (scene.text) {
             // Rolling text
@@ -284,6 +282,9 @@ function restartGame() {
     gameOverPopup.close();
     gameOverPopup.classList.add("hidden");
     endingScreen.classList.add("hidden");
+    gameScreen.classList.add("hidden");
+    currentEncounter = storyData.find(object => object.id === "Intro");
+    currentSceneIndex = 0;
 
     startingScreen.classList.remove("hidden");
 }
@@ -323,16 +324,11 @@ window.addEventListener("earlyGameOver", showGameOver);
 window.addEventListener("endGame", () => {
     gameScreen.classList.add("hidden");
     endingScreen.classList.remove("hidden");
-
-    restartBtn.addEventListener('click', restartGame, { once: true });
 })
 
 
 
-/* *Sigh* alright. time for the puzzles... */
-
-const sceneIDs = ["L1-1C2B", "1B2A3A"];
-
+/* Load puzzles in UI */
 window.addEventListener("showPuzzle", (e) => {
     switch (e.detail) {
         case "holesAndShapes":
