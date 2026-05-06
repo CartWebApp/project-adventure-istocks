@@ -1497,10 +1497,10 @@ export const data = [
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..." },
             // Same image and perspective, but a brilliant white light shines behind John
-            { image: '', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John." },
-            { image: '', speaker: "John", text: "Wha.." },
+            { image: 'images/Visuals/Climax/JohnGuardianBrilliantLight.jpg', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John." },
+            { image: 'images/Visuals/Climax/JohnGuardianBrilliantLight.jpg', speaker: "John", text: "Wha.." },
             // The Guardian has brandished its blade, preparing to fight the source.
-            { image: '', speaker: "Guardian", text: "..." },
+            { image: 'images/Visuals/Climax/JohnGuardianBrilliantLightCloseUp.jpg', speaker: "Guardian", text: "..." },
             // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
             { image: 'images/Visuals/Climax/GuardianIsDefeated.jpg', speaker: "Narrator", text: "*BANG*" },
             // The guardian collapses onto the ground. A great cloud of dust where it falls, its colossal body crashing right in front of the gate.
@@ -1511,10 +1511,10 @@ export const data = [
             // And his eyes widen.
             { image: '', speaker: "John", text: "..!" },
             // It's someone clad in full magical, animated armor! A mystic sword in one hand and a bow of light in the other, he stands opposite to John.
-            { image: '', speaker: "???", text: " " },
-            { image: '', speaker: "???", text: "It's been a while." },
+            { image: 'images/Visuals/Climax/GuardianWithMaskOn.jpg', speaker: "???", text: " " },
+            { image: 'images/Visuals/Climax/GuardianWithMaskOn.jpg', speaker: "???", text: "It's been a while." },
             // He moves his helmet up... revealing him to be Low-Budget man.
-            { image: '', speaker: "Low-Budget Man", text: "How has your adventure been, John?" },
+            { image: 'images/Visuals/Climax/GuardianWithMaskedRemoved.jpg', speaker: "Low-Budget Man", text: "How has your adventure been, John?" },
             { image: '', speaker: "John", text: "You! Why are you here?! I thought-" },
             // He moves past John, toward the body of the collapsed guardian.
             { image: '', speaker: "Low-Budget Man", text: "Quiet." },
