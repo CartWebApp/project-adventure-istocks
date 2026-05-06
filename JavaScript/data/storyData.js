@@ -1322,15 +1322,15 @@ export const data = [
             { image: '', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
             // Now John, hardly even the size of one of the titan's fingers, stands below it. He looks above it as the titan looks down at him with its mighty greatsword pierced into the Earth.
             // Noter: You can practically use this image for most of the guardian/John dialogue
-            { image: '', speaker: "Guardian", text: "...Welcome, John Stock." },
-            { image: '', speaker: "John", text: "...Hey. You look swell." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "...Welcome, John Stock." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "...Hey. You look swell." },
             { image: '', speaker: "Guardian", text: "I presume you are here solely to pass this border." },
-            { image: '', speaker: "John", text: "How'd you know, man? What do you think I've been doing, getting through all the other borders before this?" },
-            { image: '', speaker: "Guardian", text: "Very well. We shall not waste time in scrutinizing your worth." },
-            { image: '', speaker: "Guardian", text: "You will be tested for the trials you have faced on this journey - If you are to fail, you will be rightfully punished." },
-            { image: '', speaker: "Guardian", text: "Survive the preliminary audit, and the test shall truly begin." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "How'd you know, man? What do you think I've been doing, getting through all the other borders before this?" },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Very well. We shall not waste time in scrutinizing your worth." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "You will be tested for the trials you have faced on this journey - If you are to fail, you will be rightfully punished." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Survive the preliminary audit, and the test shall truly begin." },
             {
-                image: '', speaker: "Guardian", text: "Shall you accept these trials?", // Left intentionally empty
+                image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Shall you accept these trials?", // Left intentionally empty
                 options: [
                     { text: 'Beg to have the key', leadsTo: "L2-1C2A" },
                     { text: 'Yes, I\'m ready', leadsTo: "Climax" },
@@ -1343,12 +1343,13 @@ export const data = [
     {
         id: "L2-1C",
         scenes: [
-            { image: '', speaker: "John", text: "Please guardian I need this..." },
-            { image: '', speaker: "John", text: "My royalties are kind of free..." },
-            { image: '', speaker: "Guardian", text: "..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "Please guardian I need this..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "My royalties are kind of free..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
             // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
             { image: '', speaker: "Guardian", text: " " },
-            { gameOver: "You didn't come here just to earn your way to victory." },
+
+            { gameOver: "Guardian I'm watching the gameplay why you tryna not to laugh bruh" },
         ]
     },
     {
@@ -1362,47 +1363,47 @@ export const data = [
     {
         id: "Climax",
         scenes: [
-            { image: '', speaker: "Guardian", text: "Then, onto the first evaluation." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Then, onto the first evaluation." },
             {
                 sceneCondition: "Amiable",
                 conditionMetScenes: [
-                    { image: '', speaker: "Guardian", text: "You have been determined to be of a consistently kind character when warranted, returning the favors of those who support you." },
-                    { image: '', speaker: "Guardian", text: "Amiability is the first of three evaluations. You pass the first audit." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "You have been determined to be of a consistently kind character when warranted, returning the favors of those who support you." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Amiability is the first of three evaluations. You pass the first audit." },
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Guardian", text: "Your actions do not reflect gratitude for those who assist you." },
-                    { image: '', speaker: "Guardian", text: "Amiability is the first of three evaluations. You shall be punished for failing the first audit.", damage: 1 },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Your actions do not reflect gratitude for those who assist you." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Amiability is the first of three evaluations. You shall be punished for failing the first audit.", damage: 1 },
                 ],
             },
             {
                 sceneCondition: "Tenacious",
                 conditionMetScenes: [
-                    { image: '', speaker: "Guardian", text: "Though the odds seemed bleak, you continued to fight in the face of failure." },
-                    { image: '', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You pass the second audit." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Though the odds seemed bleak, you continued to fight in the face of failure." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You pass the second audit." },
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Guardian", text: "When given the option to fight the beating heart of danger, you ignorantly skipped past without the courage to stand." },
-                    { image: '', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 1 },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "When given the option to fight the beating heart of danger, you ignorantly skipped past without the courage to stand." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 1 },
                 ],
             },
             {
                 sceneCondition: "Intellect",
                 conditionMetScenes: [
-                    { image: '', speaker: "Guardian", text: "You have willingly solved the riddles spread throughout your journey and demonstrated your worth beyond these gates." },
-                    { image: '', speaker: "Guardian", text: "Intellect is the last of three evaluations. You pass the last audit." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "You have willingly solved the riddles spread throughout your journey and demonstrated your worth beyond these gates." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Intellect is the last of three evaluations. You pass the last audit." },
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Guardian", text: "By avoiding the challenge of mind, you deny the growth necessary to prove you will succeed beyond these gates." },
-                    { image: '', speaker: "Guardian", text: "Intellect is the last of three evaluations. You shall be punished for failing the third audit.", damage: 1 },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "By avoiding the challenge of mind, you deny the growth necessary to prove you will succeed beyond these gates." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Intellect is the last of three evaluations. You shall be punished for failing the third audit.", damage: 1 },
                 ],
             },
-            { image: '', speaker: "Guardian", text: "..." },
-            { image: '', speaker: "Guardian", text: "So, it seems you survive the audit. Whether that be by the health you preserved to this point or having demonstrated excellent character, it is time for your test to truly begin." },
-            { image: '', speaker: "Guardian", text: "The test is merely a three-question trial to prove the learnings of your journey. If you have passed the audit, then it is likely you will pass these verifications as well." },
-            { image: '', speaker: "Guardian", text: "Stand ready for the first question." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "So, it seems you survive the audit. Whether that be by the health you preserved to this point or having demonstrated excellent character, it is time for your test to truly begin." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "The test is merely a three-question trial to prove the learnings of your journey. If you have passed the audit, then it is likely you will pass these verifications as well." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Stand ready for the first question." },
 
             {
-                image: '',
+                image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg',
                 speaker: "Guardian",
                 text: "Name the source of your monotony in your residing world.", // Left intentionally empty
                 options: [
@@ -1416,19 +1417,19 @@ export const data = [
 
     {
         id: "Climax-Q1-Wrong",
-        scenes: [{ image: '', speaker: "Guardian", text: "Incorrect. You will be punished for your lack of remembrance.", damage: 1, leadsTo: "Climax-Q2" },]
+        scenes: [{ image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Incorrect. You will be punished for your lack of remembrance.", damage: 1, leadsTo: "Climax-Q2" },]
     },
     {
         id: "Climax-Q1-Correct",
-        scenes: [{ image: '', speaker: "Guardian", text: "Correct. Your remembrance of your past demonstrates reflection.", leadsTo: "Climax-Q2" },]
+        scenes: [{ image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Correct. Your remembrance of your past demonstrates reflection.", leadsTo: "Climax-Q2" },]
     },
 
     {
         id: "Climax-Q2",
         scenes: [
-            { image: '', speaker: "Guardian", text: "Next question." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Next question." },
             {
-                image: '',
+                image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg',
                 speaker: "Guardian",
                 text: "What is the common name for this layer?", // Left intentionally empty
                 options: [
@@ -1441,24 +1442,24 @@ export const data = [
     },
     {
         id: "Climax-Q2-Wrong",
-        scenes: [{ image: '', speaker: "Guardian", text: "Incorrect. You will be punished for your heedless explorations.", damage: 1, leadsTo: "Climax-Q3" },]
+        scenes: [{ image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Incorrect. You will be punished for your heedless explorations.", damage: 1, leadsTo: "Climax-Q3" },]
     },
     {
         id: "Climax-Q2-Correct",
-        scenes: [{ image: '', speaker: "Guardian", text: "Correct. Your calling expresses you hold dear the experiences you undergo.", leadsTo: "Climax-Q3" },]
+        scenes: [{ image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Correct. Your calling expresses you hold dear the experiences you undergo.", leadsTo: "Climax-Q3" },]
     },
 
     {
         id: "Climax-Q3",
         scenes: [
-            { image: '', speaker: "Guardian", text: "Congratulations. As the trials seem to determine, you are worthy for entry." },
-            { image: '', speaker: "John", text: "Woah, what?! I thought I had to answer one more question-" },
-            { image: '', speaker: "John", text: "(Wait, maybe I shouldn't say anything...)" },
-            { image: '', speaker: "Guardian", text: "Worry not your restless soul. The last question is a mere child's play — it shall be the easiest you face. You have been guaranteed entry long since your trials began." },
-            { image: '', speaker: "Guardian", text: "As such, it is expected you are capable of answering this dilemma without fault. Shall you blunder once, you will face the most grievous, divine punishment for misleading oneself." },
-            { image: '', speaker: "Guardian", text: "Without further stalling, the simple question goes as follows:" },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Congratulations. As the trials seem to determine, you are worthy for entry." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "Woah, what?! I thought I had to answer one more question-" },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "(Wait, maybe I shouldn't say anything...)" },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Worry not your restless soul. The last question is a mere child's play — it shall be the easiest you face. You have been guaranteed entry long since your trials began." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "As such, it is expected you are capable of answering this dilemma without fault. Shall you blunder once, you will face the most grievous, divine punishment for misleading oneself." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Without further stalling, the simple question goes as follows:" },
             {
-                image: '',
+                image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg',
                 speaker: "Guardian",
                 // Get ready.
 
@@ -1493,15 +1494,15 @@ export const data = [
     {
         id: "True-Climax",
         scenes: [
-            { image: '', speaker: "Guardian", text: "..." },
-            { image: '', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Narrator", text: "Before the Guardian can finish their conclusion..." },
             // Same image and perspective, but a brilliant white light shines behind John
             { image: '', speaker: "Narrator", text: " a brilliant bolt illuminates from the horizon behind John." },
             { image: '', speaker: "John", text: "Wha.." },
             // The Guardian has brandished its blade, preparing to fight the source.
             { image: '', speaker: "Guardian", text: "..." },
             // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
-            { image: '', speaker: "Narrator", text: " " },
+            { image: 'images/Visuals/Climax/GuardianIsDefeated.jpg', speaker: "Narrator", text: "*BANG*" },
             // The guardian collapses onto the ground. A great cloud of dust where it falls, its colossal body crashing right in front of the gate.
             { image: '', speaker: "Narrator", text: "The Guardian falls with a single strike." },
             { image: '', speaker: "John", text: "What..!" },
