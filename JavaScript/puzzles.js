@@ -83,6 +83,15 @@ function decipherPuzzle() {
 
 
     /* Needs input logic here */
+    
+    submitDecryption.addEventListener ("click", (event) => {
+        if (inputDecryption.value === chosenMessage.translatedMessage) {
+            decipherPuzzleScreen.classList.add('hidden');
+            visuals.classList.remove("hidden");
+            nextEncounter("1C2B3C4A5B");
+            console.log(inputDecryption.value);
+        }
+    });
 }
 
 function rockPaperScissorsPuzzle() {
