@@ -88,11 +88,11 @@ function decipherPuzzle() {
         if (inputDecryption.value === chosenMessage.translatedMessage) {
             decipherPuzzleScreen.classList.add('hidden');
             visuals.classList.remove("hidden");
-            nextEncounter("1C2B3C4A5B");
+            nextScene();
             console.log(inputDecryption.value);
         }
         else {
-            console.log('Hello, I am grook');
+            console.log('We Must Figure This Out.');
         }
     });
 }

@@ -577,8 +577,22 @@ export const data = [
         id: "1C2B3C4A5A",
         scenes: [
             { puzzle: "decipher" },
+            { image: '', speaker: "???", text: "Test 1" },
+            { image: '', speaker: "John", text: "Test 2" },
+            { image: '', speaker: "???", text: "Test 3" },
+
+            {
+                image: 'Test',
+                speaker: "Narrator",
+                text: "Test 1 2 3 4 I just need some fun bro",
+                options: [
+                    {text: 'David Madden', leadsTo: ""},
+                    {text: 'Andrew Nolt', leadsTo: ""},
+                ]
+            }
         ]
     },
+
 
     /* Ryan self-note: after puzzle */
 
@@ -591,6 +605,7 @@ export const data = [
             { image: '', speaker: "Narrator", text: "And... now you're all alone here with no job and nothing to do here." }
         ]
     },
+
 
     {
         id: "1C2B3C4B",
