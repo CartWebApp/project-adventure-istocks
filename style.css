@@ -242,6 +242,11 @@ button:hover {
     align-self: center;
     justify-self: center;
     height: 98%;
+
+    & img {
+        aspect-ratio:1/1;
+        width:clamp(50px, 10vh, 200px);
+    }
 }
 
 #healthbar {
@@ -399,6 +404,67 @@ p {
     }
 
 }
+
+/* Decipher Puzzle Styling (may the force be with me).. */
+
+
+#decipherPuzzle {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    height:100vh;
+    & h2 {
+        font-family: var(--font-family);
+        font-size:clamp(25px, 8vh, 75px);
+    }
+}
+
+#languageKey {
+    width:clamp(300px, 20vh, 400px);
+
+}
+
+#inputDecryption {
+    background-color: var(--main-black);
+    color:var(--main-white);
+    border: 4px solid var(--option-border-black);
+    border-radius:var(--border-radius);
+    padding: 10px 10px;
+    font-size:30px;
+    width:50%;
+    justify-self:center;
+    align-self:center;
+}
+
+
+#decryptingForm {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:20px;
+}
+
+
+#submitDecryption {
+    background-color: var(--main-black);
+            color: var(--main-white);
+            border: 4px solid var(--option-border-black);
+            border-radius: var(--border-radius);
+            padding: 10px 10px;
+            font-size: 30px;
+            justify-self: center;
+            align-self: center;
+            width: clamp(60px, 40vh, 200px);
+            height:clamp(20px, 40vh, 75px);
+}
+
+
+#encryptedImg {
+    width: clamp(50%, 20vh, 500px);
+    border-radius:var(--border-radius);
+}
+
 
 /* Draggable objects */
 #holesAndShapesPuzzle .draggable {
@@ -787,11 +853,6 @@ p {
 
         }
     }
-
-    /* #tempNavForDevs {
-        display: none;
-    } */
-
 
     #startButtons {
         margin-top: 0px;
