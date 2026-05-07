@@ -18,6 +18,8 @@ const speakerTag = document.querySelector('#speakerTag');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
+const journalSpace = document.querySelector('#journalSpace');
+
 const inventorySection = document.querySelector('#inventorySection');
 const inventoryBtn = document.querySelector('#inventoryButton');
 
@@ -35,6 +37,7 @@ let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
 let lastEncounter = undefined;
 let lastOptionScene = undefined;
+let lastUniqueImageSRC = undefined; // For Journal
 
 let inventoryEnabled = false;
 
@@ -84,6 +87,8 @@ function initiateScene() {
         window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));
         imageVisual.src = scene.image || imageVisual.src; // Keep the current image if one is not provided to switch to
         speakerTag.textContent = scene.speaker;
+        // Append to jounral
+        appendSceneToJournal(scene)
     }
 
     const loadOptions = () => {
@@ -104,6 +109,8 @@ function initiateScene() {
                 optionsRow.appendChild(newLi);
 
                 const clickedEvent = () => {
+                    // Append to journal
+                    appendOptionToJournal(option)
                     // Load the next full encounter
                     nextEncounter(option.leadsTo);
                     // Fire to gameLogic.js
@@ -207,6 +214,8 @@ function initiateScene() {
             loadText(miniScene, () => {
                 nextBtn.addEventListener("click", skipMiniScene, { once: true });
             });
+            // Append to Journal
+            appendSceneToJournal(miniScene)
         };
         // this is played on nextBtn press
         const skipMiniScene = () => {
@@ -276,6 +285,44 @@ function toggleInventory() {
     }
 }
 
+
+// Journal related things
+function appendSceneToJournal(scene) {
+    const div = document.createElement("div");
+
+    const p = document.createElement("p");
+    p.textContent = scene.text;
+    div.appendChild(p);
+
+    if (scene.image && lastUniqueImageSRC != scene.image) {
+        const img = document.createElement('img');
+        img.src = lastUniqueImageSRC;
+
+        lastUniqueImageSRC = scene.image;
+
+        div.appendChild(img);
+    }
+
+    journalSpace.appendChild(div);
+}
+
+function appendOptionToJournal(chosenOption) {
+    const p = document.createElement("p");
+    p.textContent = chosenOption.text;
+    p.classList.add("journalOption");
+    journalSpace.appendChild(p);
+}
+
+function refreshJournal() {
+    const journalEntries = journalSpace.children;
+    for (const entry of journalEntries) {
+        entry.remove();
+    }
+}
+
+
+
+
 // Restart Game
 function restartGame() {
     window.dispatchEvent(new Event("ResetStatus"));
@@ -286,6 +333,7 @@ function restartGame() {
     currentEncounter = storyData.find(object => object.id === "Intro");
     currentSceneIndex = 0;
 
+    refreshJournal();
     startingScreen.classList.remove("hidden");
 }
 
@@ -337,7 +385,6 @@ window.addEventListener("showPuzzle", (e) => {
         case "decipher":
 
             break;
-
         case "rockPaperScissors":
             rockPaperScissorsPuzzle();
             break;
