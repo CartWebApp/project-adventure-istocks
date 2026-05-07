@@ -18,7 +18,9 @@ const speakerTag = document.querySelector('#speakerTag');
 const nextBtn = document.querySelector("#next");
 const optionsRow = document.querySelector('#optionsRow');
 
+const journalSection = document.querySelector('#journalSection');
 const journalSpace = document.querySelector('#journalSpace');
+const journalBtn = document.querySelector('#journalButton');
 
 const inventorySection = document.querySelector('#inventorySection');
 const inventoryBtn = document.querySelector('#inventoryButton');
@@ -40,6 +42,7 @@ let lastOptionScene = undefined;
 let lastUniqueImageSRC = undefined; // For Journal
 
 let inventoryEnabled = false;
+let journalEnabled = false;
 
 export { currentEncounter, inventoryEnabled, nextScene, nextEncounter }
 
@@ -287,21 +290,33 @@ function toggleInventory() {
 
 
 // Journal related things
+function toggleJournal() {
+    if (!journalEnabled) {
+        visuals.classList.add("hidden");
+        journalSection.classList.remove("hidden");
+        journalEnabled = true;
+    } else {
+        visuals.classList.remove("hidden");
+        journalSection.classList.add("hidden");
+        journalEnabled = false;
+    }
+}
+
 function appendSceneToJournal(scene) {
     const div = document.createElement("div");
 
     const p = document.createElement("p");
     p.textContent = scene.text;
-    div.appendChild(p);
 
     if (scene.image && lastUniqueImageSRC != scene.image) {
         const img = document.createElement('img');
-        img.src = lastUniqueImageSRC;
+        img.src = scene.image; // If there is a new image then append that to the journal
 
         lastUniqueImageSRC = scene.image;
 
         div.appendChild(img);
     }
+    div.appendChild(p);
 
     journalSpace.appendChild(div);
 }
@@ -310,6 +325,13 @@ function appendOptionToJournal(chosenOption) {
     const p = document.createElement("p");
     p.textContent = chosenOption.text;
     p.classList.add("journalOption");
+    journalSpace.appendChild(p);
+}
+
+function appendRetryToJournal() {
+    const p = document.createElement("p");
+    p.textContent = "User retried this encounter";
+    p.classList.add("journalRetryText");
     journalSpace.appendChild(p);
 }
 
@@ -350,6 +372,7 @@ function showGameOver(e) {
         gameOverPopup.close();
         gameOverPopup.classList.add("hidden");
 
+        appendRetryToJournal();
         nextEncounter(lastEncounter.id);
     }, { once: true });
 
@@ -361,6 +384,7 @@ nextBtn.addEventListener("click", nextScene);
 startGameButton.addEventListener("click", beginGame);
 inventoryBtn.addEventListener("click", toggleInventory);
 restartBtn.addEventListener("click", restartGame);
+journalBtn.addEventListener("click", toggleJournal);
 
 // Fired from gameLogic.js
 window.addEventListener("nextEncounter", (e) => {
