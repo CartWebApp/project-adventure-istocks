@@ -271,30 +271,30 @@ export const data = [
             { image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg', speaker: "Narrator", text: "Before he can decide on the next course of action, however, he hears someone approaching." },
 
             // Change image
-            { image: '', speaker: "Narrator", text: "Two people, actually... there's another stock guy... and a stick figure?" },
-            { image: '', speaker: "John", text: "Who are you guys?" },
-            { image: '', speaker: "Stick Figure", text: "It appears there's another man here." },
-            { image: '', speaker: "Other Stock Guy", text: "What, was he trying to unlock the gate too?" },
-            { image: '', speaker: "John", text: "Unlock the gate? You can do that?" },
-            { image: '', speaker: "Other Stock Guy", text: "Woah bud, back off! This gate is MINE to pass, because I..." },
+            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Narrator", text: "Two people, actually... there's another stock guy... and a stick figure?" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Who are you guys?" },
+            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "It appears there's another man here." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "Other Stock Guy", text: "What, was he trying to unlock the gate too?" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Unlock the gate? You can do that?" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "Other Stock Guy", text: "Woah bud, back off! This gate is MINE to pass, because I..." },
 
             // he holds up the layer 1 key in his hands
-            { image: '', speaker: "Other Stock Guy", text: "Have the key for it in my hands!" },
-            { image: '', speaker: "John", text: "Woah. I want that." },
+            { image: 'images/Visuals/Intro/OtherStockHoldingLayer1Key.jpg', speaker: "Other Stock Guy", text: "Have the key for it in my hands!" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Woah. I want that." },
 
-            { image: '', speaker: "Stick Figure", text: "You cannot receive it. I only have one key, and only one person can pass at a time." },
-            { image: '', speaker: "John", text: "Serious? I bet you're giving it to the most basic guy ever. His name is probably \"James Stock\" or something." },
-            { image: '', speaker: "James Stock", text: "dude how did you know" },
-            { image: '', speaker: "John", text: "...dude" },
-            { image: '', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter." },
-            { image: '', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling." },
-            { image: '', speaker: "John", text: "Shoot. I'm named John Stock, so I actually don't have much of a chance here." },
-            { image: '', speaker: "John", text: "But look, I don't need to just be unique. I'm sure we can negotiate." },
-            { image: '', speaker: "Stick Figure", text: "You have one chance to convince me." },
-            { image: '', speaker: "James", text: "You really think you can do anything, huh?" },
+            { image: 'images/Visuals/Intro/StickFigureCentered.jpg', speaker: "Stick Figure", text: "You cannot receive it. I only have one key, and only one person can pass at a time." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Serious? I bet you're giving it to the most basic guy ever. His name is probably \"James Stock\" or something." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "James Stock", text: "dude how did you know" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "...dude" },
+            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter." },
+            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Shoot. I'm named John Stock, so I actually don't have much of a chance here." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "But look, I don't need to just be unique. I'm sure we can negotiate." },
+            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "You have one chance to convince me." },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "James", text: "You really think you can do anything, huh?" },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg',
                 speaker: "John",
                 text: "Yeah, I sure can. How about this?",
                 options: [
@@ -308,12 +308,12 @@ export const data = [
     {
         id: "1B2A3A",
         scenes: [
-            { image: '', speaker: "James", text: "Competition, eh? You know what, I got an idea..." },
-            { image: '', speaker: "James", text: "I'm quite the rock-paper-scissors guy myself. And it's not just skill; I've got a hidden talent. See for yourself, buddy." },
+            { image: 'images/Visuals/Intro/JamesStockSmirk.jpg', speaker: "James", text: "Competition, eh? You know what, I got an idea..." },
+            { image: 'images/Visuals/Intro/JamesStockSmirk.jpg', speaker: "James", text: "I'm quite the rock-paper-scissors guy myself. And it's not just skill; I've got a hidden talent. See for yourself, buddy." },
             { puzzle: "rockPaperScissors" },
 
             // This is the losing dialogue (continues the current encounter on loss)
-            { image: '', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
+            { image: 'images/Visuals/Intro/JamesStockWinningFace.jpg', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
             { image: '', speaker: "John", text: "Brooo...." },
             { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
 
@@ -326,7 +326,7 @@ export const data = [
         id: "1B2A3A-Lose",
         scenes: [
             // This is the losing dialogue (continues the current encounter on loss)
-            { image: '', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
+            { image: 'images/Visuals/Intro/JamesStockWinningFace.jpg', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
             { image: '', speaker: "John", text: "Brooo...." },
             { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
 
@@ -1587,8 +1587,8 @@ export const data = [
     {
         id: "True-Climax-1B",
         scenes: [
-            { image: '', speaker: "John", text: "RAAGH!!!" },
-            { image: '', speaker: "Low-Budget Man", text: "You fight foolishly, John!" },
+            { image: 'images/Visuals/Climax/JohnGuardianRAGHH.jpg', speaker: "John", text: "RAAGH!!!" },
+            { image: 'images/Visuals/Climax/LowBudgetManStabsJohn.jpg', speaker: "Low-Budget Man", text: "You fight foolishly, John!" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
             {
                 sceneCondition: "Tenacious",
