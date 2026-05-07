@@ -248,10 +248,10 @@ export const data = [
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
-            { image: '', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
-            { image: '', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
+            { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
+            { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
-                image: 'images/Visuals/Intro/john-stock-alone-at-gate.jpg',
+                image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg',
                 speaker: "Narrator",
                 text: "What should John do about this discovery?",
                 options: [
