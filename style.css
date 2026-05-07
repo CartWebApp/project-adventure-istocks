@@ -242,6 +242,11 @@ button:hover {
     align-self: center;
     justify-self: center;
     height: 98%;
+
+    & img {
+        aspect-ratio:1/1;
+        width:clamp(50px, 10vh, 200px);
+    }
 }
 
 #healthbar {
@@ -411,6 +416,7 @@ p {
     height:100vh;
     & h2 {
         font-family: var(--font-family);
+        font-size:clamp(25px, 8vh, 75px);
     }
 }
 
@@ -449,7 +455,8 @@ p {
             font-size: 30px;
             justify-self: center;
             align-self: center;
-            width: clamp(60px, 400vh, 200px);
+            width: clamp(60px, 40vh, 200px);
+            height:clamp(20px, 40vh, 75px);
 }
 
 
