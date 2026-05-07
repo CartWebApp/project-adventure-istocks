@@ -1491,6 +1491,8 @@ export const data = [
         ]
     },
 
+    // True-Climax Imagery 99% Done! - Mateo : )
+
     {
         id: "True-Climax",
         scenes: [
@@ -1504,12 +1506,12 @@ export const data = [
             // But then... a great arrow pierces through the Guardian's head in a flash, blowing a hole through it!
             { image: 'images/Visuals/Climax/GuardianIsDefeated.jpg', speaker: "Narrator", text: "*BANG*" },
             // The guardian collapses onto the ground. A great cloud of dust where it falls, its colossal body crashing right in front of the gate.
-            { image: '', speaker: "Narrator", text: "The Guardian falls with a single strike." },
-            { image: '', speaker: "John", text: "What..!" },
+            { image: 'images/Visuals/Climax/GuardianCollapsesGateExposed.jpg', speaker: "Narrator", text: "The Guardian falls with a single strike." },
+            { image: 'images/Visuals/Climax/GuardianCollapsesGateExposed.jpg', speaker: "John", text: "What..!" },
             // He turns around with a confused expression..
-            { image: '', speaker: "John", text: "Who could've-" },
+            { image: 'images/Visuals/Climax/JohnTurnsWithConfusedExpression.jpg', speaker: "John", text: "Who could've-" },
             // And his eyes widen.
-            { image: '', speaker: "John", text: "..!" },
+            { image: 'images/Visuals/Climax/JohnTurnsWithConfusedExpression.jpg', speaker: "John", text: "..!" },
             // It's someone clad in full magical, animated armor! A mystic sword in one hand and a bow of light in the other, he stands opposite to John.
             { image: 'images/Visuals/Climax/GuardianWithMaskOn.jpg', speaker: "???", text: " " },
             { image: 'images/Visuals/Climax/GuardianWithMaskOn.jpg', speaker: "???", text: "It's been a while." },
@@ -1526,23 +1528,23 @@ export const data = [
             { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "Oh, not without your advent. Your fame returned to me as the one who led you here." },
             { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "It doesn't matter whether you took my hand or not. It gave me enough opportunity to arrive at this moment, armed." },
 
-            { image: '', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates." },
-            { image: '', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?" },
-            { image: '', speaker: "Low-Budget Man", text: "Ha ha. Everyone? Were you told of that myth too?" },
-            { image: '', speaker: "Low-Budget Man", text: "Don't you remember? Only the possessor of the key is granted access through. You're weren't thinking I was going to use this key to help everyone, were you?" },
-            { image: '', speaker: "Low-Budget Man", text: "I only needed a tool to reach my goals. No longer will I be constrained by a child's mediocre drawing once I enter Reality." },
-            { image: '', speaker: "John", text: "So you used me to get here." },
-            { image: '', speaker: "Low-Budget Man", text: "Of course. You followed the plan as intended. You failed to prepare for an advent like mine, believing you could waltz through without a true challenge." },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell.jpg', speaker: "Narrator", text: "Low-Budget Man begins to walk for the gates." },
+            { image: 'images/Visuals/Climax/JohnFacingCameraAtGate.jpg', speaker: "John", text: "Hold on, wait a minute! So you're going to unlock the gates for everyone now?" },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell2.jpg', speaker: "Low-Budget Man", text: "Ha ha. Everyone? Were you told of that myth too?" },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell2.jpg', speaker: "Low-Budget Man", text: "Don't you remember? Only the possessor of the key is granted access through. You're weren't thinking I was going to use this key to help everyone, were you?" },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell2.jpg', speaker: "Low-Budget Man", text: "I only needed a tool to reach my goals. No longer will I be constrained by a child's mediocre drawing once I enter Reality." },
+            { image: 'images/Visuals/Climax/JohnFacingCameraAtGate.jpg', speaker: "John", text: "So you used me to get here." },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell2.jpg', speaker: "Low-Budget Man", text: "Of course. You followed the plan as intended. You failed to prepare for an advent like mine, believing you could waltz through without a true challenge." },
             // John clenches his fist
-            { image: '', speaker: "John", text: "Hey, dude. That's really not cool. I did all the work to get here." },
-            { image: '', speaker: "Low-Budget Man", text: "I hope you're not planning on stopping me. What could you do in your harmed state?" },
+            { image: 'images/Visuals/Climax/JohnAtGateFistClentched.jpg', speaker: "John", text: "Hey, dude. That's really not cool. I did all the work to get here." },
+            { image: 'images/Visuals/Climax/LowBudgetManFarewell2.jpg', speaker: "Low-Budget Man", text: "I hope you're not planning on stopping me. What could you do in your harmed state?" },
             // Pan to John's determined face
-            { image: '', speaker: "John", text: "...Anything." },
+            { image: 'images/Visuals/Climax/JohnCloseUpAtGate.jpg', speaker: "John", text: "...Anything." },
             // Now he's sweating and nervously smiling
-            { image: '', speaker: "John", text: "(naw im lying bro this guy is so right what am I going to do AGAINST THAT?! HE'S IN ARMOR! LOOK AT HIS WEAPONS!)" },
-            { image: '', speaker: "John", text: "(But I'm already here... do I let him swindle this from me? I hate these stick figures bro... I just knew he didn't come with a transparent background.)" },
+            { image: 'images/Visuals/Climax/JohnSmilingNervously.jpg', speaker: "John", text: "(naw im lying bro this guy is so right what am I going to do AGAINST THAT?! HE'S IN ARMOR! LOOK AT HIS WEAPONS!)" },
+            { image: 'images/Visuals/Climax/JohnSmilingNervously.jpg', speaker: "John", text: "(But I'm already here... do I let him swindle this from me? I hate these stick figures bro... I just knew he didn't come with a transparent background.)" },
             {
-                image: '',
+                image: 'images/Visuals/Climax/JohnSmilingNervously.jpg',
                 speaker: "John",
                 text: "Well... guess I gotta try something.",
                 options: [
