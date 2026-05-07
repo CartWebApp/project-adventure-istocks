@@ -71,7 +71,7 @@ function decipherPuzzle() {
             "you look interesting what are you"
         ),
         new message(
-            'images/Mechanics/Puzzles/decipher/message4.png',
+            'images/Mechanics/Puzzles/decipher/message5.png',
             "nice pants how did you get those"
         )
     ]
