@@ -56,7 +56,7 @@ function decipherPuzzle() {
     const potentialMessages = [
         new message(
             "images/Mechanics/Puzzles/decipher/message1.png",
-            "hello how is your day?"
+            "hello how is your day"
         ),
         new message(
             'images/Mechanics/Puzzles/decipher/message2.png',
@@ -92,7 +92,7 @@ function decipherPuzzle() {
             console.log(inputDecryption.value);
         }
         else {
-            console.log();
+            console.log('Hello, I am grook');
         }
     });
 }
