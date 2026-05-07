@@ -12,13 +12,14 @@ const decipherPuzzleScreen = document.querySelector('#decipherPuzzle');
 
 const HSSceneId = "L1-1C2B"
 
+// Show puzzle in UI when called for
 window.addEventListener("showPuzzle", (e) => {
     switch (e.detail) {
         case "holesAndShapes":
             holesAndShapesPuzzle();
             break;
         case "decipher":
-
+            decipherPuzzle();
             break;
 
         case "rockPaperScissors":
@@ -35,7 +36,53 @@ export { rockPaperScissorsPuzzle, holesAndShapesPuzzle, decipherPuzzle }
 
 
 function decipherPuzzle() {
+    class message {
+        constructor(encrypted, translated) {
+            // In case some computers can't see the images, I'm actually gonna take pictures of the potential message instead
+            // I'm not sure if line readers can read standard galactic alphabet anyways so???
+            this.encryptedSrc = encrypted;
+            this.translatedMessage = translated;
+        }
+    }
 
+    const puzzleSection = document.querySelector("#decipherPuzzle");
+    const messageImg = puzzleSection.querySelector('#encryptedImg');
+    const inputDecryption = puzzleSection.querySelector('#inputDecryption');
+    const submitDecryption = puzzleSection.querySelector('#submitDecryption');
+
+    visuals.classList.add("hidden");
+    puzzleSection.classList.remove("hidden")
+
+    const potentialMessages = [
+        new message(
+            "images/Mechanics/Puzzles/decipher/message1.png",
+            "hello how is your day?"
+        ),
+        new message(
+            'images/Mechanics/Puzzles/decipher/message2.png',
+            "hello its me crewmate"
+        ),
+        new message(
+            'images/Mechanics/Puzzles/decipher/message3.png',
+            "i am the good guy in the layer 1"
+        ),
+        new message(
+            'images/Mechanics/Puzzles/decipher/message4.png',
+            "you look interesting what are you"
+        ),
+        new message(
+            'images/Mechanics/Puzzles/decipher/message4.png',
+            "nice pants how did you get those"
+        )
+    ]
+
+    const randomIndex = Math.floor(Math.random() * potentialMessages.length); // Math.floor to always get a number from 0 to (.length - 1)
+    const chosenMessage = potentialMessages[randomIndex];
+
+    messageImg.src = chosenMessage.encryptedSrc;
+
+
+    /* Needs input logic here */
 }
 
 function rockPaperScissorsPuzzle() {

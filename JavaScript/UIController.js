@@ -217,8 +217,6 @@ function initiateScene() {
             loadText(miniScene, () => {
                 nextBtn.addEventListener("click", skipMiniScene, { once: true });
             });
-            // Append to Journal
-            appendSceneToJournal(miniScene)
         };
         // this is played on nextBtn press
         const skipMiniScene = () => {
@@ -305,9 +303,6 @@ function toggleJournal() {
 function appendSceneToJournal(scene) {
     const div = document.createElement("div");
 
-    const p = document.createElement("p");
-    p.textContent = scene.text;
-
     if (scene.image && lastUniqueImageSRC != scene.image) {
         const img = document.createElement('img');
         img.src = scene.image; // If there is a new image then append that to the journal
@@ -316,7 +311,12 @@ function appendSceneToJournal(scene) {
 
         div.appendChild(img);
     }
-    div.appendChild(p);
+
+    if (scene.text) {
+        const p = document.createElement("p");
+        p.textContent = `${scene.speaker}: ${scene.text}`;
+        div.appendChild(p);
+    }
 
     journalSpace.appendChild(div);
 }
@@ -336,10 +336,7 @@ function appendRetryToJournal() {
 }
 
 function refreshJournal() {
-    const journalEntries = journalSpace.children;
-    for (const entry of journalEntries) {
-        entry.remove();
-    }
+    journalSpace.replaceChildren();
 }
 
 
@@ -397,29 +394,6 @@ window.addEventListener("endGame", () => {
     gameScreen.classList.add("hidden");
     endingScreen.classList.remove("hidden");
 })
-
-
-
-/* Load puzzles in UI */
-window.addEventListener("showPuzzle", (e) => {
-    switch (e.detail) {
-        case "holesAndShapes":
-            holesAndShapesPuzzle();
-            break;
-        case "decipher":
-
-            break;
-        case "rockPaperScissors":
-            rockPaperScissorsPuzzle();
-            break;
-        default:
-            console.log("Invalid puzzle");
-            break;
-    }
-})
-
-
-
 
 
 

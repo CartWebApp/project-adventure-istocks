@@ -500,7 +500,7 @@ export const data = [
                 speaker: "Narrator",
                 text: 'Should you talk to him?',
                 options: [
-                    { text: 'I need friends', leadsTo: "1A2A3C4A" },
+                    { text: 'I need friends', leadsTo: "1C2B3C4A" },
                     { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
                     { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C" },
                 ]
@@ -559,14 +559,14 @@ export const data = [
         scenes: [
             { image: '', speaker: "???", text: "►○★┼╬▬○┬■-!★☐┬││▼╠┬▼✦○☐▲-┼▼│┼○╬❏○││○╬-?" },
             { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
-            { image: '', speaker: "John", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
+            { image: '', speaker: "???", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
 
             {
                 image: '',
                 speaker: "Narrator",
                 text: '...How do you want to approach this?',
                 options: [
-                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1A2A3C4A5A" },
+                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1C2B3C4A5A" },
                     { text: 'GIVE ME A JOB!!!', leadsTo: "1C2B3B4A5B" },
                 ]
             }
@@ -576,7 +576,7 @@ export const data = [
     {
         id: "1C2B3C4A5A",
         scenes: [
-            { puzzle: "Decipher" },
+            { puzzle: "decipher" },
         ]
     },
 
@@ -1318,13 +1318,13 @@ export const data = [
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
             { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
             // John on a mountain looks at the barrier - A titan with seraph wings and a flaming greatsword guards the miniature border.
-            { image: '', speaker: "Narrator", text: "...Of course, the guardian." },
-            { image: '', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
+            { image: 'images/Visuals/Climax/JohnFoundTheBorder.jpg', speaker: "Narrator", text: "...Of course, the guardian." },
+            { image: 'images/Visuals/Climax/JohnFoundTheBorder.jpg', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
             // Now John, hardly even the size of one of the titan's fingers, stands below it. He looks above it as the titan looks down at him with its mighty greatsword pierced into the Earth.
             // Noter: You can practically use this image for most of the guardian/John dialogue
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "...Welcome, John Stock." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "...Hey. You look swell." },
-            { image: '', speaker: "Guardian", text: "I presume you are here solely to pass this border." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "I presume you are here solely to pass this border." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "How'd you know, man? What do you think I've been doing, getting through all the other borders before this?" },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Very well. We shall not waste time in scrutinizing your worth." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "You will be tested for the trials you have faced on this journey - If you are to fail, you will be rightfully punished." },
@@ -1341,22 +1341,22 @@ export const data = [
     },
 
     {
-        id: "L2-1C",
+        id: "L2-1C2A",
         scenes: [
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "Please guardian I need this..." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "My royalties are kind of free..." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
             // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
-            { image: '', speaker: "Guardian", text: " " },
+            { image: 'images/Visuals/Climax/GuardianWhyYouTrynaNotToLaughBruh.jpg', speaker: "Guardian", text: " " },
 
             { gameOver: "Guardian I'm watching the gameplay why you tryna not to laugh bruh" },
         ]
     },
     {
-        id: "L2-1C",
+        id: "L2-1C2B",
         scenes: [
-            { image: '', speaker: "John", text: "RAAAG-" },
-            { gameOver: "No." },
+            { image: 'images/Visuals/Climax/JohnFightsTheGuardian.jpg', speaker: "John", text: "RAAAG-" },
+            { image: 'images/Visuals/Climax/JohnGetsDisintegrated.jpg', gameOver: "No." },
         ]
     },
 
