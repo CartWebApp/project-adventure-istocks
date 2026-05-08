@@ -63,7 +63,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low budget man being depressed.jpg', speaker: "Narrator", text: "Then, he unmasks himself..." },
 
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
 
             // Image of him with his hood off --- stickman in a hoodie!!!!
             { image: 'images/Visuals/Intro/low-budget-man-exposed 1.jpg', speaker: "Narrator", text: "..." },
@@ -104,7 +104,7 @@ export const data = [
             { image: 'images/Visuals/Intro/low-budget-man-speaking 1.jpg', speaker: "Low Budget Man", text: "You'll slap yourself for never thinking of this." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "You follow Low-Budget man to somewhere you've never gone before. Usually, it had always been the same concrete sidewalk simply going to work, then immediately back home." },
             { image: 'images/Visuals/Intro/low-budget-man-on-grass 1.jpg', speaker: "Narrator", text: "But today... John walks onto grass." },
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "And before he knows it.." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "And before he knows it.." },
 
             // Now an actual visual appears - Them at the border
             { image: 'images/Visuals/Intro/low-budget-man-john-stock-at-border 1.jpg', speaker: "Low-Budget Man", text: "Here we are." },
@@ -211,7 +211,7 @@ export const data = [
         scenes: [
             { image: 'images/Visuals/Intro/john-after-the-fight (1).jpg', speaker: "John", text: "Yeah, why don't you become royalty free, will you? Now let me get back to work." },
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: " ", leadsTo: "1A2B" }
         ]
     },
 
@@ -247,7 +247,7 @@ export const data = [
             // John frolicks around in a grass field :sob:
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "John", text: "Ha ha ha! I am having so much fun ruining my life!" },
             { image: 'images/Visuals/Intro/John Skipping Around.jpg', speaker: "Narrator", text: "He skips further into the distance, and further, and further..." },
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Until he comes across something strange." },
             { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "John", text: "What the-? A white wall? And I can't throw myself past it." },
             { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "Narrator", text: "This \"Wall\" seems to expand infinitely across the horizon. How strange. Why had no one found this before?" },
             {
@@ -392,7 +392,7 @@ export const data = [
         scenes: [
             { image: 'images/Visuals/Intro/john-going-back-to-sleep.jpg', speaker: "John", text: "Eh I can sleep a bit more it's ok." },
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // John gets fired.svg
             { image: 'images/Visuals/Intro/john-getting-fired.jpg', speaker: "Narrator", text: "John gets fired the next day." },
             { image: 'images/Visuals/Intro/john-post-fired.jpg', speaker: "John", text: "Whatever! I hated that job anyways! I can deal with not making any money..." },
@@ -586,7 +586,7 @@ export const data = [
         id: "L1",
         scenes: [
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // Image - the whole world looks like it'd been hand-drawn
             { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "Narrator", text: "John arrives through the portal." },
             { image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg', speaker: "John", text: "Woah, this place is way different from where I live." },
@@ -755,7 +755,7 @@ export const data = [
         id: "L1-1C",
         scenes: [
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "John bolts for the border, ready to conquer all that awaits him." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John bolts for the border, ready to conquer all that awaits him." },
 
             // Border -- 
             { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "John", text: "Here I am." },
@@ -962,7 +962,7 @@ export const data = [
         id: "L1-Ending",
         scenes: [
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // Gate - John holding a colored key in his hands.
             { image: 'images/Visuals/Layer1/JohnFindsTheBorder.jpg', speaker: "Narrator", text: "...Well, here you are. To the edge of the second layer." },
             { image: 'images/Visuals/Layer1/john-reaching-the-door.jpg', speaker: "John", text: "Man, this is starting to get tiring... I really hope there isn't any more than this." },
@@ -986,7 +986,7 @@ export const data = [
         id: "L2",
         scenes: [
             // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // John in a city - looks like he's in an anime. Only that he sticks out like a store thumb since he still looks like a stock image.
             { image: 'images/Visuals/Layer2/john-arrives-at-L2.jpg', speaker: "John", text: "Holy cow. Now I really wouldn't mind getting a house here." },
             { image: 'images/Visuals/Layer2/john-arrives-at-L2.jpg', speaker: "John", text: "If things move this much in the higher world, I'm curious what it's like in the upper worlds." },
@@ -1304,9 +1304,9 @@ export const data = [
     {
         id: "L2-1C",
         scenes: [
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "With what is assumed to all be done, John heads for the border to meet his final challenge." },
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "With what is assumed to all be done, John heads for the border to meet his final challenge." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Certainly, it was an arduous trek, and John had to stop for longer breaks at smaller villages down the road." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "But in the far distance, John sees it emerge into view..." },
             // John on a mountain looks at the barrier - A titan with seraph wings and a flaming greatsword guards the miniature border.
             { image: 'images/Visuals/Climax/JohnFoundTheBorder.jpg', speaker: "Narrator", text: "...Of course, the guardian." },
             { image: 'images/Visuals/Climax/JohnFoundTheBorder.jpg', speaker: "Narrator", text: "Believing in his worth, John proceeds forth until he comes into range of the border." },
@@ -1613,7 +1613,7 @@ export const data = [
         id: "Ending-1",
         scenes: [
             // All of these will have black screens
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
             { image: '', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
             { image: '', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
             { image: '', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
@@ -1626,7 +1626,7 @@ export const data = [
         id: "Ending-2",
         scenes: [
             // An image of the good-luck charm shattering flashes by.
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
             { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
             // ** The next several scenes will be in the perspective of John; keep this in mind
@@ -1649,7 +1649,7 @@ export const data = [
         id: "Ending-3-Pt1",
         scenes: [
             // An image of the good-luck charm shattering flashes by.
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
             { image: '', speaker: "Narrator", text: "..." },
             // Transition to Low-Budget Man's face with John's body behind him
