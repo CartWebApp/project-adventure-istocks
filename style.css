@@ -117,9 +117,8 @@ button:hover {
 #mainVisual {
     aspect-ratio: 3/1;
     border-radius: var(--border-radius);
-    border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
+    border: clamp(2px, 1.5vh, 10px) solid var(--main-black);
     margin-bottom: 30px;
-    border: 10px solid #2E2E2E;
     max-width: min(1701px, 50%);
     align-self: center;
 }
