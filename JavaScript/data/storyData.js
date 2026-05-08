@@ -1583,7 +1583,7 @@ export const data = [
             {
                 sceneCondition: "Tenacious",
                 conditionMetScenes: [
-                    { image: , speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans!", falseDamage: 5 },
+                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans!", falseDamage: 5 },
                 ],
                 conditionNotMetScenes: [
                     { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5 },
