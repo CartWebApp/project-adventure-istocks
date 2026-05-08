@@ -38,7 +38,6 @@ const restartBtn = document.querySelector("#restartGame");
 let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
 let lastEncounter = undefined;
-let lastOptionScene = undefined;
 let lastUniqueImageSRC = undefined; // For Journal
 
 let inventoryEnabled = false;

@@ -9,11 +9,6 @@ class Player {
         this.MaxHealth = maxHealth;
         this.Inventory = {};
         this.ImportantDecisions = [];
-
-        // Tracking stats for the Guardian Evaluation
-        this.friendshipsMade = 0;
-        this.fightsEngaged = 0;
-        this.puzzlesCompleted = 0;
     }
 }
 

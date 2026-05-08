@@ -85,11 +85,10 @@ function decipherPuzzle() {
     /* Needs input logic here */
     
     submitDecryption.addEventListener ("click", () => {
-        if (inputDecryption.value === chosenMessage.translatedMessage) {
+        if (inputDecryption.value.toLowerCase() === chosenMessage.translatedMessage) {
             decipherPuzzleScreen.classList.add('hidden');
             visuals.classList.remove("hidden");
             nextScene();
-            console.log(inputDecryption.value);
         }
         else {
             console.log('We Must Figure This Out.');
@@ -197,7 +196,7 @@ function rockPaperScissorsPuzzle() {
         } else if (enemyScore === 3) {
             RPSPuzzleScreen.classList.add("hidden");
             visuals.classList.remove("hidden");
-            nextScene("1B2A3A-Lose");
+            nextScene();
         }
 
         playerHand.src = handImages[playerChoice];

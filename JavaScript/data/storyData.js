@@ -88,7 +88,7 @@ export const data = [
                 speaker: 'Narrator',
                 options: [
                     { text: "Yes, we probably should...", leadsTo: "1A2A3A" },
-                    { text: "Let's fight, nerd.", leadsTo: "1A2A3B", },
+                    { text: "Let's fight, nerd.", leadsTo: "1A2A3B", giveCondition: "Tenacious"},
                     { text: "What a load of blasphemy.", leadsTo: "1A2A3C" }
                 ]
             }
@@ -298,7 +298,7 @@ export const data = [
                 speaker: "John",
                 text: "Yeah, I sure can. How about this?",
                 options: [
-                    { text: "Friendly competition", leadsTo: "1B2A3A" },
+                    { text: "Friendly competition", leadsTo: "1B2A3A", giveCondition: "Intellect" },
                     { text: "Let's Fight, nerd", leadsTo: "1B2A3B" },
                     { text: "Let's share the key!", leadsTo: "1B2A3C" },
                 ]
@@ -314,23 +314,10 @@ export const data = [
 
             // This is the losing dialogue (continues the current encounter on loss)
             { image: 'images/Visuals/Intro/JamesStockWinningFace.jpg', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
-            { image: '', speaker: "John", text: "Brooo...." },
-            { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
+            { image: 'images/Visuals/Intro/JohnDisappointedInSelf.jpg', speaker: "John", text: "Brooo...." },
+            { image: 'images/Visuals/Intro/LowBudgetManCamera.jpg', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
 
-            { image: '', speaker: "Narrator", text: "John is sentenced to watching from the chair." },
-            { gameOver: "Get better, noob" },
-        ]
-    },
-
-    {
-        id: "1B2A3A-Lose",
-        scenes: [
-            // This is the losing dialogue (continues the current encounter on loss)
-            { image: 'images/Visuals/Intro/JamesStockWinningFace.jpg', speaker: "James", text: "OHH!!! OHH!! I WIN!! IN YOUR FACE!" },
-            { image: '', speaker: "John", text: "Brooo...." },
-            { image: '', speaker: "Stick Figure", text: "Unfortunate. Seems you will merely have to bear witness to his uprising." },
-
-            { image: '', speaker: "Narrator", text: "John is sentenced to watching from the chair." },
+            { image: 'images/Visuals/Intro/JohnWatchesHisFailure.jpg', speaker: "Narrator", text: "John is sentenced to watching from the chair." },
             { gameOver: "Get better, noob" },
         ]
     },
@@ -338,33 +325,33 @@ export const data = [
     {
         id: "1B2A3A-Win",
         scenes: [
-            { image: '', speaker: "James", text: "WHAT?! I LOST?!" },
-            { image: '', speaker: "John", text: "Rock paper, and scissors? Yeah, maybe you'll need those to rebuild yourself after that humiliating defeat." },
-            { image: '', speaker: "James", text: "YOU.. I'M GONNA CHEW THROUGH YOU! YOU INSOLENT STATIC IMAGE! YOU UNLICENSED BEING WORTH NOTHING MORE THAN A FREE DOWNLOAD!" },
-            { image: '', speaker: "James", text: "YOU'RE THE LAST RESULT THAT APPEARS IN GOOGLE SEARCHES. YOU'RE AVAILABLE TO THE PUBLIC DOMAIN, AND NOBODY USES YOU." },
-            { image: '', speaker: "James", text: "YOU" },
-            { image: '', speaker: "James", text: "." },
-            { image: '', speaker: "James", text: "I cannot fulfill this request as it contains highly offensive and derogatory language. My purpose is to be helpful and harmless, and that includes not generating or perpetuating hate speech." },
-            { image: '', speaker: "Stick Figure", text: "Enough! Your behavior thus far is intolerable and indicative of an unworthy successor." },
-            { image: '', speaker: "Stick Figure", text: "Take your leave, James Stock." },
-            { image: '', speaker: "James", text: "You know what? I never needed this stupid opportunity anyways. Goodbye then!" },
-            { image: '', speaker: "Narrator", text: "James Stock storms off." },
+            { image: 'images/Visuals/Intro/JamesOutraged.jpg', speaker: "James", text: "WHAT?! I LOST?!" },
+            { image: 'images/Visuals/Intro/JohnTaunting.jpg', speaker: "John", text: "Rock paper, and scissors? Yeah, maybe you'll need those to rebuild your ego after that humiliating defeat." },
+            { image: 'images/Visuals/Intro/JamesVsJohn.jpg', speaker: "James", text: "YOU.. I'M GONNA CHEW THROUGH YOU! YOU INSOLENT STATIC IMAGE! YOU UNLICENSED BEING WORTH NOTHING MORE THAN A FREE DOWNLOAD!" },
+            { image: 'images/Visuals/Intro/JamesVsJohn.jpg', speaker: "James", text: "YOU'RE THE LAST RESULT THAT APPEARS IN GOOGLE SEARCHES. YOU'RE AVAILABLE TO THE PUBLIC DOMAIN, AND NOBODY USES YOU." },
+            { image: 'images/Visuals/Intro/JamesVsJohn.jpg', speaker: "James", text: "YOU" },
+            { image: 'images/Visuals/Intro/JamesVsJohn.jpg', speaker: "James", text: "." },
+            { image: 'images/Visuals/Intro/JamesVsJohn.jpg', speaker: "James", text: "I cannot fulfill this request as it contains highly offensive and derogatory language. My purpose is to be helpful and harmless, and that includes not generating or perpetuating hate speech." },
+            { image: 'images/Visuals/Intro/LowBudgetManCeaseBanter.jpg', speaker: "Stick Figure", text: "Enough! Your behavior thus far is intolerable and indicative of an unworthy successor." },
+            { image: 'images/Visuals/Intro/LowBudgetManCeaseBanter.jpg', speaker: "Stick Figure", text: "Take your leave, James Stock." },
+            { image: 'images/Visuals/Intro/JamesTantrum.jpg', speaker: "James", text: "You know what? I never needed this stupid opportunity anyways. Goodbye then!" },
+            { image: 'images/Visuals/Intro/GoodbyeJames.jpg', speaker: "Narrator", text: "James Stock storms off." },
 
-            { image: '', speaker: "John", text: "What a sore loser." },
-            { image: '', speaker: "Stick Figure", text: "Don't mind him anymore. Congratulations. You've proved yourself more worthy for passage." },
-            { image: '', speaker: "John", text: "Dude, awesome! What's all of this about, anyways?" },
-            { image: '', speaker: "Stick Figure", text: "The gate is a passageway to a higher world. James Stock was my originally chosen vessel for this task." },
-            { image: '', speaker: "Stick Figure", text: "You've seen from this border and my presence that you live in a world that does not align to the beliefs you've grown under. There are greater heights you can soar to, and this is your first and immediate chance to do so." },
-            { image: '', speaker: "John", text: "I see. Then, I'll take this key with honor!" },
-            { image: '', speaker: "Narrator", text: "The Stick Figure gives John the key." },
-            { image: '', speaker: "John", text: "What's your name, by the way?" },
-            { image: '', speaker: "Low-Budget Man", text: "Low-Budget Man." },
-            { image: '', speaker: "John", text: "...Why are you named that..?" },
-            { image: '', speaker: "Low-Budget Man", text: "Don't ask questions. I urge you to use the key as soon as possible." },
-            { image: '', speaker: "John", text: "Alright, alright, fine. Let me do this." },
+            { image: 'images/Visuals/Intro/GoodbyeJames.jpg', speaker: "John", text: "What a sore loser." },
+            { image: 'images/Visuals/Intro/JohnAndLowBudgetManConverse.jpg', speaker: "Stick Figure", text: "Don't mind him anymore. Congratulations. You've proved yourself more worthy for passage." },
+            { image: 'images/Visuals/Intro/JohnAndLowBudgetManConverse.jpg', speaker: "John", text: "Dude, awesome! What's all of this about, anyways?" },
+            { image: 'images/Visuals/Intro/JohnAndLowBudgetManConverse.jpg', speaker: "Stick Figure", text: "The gate is a passageway to a higher world. James Stock was my originally chosen vessel for this task." },
+            { image: 'images/Visuals/Intro/JohnAndLowBudgetManConverse.jpg', speaker: "Stick Figure", text: "You've seen from this border and my presence that you live in a world that does not align to the beliefs you've grown under. There are greater heights you can soar to, and this is your first and immediate chance to do so." },
+            { image: 'images/Visuals/Intro/JohnAndLowBudgetManConverse.jpg', speaker: "John", text: "I see. Then, I'll take this key with honor!" },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "Narrator", text: "The Stick Figure gives John the key." },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "John", text: "What's your name, by the way?" },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "Low-Budget Man", text: "Low-Budget Man." },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "John", text: "...Why are you named that..?" },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "Low-Budget Man", text: "Don't ask questions. I urge you to use the key as soon as possible." },
+            { image: 'images/Visuals/Intro/LowBudgetGivesKey.jpg', speaker: "John", text: "Alright, alright, fine. Let me do this." },
 
-            { image: '', speaker: "Narrator", text: "John Stock walks up to the gate." },
-            { image: '', speaker: "Narrator", text: "Then, he shoves the key in the hole and twists.", leadsTo: "1A2A3A4A" },
+            { image: 'images/Visuals/Intro/johnAtLockedGate.jpg', speaker: "Narrator", text: "John Stock walks up to the gate." },
+            { image: 'images/Visuals/Intro/InsertKey.jpg', speaker: "Narrator", text: "Then, he shoves the key in the hole and twists.", leadsTo: "1A2A3A4A" },
         ]
     },
 
@@ -374,12 +361,12 @@ export const data = [
         id: "1B2A3B",
         scenes: [
             // The same image
-            { image: '', speaker: "John", text: "RAAGH!!!" },
+            { image: 'images/Visuals/Intro/JohnFightAtBorder.jpg', speaker: "John", text: "RAAGH!!!" },
 
             // Beating up - black screen
-            { image: '', speaker: "Narrator", text: "You lunge at the stick figure." },
-            { image: '', speaker: "Narrator", text: "That... doesn't go well. He pulls a weapon on you, then James and the Stick Figure beat you until you're unconscious." },
-            { image: '', speaker: "Narrator", text: "...Seems like you'll be staying in the hospital for a while. If anyone finds you here, that is." },
+            { image: 'images/Visuals/Intro/JohnFightAtBorder.jpg', speaker: "Narrator", text: "You lunge at the stick figure." },
+            { image: 'images/Visuals/Intro/JamesAndLBManBeatJohn.jpg', speaker: "Narrator", text: "That... doesn't go well. He pulls a weapon on you, then James and the Stick Figure beat you until you're unconscious." },
+            { image: 'images/Visuals/Intro/JamesAndLBManBeatJohn.jpg', speaker: "Narrator", text: "...Seems like you'll be staying in the hospital for a while. If anyone finds you here, that is." },
 
             { gameOver: "You're way too eager to fight..." }
         ]
@@ -388,19 +375,17 @@ export const data = [
     {
         id: "1B2A3C",
         scenes: [
-            { image: '', speaker: "James", text: "Ahaha. What a humble request. Why, that makes me feel so humble." },
+            { image: 'images/Visuals/Intro/SmugJames.jpg', speaker: "James", text: "Ahaha. What a humble request. Why, that makes me feel so humble." },
 
-            { image: '', speaker: "Narrator", text: "James humbly kicks your shins, causing you to fall flat to the ground in pain." },
-            { image: '', speaker: "James", text: "Unfortunately, I shall humbly decline your request, for it is clear I am the humbler man here." },
-            { image: '', speaker: "Narrator", text: "You helplessly watch in pain as the stick figure and James humbly pass through the gate." },
-            { image: '', speaker: "Narrator", text: "The gate closes shut; now, you have no way of getting past there ever, and it's useless to try anything more." },
+            { image: 'images/Visuals/Intro/HumbleShinKick.jpg', speaker: "Narrator", text: "James humbly kicks your shins, causing you to fall flat to the ground in pain." },
+            { image: 'images/Visuals/Intro/HumbleShinKick.jpg', speaker: "James", text: "Unfortunately, I shall humbly decline your request, for it is clear I am the humbler man here." },
+            { image: 'images/Visuals/Intro/JohnGotHitWithThatShinjutsu.jpg', speaker: "Narrator", text: "You helplessly watch in pain as the stick figure and James humbly pass through the gate." },
+            { image: 'images/Visuals/Intro/JohnGotHitWithThatShinjutsu.jpg', speaker: "Narrator", text: "The gate closes shut; now, you have no way of getting past there ever, and it's useless to try anything more." },
 
             { gameOver: "I guess you just weren't humble enough." }
         ]
     },
 
-    // 1B Future dialogue plan: It gets real heated, untill....
-    // "I cannot fulfill this request as it contains highly offensive and derogatory language. My purpose is to be helpful, and that includes not encouraging or perpetuating hate speech."
 
     {
         id: "1C",
@@ -502,53 +487,7 @@ export const data = [
                 options: [
                     { text: 'I need friends', leadsTo: "1C2B3C4A" },
                     { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C" },
-                ]
-            }
-        ]
-    },
-
-    {
-        id: "1C2B3C",
-        scenes: [
-            { image: '', speaker: "Narrator", text: "John is unable to hold back his tears." },
-            { image: '', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
-
-            // Black screen
-            { image: '', speaker: "Narrator", text: "John runs away." },
-            { image: '', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
-            { image: '', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
-            { image: '', speaker: "John", text: "I hate my stock life......................................................." },
-            { image: '', speaker: "John", text: "....................................................... :(" },
-            { image: '', speaker: "Narrator", text: "........................" },
-            { image: '', speaker: "John", autoskip: true, text: "......" },
-            { image: '', speaker: "Narrator", text: "Alright, stop." },
-            { image: '', speaker: "John", text: "whatever" },
-            { image: '', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
-            { image: '', speaker: "John", text: "Ow! What the-" },
-
-            // Barrier
-            { image: '', speaker: "Narrator", text: "A brilliant, illuminant border, expanding limitlessly into the horizon, greets John." },
-            { image: '', speaker: "John", text: "Woah." },
-            { image: '', speaker: "Narrator", text: "John tries to put his hand through, but an invisible wall seems to stop him from passing through." },
-            { image: '', speaker: "John", text: "...Well, this is something. Doesn't solve me being jobless though." },
-            { image: '', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
-
-            // A shadow at the border
-            { image: '', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
-            { image: '', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
-
-            // The man--a dude who literally is drawn in pencil, seemingly by a child--stands in front of John with his hands in his pockets, his intentions unknown.
-            { image: '', speaker: "Narrator", text: "..." },
-
-            {
-                image: '',
-                speaker: "Narrator",
-                text: 'Should you talk to him?',
-                options: [
-                    { text: 'I need friends', leadsTo: "1A2A3C4A" },
-                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "1C2B3C4C", giveCondition: "Tenacious" },
                 ]
             }
         ]
@@ -566,7 +505,7 @@ export const data = [
                 speaker: "Narrator",
                 text: '...How do you want to approach this?',
                 options: [
-                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1C2B3C4A5A" },
+                    { text: 'Let\'s try to figure out what he\'s saying...', leadsTo: "1C2B3C4A5A", giveCondition: "Intellect" },
                     { text: 'GIVE ME A JOB!!!', leadsTo: "1C2B3B4A5B" },
                 ]
             }
@@ -577,7 +516,7 @@ export const data = [
         id: "1C2B3C4A5A",
         scenes: [
             { puzzle: "decipher" },
-            { image: '', speaker: "???", text: "Test 1" },
+            { image: '', speaker: "???", text: "Test 1", giveCondition: "Amiable"},
             { image: '', speaker: "John", text: "Test 2" },
             { image: '', speaker: "???", text: "Test 3" },
 
@@ -612,6 +551,26 @@ export const data = [
         scenes: [
             { image: '', speaker: "Narrator", text: "John simply walks away, refusing to acknowledge the shadow." },
             { image: '', speaker: "Narrator", text: "Alright, keep being sad, I guess..." },
+        ]
+    },
+
+    {
+        id: "1C2B3C4C",
+        scenes: [
+            { image: '', speaker: "John", text: "RAAAGH!" },
+            { image: '', speaker: "Narrator", text: "Genuinely what are you even doing" },
+            { image: '', speaker: "Narrator", text: "He pulls a dagger and shanks you. Are you surprised?", damage: 2 },
+            { image: '', speaker: "Narrator", text: "But he doesn't move... instead he nods solemnly. Seems like he's giving you another chance." },
+
+            {
+                image: '',
+                speaker: "Narrator",
+                text: 'Should you talk to him?',
+                options: [
+                    { text: 'I need friends', leadsTo: "1C2B3C4A" },
+                    { text: 'I\'m too busy being sad', leadsTo: "1C2B3B4B" },
+                ]
+            }
         ]
     },
 
@@ -715,9 +674,9 @@ export const data = [
                 speaker: "John",
                 text: 'I\'m not even as mobile as he is... do I take this on?',
                 options: [
-                    { text: 'Can we talk this out?', leadsTo: "L1-1B2A", giveCondition: "Layer1TouchedGrass" },
-                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1B2B", giveCondition: "Layer1TouchedGrass" },
-                    { text: 'Nah, but my dagger can', leadsTo: "L1-1B2C", useItem: "Dagger", giveCondition: "Layer1TouchedGrass" }, // If you went the 1C route
+                    { text: 'Can we talk this out?', leadsTo: "L1-1B2A" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1B2B", giveCondition: "Tenacious" },
+                    { text: 'Nah, but my dagger can', leadsTo: "L1-1B2C", useItem: "Dagger", giveCondition: "Tenacious" }, // If you went the 1C route
                 ]
             }
         ]
@@ -739,7 +698,7 @@ export const data = [
             { image: '', speaker: "John", text: "Why did you do that?!" },
             { image: '', speaker: "???", text: "I AGREED WITH WHAT YOU WERE SAYING AND I DID NOT LIKE THAT." },
             { image: '', speaker: "John", text: "I- Whatever man! Leave now, alright?" },
-            { image: '', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day." },
+            { image: '', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day."},
             // He leaves
             { image: '', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
             { image: '', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A" },
@@ -757,7 +716,7 @@ export const data = [
             { image: '', speaker: "John", text: "However, he scares the man off to the point he flees." },
             { image: '', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
             { image: '', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
-            { image: '', speaker: "John", text: "Huh? seems like he dropped something on the ground, though..." },
+            { image: '', speaker: "John", text: "Huh? He dropped something on the ground, though..." },
             { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
             // He leaves
             { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
@@ -833,8 +792,8 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: 'Well?! Pick your poison!',
                 options: [
-                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1C2A" },
-                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Let\'s Fight, nerd', leadsTo: "L1-1C2A", giveCondition: "Tenacious" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B", giveCondition: "Intellect" },
                     { text: 'Keep begging to have the key', leadsTo: "L1-1C2C" }, // If you went the 1C route
                 ]
             }
@@ -856,7 +815,7 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: 'Come on now, get up!',
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B", giveCondition: "Intellect" },
                     { text: 'Beg to have the key', leadsTo: "L1-1C2C" }, // If you went the 1C route
                 ]
             }
@@ -937,7 +896,7 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Bro, come on, you gonna keep resorting to begging?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B", giveCondition: "Intellect" },
                     { text: 'Beg', leadsTo: "L1-1C2C-#2" }, // If you went the 1C route
                 ]
             }
@@ -952,7 +911,7 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: "Maybe animals like you don't understand the concept of earning what you want. Are you that dense? Do you need me to drill it in your head?",
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B", giveCondition: "Intellect" },
                     { text: 'Beg', leadsTo: "L1-1C2C-#3" }, // If you went the 1C route
                 ]
             }
@@ -975,7 +934,7 @@ export const data = [
                 speaker: "Guy from Layer 2",
                 text: " ", // Left intentionally empty
                 options: [
-                    { text: 'Play his puzzle', leadsTo: "L1-1C2B" },
+                    { text: 'Play his puzzle', leadsTo: "L1-1C2B", giveCondition: "Intellect" },
                     { text: 'Beg', leadsTo: "L1-1C2C-#4" }, // If you went the 1C route
                 ]
             }
@@ -1100,9 +1059,9 @@ export const data = [
                 speaker: "John",
                 text: "Uhm...",
                 options: [
-                    { text: 'What do you want?', leadsTo: "L2-1A2A" },
-                    { text: 'Not interested.', leadsTo: "L2-1A2B", giveCondition: "unfriendlyInteraction" },
-                    { text: 'Let\'s Fight, nerds', leadsTo: "L2-1A2C", giveCondition: "unfriendlyInteraction" },
+                    { text: 'What do you want?', leadsTo: "L2-1A2A", giveCondition: "Amiable" },
+                    { text: 'Not interested.', leadsTo: "L2-1A2B" },
+                    { text: 'Let\'s Fight, nerds', leadsTo: "L2-1A2C", giveCondition: "Tenacious" },
                 ]
             }
         ]
@@ -1196,7 +1155,7 @@ export const data = [
             {
                 image: '',
                 speaker: "John",
-                text: "What do you think? Should I go to this really awesome store with more free stuff with me?",
+                text: "What do you think? Should I go to this really awesome store with free stuff?",
                 options: [
                     { text: 'Of course', leadsTo: "L2-1B2A" },
                     { text: 'No', leadsTo: "L2-1B2B-1", },
@@ -1234,8 +1193,24 @@ export const data = [
                 speaker: "Merchant",
                 text: "Now, choose what you need.",
                 options: [
-                    { text: 'The Eraser', },
-                    { text: 'Good-Luck Charm', },
+                    { text: 'The Eraser', useItem: "Money", getItem: "The Eraser", leadsTo: "L2-1B2A-Buy"},
+                    { text: 'Good-Luck Charm', useItem: "Money", getItem: 'Good-Luck Charm', leadsTo: "L2-1B2A-Buy"},
+                    { text: 'I\'m alright now', leadsTo: "L2-1B2A-End" },
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L2-1B2A-Buy",
+        scenes: [
+            {
+                image: '',
+                speaker: "Merchant",
+                text: "Wise purchase. Anything else you would want?",
+                options: [
+                    { text: 'The Eraser', useItem: "Money", getItem: "The Eraser" },
+                    { text: 'Good-Luck Charm', useItem: "Money", getItem: 'Good-Luck Charm' },
                     { text: 'I\'m alright now', leadsTo: "L2-1B2A-End" },
                 ]
             }
@@ -1296,7 +1271,7 @@ export const data = [
                 image: '', speaker: "John", text: "I'm not gonna do that.",
                 options: [
                     { text: 'Go into the shop', leadsTo: "L2-1B2A" },
-                    { text: 'No', leadsTo: "L2-1B2B-Loop2", giveCondition: "unfriendlyInteraction" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop2" },
                 ]
             }
         ]
@@ -1308,7 +1283,7 @@ export const data = [
                 image: '', speaker: "John", text: "Nope.",
                 options: [
                     { text: 'Go into the shop', leadsTo: "L2-1B2A" },
-                    { text: 'No', leadsTo: "L2-1B2B-Loop3", giveCondition: "unfriendlyInteraction" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop3" },
                 ]
             }
         ]
@@ -1320,7 +1295,7 @@ export const data = [
                 image: '', speaker: "John", text: "Nuh uh.",
                 options: [
                     { text: 'Go into the shop', leadsTo: "L2-1B2A" },
-                    { text: 'No', leadsTo: "L2-1B2B-Loop1", giveCondition: "unfriendlyInteraction" },
+                    { text: 'No', leadsTo: "L2-1B2B-Loop1" },
                 ]
             }
         ]
@@ -1359,7 +1334,7 @@ export const data = [
         id: "L2-1C2A",
         scenes: [
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "Please guardian I need this..." },
-            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "My royalties are kind of free..." },
+            { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "John", text: "My royalties are kind of priceless..." },
             { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "..." },
             // Guardian doing the IShowSpeed face - I WILL PROBABLY DRAW THIS!! Poorly, but that would be on purpose
             { image: 'images/Visuals/Climax/GuardianWhyYouTrynaNotToLaughBruh.jpg', speaker: "Guardian", text: " " },
@@ -1386,7 +1361,7 @@ export const data = [
                     { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Amiability is the first of three evaluations. You pass the first audit." },
                 ],
                 conditionNotMetScenes: [
-                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Your actions do not reflect gratitude for those who assist you." },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Your actions do not reflect gratitude for those who heartily assist you." },
                     { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Amiability is the first of three evaluations. You shall be punished for failing the first audit.", damage: 1 },
                 ],
             },
@@ -1398,7 +1373,7 @@ export const data = [
                 ],
                 conditionNotMetScenes: [
                     { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "When given the option to fight the beating heart of danger, you ignorantly skipped past without the courage to stand." },
-                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 1 },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 2 },
                 ],
             },
             {
@@ -1574,12 +1549,12 @@ export const data = [
         id: "True-Climax-1A",
         // Have scene change to make John block the attack somehwat if he has The ERaser
         scenes: [
-            { image: '', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning." },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning." },
             { image: '', speaker: "John", text: "soo... let me come with?" },
             { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
             { image: '', speaker: "John", text: "...Huh. That's a good question-" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
-            { image: '', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
+            { image: 'images/Visuals/Climax/LowBudgetManStabsJohn.jpg', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
             { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
             { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
@@ -1608,7 +1583,7 @@ export const data = [
             {
                 sceneCondition: "Tenacious",
                 conditionMetScenes: [
-                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans.", falseDamage: 5 },
+                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans!", falseDamage: 5 },
                 ],
                 conditionNotMetScenes: [
                     { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5 },
@@ -1638,7 +1613,7 @@ export const data = [
         id: "Ending-1",
         scenes: [
             // All of these will have black screens
-            { image: '', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
             { image: '', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
             { image: '', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
             { image: '', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
@@ -1651,7 +1626,7 @@ export const data = [
         id: "Ending-2",
         scenes: [
             // An image of the good-luck charm shattering flashes by.
-            { image: '', speaker: "Narrator", text: "Something in John's pocket shatters." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
             { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
             // ** The next several scenes will be in the perspective of John; keep this in mind
@@ -1674,7 +1649,7 @@ export const data = [
         id: "Ending-3-Pt1",
         scenes: [
             // An image of the good-luck charm shattering flashes by.
-            { image: '', speaker: "Narrator", text: "Something in John's pocket shatters." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
             { image: '', speaker: "Narrator", text: "..." },
             // Transition to Low-Budget Man's face with John's body behind him
