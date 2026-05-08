@@ -137,48 +137,63 @@ button:hover {
 #dialogueBox {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
-    /* Temporary placement while we figure out how to actually position it where we want it */
+    
+    /* Change this to change width of dialogue box */
+    width: 80%;
+}
+
+/* Actual text in the dialogue box */
+
+#dialogueBoxStyle {
+    display: inline-block;
+    overflow: auto;
+    height: max(auto, 300px);
+    padding: 20px;
+
+    border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
+    border-radius: var(--border-radius);
+    background-color: #F9F9F9;
+    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
+
+    & #dialogue {
+        font-size: clamp(20px, 5vw, 35px);
+        width: 100%;
+    }
 }
 
 #speakerTag {
-    margin-left: clamp(125px, 15vh, 400px);
-    padding:clamp(5px, 3vh, 20px);
+    margin-left: clamp(10px, 7vh, 400px);
+    padding:clamp(10px, 3vh, 20px);
     position: absolute;
-    top:-70px;
-    height: clamp(20px, 10vh, 45px);
-    width: clamp(100px, 30vh, 200px);
+    top: -70px;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    font-size:clamp(10px, 7vh, 40px);
+    font-size:clamp(30px, 7vh, 40px);
+    text-wrap: nowrap;
 
     background-color: var(--main-black);
     color: var(--main-white);
     border-radius: var(--border-radius);
 }
 
-#dialogueBoxStyle,
 #inventorySection {
     border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
-    width: auto;
     margin-left: clamp(20px, 8vw, 120px);
     margin-right: clamp(20px, 8vw, 120px);
     height: clamp(100px, 20vh, 200px);
     justify-self: center;
-
-    & p {
-        font-size: clamp(20px, 6vh, 45px);
-        height: 100%;
-        margin: 40px;
-    }
 }
 
+#inventorySection p {
+    height: 100%;
+    margin: 40px;
+}
 /* Inventory list*/
 #inventory {
     display: flex;
