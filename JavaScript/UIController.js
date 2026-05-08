@@ -39,7 +39,7 @@ let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
 let lastEncounter = undefined;
 let lastUniqueImageSRC = undefined; // For Journal
-
+let lastOptionScene = undefined;
 let inventoryEnabled = false;
 let journalEnabled = false;
 
