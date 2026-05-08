@@ -450,28 +450,28 @@ export const data = [
     {
         id: "1C2B3C",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John is unable to hold back his tears." },
-            { image: '', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "Narrator", text: "John is unable to hold back his tears." },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
 
             // Black screen
-            { image: '', speaker: "Narrator", text: "John runs away." },
-            { image: '', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
-            { image: '', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
-            { image: '', speaker: "John", text: "I hate my stock life......................................................." },
-            { image: '', speaker: "John", text: "....................................................... :(" },
-            { image: '', speaker: "Narrator", text: "........................" },
-            { image: '', speaker: "John", autoskip: true, text: "......" },
-            { image: '', speaker: "Narrator", text: "Alright, stop." },
-            { image: '', speaker: "John", text: "whatever" },
-            { image: '', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
-            { image: '', speaker: "John", text: "Ow! What the-" },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "John runs away." },
+            { image: 'images/Visuals/Intro/john-running-away.jpg', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
+            { image: 'images/Visuals/Intro/john-running-eyes-closed.jpg', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "I hate my stock life......................................................." },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "....................................................... :(" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "Narrator", text: "........................" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", autoskip: true, text: "......" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "Narrator", text: "Alright, stop." },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "whatever" },
+            { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
+            { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "John", text: "Ow! What the-" },
 
             // Barrier
-            { image: '', speaker: "Narrator", text: "A brilliant, illuminant border, expanding limitlessly into the horizon, greets John." },
-            { image: '', speaker: "John", text: "Woah." },
-            { image: '', speaker: "Narrator", text: "John tries to put his hand through, but an invisible wall seems to stop him from passing through." },
-            { image: '', speaker: "John", text: "...Well, this is something. Doesn't solve me being jobless though." },
-            { image: '', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
+            { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "Narrator", text: "A brilliant, illuminant border, expanding limitlessly into the horizon, greets John." },
+            { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "John", text: "Woah." },
+            { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "Narrator", text: "John tries to put his hand through, but an invisible wall seems to stop him from passing through." },
+            { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "John", text: "...Well, this is something. Doesn't solve me being jobless though." },
+            { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
 
             // A shadow at the border
             { image: '', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
