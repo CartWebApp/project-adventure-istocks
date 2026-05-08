@@ -1373,7 +1373,7 @@ export const data = [
                 ],
                 conditionNotMetScenes: [
                     { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "When given the option to fight the beating heart of danger, you ignorantly skipped past without the courage to stand." },
-                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 2 },
+                    { image: 'images/Visuals/Climax/JohnTalksToGuardian.jpg', speaker: "Guardian", text: "Tenacity is the second of three evaluations. You shall be punished for failing the second audit.", damage: 1 },
                 ],
             },
             {
