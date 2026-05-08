@@ -578,7 +578,6 @@ p {
     align-items: center;
     justify-content: center;
     width: 410px;
-    height: 250px;
 
     & button {
         background-color: #2E2E2E;
