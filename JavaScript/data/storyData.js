@@ -1628,12 +1628,12 @@ export const data = [
             // An image of the good-luck charm shattering flashes by.
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
-            { image: '', speaker: "John's Internal Monologue", text: "Huh..?" },
+            { image: 'images/Visuals/JohnWakesAgain.png', speaker: "John's Internal Monologue", text: "Huh..?" },
             // ** The next several scenes will be in the perspective of John; keep this in mind
             // He wakes to an empty field.. except for a permanently shut border and the dissipating body of the Guardian.
             { image: '', speaker: "John's Internal Monologue", text: "Oh hey, I'm still alive." },
             { image: '', speaker: "John's Internal Monologue", text: "That's pretty cool, but..." },
-            { image: '', speaker: "Narrator", text: "The gate is now permanently shut. Low-Budget Man had already advanced through." },
+            { image: 'images/Visuals/JohnIsAlone.png', speaker: "Narrator", text: "The gate is now permanently shut. Low-Budget Man had already advanced through." },
             { image: '', speaker: "John's Internal Monologue", text: "Well, that's a shame." },
             // John raises his hands up and looks at them - they're animated. He can move them freely.
             { image: '', speaker: "John's Internal Monologue", text: "I look kinda funny. No wonder I've been feeling really loose since I woke up." },
