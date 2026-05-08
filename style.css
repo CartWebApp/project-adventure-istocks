@@ -105,7 +105,7 @@ button:hover {
 #visuals {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     padding-top: 4em;
     gap: 50px;
 }
@@ -144,15 +144,17 @@ button:hover {
 }
 
 #speakerTag {
-    margin-left: 20px;
-    margin-bottom: 0px;
+    margin-left: clamp(40px, 15vh, 400px);
     padding: 20px;
     position: absolute;
     top: -90px;
-    left: 10px;
-    width: 260px;
+    height: clamp(20px, 10vh, 45px);
+    width: clamp(100px, 30vh, 200px);
     text-align: center;
-    text-wrap: nowrap;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+
 
     background-color: var(--main-black);
     color: var(--main-white);
@@ -165,13 +167,14 @@ button:hover {
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
-
-    width: 98.4%;
-    height: 200px;
+    width: auto;
+    margin-left: clamp(20px, 8vw, 120px);
+    margin-right: clamp(20px, 8vw, 120px);
+    height: clamp(150px, 20vh, 200px);
     justify-self: center;
 
     & p {
-        font-size: max(2.65em, 100%);
+        font-size: clamp(20px, 6vh, 45px);
         height: 100%;
         margin: 40px;
     }
@@ -193,15 +196,15 @@ button:hover {
 }
 
 #next {
-    margin-left: 80%;
+    margin-left: clamp(20%, 126vh, 80%);
     background-color: var(--main-black);
     color: var(--main-white);
     border: 4px solid var(--option-border-black);
     border-radius: var(--border-radius);
     padding: 5px 10px;
-    width: 284px;
-    height: 98px;
-    font-size: 30px;
+    width: clamp(200px, 20vh, 400px);
+    height: clamp(40px, 20vh, 100px);
+    font-size: clamp(10px, 10vh, 40px);
     justify-self: flex-end;
 }
 
@@ -212,7 +215,7 @@ button:hover {
 #optionsRow {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: clamp(10px, 5vh, 50px);
 
     list-style: none;
     margin-left: 0px;
@@ -231,6 +234,12 @@ button:hover {
         border-radius: var(--border-radius);
         padding: 5px 10px;
     }
+
+    & p {
+        font-size: clamp(10px, 20vh, 40px);
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 
@@ -244,8 +253,8 @@ button:hover {
     height: 98%;
 
     & img {
-        aspect-ratio:1/1;
-        width:clamp(50px, 10vh, 200px);
+        aspect-ratio: 1/1;
+        width: clamp(50px, 10vh, 200px);
     }
 }
 
@@ -254,21 +263,35 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
-    height: 100vh;
+    height: 97vh;
     margin-right: 20px;
 }
 
 #inventoryButton {
     position: relative;
     order: 1;
-    height: 80px;
-    width: 80px;
+    height: clamp(20px, 20vh, 80px);
+    width: clamp(20px, 20vh, 80px);
     justify-self: center;
     display: flex;
-    margin-top: 20px;
-    margin-right: 45px;
+    margin-top: clamp(10px, 10vh, 20px);
+    margin-right: clamp(20px, 20vh, 65px);
     background-color: #ffffff00;
     border: 0;
+}
+
+#journalButton {
+    position: relative;
+    order: 1;
+    height: clamp(20px, 20vh, 80px);
+    width: clamp(20px, 20vh, 80px);
+    justify-self: center;
+    display: flex;
+    margin-top: clamp(10px, 10vh, 20px);
+    margin-right: clamp(20px, 20vh, 65px);
+    background-color: #ffffff00;
+    border: 0;
+
 }
 
 p {
@@ -409,60 +432,61 @@ p {
 
 
 #decipherPuzzle {
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
-    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+
     & h2 {
         font-family: var(--font-family);
-        font-size:clamp(25px, 8vh, 75px);
+        font-size: clamp(25px, 8vh, 75px);
     }
 }
 
 #languageKey {
-    width:clamp(300px, 20vh, 400px);
+    width: clamp(300px, 20vh, 400px);
 
 }
 
 #inputDecryption {
     background-color: var(--main-black);
-    color:var(--main-white);
+    color: var(--main-white);
     border: 4px solid var(--option-border-black);
-    border-radius:var(--border-radius);
+    border-radius: var(--border-radius);
     padding: 10px 10px;
-    font-size:30px;
-    width:50%;
-    justify-self:center;
-    align-self:center;
+    font-size: 30px;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
 }
 
 
 #decryptingForm {
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    gap:20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
 }
 
 
 #submitDecryption {
     background-color: var(--main-black);
-            color: var(--main-white);
-            border: 4px solid var(--option-border-black);
-            border-radius: var(--border-radius);
-            padding: 10px 10px;
-            font-size: 30px;
-            justify-self: center;
-            align-self: center;
-            width: clamp(60px, 40vh, 200px);
-            height:clamp(20px, 40vh, 75px);
+    color: var(--main-white);
+    border: 4px solid var(--option-border-black);
+    border-radius: var(--border-radius);
+    padding: 10px 10px;
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+    width: clamp(60px, 40vh, 200px);
+    height: clamp(20px, 40vh, 75px);
 }
 
 
 #encryptedImg {
     width: clamp(50%, 20vh, 500px);
-    border-radius:var(--border-radius);
+    border-radius: var(--border-radius);
 }
 
 
@@ -592,7 +616,8 @@ p {
     border: 5px solid #2E2E2E;
     border-radius: 20px;
     margin-bottom: 35px;
-    margin-top: 35px;
+    margin-top: clamp(0px, 15vh, 150px);
+    width:auto;
 }
 
 
@@ -601,11 +626,12 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 300px;
+    gap:clamp(250px, 21.9vh, 500px);
+
 
 
     & aside div {
-        font-size: 30px;
+        font-size: clamp(15px, 5vh, 40px);
         font-family: var(--font-family);
         align-self: flex-end;
     }
@@ -643,10 +669,7 @@ p {
 
     & button {
         background-color: var(#FFF8F0);
-        width: 250px;
-        height: 100px;
-        gap: 300px;
-        font-size: 30px;
+        font-size:clamp(10px, 5vh, 30px);
         border-radius: 20px;
         border: 5px solid #5E5E5E;
     }
@@ -748,7 +771,50 @@ p {
 }
 
 
+@media (orientation: landscape) and (max-height: 402px) and (max-width:1000px) {
+    #visuals {
+        gap: 0px;
+        padding-top: 10px;
+    }
+
+    #rockPaperScissorsPuzzle {
+        margin-top:0px;
+        margin-bottom:0px;
+    }
+
+    #startButtons {
+        margin-top: 0px;
+        gap: 15px;
+
+        & button {
+            font-size: 20px;
+            width: 184px;
+            height: 54px;
+        }
+    }
+
+    #holesAndShapesPuzzle>p {
+        display: none;
+    }
+
+
+    #startingScreen h1 {
+        text-align: center;
+        font-size: 35px;
+        border: 5px solid #2E2E2E;
+    }
+
+    #startingScreen div {
+        gap: 15px;
+    }
+}
+
+
+
 /* Media Queries for Landscape Mobile Phones*/
+
+/*
+
 
 @media (orientation: landscape) and (max-height: 402px) and (max-width:874px) {
 
@@ -896,85 +962,75 @@ p {
     /* Puzzle Media Queries */
 
 
-    /* Rock, Paper, Scissors Mobile*/
+/* Rock, Paper, Scissors Mobile*/
 
-    #resultDisplay {
-        font-size: 20px;
-    }
+#resultDisplay {
+    font-size: 20px;
+}
 
-    #choices {
+#choices {
+    height: 50px;
+
+    & button {
+        width:clamp(150px, 20vh, 200px);
         height: 50px;
+    }
+}
+
+.scoreDisplay {
+    font-size: 20px;
+}
+
+
+/* Holes and Shapes Mobile */
+
+
+#draggableShapeContainer img {
+    width: 50px;
+    height: 50px;
+}
+
+#holesAndShapesPuzzle #draggableShapeContainer>img {
+
+    width: 50px;
+    height: 50px;
+}
+
+element.style {
+    width: 50px;
+    height: 50px;
+}
+
+#holesAndShapesPuzzle #boxOfHoles {
+    margin-top: 0px;
+
+    & img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+#holesAndShapesPuzzle #GL2Profile {
+    margin-bottom: 55px;
+    gap: 200px;
+
+    & div {
+        width: 300px;
+        height: 100px;
 
         & button {
-            width: 200px;
-            height: 50px;
+            width: 100px;
+            top: 5px;
+            font-size: 25px;
+        }
+
+        & p {
+            font-size: 13px;
         }
     }
 
-    .scoreDisplay {
-        font-size: 20px;
-    }
-
-
-    #rockPaperScissorsDuel {
-        gap: 150px;
-
-        & aside div {
-            font-size: 20px;
-        }
-    }
-
-
-    /* Holes and Shapes Mobile */
-
-
-    #draggableShapeContainer img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #holesAndShapesPuzzle #draggableShapeContainer>img {
-
-        width: 50px;
-        height: 50px;
-    }
-
-    element.style {
-        width: 50px;
-        height: 50px;
-    }
-
-    #holesAndShapesPuzzle #boxOfHoles {
-        margin-top: 0px;
-
-        & img {
-            width: 120px;
-            height: 120px;
-        }
-    }
-
-
-    #holesAndShapesPuzzle #GL2Profile {
-        margin-bottom: 55px;
-        gap: 200px;
-
-        & div {
-            width: 300px;
-            height: 100px;
-
-            & button {
-                width: 100px;
-                top: 5px;
-                font-size: 25px;
-            }
-
-            & p {
-                font-size: 13px;
-            }
-        }
-
-        & img {
-            width: 120px;
-        }
+    & img {
+        width: 120px;
     }
 }

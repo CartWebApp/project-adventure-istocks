@@ -286,6 +286,13 @@ function toggleInventory() {
     }
 }
 
+/*
+function removeDialogue() {
+    if (optionsRow.display !== 'hidden') {
+        dialogueBox.classList.add("hidden");
+    }
+}
+*/
 
 // Journal related things
 function toggleJournal() {
