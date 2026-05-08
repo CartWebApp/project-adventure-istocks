@@ -15,7 +15,7 @@ const startGameButton = document.querySelector('#startGame');
 const dialogueBox = document.querySelector('#dialogueBox')
 const dialogue = document.querySelector('#dialogueBox #dialogue');
 const speakerTag = document.querySelector('#speakerTag');
-const nextBtn = document.querySelector("#next");
+const nextBtn = document.querySelector("#dialogueBox");
 const optionsRow = document.querySelector('#optionsRow');
 
 const journalSection = document.querySelector('#journalSection');
@@ -63,7 +63,6 @@ function nextEncounter(encounterID) {
     // Set next encounter
     currentEncounter = storyData.find(object => object.id === encounterID);
     currentSceneIndex = 0;
-    nextBtn.classList.remove("hidden");
 
     /* Clear options */
     optionsRow.replaceChildren();
@@ -73,15 +72,6 @@ function nextEncounter(encounterID) {
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
-
-    // Putting this outside of loadOptions() to deal with my cheap coding
-    const options = currentScene.options;
-    if (!options) {
-        nextBtn.classList.remove("hidden");
-    } else {
-        nextBtn.classList.add("hidden");
-    }
-
     const loadScene = (scene) => {
         // Fire to gameLogic.js, evaluate mechanics now that dialogue has finished loading.
         window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));

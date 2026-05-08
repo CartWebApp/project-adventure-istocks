@@ -92,7 +92,7 @@ button:hover {
     /* Splits layouts for health, main content, and inventory button */
     display: grid;
     grid-template-columns: 5vw 1fr 5vw;
-    column-gap: 20px;
+    column-gap: 100px;
     height: 97vh;
 }
 
@@ -107,7 +107,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding-top: 4em;
-    gap: 50px;
+    gap: clamp(10px, 3vh, 50px);
 }
 
 #visuals.hidden {
@@ -149,17 +149,19 @@ button:hover {
 #dialogueBoxStyle {
     display: inline-block;
     overflow: auto;
-    height: max(auto, 300px);
+    min-height: clamp(30px,17.5vh,150px);
+    height: fit-content;
     padding: 20px;
 
-    border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
+    border: clamp(5px, 1.5vh, 15px) solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
     & #dialogue {
-        font-size: clamp(20px, 5vw, 35px);
+        font-size: clamp(15px, 10vh, 30px);
         width: 100%;
+        margin-bottom: 10px;
     }
 }
 
@@ -179,11 +181,23 @@ button:hover {
     border-radius: var(--border-radius);
 }
 
+#tapIndicator {
+    position: absolute;
+    bottom: clamp(3px, 3vh, 7px);
+    right: clamp(3px, 3vh, 7px);
+    
+    margin: 0;
+    padding: 10px;
+
+    font-size: clamp(10px, 3vh, 20px);
+    color:rgba(0, 0, 0, 0.30);
+}
+
 #inventorySection {
     border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
-    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
+    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.74) inset;
     margin-left: clamp(20px, 8vw, 120px);
     margin-right: clamp(20px, 8vw, 120px);
     height: clamp(100px, 20vh, 200px);
@@ -235,12 +249,10 @@ button:hover {
     margin-left: 0px;
     padding-left: 0px;
     text-align: center;
+    width: 80%;
 
     & li {
-        /* flex-basis: 0; */
-        flex-grow: 1;
-        flex-shrink: 1;
-
+        width: max(500px, 20%);
         font-size: 20px;
         background-color: var(--main-black);
         color: var(--main-white);
