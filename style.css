@@ -92,7 +92,7 @@ button:hover {
     /* Splits layouts for health, main content, and inventory button */
     display: grid;
     grid-template-columns: 5vw 1fr 5vw;
-    column-gap: 20px;
+    column-gap: 100px;
     height: 97vh;
 }
 
@@ -107,7 +107,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding-top: 4em;
-    gap: 50px;
+    gap: clamp(10px, 3vh, 50px);
 }
 
 #visuals.hidden {
@@ -119,7 +119,7 @@ button:hover {
     border-radius: var(--border-radius);
     border: clamp(2px, 1.5vh, 10px) solid var(--main-black);
     margin-bottom: 30px;
-    max-width: min(1701px, 45%);
+    max-height: clamp(165px, 30vh, 567px);
     align-self: center;
 }
 
@@ -137,48 +137,77 @@ button:hover {
 #dialogueBox {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
-    /* Temporary placement while we figure out how to actually position it where we want it */
+    
+    /* Change this to change width of dialogue box */
+    width: 80%;
+}
+
+/* Actual text in the dialogue box */
+
+#dialogueBoxStyle {
+    display: inline-block;
+    overflow: auto;
+    min-height: clamp(30px,17.5vh,150px);
+    height: fit-content;
+    padding: 20px;
+
+    border: clamp(5px, 1.5vh, 15px) solid var(--main-black);
+    border-radius: var(--border-radius);
+    background-color: #F9F9F9;
+    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
+
+    & #dialogue {
+        font-size: clamp(15px, 5vh, 40px);
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 #speakerTag {
-    margin-left: clamp(125px, 15vh, 400px);
-    padding:clamp(5px, 3vh, 20px);
+    margin-left: clamp(10px, 7vh, 400px);
+    padding:clamp(10px, 3vh, 20px);
     position: absolute;
-    top:-70px;
-    height: clamp(20px, 10vh, 45px);
-    width: clamp(100px, 30vh, 200px);
+    top: -70px;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    font-size:clamp(10px, 7vh, 40px);
+    font-size:clamp(30px, 7vh, 40px);
+    text-wrap: nowrap;
 
     background-color: var(--main-black);
     color: var(--main-white);
     border-radius: var(--border-radius);
 }
 
-#dialogueBoxStyle,
+#tapIndicator {
+    position: absolute;
+    bottom: clamp(3px, 3vh, 7px);
+    right: clamp(3px, 3vh, 7px);
+    
+    margin: 0;
+    padding: 10px;
+
+    font-size: clamp(10px, 3vh, 20px);
+    color:rgba(0, 0, 0, 0.30);
+}
+
 #inventorySection {
     border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
-    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
-    width: auto;
+    box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.74) inset;
     margin-left: clamp(20px, 8vw, 120px);
     margin-right: clamp(20px, 8vw, 120px);
     height: clamp(100px, 20vh, 200px);
     justify-self: center;
-
-    & p {
-        font-size: clamp(20px, 6vh, 45px);
-        height: 100%;
-        margin: 40px;
-    }
 }
 
+#inventorySection p {
+    height: 100%;
+    margin: 40px;
+}
 /* Inventory list*/
 #inventory {
     display: flex;
@@ -194,23 +223,6 @@ button:hover {
     }
 }
 
-#next {
-    margin-left: clamp(20%, 126vh, 80%);
-    background-color: var(--main-black);
-    color: var(--main-white);
-     border: clamp(2px, 2.5vh, 5px) solid var(--main-black);
-    border-radius: var(--border-radius);
-    padding: 5px 10px;
-    width: clamp(200px, 20vh, 400px);
-    height: clamp(30px, 15vh, 100px);
-    font-size: clamp(10px, 10vh, 40px);
-    justify-self: flex-end;
-}
-
-#next.hidden {
-    display: none;
-}
-
 #optionsRow {
     display: flex;
     justify-content: space-between;
@@ -220,12 +232,10 @@ button:hover {
     margin-left: 0px;
     padding-left: 0px;
     text-align: center;
+    width: 80%;
 
     & li {
-        /* flex-basis: 0; */
-        flex-grow: 1;
-        flex-shrink: 1;
-
+        width: max(500px, 20%);
         font-size: 20px;
         background-color: var(--main-black);
         color: var(--main-white);
@@ -563,7 +573,6 @@ p {
     align-items: center;
     justify-content: center;
     width: 410px;
-    height: 250px;
 
     & button {
         background-color: #2E2E2E;

@@ -15,7 +15,7 @@ const startGameButton = document.querySelector('#startGame');
 const dialogueBox = document.querySelector('#dialogueBox')
 const dialogue = document.querySelector('#dialogueBox #dialogue');
 const speakerTag = document.querySelector('#speakerTag');
-const nextBtn = document.querySelector("#next");
+const nextBtn = document.querySelector("#dialogueBox");
 const optionsRow = document.querySelector('#optionsRow');
 
 const journalSection = document.querySelector('#journalSection');
@@ -63,7 +63,6 @@ function nextEncounter(encounterID) {
     // Set next encounter
     currentEncounter = storyData.find(object => object.id === encounterID);
     currentSceneIndex = 0;
-    nextBtn.classList.remove("hidden");
 
     /* Clear options */
     optionsRow.replaceChildren();
@@ -73,15 +72,6 @@ function nextEncounter(encounterID) {
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
-
-    // Putting this outside of loadOptions() to deal with my cheap coding
-    const options = currentScene.options;
-    if (!options) {
-        nextBtn.classList.remove("hidden");
-    } else {
-        nextBtn.classList.add("hidden");
-    }
-
     const loadScene = (scene) => {
         // Fire to gameLogic.js, evaluate mechanics now that dialogue has finished loading.
         window.dispatchEvent(new CustomEvent("evaluateScene", { detail: scene }));
@@ -148,7 +138,6 @@ function initiateScene() {
             const sceneText = scene.text;
             const maxChars = sceneText.length;
             let index = 0;
-              updateFontSize();
             
 
             // Skip the rolling dialogue
@@ -162,11 +151,11 @@ function initiateScene() {
             nextBtn.addEventListener("click", skipDialogue, { once: true });
             nextBtn.removeEventListener("click", nextScene)
 
-            const iterateACharacter = () => {
+            const iterateACharacter = () => {;
                 if (index < maxChars) {
                     const textSection = sceneText.slice(0, index + 1);
                     dialogue.textContent = textSection;
-                    index++
+                    index++;
 
                     // Recursive: Repeat the function after the given time (in ms)
                     const character = sceneText[index - 2]; // For some reason, the current index is offset by 2?
@@ -414,19 +403,6 @@ navigateSceneButton.addEventListener("click", () => {
         nextEncounter(sceneID);
     }
 })
-
-function updateFontSize() {
-    const wordCount = dialogue.innerText.trim().split(/\s+/).length;
-
-    if (wordCount > 30) {
-        dialogue.style.fontSize = "15px";
-    } else if (wordCount < 20) {
-        dialogue.style.fontSize = "20px";
-    }
-    else {
-        dialogue.style.fontsize = "17px";
-    }
-}
 
 
 // Custom Cursor (can alter styling with a different image or CSS styling, do not need to adjust JavaScript logic).
