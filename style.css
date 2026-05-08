@@ -120,7 +120,7 @@ button:hover {
     border: 3px solid var(--main-black);
     margin-bottom: 30px;
     border: 10px solid #2E2E2E;
-    max-width: 70%;
+    max-width: 50%;
     align-self: center;
 }
 
@@ -144,17 +144,17 @@ button:hover {
 }
 
 #speakerTag {
-    margin-left: clamp(40px, 15vh, 400px);
-    padding: 20px;
+    margin-left: clamp(125px, 15vh, 400px);
+    padding:clamp(5px, 3vh, 20px);
     position: absolute;
-    top: -90px;
+    top:-70px;
     height: clamp(20px, 10vh, 45px);
     width: clamp(100px, 30vh, 200px);
     text-align: center;
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-
+    font-size:clamp(10px, 7vh, 40px);
 
     background-color: var(--main-black);
     color: var(--main-white);
@@ -163,7 +163,7 @@ button:hover {
 
 #dialogueBoxStyle,
 #inventorySection {
-    border: 15px solid var(--main-black);
+    border: clamp(2px, 1.5vh, 15px) solid var(--main-black);
     border-radius: var(--border-radius);
     background-color: #F9F9F9;
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
@@ -203,7 +203,7 @@ button:hover {
     border-radius: var(--border-radius);
     padding: 5px 10px;
     width: clamp(200px, 20vh, 400px);
-    height: clamp(40px, 20vh, 100px);
+    height: clamp(30px, 15vh, 100px);
     font-size: clamp(10px, 10vh, 40px);
     justify-self: flex-end;
 }
@@ -270,8 +270,8 @@ button:hover {
 #inventoryButton {
     position: relative;
     order: 1;
-    height: clamp(20px, 20vh, 80px);
-    width: clamp(20px, 20vh, 80px);
+    width: clamp(50px, 10vh, 200px);
+    aspect-ratio: 1/1;
     justify-self: center;
     display: flex;
     margin-top: clamp(10px, 10vh, 20px);
@@ -283,8 +283,8 @@ button:hover {
 #journalButton {
     position: relative;
     order: 1;
-    height: clamp(20px, 20vh, 80px);
-    width: clamp(20px, 20vh, 80px);
+    width: clamp(50px, 10vh, 200px);
+    aspect-ratio: 1/1;
     justify-self: center;
     display: flex;
     margin-top: clamp(10px, 10vh, 20px);
@@ -780,7 +780,10 @@ p {
 
     #visuals {
         gap: 0px;
-        padding-top: 10px;
+        padding-top: 0px;
+        padding-bottom:0px;
+        margin-bottom:0px;
+        margin-top:0px;
     }
 
     #rockPaperScissorsPuzzle {
@@ -812,6 +815,10 @@ p {
 
     #startingScreen div {
         gap: 15px;
+    }
+
+    #speakerTag {
+        top:-55px;
     }
 }
 
