@@ -119,7 +119,7 @@ button:hover {
     border-radius: var(--border-radius);
     border: clamp(2px, 1.5vh, 10px) solid var(--main-black);
     margin-bottom: 30px;
-    max-width: min(1701px, 50%);
+    max-width: min(1701px, 45%);
     align-self: center;
 }
 
@@ -169,7 +169,7 @@ button:hover {
     width: auto;
     margin-left: clamp(20px, 8vw, 120px);
     margin-right: clamp(20px, 8vw, 120px);
-    height: clamp(150px, 20vh, 200px);
+    height: clamp(100px, 20vh, 200px);
     justify-self: center;
 
     & p {
@@ -198,7 +198,7 @@ button:hover {
     margin-left: clamp(20%, 126vh, 80%);
     background-color: var(--main-black);
     color: var(--main-white);
-    border: 4px solid var(--option-border-black);
+     border: clamp(2px, 2.5vh, 5px) solid var(--main-black);
     border-radius: var(--border-radius);
     padding: 5px 10px;
     width: clamp(200px, 20vh, 400px);
@@ -222,7 +222,7 @@ button:hover {
     text-align: center;
 
     & li {
-        flex-basis: 0;
+        /* flex-basis: 0; */
         flex-grow: 1;
         flex-shrink: 1;
 
@@ -235,7 +235,7 @@ button:hover {
     }
 
     & p {
-        font-size: clamp(10px, 20vh, 40px);
+        font-size: clamp(10px, 5vh, 40px);
         align-self: center;
         justify-self: center;
     }
@@ -262,7 +262,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
-    height: 97vh;
+    height: 93vh;
     margin-right: 20px;
 }
 
@@ -773,12 +773,16 @@ p {
 @media (orientation: landscape) and (max-height: 402px) and (max-width:1000px) {
 
 
+    #mainVisual {
+        margin-bottom:0px;
+    }
+
     .circle {
         display: none;
     }
 
     #visuals {
-        gap: 0px;
+        gap: 30px;
         padding-top: 10px;
         padding-bottom:0px;
         margin-bottom:0px;

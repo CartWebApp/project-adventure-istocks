@@ -70,7 +70,15 @@ function nextEncounter(encounterID) {
     initiateScene();
 }
 
+const wordCount = dialogue.innerText.trim().split(/\s+/).length;
 
+if (wordCount > 20 ) {
+    dialogue.style.fontSize = "10px";
+} else if (wordCount > 10) {
+    dialogue.style.fontSize =  "15px";
+} else {
+    dialogue.style.fontSize = "20px"; 
+}
 
 
 function initiateScene() {
