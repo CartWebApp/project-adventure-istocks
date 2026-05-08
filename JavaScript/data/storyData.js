@@ -390,16 +390,16 @@ export const data = [
     {
         id: "1C",
         scenes: [
-            { image: '', speaker: "John", text: "Eh I can sleep a bit more it's ok." },
+            { image: 'images/Visuals/Intro/john-going-back-to-sleep.jpg', speaker: "John", text: "Eh I can sleep a bit more it's ok." },
             // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "..." },
             // John gets fired.svg
-            { image: '', speaker: "Narrator", text: "John gets fired the next day." },
-            { image: '', speaker: "John", text: "Whatever! I hated that job anyways! I can deal with not making any money..." },
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Intro/john-getting-fired.jpg', speaker: "Narrator", text: "John gets fired the next day." },
+            { image: 'images/Visuals/Intro/john-post-fired.jpg', speaker: "John", text: "Whatever! I hated that job anyways! I can deal with not making any money..." },
+            { image: 'images/Visuals/Intro/john-post-fired.jpg', speaker: "John", text: "..." },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/john-post-fired.jpg',
                 speaker: "John",
                 text: 'I\'m gonna be homeless in a few days. I need to do something quick. What do I do?!',
                 options: [
@@ -414,18 +414,18 @@ export const data = [
         id: "1C2B",
         scenes: [
             // John is begging in a cardboard box with a cup for change
-            { image: '', speaker: "John", text: "Spare change..? Anyone..?" },
-            { image: '', speaker: "John", text: "Man, why'd I do that... my life kinda sucks now. The extra hours of sleep felt real nice, though." },
+            { image: 'images/Visuals/Intro/john-begging-for-money.jpg', speaker: "John", text: "Spare change..? Anyone..?" },
+            { image: 'images/Visuals/Intro/john-begging-for-money.jpg', speaker: "John", text: "Man, why'd I do that... my life kinda sucks now. The extra hours of sleep felt real nice, though." },
             // A shadow moves into frame
-            { image: '', speaker: "???", text: "Having a bad day in this world?" },
-            { image: '', speaker: "Narrator", text: "A hooded man approaches John." },
-            { image: '', speaker: "John", text: "Yeah, I am... got any money?" },
-            { image: '', speaker: "???", text: "I have something better. I can offer you freedom from your shackles." },
-            { image: '', speaker: "Low-Budget Man", text: "Refer to me by Low-Budget Man. I'd be curious to know yours..." },
-            { image: '', speaker: "Low-Budget Man", text: "You look pathetic right now. It'd be best for you to take my offer." },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "???", text: "Having a bad day in this world?" },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "Narrator", text: "A hooded man approaches John." },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "John", text: "Yeah, I am... got any money?" },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "???", text: "I have something better. I can offer you freedom from your shackles." },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "Low-Budget Man", text: "Refer to me by Low-Budget Man. I'd be curious to know yours..." },
+            { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "Low-Budget Man", text: "You look pathetic right now. It'd be best for you to take my offer." },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg',
                 speaker: "Narrator",
                 text: 'Listen to him?',
                 options: [
@@ -440,10 +440,10 @@ export const data = [
     {
         id: "1C2B3B",
         scenes: [
-            { image: '', speaker: "Narrator", text: "You must be masochistic. You just made a frail, starving man try to throw hands." },
-            { image: '', speaker: "Narrator", text: "No, John does not survive that encounter." },
+            { image: 'images/Visuals/Intro/john-fighting-homeless.jpg', speaker: "Narrator", text: "You must be masochistic. You just made a frail, starving man try to throw hands." },
+            { image: 'images/Visuals/Intro/john-lost-to-lowbudgetman.jpg', speaker: "Narrator", text: "No, John does not survive that encounter. : (" },
 
-            { gameOver: "I know life's getting hard, but you don't need to be so aggressive." }
+            { gameOver: "I know life's getting hard, but you don't need to be so aggressive. : )" }
         ]
     },
 
