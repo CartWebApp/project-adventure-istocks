@@ -34,6 +34,7 @@ const endingScreen = document.querySelector("#endingScreen");
 const restartBtn = document.querySelector("#restartGame");
 
 
+
 /* Variables */
 let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
@@ -69,17 +70,6 @@ function nextEncounter(encounterID) {
 
     initiateScene();
 }
-
-const wordCount = dialogue.innerText.trim().split(/\s+/).length;
-
-if (wordCount > 20 ) {
-    dialogue.style.fontSize = "10px";
-} else if (wordCount > 10) {
-    dialogue.style.fontSize =  "15px";
-} else {
-    dialogue.style.fontSize = "20px"; 
-}
-
 
 function initiateScene() {
     let currentScene = currentEncounter.scenes[currentSceneIndex];
@@ -158,6 +148,8 @@ function initiateScene() {
             const sceneText = scene.text;
             const maxChars = sceneText.length;
             let index = 0;
+              updateFontSize();
+            
 
             // Skip the rolling dialogue
             const skipDialogue = () => {
@@ -422,6 +414,19 @@ navigateSceneButton.addEventListener("click", () => {
         nextEncounter(sceneID);
     }
 })
+
+function updateFontSize() {
+    const wordCount = dialogue.innerText.trim().split(/\s+/).length;
+
+    if (wordCount > 30) {
+        dialogue.style.fontSize = "15px";
+    } else if (wordCount < 20) {
+        dialogue.style.fontSize = "20px";
+    }
+    else {
+        dialogue.style.fontsize = "17px";
+    }
+}
 
 
 // Custom Cursor (can alter styling with a different image or CSS styling, do not need to adjust JavaScript logic).
