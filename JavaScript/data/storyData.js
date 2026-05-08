@@ -474,8 +474,8 @@ export const data = [
             { image: 'images/Visuals/Intro/JohnWonderWhatBorderIs.jpg', speaker: "Narrator", text: "But this is where that melancholy shall end!" },
 
             // A shadow at the border
-            { image: '', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
-            { image: '', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
+            { image: 'images/Visuals/Intro/john-gate-shadow-appearence.jpg', speaker: "Narrator", text: "Someone's shadow suddenly manifests at the border." },
+            { image: 'images/Visuals/Intro/john-gate-shadow-appearence.jpg', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
 
             // The man--a dude who literally is drawn in pencil, seemingly by a child--stands in front of John with his hands in his pockets, his intentions unknown.
             { image: '', speaker: "Narrator", text: "..." },
@@ -526,7 +526,7 @@ export const data = [
                 text: "Test 1 2 3 4 I just need some fun bro",
                 options: [
                     {text: 'David Madden', leadsTo: ""},
-                    {text: 'Andrew Nolt', leadsTo: ""},
+                    {text: '', leadsTo: ""},
                 ]
             }
         ]
