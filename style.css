@@ -119,7 +119,7 @@ button:hover {
     border-radius: var(--border-radius);
     border: clamp(2px, 1.5vh, 10px) solid var(--main-black);
     margin-bottom: 30px;
-    max-width: min(1701px, 45%);
+    max-height: clamp(165px, 30vh, 567px);
     align-self: center;
 }
 
@@ -159,7 +159,7 @@ button:hover {
     box-shadow: -3px 3px 12px 1px rgba(0, 0, 0, 0.30) inset;
 
     & #dialogue {
-        font-size: clamp(15px, 10vh, 30px);
+        font-size: clamp(15px, 5vh, 40px);
         width: 100%;
         margin-bottom: 10px;
     }
