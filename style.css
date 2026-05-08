@@ -617,7 +617,7 @@ p {
     border-radius: 20px;
     margin-bottom: 35px;
     margin-top: clamp(0px, 15vh, 150px);
-    width:auto;
+    width: auto;
 }
 
 
@@ -626,7 +626,7 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:clamp(250px, 21.9vh, 500px);
+    gap: clamp(250px, 21.9vh, 500px);
 
 
 
@@ -669,7 +669,7 @@ p {
 
     & button {
         background-color: var(#FFF8F0);
-        font-size:clamp(10px, 5vh, 30px);
+        font-size: clamp(10px, 5vh, 30px);
         border-radius: 20px;
         border: 5px solid #5E5E5E;
     }
@@ -772,14 +772,20 @@ p {
 
 
 @media (orientation: landscape) and (max-height: 402px) and (max-width:1000px) {
+
+
+    .circle {
+        display: none;
+    }
+
     #visuals {
         gap: 0px;
         padding-top: 10px;
     }
 
     #rockPaperScissorsPuzzle {
-        margin-top:0px;
-        margin-bottom:0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     #startButtons {
@@ -972,7 +978,7 @@ p {
     height: 50px;
 
     & button {
-        width:clamp(150px, 20vh, 200px);
+        width: clamp(150px, 20vh, 200px);
         height: 50px;
     }
 }
