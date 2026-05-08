@@ -223,23 +223,6 @@ button:hover {
     }
 }
 
-#next {
-    margin-left: clamp(20%, 126vh, 80%);
-    background-color: var(--main-black);
-    color: var(--main-white);
-     border: clamp(2px, 2.5vh, 5px) solid var(--main-black);
-    border-radius: var(--border-radius);
-    padding: 5px 10px;
-    width: clamp(200px, 20vh, 400px);
-    height: clamp(30px, 15vh, 100px);
-    font-size: clamp(10px, 10vh, 40px);
-    justify-self: flex-end;
-}
-
-#next.hidden {
-    display: none;
-}
-
 #optionsRow {
     display: flex;
     justify-content: space-between;
