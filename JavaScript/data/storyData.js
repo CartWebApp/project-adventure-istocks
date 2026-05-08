@@ -1554,21 +1554,21 @@ export const data = [
             { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
             { image: '', speaker: "John", text: "...Huh. That's a good question-" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
-            { image: 'images/Visuals/Climax/LowBudgetManStabsJohn.jpg', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
-            { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
+            { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
+            { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
-            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
+            { image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
             {
                 itemCondition: "Good-Luck Charm",
                 conditionMetScenes: [
                     {
                         itemCondition: "The Eraser",
-                        conditionMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
-                        conditionNotMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
+                        conditionMetScenes: [{ image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
+                        conditionNotMetScenes: [{ image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
                     }
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
+                    { image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
                 ],
             },
         ]
@@ -1583,27 +1583,27 @@ export const data = [
             {
                 sceneCondition: "Tenacious",
                 conditionMetScenes: [
-                    { image: '', speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans!", falseDamage: 5 },
+                    { image: , speaker: "Low-Budget Man", text: "You hardly even have the reflexes to support your shenanigans!", falseDamage: 5 },
                 ],
                 conditionNotMetScenes: [
                     { image: '', speaker: "Low-Budget Man", text: "You lack the courage to strike through.", falseDamage: 5 },
                 ]
             },
-            { image: '', speaker: "Low-Budget Man", text: " ", falseDamage: 5 },
+            { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: " ", falseDamage: 5 },
             { image: '', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
             // John X_X on the floor as Low-Budget Man waves off and walks through the gate
-            { image: '', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
+            { image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "John collapses as Low-Budget Man walks off." },
             {
                 itemCondition: "Good-Luck Charm",
                 conditionMetScenes: [
                     {
                         itemCondition: "The Eraser",
-                        conditionMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
-                        conditionNotMetScenes: [{ image: '', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
+                        conditionMetScenes: [{ image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-3" }],
+                        conditionNotMetScenes: [{ image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose! ...", leadsTo: "Ending-2" }],
                     }
                 ],
                 conditionNotMetScenes: [
-                    { image: '', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
+                    { image: 'images/Visuals/Climax/JohnIsDefeated.jpg', speaker: "Narrator", text: "You lose!", leadsTo: "Ending-1" },
                 ],
             },
         ]
