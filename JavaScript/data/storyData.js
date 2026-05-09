@@ -975,11 +975,11 @@ export const data = [
             // Rolls up his sleeves
             { image: 'images/Visuals/Layer1/John-preparing-to-punch-john.jpg', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
             // Punching ensues - Different images of punching per scenes below
-            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
-            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
-            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
+            { image: 'images/Visuals/Layer1/johngettingpunchedbyguyfromlayer2.jpg', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
+            { image: 'images/Visuals/Layer1/johngettingpunchedbyguyfromlayer2.jpg', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
+            { image: 'images/Visuals/Layer1/johngettingpunchedbyguyfromlayer2.jpg', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
             // John lies on the ground, battered
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer1/johnlyingongroundaftefight.jpg', speaker: "John", text: "..." },
             {
                 image: '',
                 speaker: "Guy from Layer 2",
@@ -996,16 +996,16 @@ export const data = [
         id: "L1-1C2C-#4",
         scenes: [
             // He stands above John's body, but has an angry expression
-            { image: '', speaker: "Guy from Layer 2", text: "...Why?!" },
-            { image: '', speaker: "Guy from Layer 2", text: "Why are you still begging?! You had the most brutal beatdown of your life, and yet you-!" },
-            { image: '', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!" },
+            { image: 'images/Visuals/Layer1/johnlyingongroundaftefight.jpg', speaker: "Guy from Layer 2", text: "...Why?!" },
+            { image: 'images/Visuals/Layer1/johnlyingongroundaftefight.jpg', speaker: "Guy from Layer 2", text: "Why are you still begging?! You had the most brutal beatdown of your life, and yet you-!" },
+            { image: 'images/Visuals/Layer1/johnlyingongroundaftefight.jpg', speaker: "Guy from Layer 2", text: "...Hah, I don't even know how, but you're frustrating me! How did a lowly worm like you manage to frustrate me?!" },
             // He angrily tosses the key next to his side
-            { image: '', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!" },
-            { image: '', speaker: "Narrator", text: "...He stomps away.", getItem: "Layer2Key" },
+            { image: 'images/Visuals/Layer1/layer2keybesidejohn.jpg', speaker: "Guy from Layer 2", text: "Whatever, just take it, I don't care anymore!" },
+            { image: 'images/Visuals/Layer1/layer2keybesidejohn.jpg', speaker: "Narrator", text: "...He stomps away.", getItem: "Layer2Key" },
             // Back to John being beat up on the ground
-            { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "Narrator", text: "You got a key!" },
-            { image: '', speaker: "John", text: "yay.....", leadsTo: "L1-Ending" },
+            { image: 'images/Visuals/Layer1/layer2keybesidejohn.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer1/layer2keybesidejohn.jpg', speaker: "Narrator", text: "You got a key!" },
+            { image: 'images/Visuals/Layer1/layer2keybesidejohn.jpg', speaker: "John", text: "yay.....", leadsTo: "L1-Ending" },
         ]
     },
 
@@ -1083,7 +1083,7 @@ export const data = [
             { image: 'images/Visuals/Layer2/john-solo-at-L2.jpg', speaker: "Narrator", text: "The mayor leaves you to your devices." },
             { image: '', speaker: "John", text: "...Awesome. I love peer pressure." },
             {
-                image: '',
+                image: 'images/Visuals/Layer2/john-solo-at-L2.jpg',
                 speaker: "John",
                 text: "Alright then. What should I do now..?",
                 options: [
