@@ -973,11 +973,11 @@ export const data = [
         id: "L1-1C2C-#3",
         scenes: [
             // Rolls up his sleeves
-            { image: '', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
+            { image: 'images/Visuals/Layer1/John-preparing-to-punch-john.jpg', speaker: "Guy from Layer 2", text: "Alright, let me teach you a lesson!" },
             // Punching ensues - Different images of punching per scenes below
             { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Learn!", damage: 1 },
-            { image: '', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
-            { image: '', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "To!", damage: 1 },
+            { image: 'images/Visuals/Layer1/GL2BeatsUpJohn.jpg', speaker: "Guy from Layer 2", text: "Earn things yourself!", damage: 1 },
             // John lies on the ground, battered
             { image: '', speaker: "John", text: "..." },
             {
