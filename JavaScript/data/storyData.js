@@ -1671,11 +1671,11 @@ export const data = [
             { image: 'images/Visuals/JohnIsAlone.png', speaker: "Narrator", text: "The gate is now permanently shut. Low-Budget Man had already advanced through." },
             { image: 'images/Visuals/JohnIsAlone.png', speaker: "John's Internal Monologue", text: "Well, that's a shame." },
             // John raises his hands up and looks at them - they're animated. He can move them freely.
-            { image: '', speaker: "John's Internal Monologue", text: "I look kinda funny. No wonder I've been feeling really loose since I woke up." },
-            { image: '', speaker: "John's Internal Monologue", text: "Have I been assimilated into this Layer? Maybe that makes me a permanent resident." },
-            { image: '', speaker: "John's Internal Monologue", text: "I mean, I really wouldn't mind living here. What am I gonna tell the people who were expecting me to get by, though..?" },
-            { image: '', speaker: "John's Internal Monologue", text: "Maybe I would've been more prepared if I had a strong enough weapon to fight against him." },
-            { image: '', speaker: "John's Internal Monologue", text: "Guess it doesn't matter now. I should get walking soon..." },
+            { image: 'images/Visuals/JohnHandAnew.png', speaker: "John's Internal Monologue", text: "I look kinda funny. No wonder I've been feeling really loose since I woke up." },
+            { image: 'images/Visuals/JohnHandAnew.png', speaker: "John's Internal Monologue", text: "Have I been assimilated into this Layer? Maybe that makes me a permanent resident." },
+            { image: 'images/Visuals/JohnHandAnew.png', speaker: "John's Internal Monologue", text: "I mean, I really wouldn't mind living here. What am I gonna tell the people who were expecting me to get by, though..?" },
+            { image: 'images/Visuals/JohnHandAnew.png', speaker: "John's Internal Monologue", text: "Maybe I would've been more prepared if I had a strong enough weapon to fight against him." },
+            { image: 'images/Visuals/JohnHandAnew.png', speaker: "John's Internal Monologue", text: "Guess it doesn't matter now. I should get walking soon..." },
             { endGame: "Ending2" },
         ]
     },
@@ -1683,23 +1683,21 @@ export const data = [
     {
         id: "Ending-3-Pt1",
         scenes: [
-            // An image of the good-luck charm shattering flashes by.
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
-            // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // Transition to Low-Budget Man's face with John's body behind him
-            { image: '', speaker: "Low-Budget Man", text: "..." },
+            { image: 'images/Visuals/Endings/LowBudgetWins.jpg', speaker: "Low-Budget Man", text: "..." },
             // He covers his face with his helmet buy once more and begins walking to the gate.
-            { image: '', speaker: "Low-Budget Man", text: "..." },
+            { image: 'images/Visuals/Endings/LowBudgetBeginsWalking.jpg', speaker: "Low-Budget Man", text: "..." },
             // Have a perspective that is facing Low-Budget Man's back, as Low-Budget Man faces the gate.
-            { image: '', speaker: "Low-Budget Man", text: "..." },
+            { image: 'images/Visuals/Endings/LowBudgetAtGate.jpg', speaker: "Low-Budget Man", text: "..." },
             // Then, the shadow of a man blocks the screen.
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/ShadowArises.jpg', speaker: "John", text: "..." },
             // Pan back to the original perspective, but this time John is standing up - he's gone beyond his stock image form. He's animated..!
-            { image: '', speaker: "John", text: "Hey man." },
-            { image: '', speaker: "Low-Budget Man", text: "Huh?" },
+            { image: 'images/Visuals/Endings/JohnConfrontsAnew.jpg', speaker: "John", text: "Hey man." },
+            { image: 'images/Visuals/Endings/JohnConfrontsAnew.jpg', speaker: "Low-Budget Man", text: "Huh?" },
             {
-                image: '',
+                image: 'images/Visuals/Endings/JohnConfrontsAnew.jpg',
                 speaker: "John",
                 text: " ",
                 options: [
@@ -1713,42 +1711,40 @@ export const data = [
         id: "Ending-3-Pt2",
         scenes: [
             // John swipes Low-Budget man with the eraser, striking through the armor and splitting him in half
-            { image: '', speaker: "Low-Budget Man", text: "..!" },
-            { image: '', speaker: "Low-Budget Man", text: "What?!" },
+            { image: 'images/Visuals/Endings/BrandishTheEraser.jpg', speaker: "Low-Budget Man", text: "AUGH!" },
+            { image: 'images/Visuals/Endings/BrandishTheEraser.jpg', speaker: "Low-Budget Man", text: "WHAT?!" },
             // Low-Budget Man's upper half falls to the ground, where John stands above you
-            { image: '', speaker: "Low-Budget Man", text: "How?! How did you survive?" },
-            { image: '', speaker: "John", text: "Dang. Guess my plot armor's stronger." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Low-Budget Man", text: "How?! How did you survive?" },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Dang. Guess my plot armor's stronger." },
             // Do you know those two panels with Gojo and Sukuna? 
-            { image: '', speaker: "Low-Budget Man", text: "This can't be..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Low-Budget Man", text: "This can't be..." },
             // You'll see the reference if you search up the two lines below (change Low-Budget Man to Gojo)
-            { image: '', speaker: "John", text: "You were magnificent, Low-Budget Man." },
-            { image: '', speaker: "John", text: "I won't forget you for as long as I live." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "You were magnificent, Low-Budget Man." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "I won't forget you for as long as I live." },
 
-            { image: '', speaker: "Low-Budget Man", text: "Don't..!" },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Low-Budget Man", text: "Don't..!" },
 
-            { image: '', speaker: "Narrator", text: "He's too late to object. John erases the rest of him with the Eraser." },
-            { image: '', speaker: "John", text: "Man, finally..!" },
+            { image: 'images/Visuals/Endings/JohnErasesLowBudget.jpg', speaker: "Narrator", text: "He's too late to object. John erases the rest of him with the Eraser." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Man, finally..!" },
             // 
-            { image: '', speaker: "Narrator", text: "John retrieves the key from his body." },
-            { image: '', speaker: "John", text: "Well, I have this. What do I do now?" },
-            { image: '', speaker: "John", text: "So it turns out I can't free the people here after all... but maybe I'll find a way when I step through this border." },
-            { image: '', speaker: "John", text: "Hope they don't think too much about it." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "John retrieves the key from his body." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Well, I have this. What do I do now?" },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "So it turns out I can't free the people here after all... but maybe I'll find a way when I step through this border." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Hope they don't think too much about it." },
             // He steps to the gate.
-            { image: '', speaker: "John", text: "Alright. Time to do this." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Alright. Time to do this." },
             // Inserts the key
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
             // The gate opens
-            { image: '', speaker: "John", text: "..." },
-            // Perspective of camera behind John, with the light shining from his figure.
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
             // He turns back.
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
             // Gives a thumbs up or a wave and smiles
-            { image: '', speaker: "John", text: "See you!" },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "See you!" },
             // Then he walks through, being enguled by the light...
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "..." },
             // And the gates shut.
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "..." },
             { endGame: "Ending3" },
         ]
     },
