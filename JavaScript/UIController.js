@@ -395,9 +395,9 @@ window.addEventListener("endGame", (e) => {
     const hpRemaining = document.querySelector("#hpAfter");
     const endNumber = document.querySelector("#endingReceived");
 
-    console.log(e)
-    hpRemaining.textContent = e.detail.healthRemaining
-    endNumber.textContent = e.detail.ending
+    console.log(e.detail)
+    hpRemaining.textContent = status.Health
+    endNumber.textContent = e.detail
 })
 
 

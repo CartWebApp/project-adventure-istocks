@@ -741,7 +741,7 @@ export const data = [
         scenes: [
             { image: 'images/Visuals/Layer1/JohnAttemptsToTalkOutWithStickFigure.jpg', speaker: "John", text: "Hey, I'm sure we can have a civil discussion. Let's just chill for a moment and talk, alright?" },
             { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "WHAT COULD A THING LIKE YOU POSSIBLY SAY TO PERSUADE ME?" },
-            { image: 'images/Visuals/Layer1\JohnAttemptsToTalkOutWithStickFigure.jpg', speaker: "John", text: "Let's sit down and see." },
+            { image: 'images/Visuals/Layer1/JohnAttemptsToTalkOutWithStickFigure.jpg', speaker: "John", text: "Let's sit down and see." },
 
             // Black screen
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John", text: "..." },
