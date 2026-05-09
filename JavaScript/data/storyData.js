@@ -89,7 +89,7 @@ export const data = [
                 options: [
                     { text: "Yes, we probably should...", leadsTo: "1A2A3A" },
                     { text: "Let's fight, nerd.", leadsTo: "1A2A3B", giveCondition: "Tenacious"},
-                    { text: "What a load of blasphemy.", leadsTo: "1A2A3C" }
+                   // { text: "What a load of blasphemy.", leadsTo: "1A2A3C" }
                 ]
             }
         ]
@@ -146,7 +146,7 @@ export const data = [
         id: "1A2A3A4A",
         scenes: [
             // John and Low-Budget man watch the gate open.
-            { image: 'images/Visuals/Intro/john-and-low-budget-man-at-gate-doors.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
+            { image: 'images/Visuals/Intro/InsertKey.jpg', speaker: "Narrator", text: "The gate hinges open with a winded creak." },
             { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Once more, congratulations." },
             { image: 'images/Visuals/Intro/john-stock-starting-up-at-the-gate.jpg', speaker: "John", text: "Is that all? I'm quite surprised. And you're saying this will grant me a freedom I've never had?" },
             { image: 'images/Visuals/Intro/low-budget-man-staring-into-your-soul 1.jpg', speaker: "Low-Budget Man", text: "Yes. And shall you choose to travel to higher layers, you will gain finer freedoms." },
@@ -200,7 +200,7 @@ export const data = [
                 text: "Maybe that beating put some sense into you. Now, will you accept my offer or not?",
                 options: [
                     { text: "i guess bro", leadsTo: "1A2A3A" },
-                    { text: "What a load of blasphemy", leadsTo: "1A2A3C" }
+                    //{ text: "What a load of blasphemy", leadsTo: "1A2A3C" }
                 ]
             },
         ]
@@ -286,11 +286,11 @@ export const data = [
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Serious? I bet you're giving it to the most basic guy ever. His name is probably \"James Stock\" or something." },
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "James Stock", text: "dude how did you know" },
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "...dude" },
-            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter." },
-            { image: 'images/Visuals/Intro/OtherStockAndStickFigure.jpg', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling." },
+            { image: 'images/Visuals/Intro/LowBudgetInterrupts.jpg', speaker: "Stick Figure", text: "I wouldn't believe you are creatively named either, though the details of that fact do not matter." },
+            { image: 'images/Visuals/Intro/LowBudgetInterrupts.jpg', speaker: "Stick Figure", text: "You have missed the chance. Lest you have a better reason to have the key, this is not your calling." },
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Shoot. I'm named John Stock, so I actually don't have much of a chance here." },
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "But look, I don't need to just be unique. I'm sure we can negotiate." },
-            { image: 'images/Visuals/Intro/LowBudgetManCamera.jpg', speaker: "Stick Figure", text: "You have one chance to convince me." },
+            { image: 'images/Visuals/Intro/JamesCloseUp.jpg', speaker: "Stick Figure", text: "You have one chance to convince me." },
             { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "James", text: "You really think you can do anything, huh?" },
 
             {
@@ -453,17 +453,16 @@ export const data = [
             { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "Narrator", text: "John is unable to hold back his tears." },
             { image: 'images/Visuals/Intro/john-homeless-low-budget-man.jpg', speaker: "John", text: "W-Well, if you're gonna be so mean to me, then I'm not accepting anything you want! I'm leaving!" },
 
-            // Black screen
-            { image: 'images/Visuals/BLACK SCREEN.png', speaker: "Narrator", text: "John runs away." },
+            { image: 'images/Visuals/Intro/john-running-away.jpg', speaker: "Narrator", text: "John runs away." },
             { image: 'images/Visuals/Intro/john-running-away.jpg', speaker: "Narrator", text: "He runs far, far away without any sense of direction." },
             { image: 'images/Visuals/Intro/john-running-eyes-closed.jpg', speaker: "Narrator", text: "His eyes shut, but his legs continue cycling." },
-            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "I hate my stock life......................................................." },
-            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "....................................................... :(" },
-            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "Narrator", text: "........................" },
-            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", autoskip: true, text: "......" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "I hate my stock life......................" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "........................" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "Narrator", text: "............" },
+            { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", autoskip: true, text: "...." },
             { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "Narrator", text: "Alright, stop." },
             { image: 'images/Visuals/Intro/john-running-toward-camera.jpg', speaker: "John", text: "whatever" },
-            { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Then, at some point, John bumps his head into a thick wall." },
             { image: 'images/Visuals/Intro/john-crashing-onto-layer1.jpg', speaker: "John", text: "Ow! What the-" },
 
             // Barrier
@@ -516,19 +515,28 @@ export const data = [
         id: "1C2B3C4A5A",
         scenes: [
             { puzzle: "decipher" },
-            { image: '', speaker: "???", text: "Test 1", giveCondition: "Amiable"},
-            { image: '', speaker: "John", text: "Test 2" },
-            { image: '', speaker: "???", text: "Test 3" },
+            { image: 'images/Visuals/Intro/FriendIsHappy.jpg', speaker: "Narrator", text: "At last, you can now figure out what he's saying.", giveCondition: "Amiable"},
+            { image: 'images/Visuals/Intro/FriendIsHappy.jpg', speaker: "???", text: "Friend! It is so nice to meet you." },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "John", text: "Hey buddy. Who are you?" },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "Friend", text: "Friend!" },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "John", text: "...ok. Hey Friend. What is this place?"},
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "Friend", text: "Border!" },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "John", text: "Yeah?" },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "Friend", text: ". ." },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "Friend", text: "Do you want to play hide and seek?" },
+            { image: 'images/Visuals/Intro/JohnFriendTalk.jpg', speaker: "John", text: "Dude where could you possibly hide here" },
 
-            {
-                image: 'Test',
-                speaker: "Narrator",
-                text: "Test 1 2 3 4 I just need some fun bro",
-                options: [
-                    {text: 'David Madden', leadsTo: ""},
-                    {text: '', leadsTo: ""},
-                ]
-            }
+            { image: 'images/Visuals/Intro/FriendGivesKey.jpg', speaker: "Friend", text: "Join me!", getItem: "Layer1Key" },
+            { image: 'images/Visuals/Intro/FriendGivesKey.jpg', speaker: "Narrator", text: "He tosses a key at John, which John barely manages to react to and catch in time." },
+            { image: 'images/Visuals/Intro/FriendGivesKey.jpg', speaker: "Friend", text: "You can come with me. And then we can go to higher worlds!" },
+            { image: 'images/Visuals/Intro/FriendGivesKey.jpg', speaker: "John", text: "Higher worlds? What what what?" },
+            { image: 'images/Visuals/Intro/JohnFFriendGivesKeyriendTalk.jpg', speaker: "Friend", text: "Come! The world is better than here! And then you can come and visit me!" },
+            { image: 'images/Visuals/Intro/hand-drawn-man-at-gate.jpg', speaker: "Friend", text: "I will wait for you at my house ok come :)" },
+            { image: 'images/Visuals/Intro/john-gate-shadow-appearence.jpg', speaker: "Narrator", text: "It goes through the gate." },
+
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "John", text: "Ohh yeah ok ok I'll be there..." },
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "John", text: "...Is it gone?" },
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "John", text: "lol i am not going to visit that thing.", leadsTo: "1C-End"},
         ]
     },
 
@@ -538,10 +546,10 @@ export const data = [
     {
         id: "1C2B3C4A5B",
         scenes: [
-            { image: '', speaker: "Narrator", text: "Terrified by John's incomprehensible yelling, he runs off." },
-            { image: '', speaker: "John", text: "Oh." },
-            { image: '', speaker: "Narrator", text: "You attain nothing valuable from this..." },
-            { image: '', speaker: "Narrator", text: "And... now you're all alone here with no job and nothing to do here." }
+            { image: 'images/Visuals/Intro/FriendScared.jpg', speaker: "Narrator", text: "Terrified by John's incomprehensible yelling, he runs off." },
+            { image: 'images/Visuals/Intro/john-gate-shadow-appearence.jpg', speaker: "John", text: "Oh." },
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "Narrator", text: "You attain nothing valuable from this..." },
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "Narrator", text: "And... now you're all alone here with no job and nothing to do here." }
         ]
     },
 
@@ -549,8 +557,8 @@ export const data = [
     {
         id: "1C2B3C4B",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John simply walks away, refusing to acknowledge the shadow." },
-            { image: '', speaker: "Narrator", text: "Alright, keep being sad, I guess..." },
+            { image: 'images/Visuals/Intro/JohnAbandonsFriend.jpg', speaker: "Narrator", text: "John simply walks away, refusing to acknowledge the shadow." },
+            { image: 'images/Visuals/Intro/JohnAbandonsFriend.jpg', speaker: "Narrator", text: "Alright, keep being sad, I guess...", leadsTo: "1C-End" },
         ]
     },
 
@@ -559,8 +567,8 @@ export const data = [
         scenes: [
             { image: '', speaker: "John", text: "RAAAGH!" },
             { image: '', speaker: "Narrator", text: "Genuinely what are you even doing" },
-            { image: '', speaker: "Narrator", text: "He pulls a dagger and shanks you. Are you surprised?", damage: 2 },
-            { image: '', speaker: "Narrator", text: "But he doesn't move... instead he nods solemnly. Seems like he's giving you another chance." },
+            { image: '', speaker: "Narrator", text: "He pulls a dagger and stabs you. Are you surprised?", damage: 1 },
+            { image: '', speaker: "Narrator", text: "But he doesn't move... instead he remains where he is. Seems like he's giving you another chance." },
 
             {
                 image: '',
@@ -574,8 +582,39 @@ export const data = [
         ]
     },
 
-    // Ryan self note: Uh, maybe I should expand 1C2B3C-3-5-6 options... and I need to do something about 1C-2B-3C-4C cause that is so useless right now
+    {
+        id: "1C-End",
+        scenes: [
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "Narrator", text: "Wow.. whatever just happened, now you're alone at the gate." },
+            {
+                image: 'images/Visuals/Intro/JohnAtLockedGate.jpg',
+                speaker: "Narrator",
+                text: '...What do you wanna do from this point?',
+                options: [
+                    { text: 'Be lonely forever now', leadsTo: "1C-End-Over" },
+                    { text: 'Unlock the gate', leadsTo: "1C-End-Gate", useItem: "Layer1Key"},
+                ]
+            }
+        ]
+    },
 
+    {
+        id: "1C-End-Over",
+        scenes: [
+            { image: 'images/Visuals/Intro/JohnIsAlone.jpg', speaker: "Narrator", text: "Having pushed away every single opportunity you could've potentially had to get help from people, there's nothing left to do here." },
+            { image: 'images/Visuals/Intro/JohnIsAlone.jpg', speaker: "Narrator", text: "John huddles into a ball and cries for the rest of his fruitless stock life at the border." },
+            { gameOver: "Work on your social skills, man." }
+        ]
+    },
+
+    {
+        id: "1C-End-Gate",
+        scenes: [
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "John", text: "Okay, I guess I'm just gonna break that thing's heart and go through without going to his house." },
+            { image: 'images/Visuals/Intro/JohnAtLockedGate.jpg', speaker: "John", text: "Ehh it's okay he shouldn't be playing with strangers anyways" },
+            { image: 'images/Visuals/Intro/InsertKey.jpg', speaker: "Narrator", text: "Being homeless for a few minutes seemed to not teach John any gratitude. Thus, John goes to the gate and uses the key...", leadsTo: "L1" },
+        ]
+    },
 
 
 
@@ -602,7 +641,6 @@ export const data = [
                     { text: 'Sleep somewhere nearby', leadsTo: "L1-1A", hideCondition: "Layer1Hotel" },
                     { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass" },
                     { text: 'Run straight for the next world', leadsTo: "L1-1C" },
-                    //{ text: 'Go to your friend\'s house', leadsTo: "L1-1D", condition: "madeAFriend" }, // If you went the 1C route
                 ]
             }
         ]
@@ -883,9 +921,6 @@ export const data = [
             { image: 'images/Visuals/Layer1/GoodbyeGL2.jpg', speaker: "John", text: "...oh. Awesome!", leadsTo: 'L1-Ending' },
         ]
     },
-
-
-    // Personal note to continue this here after the puzzle ensues
 
     {
         id: "L1-1C2C",
@@ -1578,7 +1613,7 @@ export const data = [
         id: "True-Climax-1B",
         scenes: [
             { image: 'images/Visuals/Climax/JohnGuardianRAGHH.jpg', speaker: "John", text: "RAAGH!!!" },
-            { image: 'images/Visuals/Climax/LowBudgetManStabsJohn.jpg', speaker: "Low-Budget Man", text: "You fight foolishly, John!" },
+            { image: 'images/Visuals/Climax/LowBudgetAttacks.jpg', speaker: "Low-Budget Man", text: "You fight foolishly, John!" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
             {
                 sceneCondition: "Tenacious",
@@ -1628,13 +1663,13 @@ export const data = [
             // An image of the good-luck charm shattering flashes by.
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
-            { image: 'images/Visuals/JohnWakesAgain.png', speaker: "John's Internal Monologue", text: "Huh..?" },
+            { image: 'images/Visuals/Endings/JohnWakesAgain.png', speaker: "John's Internal Monologue", text: "Huh..?" },
             // ** The next several scenes will be in the perspective of John; keep this in mind
             // He wakes to an empty field.. except for a permanently shut border and the dissipating body of the Guardian.
             { image: '', speaker: "John's Internal Monologue", text: "Oh hey, I'm still alive." },
             { image: '', speaker: "John's Internal Monologue", text: "That's pretty cool, but..." },
             { image: 'images/Visuals/JohnIsAlone.png', speaker: "Narrator", text: "The gate is now permanently shut. Low-Budget Man had already advanced through." },
-            { image: '', speaker: "John's Internal Monologue", text: "Well, that's a shame." },
+            { image: 'images/Visuals/JohnIsAlone.png', speaker: "John's Internal Monologue", text: "Well, that's a shame." },
             // John raises his hands up and looks at them - they're animated. He can move them freely.
             { image: '', speaker: "John's Internal Monologue", text: "I look kinda funny. No wonder I've been feeling really loose since I woke up." },
             { image: '', speaker: "John's Internal Monologue", text: "Have I been assimilated into this Layer? Maybe that makes me a permanent resident." },
