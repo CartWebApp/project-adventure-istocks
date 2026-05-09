@@ -766,26 +766,26 @@ export const data = [
         id: "L1-1B2C",
         scenes: [
             // Black screen
-            { image: '', speaker: "Narrator", text: "You are about to see something very, very graphic." },
-            { image: '', speaker: "Narrator", text: "It involves a man stabbing another very violently." },
-            { image: '', speaker: "Narrator", text: "Please prepare yourself. Most people cannot witness this without puking." },
-            { image: '', speaker: "Narrator", text: "Are you ready?" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "You are about to see something very, very graphic." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "It involves a man stabbing another very violently." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Please prepare yourself. Most people cannot witness this without puking." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Are you ready?" },
 
             // The "t" thing is stabbed very poorly into the dude--a hole was scribbled into him and the dagger stabs inside. He's screaming.
-            { image: '', speaker: "Narrator", text: "..." },
-            { image: '', speaker: "???", text: "AUGH!!!!!!!!!!!!" },
+            { image: 'images/Visuals/Layer1/JohnDaggerStabbingStickFigure.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Layer1/JohnDaggerStabbingStickFigure.jpg', speaker: "???", text: "AUGH!!!!!!!!!!!!" },
 
             // He collapses to the ground. John stares down at him.
-            { image: '', speaker: "John", text: "Shouldn't have messed around, man." },
-            { image: '', speaker: "John", text: "I wonder what loot you drop..." },
+            { image: 'images/Visuals/Layer1/JohnLooksDownOnDeadStockFigure.jpg', speaker: "John", text: "Shouldn't have messed around, man." },
+            { image: 'images/Visuals/Layer1/JohnLooksDownOnDeadStockFigure.jpg', speaker: "John", text: "I wonder what loot you drop..." },
 
-            { image: '', speaker: "John", text: "Dang...", getItem: "Money" },
-            { image: '', speaker: "John", text: "Dang! you're rich dude!", getItem: "Money" },
-            { image: '', speaker: "John", text: "Sick, thanks so much! You can keep the dagger. I don't think I can take that thing out of you anyways." },
-            { image: '', speaker: "John", text: "Wouldn't you agree?", },
+            { image: 'images/Visuals/Layer1/StickFigureBodyMoney.jpg', speaker: "John", text: "Dang...", getItem: "Money" },
+            { image: 'images/Visuals/Layer1/StickFigureBodyMoney.jpg', speaker: "John", text: "Dang! you're rich dude!", getItem: "Money" },
+            { image: 'images/Visuals/Layer1/StickFigureBodyMoney.jpg', speaker: "John", text: "Sick, thanks so much! You can keep the dagger. I don't think I can take that thing out of you anyways." },
+            { image: 'images/Visuals/Layer1/StickFigureBodyMoney.jpg', speaker: "John", text: "Wouldn't you agree?", },
 
             // Zoomed in image of his dead face: X_X
-            { image: '', speaker: "???", text: "X_X", leadsTo: "L1" },
+            { image: 'images/Visuals/Layer1/StickFigureX-X.jpg', speaker: "???", text: "X_X", leadsTo: "L1" },
         ]
     },
 
@@ -1161,7 +1161,7 @@ export const data = [
             { image: '', speaker: "John", text: "Thank god. Now let me sleep!" },
 
             // Black screen
-            { image: '', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2" },
         ]
     },
 
@@ -1205,7 +1205,7 @@ export const data = [
             { image: '', speaker: "John", text: "Oh yeah! Lemme get some of that free stuff.", },
             { image: '', speaker: "Narrator", text: "John walks into the store.", },
             // Black screen
-            { image: '', speaker: "John", text: "...Hello? Why's it so dark in here?", },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John", text: "...Hello? Why's it so dark in here?", },
             { image: '', speaker: "???", text: "Aha... welcome, John. Come see my wares.", },
             // John in the store with a merchant in eccentric magician's clothing. He is looking at the items for sale.
             { image: '', speaker: "Narrator", text: "He pulls a string, and the lights flicker on.", },
@@ -1686,7 +1686,7 @@ export const data = [
             // An image of the good-luck charm shattering flashes by.
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "Something in John's pocket shatters." },
             // Black screen
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "..." },
             // Transition to Low-Budget Man's face with John's body behind him
             { image: '', speaker: "Low-Budget Man", text: "..." },
             // He covers his face with his helmet buy once more and begins walking to the gate.
