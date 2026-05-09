@@ -1156,26 +1156,26 @@ export const data = [
             { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "Alright, sure man. Here, come bunch up with me." },
 
             // Pose for the camera! Group selfie with Guy 1 holding the camera
-            { image: '', speaker: "Everyone", text: ":)" },
-            { image: '', speaker: "Guy 1", text: "...Thank you." },
-            { image: '', speaker: "John", text: "Yeah man you're welcome. Maybe work on your voice though." },
-            { image: '', speaker: "Guy 1", text: "...I appreciate. The advice." },
-            { image: '', speaker: "Guy 2", text: "hold on i have something for you" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Everyone", text: ":)" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 1", text: "...Thank you." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Yeah man you're welcome. Maybe work on your voice though." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 1", text: "...I appreciate. The advice." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 2", text: "hold on i have something for you" },
 
-            { image: '', speaker: "Narrator", text: "He gives John a strange looking charm.", getItem: "Good-Luck Charm" },
-            { image: '', speaker: "Guy 2", text: "keep it for your adventures it will bring you luck i think" },
-            { image: '', speaker: "John", text: "Thanks." },
-            { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "John", text: "(What else am I supposed to say dude)" },
-            { image: '', speaker: "Guy 1", text: "...We will be leaving" },
-            { image: '', speaker: "John", text: "Ok (Thank god)." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "He gives John a strange looking charm.", getItem: "Good-Luck Charm" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 2", text: "keep it for your adventures it will bring you luck i think" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Thanks." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "(What else am I supposed to say dude)" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 1", text: "...We will be leaving" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Ok (Thank god)." },
 
-            { image: '', speaker: "Narrator", text: "The men depart, and John is finally allowed to rest." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "The men depart, and John is finally allowed to rest." },
 
             // 
-            { image: '', speaker: "Narrator", text: "[...John is sleeping.]" },
-            { image: '', speaker: "Narrator", text: "[i don't know what else to say]" },
-            { image: '', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2-Repeat" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "[...John is sleeping.]" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "[i don't know what else to say]" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1183,14 +1183,14 @@ export const data = [
         id: "L2-1A2B",
         scenes: [
             // Frame of the three people standing there menancingly
-            { image: '', speaker: "Random Guys", text: "...Oh." },
-            { image: '', speaker: "John", text: "...Yeah?" },
-            { image: '', speaker: "Guy 1", text: "...We were not... expecting a cold face." },
-            { image: '', speaker: "John", text: "Three people come up to my face, stand in front of me, stare into my soul, don't even say a word — and you think I wanna talk dude?" },
-            { image: '', speaker: "John", text: "Get out of here." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Random Guys", text: "...Oh." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "...Yeah?" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Guy 1", text: "...We were not... expecting a cold face." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Three people come up to my face, stand in front of me, stare into my soul, don't even say a word — and you think I wanna talk dude?" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Get out of here." },
 
-            { image: '', speaker: "Narrator", text: "They walk away with the heads downcast." },
-            { image: '', speaker: "John", text: "Thank god. Now let me sleep!" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "They walk away with the heads downcast." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Thank god. Now let me sleep!" },
 
             // Black screen
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2-Repeat" },
@@ -1201,11 +1201,11 @@ export const data = [
         id: "L2-1A2C",
         scenes: [
             // Frame of the three people standing there menancingly
-            { image: '', speaker: "John", text: "RAAGH!!" },
-            { image: '', speaker: "Narrator", text: "You gotta start controlling your violent tendencies, dude." },
-            { image: '', speaker: "Narrator", text: "John gets beat up, and the people flee.", damage: 1 },
-            { image: '', speaker: "Narrator", text: "As a result of your actions, John cannot sleep well." },
-            { image: '', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2-Repeat" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "RAAGH!!" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "You gotta start controlling your violent tendencies, dude." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "John gets beat up, and the people flee.", damage: 1 },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "As a result of your actions, John cannot sleep well." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1213,14 +1213,14 @@ export const data = [
         id: "L2-1B",
         scenes: [
 
-            { image: '', speaker: "Narrator", text: "As John walks along the city, he hears a voice call out to him.", giveCondition: "Layer2TouchedGrass" },
-            { image: '', speaker: "???", text: "Hey, John! Over here, in this store! I've got some stuff for you." },
-            { image: '', speaker: "John", text: "Woah. Free stuff?" },
-            { image: '', speaker: "???", text: "Free." },
-            { image: '', speaker: "John", text: "Hmmmmmm........" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "As John walks along the city, he hears a voice call out to him.", giveCondition: "Layer2TouchedGrass" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "???", text: "Hey, John! Over here, in this store! I've got some stuff for you." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Woah. Free stuff?" },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "???", text: "Free." },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Hmmmmmm........" },
 
             {
-                image: '',
+                image: 'images/Visuals/Layer2/johnimage.jpg',
                 speaker: "John",
                 text: "What do you think? Should I go to this really awesome store with free stuff?",
                 options: [
@@ -1234,27 +1234,27 @@ export const data = [
     {
         id: "L2-1B2A",
         scenes: [
-            { image: '', speaker: "John", text: "Oh yeah! Lemme get some of that free stuff.", },
-            { image: '', speaker: "Narrator", text: "John walks into the store.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Oh yeah! Lemme get some of that free stuff.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "John walks into the store.", },
             // Black screen
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John", text: "...Hello? Why's it so dark in here?", },
-            { image: '', speaker: "???", text: "Aha... welcome, John. Come see my wares.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "???", text: "Aha... welcome, John. Come see my wares.", },
             // John in the store with a merchant in eccentric magician's clothing. He is looking at the items for sale.
-            { image: '', speaker: "Narrator", text: "He pulls a string, and the lights flicker on.", },
-            { image: '', speaker: "John", text: "Woah. You're a merchant? Your free stuff is cool!", },
-            { image: '', speaker: "Merchant", text: "Of course. Please take as you would like.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Narrator", text: "He pulls a string, and the lights flicker on.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Woah. You're a merchant? Your free stuff is cool!", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "Of course. Please take as you would like.", },
             // John reaches for some strange tool in the shape of an eraser.
             { image: '', speaker: "John", text: "How about this?", },
             // But suddenly, the merchant lunges forth and grabs John by the hand.
-            { image: '', speaker: "Merchant", text: "Wait!", },
-            { image: '', speaker: "John", text: "Huh?", },
-            { image: '', speaker: "Merchant", text: "You can't take that. It costs money", },
-            { image: '', speaker: "John", text: "...I thought you said everything was free.", },
-            { image: '', speaker: "Merchant", text: "Of course. Free for a price of $20 dollars.", },
-            { image: '', speaker: "John", text: "Wh- What kind of free download online for a premium license kinda scheme is this?!", },
-            { image: '', speaker: "Merchant", text: "You're already here. Do you have money to buy anything?", },
-            { image: '', speaker: "John", text: "...I was kind of expecting to not have to buy anything.", },
-            { image: '', speaker: "Merchant", text: "Doesn't matter. I assure what I sell will be of use to you, but I will certainly be earning my money's worth.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "Wait!", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Huh?", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "You can't take that. It costs money", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "...I thought you said everything was free.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "Of course. Free for a price of $20 dollars.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "Wh- What kind of free download online for a premium license kinda scheme is this?!", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "You're already here. Do you have money to buy anything?", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "John", text: "...I was kind of expecting to not have to buy anything.", },
+            { image: 'images/Visuals/Layer2/johnimage.jpg', speaker: "Merchant", text: "Doesn't matter. I assure what I sell will be of use to you, but I will certainly be earning my money's worth.", },
             {
                 image: '',
                 speaker: "Merchant",
