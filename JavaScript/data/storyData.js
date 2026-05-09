@@ -687,28 +687,28 @@ export const data = [
     {
         id: "L1-1B",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
-            { image: '', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
-            { image: '', speaker: "John", text: "Really feels like I can move around more, though!" },
-            { image: '', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
-            { image: '', speaker: "Narrator", text: "By the time he notices, it's too late. John bumps into someone." },
-            { image: '', speaker: "John", text: "Ow! What the-" },
-            { image: '', speaker: "???", text: "WHAT THE?!-" },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Really feels like I can move around more, though!" },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1-2.jpg', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
+            { image: 'images/Visuals/Layer1/JohnMeetsWithNewStickFigure.jpg', speaker: "Narrator", text: "By the time he notices, it's too late. John bumps into someone." },
+            { image: 'images/Visuals/Layer1/JohnRunningIntoNewStickFigure.jpg', speaker: "John", text: "Ow! What the-" },
+            { image: 'images/Visuals/Layer1/JohnRunningIntoNewStickFigure.jpg', speaker: "???", text: "WHAT THE?!-" },
 
-            // Introduce him - another hand-drawn person, though not drawn very well. He's drawn with squiggly lines and hardly has a defined body at all.
+            // Introduce him - another hand-drawn person, though not drawn very well. He's drawn with squiggly lines and hardly has a defined body at all.Z
             // The man's got an angry expression... which literally looks like a >:(
-            { image: '', speaker: "John", text: "Oooops... my bad, I'll just get going here-" },
-            { image: '', speaker: "???", text: "WHAT ARE YOU DOING HERE?! ROYALTY FREE MEN ARE NOT MEANT TO BE IN OUR WORLD." },
-            { image: '', speaker: "John", text: "Wha- hey! Highly offensive. And what's wrong with me being here?!" },
-            { image: '', speaker: "???", text: "WE ARE ADVANCED PEOPLE. YOU ARE THE LOWEST OF US ALL. YOU HAVE NO RIGHTS OVER YOUR OWN LIVES - ANYONE CAN USE YOU AS THEY PLEASE." },
-            { image: '', speaker: "John", text: "Alright, well why do you think I'm here then?! I'm tryna find some peace, dude." },
-            { image: '', speaker: "???", text: "UNACCEPTABLE. I WILL NOT ALLOW SUCH LOWLEY PERSONS TO GRACE OUR GROUNDS." },
+            { image: 'images/Visuals/Layer1/JohnPostRunningIntoNewStickFigure.jpg', speaker: "John", text: "Oooops... my bad, I'll just get going here-" },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "WHAT ARE YOU DOING HERE?! ROYALTY FREE MEN ARE NOT MEANT TO BE IN OUR WORLD." },
+            { image: 'images/Visuals/Layer1/JohnPostRunningIntoNewStickFigure.jpg', speaker: "John", text: "Wha- hey! Highly offensive. And what's wrong with me being here?!" },
+            { image: 'images/Visuals/Layer1/JohnPostRunningIntoNewStickFigure.jpg', speaker: "???", text: "WE ARE ADVANCED PEOPLE. YOU ARE THE LOWEST OF US ALL. YOU HAVE NO RIGHTS OVER YOUR OWN LIVES - ANYONE CAN USE YOU AS THEY PLEASE." },
+            { image: 'images/Visuals/Layer1/JohnPostRunningIntoNewStickFigure.jpg', speaker: "John", text: "Alright, well why do you think I'm here then?! I'm tryna find some peace, dude." },
+            { image: 'images/Visuals/Layer1/JohnPostRunningIntoNewStickFigure.jpg', speaker: "???", text: "UNACCEPTABLE. I WILL NOT ALLOW SUCH LOWLEY PERSONS TO GRACE OUR GROUNDS." },
 
             // He raises his fists.
-            { image: '', speaker: "John", text: "...This guy's seriously about to throw hands with me." },
+            { image: 'images/Visuals/Layer1/JohnFistsUpForStickFigureFight.jpg', speaker: "John", text: "...This guy's seriously about to throw hands with me." },
 
             {
-                image: '',
+                image: 'images/Visuals/Layer1/JohnFistsUpForStickFigureFight.jpg',
                 speaker: "John",
                 text: 'I\'m not even as mobile as he is... do I take this on?',
                 options: [
@@ -723,42 +723,42 @@ export const data = [
     {
         id: "L1-1B2A",
         scenes: [
-            { image: '', speaker: "John", text: "Hey, I'm sure we can have a civil discussion. Let's just chill for a moment and talk, alright?" },
-            { image: '', speaker: "???", text: "WHAT COULD A THING LIKE YOU POSSIBLY SAY TO PERSUADE ME?" },
-            { image: '', speaker: "John", text: "Let's sit down and see." },
+            { image: 'images/Visuals/Layer1/JohnAttemptsToTalkOutWithStickFigure.jpg', speaker: "John", text: "Hey, I'm sure we can have a civil discussion. Let's just chill for a moment and talk, alright?" },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "WHAT COULD A THING LIKE YOU POSSIBLY SAY TO PERSUADE ME?" },
+            { image: 'images/Visuals/Layer1\JohnAttemptsToTalkOutWithStickFigure.jpg', speaker: "John", text: "Let's sit down and see." },
 
             // Black screen
-            { image: '', speaker: "John", text: "..." },
-            { image: '', speaker: "John", text: "So because stock images are used by people universally around the world, we're not that bad, y'know?" },
-            { image: '', speaker: "???", text: "WHY... YOU..." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer1/JohnSittingDownWithNewStickFigure.jpg', speaker: "John", text: "So because stock images are used by people universally around the world, we're not that bad, y'know?" },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "WHY... YOU..." },
             // He punches down
-            { image: '', speaker: "John", text: "Ow!", damage: 1 },
-            { image: '', speaker: "John", text: "Why did you do that?!" },
-            { image: '', speaker: "???", text: "I AGREED WITH WHAT YOU WERE SAYING AND I DID NOT LIKE THAT." },
-            { image: '', speaker: "John", text: "I- Whatever man! Leave now, alright?" },
-            { image: '', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day."},
+            { image: 'images/Visuals/Layer1/StickFigurePunchesDownJohn.jpg', speaker: "John", text: "Ow!", damage: 1 },
+            { image: 'images/Visuals/Layer1/StickFigurePunchesDownJohn.jpg', speaker: "John", text: "Why did you do that?!" },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "I AGREED WITH WHAT YOU WERE SAYING AND I DID NOT LIKE THAT." },
+            { image: 'images/Visuals/Layer1/JohnStickFigurePostFight.jpg', speaker: "John", text: "I- Whatever man! Leave now, alright?" },
+            { image: 'images/Visuals/Layer1/JohnStickFigurePostFight.jpg', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day."},
             // He leaves
-            { image: '', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
-            { image: '', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A" },
         ]
     },
 
     {
         id: "L1-1B2B",
         scenes: [
-            { image: '', speaker: "John", text: "RAAGH!!!" },
-            { image: '', speaker: "Narrator", text: "You know what, it's pretty valid to expect to fight this time." },
-            { image: '', speaker: "Narrator", text: "I mean, that doesn't make it a good idea." },
-            { image: '', speaker: "Narrator", text: "They exchange blows, John taking more damage than the man does.", damage: 2 },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "John", text: "RAAGH!!!" },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "Narrator", text: "You know what, it's pretty valid to expect to fight this time." },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "Narrator", text: "I mean, that doesn't make it a good idea." },
+            { image: 'images/Visuals/Layer1/JohnAndStickFigureFightOngoing.jpg', speaker: "Narrator", text: "They exchange blows, John taking more damage than the man does.", damage: 2 },
 
             { image: '', speaker: "John", text: "However, he scares the man off to the point he flees." },
-            { image: '', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
-            { image: '', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
-            { image: '', speaker: "John", text: "Huh? He dropped something on the ground, though..." },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
+            { image: 'images/Visuals/Layer1/JohnSadPostStickFigureFight.jpg', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
+            { image: 'images/Visuals/Layer1/JohnSadPostStickFigureFight.jpg', speaker: "John", text: "Huh? He dropped something on the ground, though..." },
             { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
             // He leaves
-            { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
-            { image: '', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
         ]
     },
 
