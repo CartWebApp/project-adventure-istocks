@@ -133,13 +133,13 @@ window.addEventListener("evaluateScene", (e) => {
         switch (endGame) {
             // Put end screens here, details information about your playthrough
             case "Ending1":
-                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 1}})
+                window.dispatchEvent(new CustomEvent("endGame", { detail: 1}))
                 break;
             case "Ending2":
-                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 2}})
+                window.dispatchEvent(new CustomEvent("endGame", { detail: 2}))
                 break;
             case "Ending3":
-                window.dispatchEvent(new CustomEvent("endGame"), { detail: {healthRemaining: status.Health, ending: 3}})
+                window.dispatchEvent(new CustomEvent("endGame", { detail: 3}))
                 break;
         }
 
