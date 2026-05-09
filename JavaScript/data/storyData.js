@@ -1098,15 +1098,15 @@ export const data = [
     {
         id: "L2-1A",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John finds another nearby hotel and gets ready to rest. He pays for his room and prepares for rest." },
-            { image: '', speaker: "Narrator", text: "It seems normal enough, until..." },
+            { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "Narrator", text: "John finds another nearby hotel and gets ready to rest. He pays for his room and prepares for rest." },
+            { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "Narrator", text: "It seems normal enough, until..." },
             // Three drawn people stand in John's way
-            { image: '', speaker: "Narrator", text: "..." },
-            { image: '', speaker: "John", text: "Uh... who are you guys?" },
-            { image: '', speaker: "Narrator", text: "They remain unnervingly silent, staring into John's soul." },
+            { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "John", text: "Uh... who are you guys?" },
+            { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "Narrator", text: "They remain unnervingly silent, staring into John's soul." },
 
             {
-                image: '',
+                image: 'images/Visuals/Layer2/johnlayer2hotel.jpg',
                 speaker: "John",
                 text: "Uhm...",
                 options: [
@@ -1122,22 +1122,22 @@ export const data = [
         id: "L2-1A2A",
         scenes: [
             // Frame of the three people standing there menancingly
-            { image: '', speaker: "Random Guys", text: "..." },
-            { image: '', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Random Guys", text: "..." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "..." },
             // Same frame, but the one in front opens their mouth to talk
-            { image: '', speaker: "Guy 1", text: "...Hello, John." },
-            { image: '', speaker: "John", text: "Hey dude." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 1", text: "...Hello, John." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "Hey dude." },
 
-            { image: '', speaker: "Guy 1", text: "..." },
-            { image: '', speaker: "Guy 1", text: "May we..." },
-            { image: '', speaker: "Guy 1", text: "...have a selfie." },
-            { image: '', speaker: "John", text: "yo" },
-            { image: '', speaker: "John", text: "You were being real scary and all that and THAT is what you want?" },
-            { image: '', speaker: "Guy 1", text: "...This is... how we talk." },
-            { image: '', speaker: "John", text: "bro" },
-            { image: '', speaker: "Guy 2", text: "some of us are a little strange here" },
-            { image: '', speaker: "Guy 3", text: "We Apologize If It Comes Off As Threatening." },
-            { image: '', speaker: "John", text: "Alright, sure man. Here, come bunch up with me." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 1", text: "..." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 1", text: "May we..." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 1", text: "...have a selfie." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "yo" },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "You were being real scary and all that and THAT is what you want?" },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 1", text: "...This is... how we talk." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "bro" },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 2", text: "some of us are a little strange here" },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "Guy 3", text: "We Apologize If It Comes Off As Threatening." },
+            { image: 'images/Visuals/Layer2/johnselife1.jpg', speaker: "John", text: "Alright, sure man. Here, come bunch up with me." },
 
             // Pose for the camera! Group selfie with Guy 1 holding the camera
             { image: '', speaker: "Everyone", text: ":)" },
