@@ -1617,9 +1617,9 @@ export const data = [
         // Have scene change to make John block the attack somehwat if he has The ERaser
         scenes: [
             { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning." },
-            { image: '', speaker: "John", text: "soo... let me come with?" },
-            { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
-            { image: '', speaker: "John", text: "...Huh. That's a good question-" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "John", text: "soo... let me come with?" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "John", text: "...Huh. That's a good question-" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
             { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
             { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
@@ -1681,10 +1681,10 @@ export const data = [
         scenes: [
             // All of these will have black screens
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
-            { image: '', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
-            { image: '', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
-            { image: '', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
-            { image: '', speaker: "John's Internal Monologue", text: "Whatever. Guess I'll die." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Whatever. Guess I'll die." },
             { endGame: "Ending1" },
         ]
     },
