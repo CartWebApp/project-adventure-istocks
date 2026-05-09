@@ -941,9 +941,9 @@ export const data = [
     {
         id: "L1-1C2C",
         scenes: [
-            { image: '', speaker: "Guy from Layer 2", text: "..." },
+            { image: 'images/Visuals/Layer1/JohnBeggingForKey.jpg', speaker: "Guy from Layer 2", text: "..." },
             {
-                image: '',
+                image: 'images/Visuals/Layer1/JohnBeggingForKey.jpg',
                 speaker: "Guy from Layer 2",
                 text: "Bro, come on, you gonna keep resorting to begging?",
                 options: [
@@ -958,7 +958,7 @@ export const data = [
         id: "L1-1C2C-#2",
         scenes: [
             {
-                image: '',
+                image: 'images/Visuals/Layer1/JohnBeggingForKey.jpg',
                 speaker: "Guy from Layer 2",
                 text: "Maybe animals like you don't understand the concept of earning what you want. Are you that dense? Do you need me to drill it in your head?",
                 options: [
