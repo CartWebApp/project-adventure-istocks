@@ -649,15 +649,15 @@ export const data = [
     {
         id: "L1-1B",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
-            { image: '', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
-            { image: '', speaker: "John", text: "Really feels like I can move around more, though!" },
-            { image: '', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
-            { image: '', speaker: "Narrator", text: "By the time he notices, it's too late. John bumps into someone." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Really feels like I can move around more, though!" },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1-2.jpg', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1-2.jpg', speaker: "Narrator", text: "By the time he notices, it's too late. John bumps into someone." },
             { image: '', speaker: "John", text: "Ow! What the-" },
             { image: '', speaker: "???", text: "WHAT THE?!-" },
 
-            // Introduce him - another hand-drawn person, though not drawn very well. He's drawn with squiggly lines and hardly has a defined body at all.
+            // Introduce him - another hand-drawn person, though not drawn very well. He's drawn with squiggly lines and hardly has a defined body at all.Z
             // The man's got an angry expression... which literally looks like a >:(
             { image: '', speaker: "John", text: "Oooops... my bad, I'll just get going here-" },
             { image: '', speaker: "???", text: "WHAT ARE YOU DOING HERE?! ROYALTY FREE MEN ARE NOT MEANT TO BE IN OUR WORLD." },
