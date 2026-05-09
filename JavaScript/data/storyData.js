@@ -746,19 +746,19 @@ export const data = [
     {
         id: "L1-1B2B",
         scenes: [
-            { image: '', speaker: "John", text: "RAAGH!!!" },
-            { image: '', speaker: "Narrator", text: "You know what, it's pretty valid to expect to fight this time." },
-            { image: '', speaker: "Narrator", text: "I mean, that doesn't make it a good idea." },
-            { image: '', speaker: "Narrator", text: "They exchange blows, John taking more damage than the man does.", damage: 2 },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "John", text: "RAAGH!!!" },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "Narrator", text: "You know what, it's pretty valid to expect to fight this time." },
+            { image: 'images/Visuals/Layer1/JohnFightingStanceWithStickFigure.jpg', speaker: "Narrator", text: "I mean, that doesn't make it a good idea." },
+            { image: 'images/Visuals/Layer1/JohnAndStickFigureFightOngoing.jpg', speaker: "Narrator", text: "They exchange blows, John taking more damage than the man does.", damage: 2 },
 
             { image: '', speaker: "John", text: "However, he scares the man off to the point he flees." },
-            { image: '', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
-            { image: '', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
-            { image: '', speaker: "John", text: "Huh? He dropped something on the ground, though..." },
+            { image: 'images/Visuals/Layer1/NewStickFigureCloseUp.jpg', speaker: "???", text: "ROT IN HELL, ROYALTY-FREE MAN!" },
+            { image: 'images/Visuals/Layer1/JohnSadPostStickFigureFight.jpg', speaker: "John", text: "Whatever, dude! Geez, that was the dumbest interaction I've ever had." },
+            { image: 'images/Visuals/Layer1/JohnSadPostStickFigureFight.jpg', speaker: "John", text: "Huh? He dropped something on the ground, though..." },
             { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
             // He leaves
-            { image: '', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
-            { image: '', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
         ]
     },
 
