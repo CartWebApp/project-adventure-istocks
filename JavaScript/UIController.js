@@ -116,6 +116,12 @@ function initiateScene() {
                         doesNotMeetRequirement = true;
                     }
                 }
+                // Hide button if user HAS a condition
+                if (option.hideCondition) {
+                    if (status.ImportantDecisions.find(option.hideCondition)) {
+                        doesNotMeetRequirement = true;
+                    }
+                }
 
                 // If does not meet requirement then do not allow them to click the button
                 if (doesNotMeetRequirement) {
@@ -382,9 +388,16 @@ window.addEventListener("nextEncounter", (e) => {
 window.addEventListener("earlyGameOver", showGameOver);
 
 // End Game
-window.addEventListener("endGame", () => {
+window.addEventListener("endGame", (e) => {
     gameScreen.classList.add("hidden");
     endingScreen.classList.remove("hidden");
+
+    const hpRemaining = document.querySelector("#hpAfter");
+    const endNumber = document.querySelector("#endingReceived");
+
+    console.log(e)
+    hpRemaining.textContent = e.detail.healthRemaining
+    endNumber.textContent = e.detail.ending
 })
 
 

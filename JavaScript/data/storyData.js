@@ -565,8 +565,8 @@ export const data = [
     {
         id: "1C2B3C4C",
         scenes: [
-            { image: '', speaker: "John", text: "RAAAGH!" },
-            { image: '', speaker: "Narrator", text: "Genuinely what are you even doing" },
+            { image: 'images/Visuals/Intro/JohnFightAtBorder.jpg', speaker: "John", text: "RAAAGH!" },
+            { image: 'images/Visuals/Intro/JohnFightAtBorder.jpg', speaker: "Narrator", text: "Genuinely what are you even doing" },
             { image: '', speaker: "Narrator", text: "He pulls a dagger and stabs you. Are you surprised?", damage: 1 },
             { image: '', speaker: "Narrator", text: "But he doesn't move... instead he remains where he is. Seems like he's giving you another chance." },
 
@@ -638,6 +638,22 @@ export const data = [
                 speaker: "John",
                 text: 'Hmm, where should I start?',
                 options: [
+                    { text: 'Sleep somewhere nearby', leadsTo: "L1-1A" },
+                    { text: 'Stroll around the city', leadsTo: "L1-1B" },
+                    { text: 'Run straight for the next world', leadsTo: "L1-1C" },
+                ]
+            }
+        ]
+    },
+
+    {
+        id: "L1-Repeat",
+        scenes: [
+            {
+                image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg',
+                speaker: "John",
+                text: 'Alright, what do I do now??',
+                options: [
                     { text: 'Sleep somewhere nearby', leadsTo: "L1-1A", hideCondition: "Layer1Hotel" },
                     { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass" },
                     { text: 'Run straight for the next world', leadsTo: "L1-1C" },
@@ -670,24 +686,24 @@ export const data = [
     {
         id: "L1-1A2A",
         scenes: [
-            { image: '', speaker: "John", text: "Uh, actually, I'm good, thanks." },
-            { image: '', speaker: "Attendant", text: "Come back when you're a little... mmm... richer!", leadsTo: 'L1' },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "John", text: "Uh, actually, I'm good, thanks." },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "Attendant", text: "Come back when you're a little... mmm... richer!", leadsTo: 'L1-Repeat' },
         ]
     },
 
     {
         id: "L1-1A2A",
         scenes: [
-            { image: '', speaker: "Attendant", text: "Good choice, my friend!" },
-            { image: '', speaker: "John", text: "Yeah alright man." },
-            { image: '', speaker: "Narrator", text: "John rests up, and feels a little healthier.", heal: 1, leadsTo: 'L1' },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "Attendant", text: "Good choice, my friend!" },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "John", text: "Yeah alright man." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John rests up, and feels a little healthier.", heal: 1, leadsTo: 'L1-Repeat' },
         ]
     },
 
     {
         id: "L1-1B",
         scenes: [
-            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings." },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings.", giveCondition: "layer1TouchedGrass" },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Really feels like I can move around more, though!" },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1-2.jpg', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
@@ -739,7 +755,7 @@ export const data = [
             { image: 'images/Visuals/Layer1/JohnStickFigurePostFight.jpg', speaker: "???", text: "i appreciate the time we spent together. i shall see you another day."},
             // He leaves
             { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "Wha- alright, whatever. Bye, I guess." },
-            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "1A" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...that was the most horrid social encounter I've ever had.", leadsTo: "L1-Repeat" },
         ]
     },
 
@@ -758,7 +774,7 @@ export const data = [
             { image: '', speaker: "Narrator", text: "Seems that some cash fell out of his pocket." },
             // He leaves
             { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "Oh, awesome.. guess there's that, at least.", getItem: "Money" },
-            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "1A" },
+            { image: 'images/Visuals/Layer1/StickFigureWalkingAway.jpg', speaker: "John", text: "...man, this place sucks, actually.", leadsTo: "L1-Repeat" },
         ]
     },
 
@@ -785,7 +801,7 @@ export const data = [
             { image: 'images/Visuals/Layer1/StickFigureBodyMoney.jpg', speaker: "John", text: "Wouldn't you agree?", },
 
             // Zoomed in image of his dead face: X_X
-            { image: 'images/Visuals/Layer1/StickFigureX-X.jpg', speaker: "???", text: "X_X", leadsTo: "L1" },
+            { image: 'images/Visuals/Layer1/StickFigureX-X.jpg', speaker: "???", text: "X_X", leadsTo: "L1-Repeat" },
         ]
     },
 
@@ -1726,26 +1742,23 @@ export const data = [
             { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Low-Budget Man", text: "Don't..!" },
 
             { image: 'images/Visuals/Endings/JohnErasesLowBudget.jpg', speaker: "Narrator", text: "He's too late to object. John erases the rest of him with the Eraser." },
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Man, finally..!" },
+            { image: 'images/Visuals/Endings/KeyAlone.jpg', speaker: "John", text: "Man, finally..!" },
             // 
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "John retrieves the key from his body." },
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Well, I have this. What do I do now?" },
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "So it turns out I can't free the people here after all... but maybe I'll find a way when I step through this border." },
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Hope they don't think too much about it." },
+            { image: 'images/Visuals/Endings/JohnPicksUpKey.jpg', speaker: "Narrator", text: "John retrieves the key from his body." },
+            { image: 'images/Visuals/Endings/JohnPicksUpKey.jpg', speaker: "John", text: "Well, I have this. What do I do now?" },
+            { image: 'images/Visuals/Endings/JohnPicksUpKey.jpg', speaker: "John", text: "So it turns out I can't free the people here after all... but maybe I'll find a way when I step through this border." },
+            { image: 'images/Visuals/Endings/JohnPicksUpKey.jpg', speaker: "John", text: "Hope they don't think too much about it." },
             // He steps to the gate.
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "Alright. Time to do this." },
+            { image: 'images/Visuals/Endings/JohnGateWithKey.jpg', speaker: "John", text: "Alright. Time to do this." },
             // Inserts the key
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/JohnInsertsKey.jpg', speaker: "John", text: "..." },
             // The gate opens
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
-            // He turns back.
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "..." },
-            // Gives a thumbs up or a wave and smiles
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "John", text: "See you!" },
+            { image: 'images/Visuals/Endings/JohnStandsAtOpenGate.jpg', speaker: "John", text: "..." },
+            { image: 'images/Visuals/Endings/JohnStandsAtOpenGate.jpg', speaker: "John", text: "Well, see you all, everyone. Wherever I'm headed to now." },
             // Then he walks through, being enguled by the light...
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Endings/JohnWalksIntoGate.jpg', speaker: "Narrator", text: "..." },
             // And the gates shut.
-            { image: 'images/Visuals/Endings/JohnTowersOver.jpg', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Endings/ClosedGate.jpg', speaker: "Narrator", text: "*SLAM*" },
             { endGame: "Ending3" },
         ]
     },
