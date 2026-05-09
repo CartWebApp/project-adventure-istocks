@@ -92,7 +92,6 @@ button:hover {
     /* Splits layouts for health, main content, and inventory button */
     display: grid;
     grid-template-columns: 5vw 1fr 5vw;
-    column-gap: 100px;
     height: 97vh;
 }
 
@@ -272,7 +271,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
-    height: 93vh;
+    height: 92vh;
     margin-right: 20px;
 }
 
@@ -625,7 +624,8 @@ p {
     border-radius: 20px;
     margin-bottom: 35px;
     margin-top: clamp(0px, 15vh, 150px);
-    width: auto;
+    justify-self:center;
+    align-self:center;
 }
 
 
@@ -634,7 +634,7 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: clamp(250px, 21.9vh, 500px);
+    gap: clamp(200px, 17vh, 300px);
 
 
 
@@ -791,7 +791,7 @@ p {
     }
 
     #visuals {
-        gap: 30px;
+        gap: 25px;
         padding-top: 10px;
         padding-bottom:0px;
         margin-bottom:0px;
@@ -801,6 +801,8 @@ p {
     #rockPaperScissorsPuzzle {
         margin-top: 0px;
         margin-bottom: 0px;
+        margin:2.5px;
+       
     }
 
     #startButtons {
@@ -812,6 +814,10 @@ p {
             width: 184px;
             height: 54px;
         }
+    }
+
+    #actualGame {
+        column-gap:0px;
     }
 
     #holesAndShapesPuzzle>p {
