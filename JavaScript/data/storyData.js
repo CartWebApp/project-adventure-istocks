@@ -478,10 +478,10 @@ export const data = [
             { image: 'images/Visuals/Intro/john-gate-shadow-appearence.jpg', speaker: "Narrator", text: "With him, the pillars of a gate emerge from the ground. Though the doors seem clearly locked to you, he phases through without effort." },
 
             // The man--a dude who literally is drawn in pencil, seemingly by a child--stands in front of John with his hands in his pockets, his intentions unknown.
-            { image: '', speaker: "Narrator", text: "..." },
+            { image: 'images/Visuals/Intro/john-meets-hand-drawn-man.jpg', speaker: "Narrator", text: "..." },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/john-meets-hand-drawn-man.jpg',
                 speaker: "Narrator",
                 text: 'Should you talk to him?',
                 options: [
@@ -496,12 +496,12 @@ export const data = [
     {
         id: "1C2B3C4A",
         scenes: [
-            { image: '', speaker: "???", text: "►○★┼╬▬○┬■-!★☐┬││▼╠┬▼✦○☐▲-┼▼│┼○╬❏○││○╬-?" },
-            { image: '', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
-            { image: '', speaker: "???", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
+            { image: 'images/Visuals/Intro/hand-drawn-man-at-gate.jpg', speaker: "???", text: "►○★┼╬▬○┬■-!★☐┬││▼╠┬▼✦○☐▲-┼▼│┼○╬❏○││○╬-?" },
+            { image: 'images/Visuals/Intro/JohnCenteredAtLayer.jpg', speaker: "John", text: "Wha- I'm sorry, could you repeat that?" },
+            { image: 'images/Visuals/Intro/hand-drawn-man-at-gate.jpg', speaker: "???", text: " ▲-✦┴☐┬-,○❖○╬★▼┬○═┐○☐╠═┤┬┤╝▬═┼... ✦┼★▲-☐┬┬▼▼┬○♢┬■○╬═│☐┬■┴○-?" },
 
             {
-                image: '',
+                image: 'images/Visuals/Intro/hand-drawn-man-at-gate.jpg',
                 speaker: "Narrator",
                 text: '...How do you want to approach this?',
                 options: [
