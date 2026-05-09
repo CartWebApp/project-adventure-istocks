@@ -40,7 +40,6 @@ let currentEncounter = storyData.find(object => object.id === "Intro");
 let currentSceneIndex = 0;
 let lastEncounter = undefined;
 let lastUniqueImageSRC = undefined; // For Journal
-let lastOptionScene = undefined;
 let inventoryEnabled = false;
 let journalEnabled = false;
 
@@ -86,8 +85,6 @@ function initiateScene() {
         // Hide next button if options are about to appear
         const options = currentScene.options;
         if (options) {
-            lastOptionScene = currentScene;
-
             for (const option of options) {
                 const newLi = document.createElement('li');
                 const newP = document.createElement('p');
