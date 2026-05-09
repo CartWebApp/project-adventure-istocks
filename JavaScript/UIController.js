@@ -112,13 +112,13 @@ function initiateScene() {
                     }
                 }
                 if (option.condition) {
-                    if (!status.ImportantDecisions.find(option.condition)) {
+                    if (!status.ImportantDecisions.includes(option.condition)) {
                         doesNotMeetRequirement = true;
                     }
                 }
                 // Hide button if user HAS a condition
                 if (option.hideCondition) {
-                    if (status.ImportantDecisions.find(option.hideCondition)) {
+                    if (status.ImportantDecisions.includes(option.hideCondition)) {
                         doesNotMeetRequirement = true;
                     }
                 }
@@ -395,7 +395,6 @@ window.addEventListener("endGame", (e) => {
     const hpRemaining = document.querySelector("#hpAfter");
     const endNumber = document.querySelector("#endingReceived");
 
-    console.log(e.detail)
     hpRemaining.textContent = status.Health
     endNumber.textContent = e.detail
 })

@@ -652,7 +652,7 @@ export const data = [
             {
                 image: 'images/Visuals/Layer1/L1JohnOverlooks.jpg',
                 speaker: "John",
-                text: 'Alright, what do I do now??',
+                text: 'Alright, what do I do now?',
                 options: [
                     { text: 'Sleep somewhere nearby', leadsTo: "L1-1A", hideCondition: "Layer1Hotel" },
                     { text: 'Stroll around the city', leadsTo: "L1-1B", hideCondition: "Layer1TouchedGrass" },
@@ -665,7 +665,7 @@ export const data = [
     {
         id: "L1-1A",
         scenes: [
-            { image: 'images/Visuals/Layer1/JohnArrivingAtLayer1Hotel.jpg', speaker: "Narrator", text: "John find a nearby inn to rest." },
+            { image: 'images/Visuals/Layer1/JohnArrivingAtLayer1Hotel.jpg', speaker: "Narrator", text: "John find a nearby inn to rest.", giveCondition: "Layer1Hotel" },
             // At the front desk with a hand-drawn attendant
             { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "John", text: "Hey, can I sleep here?." },
             { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "Attendant", text: "Ho ho. Rest? Sleep? Recovery? It's yours my friend, as long as you have enough money." },
@@ -676,8 +676,8 @@ export const data = [
                 speaker: "Narrator",
                 text: 'Pay?',
                 options: [
-                    { text: 'I\'ll just stay up man', leadsTo: "L1-1A2A", giveCondition: "layer1Hotel" }, // Depends on if you have money or not, also only visible first time you've looped here
-                    { text: 'Sure...', leadsTo: "L1-1A2B", useItem: "Money", giveCondition: "layer1Hotel" },
+                    { text: 'I\'ll just stay up man', leadsTo: "L1-1A2A" }, // Depends on if you have money or not, also only visible first time you've looped here
+                    { text: 'Sure...', leadsTo: "L1-1A2B", useItem: "Money" },
                 ]
             }
         ]
@@ -703,7 +703,7 @@ export const data = [
     {
         id: "L1-1B",
         scenes: [
-            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings.", giveCondition: "layer1TouchedGrass" },
+            { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "Narrator", text: "John takes a nice stroll around the city, looking at the buildings.", giveCondition: "Layer1TouchedGrass" },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Dang, wouldn't mind staying here honestly. Just feels like it's lacking a bit of color." },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1.jpg', speaker: "John", text: "Really feels like I can move around more, though!" },
             { image: 'images/Visuals/Layer1/JohnExploringLayer1-2.jpg', speaker: "Narrator", text: "John keeps looking up at the sky and buildings, completely ignoring what's in front of him." },
@@ -1096,6 +1096,22 @@ export const data = [
     },
 
     {
+        id: "L2-Repeat",
+        scenes: [
+            {
+                image: 'images/Visuals/Layer2/john-solo-at-L2.jpg',
+                speaker: "John",
+                text: 'Alright, what do I do now??',
+                options: [
+                    { text: 'Rest somewhere nearby', leadsTo: "L2-1A", useItem: "Money", hideCondition: "Layer2Hotel" },
+                    { text: 'Stroll around the city', leadsTo: "L2-1B", hideCondition: "Layer2TouchedGrass" },
+                    { text: 'Bolt for the Border', leadsTo: "L2-1C" },
+                ]
+            }
+        ]
+    },
+
+    {
         id: "L2-1A",
         scenes: [
             { image: 'images/Visuals/Layer2/johnlayer2hotel.jpg', speaker: "Narrator", text: "John finds another nearby hotel and gets ready to rest. He pays for his room and prepares for rest." },
@@ -1159,7 +1175,7 @@ export const data = [
             // 
             { image: '', speaker: "Narrator", text: "[...John is sleeping.]" },
             { image: '', speaker: "Narrator", text: "[i don't know what else to say]" },
-            { image: '', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2" },
+            { image: '', speaker: "Narrator", text: "[I Don't Think You Guys Should Be Watching Him Sleep.]", heal: 1, leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1177,7 +1193,7 @@ export const data = [
             { image: '', speaker: "John", text: "Thank god. Now let me sleep!" },
 
             // Black screen
-            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "Narrator", text: "John gets a good night's rest.", heal: 1, leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1189,7 +1205,7 @@ export const data = [
             { image: '', speaker: "Narrator", text: "You gotta start controlling your violent tendencies, dude." },
             { image: '', speaker: "Narrator", text: "John gets beat up, and the people flee.", damage: 1 },
             { image: '', speaker: "Narrator", text: "As a result of your actions, John cannot sleep well." },
-            { image: '', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2" },
+            { image: '', speaker: "Narrator", text: "Real good reputation you're building here.", leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1197,7 +1213,7 @@ export const data = [
         id: "L2-1B",
         scenes: [
 
-            { image: '', speaker: "Narrator", text: "As John walks along the city, he hears a voice call out to him." },
+            { image: '', speaker: "Narrator", text: "As John walks along the city, he hears a voice call out to him.", giveCondition: "Layer2TouchedGrass" },
             { image: '', speaker: "???", text: "Hey, John! Over here, in this store! I've got some stuff for you." },
             { image: '', speaker: "John", text: "Woah. Free stuff?" },
             { image: '', speaker: "???", text: "Free." },
@@ -1274,7 +1290,7 @@ export const data = [
             // John walking away
             { image: '', speaker: "John", text: "Thanks for your scam, I guess...", },
             { image: '', speaker: "Merchant", text: "Heheh. Come again another time.", },
-            { image: '', speaker: "John", text: "I guess.", leadsTo: "L2" },
+            { image: '', speaker: "John", text: "I guess.", leadsTo: "L2-Repeat" },
         ]
     },
 
@@ -1601,9 +1617,9 @@ export const data = [
         // Have scene change to make John block the attack somehwat if he has The ERaser
         scenes: [
             { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "...You are as pitiful as you were since the beginning." },
-            { image: '', speaker: "John", text: "soo... let me come with?" },
-            { image: '', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
-            { image: '', speaker: "John", text: "...Huh. That's a good question-" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "John", text: "soo... let me come with?" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "Low-Budget Man", text: "If begging is your power then what are you without it?" },
+            { image: 'images/Visuals/Climax/LowBudgetManAndJohnAtGoldenGate.jpg', speaker: "John", text: "...Huh. That's a good question-" },
             // Low-Budget man speedblitzes him - stabs through John's body with his blade -
             { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Worthless.", falseDamage: 5 },
             { image: 'images/Visuals/Climax/LowBudgetStabJohn.jpg', speaker: "Low-Budget Man", text: "Apologies. I allow no witnesses, in the case they find an escape and come to hunt me as well." },
@@ -1665,10 +1681,10 @@ export const data = [
         scenes: [
             // All of these will have black screens
             { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Ow... that hurt. I don't think I can get up." },
-            { image: '', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
-            { image: '', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
-            { image: '', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
-            { image: '', speaker: "John's Internal Monologue", text: "Whatever. Guess I'll die." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "He's just walking past... man, come on, I'm letting him by. Was there anything different I could've done?" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "No one's going to know what happened. If only I survived." },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Where does he get all that stuff, dude?! If someone gave me an object that could save me from getting hit, that'd be real nice, man!" },
+            { image: 'images/Visuals/BLACK-SCREEN.png', speaker: "John's Internal Monologue", text: "Whatever. Guess I'll die." },
             { endGame: "Ending1" },
         ]
     },

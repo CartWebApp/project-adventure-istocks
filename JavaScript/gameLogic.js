@@ -118,7 +118,7 @@ window.addEventListener("evaluateScene", (e) => {
         if (status.Health < status.MaxHealth) { modifyHealth(heal); }
 
 
-
+        console.log(status)
         if (getItem) { addToInventory(getItem); }
         if (useItem) { deleteFromInventory(useItem); }
 
