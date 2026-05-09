@@ -611,14 +611,14 @@ export const data = [
     {
         id: "L1-1A",
         scenes: [
-            { image: '', speaker: "Narrator", text: "John find a nearby inn to rest." },
+            { image: 'images/Visuals/Layer1/JohnArrivingAtLayer1Hotel.jpg', speaker: "Narrator", text: "John find a nearby inn to rest." },
             // At the front desk with a hand-drawn attendant
-            { image: '', speaker: "John", text: "Hey, can I sleep here?." },
-            { image: '', speaker: "Attendant", text: "Ho ho. Rest? Sleep? Recovery? It's yours my friend, as long as you have enough money." },
-            { image: '', speaker: "John", text: "...What?" },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "John", text: "Hey, can I sleep here?." },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "Attendant", text: "Ho ho. Rest? Sleep? Recovery? It's yours my friend, as long as you have enough money." },
+            { image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg', speaker: "John", text: "...What?" },
 
             {
-                image: '',
+                image: 'images/Visuals/Layer1/JohnHotelFrontDesk.jpg',
                 speaker: "Narrator",
                 text: 'Pay?',
                 options: [
